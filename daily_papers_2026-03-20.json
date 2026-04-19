@@ -1,0 +1,261 @@
+[
+  {
+    "id": "2603.19235",
+    "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
+    "summary": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
+    "upvotes": 51,
+    "projectPage": "https://github.com/H-EmbodVis/VEGA-3D",
+    "ai_keywords": [
+      "multimodal large language models",
+      "spatial blindness",
+      "3D structural priors",
+      "physical laws",
+      "video diffusion model",
+      "latent world simulator",
+      "spatiotemporal features",
+      "token-level adaptive gated fusion",
+      "generative priors",
+      "embodied manipulation"
+    ],
+    "category": "World Models / 世界模型"
+  },
+  {
+    "id": "2603.19199",
+    "title": "FASTER: Rethinking Real-Time Flow VLAs",
+    "summary": "Real-time execution is crucial for deploying Vision-Language-Action (VLA) models in the physical world. Existing asynchronous inference methods primarily optimize trajectory smoothness, but neglect the critical latency in reacting to environmental changes. By rethinking the notion of reaction in action chunking policies, this paper presents a systematic analysis of the factors governing reaction time. We show that reaction time follows a uniform distribution determined jointly by the Time to First Action (TTFA) and the execution horizon. Moreover, we reveal that the standard practice of applying a constant schedule in flow-based VLAs can be inefficient and forces the system to complete all sampling steps before any movement can start, forming the bottleneck in reaction latency. To overcome this issue, we propose Fast Action Sampling for ImmediaTE Reaction (FASTER). By introducing a Horizon-Aware Schedule, FASTER adaptively prioritizes near-term actions during flow sampling, compressing the denoising of the immediate reaction by tenfold (e.g., in π_{0.5} and X-VLA) into a single step, while preserving the quality of long-horizon trajectory. Coupled with a streaming client-server pipeline, FASTER substantially reduces the effective reaction latency on real robots, especially when deployed on consumer-grade GPUs. Real-world experiments, including a highly dynamic table tennis task, prove that FASTER unlocks unprecedented real-time responsiveness for generalist policies, enabling rapid generation of accurate and smooth trajectories.",
+    "upvotes": 31,
+    "projectPage": "https://innovator-zero.github.io/FASTER",
+    "ai_keywords": [
+      "Vision-Language-Action models",
+      "action chunking policies",
+      "reaction time",
+      "Time to First Action",
+      "execution horizon",
+      "flow-based VLA",
+      "denoising",
+      "streaming client-server pipeline",
+      "real-time responsiveness",
+      "trajectory smoothness"
+    ],
+    "category": "Embodied / Physical AI"
+  },
+  {
+    "id": "2603.19228",
+    "title": "SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing",
+    "summary": "Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editing into semantic anchoring and motion modeling. First, we introduce Semantic Anchoring, which establishes a reliable visual anchor by jointly predicting semantic tokens and video latents at sparse anchor frames, enabling purely instruction-aware structural planning. Second, Motion Alignment pre-trains the same backbone on motion-centric video restoration pretext tasks (cube inpainting, speed perturbation, and tube shuffle), enabling the model to internalize temporal dynamics directly from raw videos. SAMA is optimized with a two-stage pipeline: a factorized pre-training stage that learns inherent semantic-motion representations without paired video-instruction editing data, followed by supervised fine-tuning on paired editing data. Remarkably, the factorized pre-training alone already yields strong zero-shot video editing ability, validating the proposed factorization. SAMA achieves state-of-the-art performance among open-source models and is competitive with leading commercial systems (e.g., Kling-Omni). Code, models, and datasets will be released.",
+    "upvotes": 20,
+    "projectPage": "https://cynthiazxy123.github.io/SAMA/",
+    "ai_keywords": [
+      "semantic anchoring",
+      "motion alignment",
+      "video editing",
+      "semantic tokens",
+      "video latents",
+      "sparse anchor frames",
+      "motion-centric video restoration",
+      "cube inpainting",
+      "speed perturbation",
+      "tube shuffle",
+      "factorized pre-training",
+      "supervised fine-tuning",
+      "zero-shot video editing"
+    ],
+    "category": "多模态基础模型"
+  },
+  {
+    "id": "2603.19223",
+    "title": "F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World",
+    "summary": "We present F2LLM-v2, a new family of general-purpose, multilingual embedding models in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of 60 million publicly available high-quality data samples, F2LLM-v2 supports more than 200 languages, with a particular emphasis on previously underserved mid- and low-resource languages. By integrating a two-stage LLM-based embedding training pipeline with matryoshka learning, model pruning, and knowledge distillation techniques, we present models that are far more efficient than previous LLM-based embedding models while retaining competitive performances. Extensive evaluations confirm that F2LLM-v2-14B ranks first on 11 MTEB benchmarks, while the smaller models in the family also set a new state of the art for resource-constrained applications. To facilitate open-source embedding model research, we release all models, data, code, and intermediate checkpoints.",
+    "upvotes": 18,
+    "projectPage": "https://huggingface.co/collections/codefuse-ai/f2llm",
+    "ai_keywords": [
+      "multilingual embedding models",
+      "LLM-based embedding training",
+      "matryoshka learning",
+      "model pruning",
+      "knowledge distillation",
+      "MTEB benchmarks"
+    ]
+  },
+  {
+    "id": "2603.18743",
+    "title": "Memento-Skills: Let Agents Design Agents",
+    "summary": "We introduce Memento-Skills, a generalist, continually-learnable LLM agent system that functions as an agent-designing agent: it autonomously constructs, adapts, and improves task-specific agents through experience. The system is built on a memory-based reinforcement learning framework with stateful prompts, where reusable skills (stored as structured markdown files) serve as persistent, evolving memory. These skills encode both behaviour and context, enabling the agent to carry forward knowledge across interactions.\n  Starting from simple elementary skills (like Web search and terminal operations), the agent continually improves via the Read--Write Reflective Learning mechanism introduced in Memento~2~wang2025memento2. In the read phase, a behaviour-trainable skill router selects the most relevant skill conditioned on the current stateful prompt; in the write phase, the agent updates and expands its skill library based on new experience. This closed-loop design enables continual learning without updating LLM parameters, as all adaptation is realised through the evolution of externalised skills and prompts.\n  Unlike prior approaches that rely on human-designed agents, Memento-Skills enables a generalist agent to design agents end-to-end for new tasks. Through iterative skill generation and refinement, the system progressively improves its own capabilities. Experiments on the General AI Assistants benchmark and Humanity's Last Exam demonstrate sustained gains, achieving 26.2\\% and 116.2\\% relative improvements in overall accuracy, respectively. Code is available at https://github.com/Memento-Teams/Memento-Skills.",
+    "upvotes": 17,
+    "projectPage": "https://memento.run/",
+    "ai_keywords": [
+      "LLM agent system",
+      "memory-based reinforcement learning",
+      "stateful prompts",
+      "skill router",
+      "Read--Write Reflective Learning",
+      "continual learning",
+      "agent-designing agent",
+      "skill library",
+      "behavior-trainable skill router",
+      "externalised skills"
+    ]
+  },
+  {
+    "id": "2603.19232",
+    "title": "Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens",
+    "summary": "Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fundamental challenges. In this paper, we present Cubic Discrete Diffusion (CubiD), the first discrete generation model for high-dimensional representations. CubiD performs fine-grained masking throughout the high-dimensional discrete representation -- any dimension at any position can be masked and predicted from partial observations. This enables the model to learn rich correlations both within and across spatial positions, with the number of generation steps fixed at T regardless of feature dimensionality, where T ll hwd. On ImageNet-256, CubiD achieves state-of-the-art discrete generation with strong scaling behavior from 900M to 3.7B parameters. Crucially, we validate that these discretized tokens preserve original representation capabilities, demonstrating that the same discrete tokens can effectively serve both understanding and generation tasks. We hope this work will inspire future research toward unified multimodal architectures. Code is available at: https://github.com/YuqingWang1029/CubiD.",
+    "upvotes": 14,
+    "projectPage": null,
+    "ai_keywords": [
+      "discrete generation",
+      "high-dimensional representations",
+      "fine-grained masking",
+      "spatial positions",
+      "generation steps",
+      "discrete diffusion",
+      "token prediction",
+      "multimodal architectures",
+      "pretrained representations",
+      "visual generation"
+    ]
+  },
+  {
+    "id": "2603.19217",
+    "title": "LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs",
+    "summary": "Recent advancements in omnimodal large language models (OmniLLMs) have significantly improved the comprehension of audio and video inputs. However, current evaluations primarily focus on short audio and video clips ranging from 10 seconds to 5 minutes, failing to reflect the demands of real-world applications, where videos typically run for tens of minutes. To address this critical gap, we introduce LVOmniBench, a new benchmark designed specifically for the cross-modal comprehension of long-form audio and video. This dataset comprises high-quality videos sourced from open platforms that feature rich audio-visual dynamics. Through rigorous manual selection and annotation, LVOmniBench comprises 275 videos, ranging in duration from 10 to 90 minutes, and 1,014 question-answer (QA) pairs. LVOmniBench aims to rigorously evaluate the capabilities of OmniLLMs across domains, including long-term memory, temporal localization, fine-grained understanding, and multimodal perception. Our extensive evaluation reveals that current OmniLLMs encounter significant challenges when processing extended audio-visual inputs. Open-source models generally achieve accuracies below 35%, whereas the Gemini 3 Pro reaches a peak accuracy of approximately 65%. We anticipate that this dataset, along with our empirical findings, will stimulate further research and the development of advanced models capable of resolving complex cross-modal understanding problems within long-form audio-visual contexts.",
+    "upvotes": 10,
+    "projectPage": "https://kd-tao.github.io/LVOmniBench/",
+    "ai_keywords": [
+      "omnimodal large language models",
+      "cross-modal comprehension",
+      "long-form audio-visual inputs",
+      "multimodal perception",
+      "temporal localization",
+      "fine-grained understanding",
+      "long-term memory"
+    ]
+  },
+  {
+    "id": "2603.19220",
+    "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+    "summary": "We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICPC World Finals, demonstrating remarkably high intelligence density with 20x fewer parameters. In contrast to Nemotron-Cascade 1, the key technical advancements are as follows. After SFT on a meticulously curated dataset, we substantially expand Cascade RL to cover a much broader spectrum of reasoning and agentic domains. Furthermore, we introduce multi-domain on-policy distillation from the strongest intermediate teacher models for each domain throughout the Cascade RL process, allowing us to efficiently recover benchmark regressions and sustain strong performance gains along the way. We release the collection of model checkpoint and training data.",
+    "upvotes": 7,
+    "projectPage": null,
+    "ai_keywords": [
+      "Mixture-of-Experts",
+      "reasoning",
+      "agentic capabilities",
+      "mathematical reasoning",
+      "coding reasoning",
+      "Cascade RL",
+      "on-policy distillation",
+      "intermediate teacher models"
+    ]
+  },
+  {
+    "id": "2603.11804",
+    "title": "OSM-based Domain Adaptation for Remote Sensing VLMs",
+    "summary": "Vision-Language Models (VLMs) adapted to remote sensing rely heavily on domain-specific image-text supervision, yet high-quality annotations for satellite and aerial imagery remain scarce and expensive to produce. Prevailing pseudo-labeling pipelines address this gap by distilling knowledge from large frontier models, but this dependence on large teachers is costly, limits scalability, and caps achievable performance at the ceiling of the teacher. We propose OSMDA: a self-contained domain adaptation framework that eliminates this dependency. Our key insight is that a capable base VLM can serve as its own annotation engine: by pairing aerial images with rendered OpenStreetMap (OSM) tiles, we leverage optical character recognition and chart comprehension capabilities of the model to generate captions enriched by OSM's vast auxiliary metadata. The model is then fine-tuned on the resulting corpus with satellite imagery alone, yielding OSMDA-VLM, a domain-adapted VLM that requires no manual labeling and no stronger external model. We conduct exhaustive evaluations spanning 10 benchmarks across image-text-to-text tasks and comparing against 9 competitive baselines. When equally mixed with real data, our method achieves state-of-the-art results, while being substantially cheaper to train than teacher-dependent alternatives. These results suggest that, given a strong foundation model, alignment with crowd-sourced geographic data is a practical and scalable path towards remote sensing domain adaptation. Dataset and model weights will be made publicly available.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "Vision-Language Models",
+      "domain adaptation",
+      "pseudo-labeling",
+      "frontier models",
+      "OpenStreetMap",
+      "optical character recognition",
+      "caption generation",
+      "fine-tuning",
+      "satellite imagery",
+      "aerial images"
+    ]
+  },
+  {
+    "id": "2603.18815",
+    "title": "ProRL Agent: Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents",
+    "summary": "Multi-turn LLM agents are increasingly important for solving complex, interactive tasks, and reinforcement learning (RL) is a key ingredient for improving their long-horizon behavior. However, RL training requires generating large numbers of sandboxed rollout trajectories, and existing infrastructures often couple rollout orchestration with the training loop, making systems hard to migrate and maintain. Under the rollout-as-a-service philosophy, we present ProRL Agent , a scalable infrastructure that serves the full agentic rollout lifecycle through an API service. ProRL Agent also provides standardized and extensible sandbox environments that support diverse agentic tasks in rootless HPC settings. We validate ProRL Agent through RL training on software engineering, math, STEM, and coding tasks. ProRL Agent is open-sourced and integrated as part of NVIDIA NeMo Gym.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "multi-turn LLM agents",
+      "reinforcement learning",
+      "rollout trajectories",
+      "sandboxed rollout trajectories",
+      "agentic rollout lifecycle",
+      "API service",
+      "sandbox environments",
+      "rootless HPC settings",
+      "software engineering",
+      "math",
+      "STEM",
+      "coding tasks"
+    ]
+  },
+  {
+    "id": "2603.16929",
+    "title": "MHPO: Modulated Hazard-aware Policy Optimization for Stable Reinforcement Learning",
+    "summary": "Regulating the importance ratio is critical for the training stability of Group Relative Policy Optimization (GRPO) based frameworks. However, prevailing ratio control methods, such as hard clipping, suffer from non-differentiable boundaries and vanishing gradient regions, failing to maintain gradient fidelity. Furthermore, these methods lack a hazard-aware mechanism to adaptively suppress extreme deviations, leaving the optimization process vulnerable to abrupt policy shifts. To address these challenges, we propose Modulated Hazard-aware Policy Optimization (MHPO), a novel framework designed for robust and stable reinforcement learning. The proposed MHPO introduces a Log-Fidelity Modulator (LFM) to map unbounded importance ratios into a bounded, differentiable domain. This mechanism effectively prevents high-variance outlier tokens from destabilizing the loss landscape while ensuring global gradient stability. Complementarily, a Decoupled Hazard Penalty (DHP) integrates cumulative hazard functions from survival analysis to independently regulate positive and negative policy shifts. By shaping the optimization landscape with hazard-aware penalties, the proposed MHPO achieves fine-grained regulation of asymmetric policy shifts simultaneously mitigating mode collapse from over-expansion and preventing policy erosion from catastrophic contraction within a stabilized trust region. Extensive evaluations on diverse reasoning benchmarks across both text-based and vision-language tasks demonstrate that MHPO consistently outperforms existing methods, achieving superior performance while significantly enhancing training stability.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "Group Relative Policy Optimization",
+      "importance ratio",
+      "hard clipping",
+      "gradient fidelity",
+      "policy optimization",
+      "Log-Fidelity Modulator",
+      "Decoupled Hazard Penalty",
+      "cumulative hazard functions",
+      "policy shifts",
+      "trust region",
+      "mode collapse",
+      "policy erosion"
+    ]
+  },
+  {
+    "id": "2603.19234",
+    "title": "Matryoshka Gaussian Splatting",
+    "summary": "The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that enables continuous LoD for standard 3DGS pipelines without sacrificing full-capacity rendering quality. MGS learns a single ordered set of Gaussians such that rendering any prefix, the first k splats, produces a coherent reconstruction whose fidelity improves smoothly with increasing budget. Our key idea is stochastic budget training: each iteration samples a random splat budget and optimises both the corresponding prefix and the full set. This strategy requires only two forward passes and introduces no architectural modifications. Experiments across four benchmarks and six baselines show that MGS matches the full-capacity performance of its backbone while enabling a continuous speed-quality trade-off from a single model. Extensive ablations on ordering strategies, training objectives, and model capacity further validate the designs.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "3D Gaussian Splatting",
+      "level of detail",
+      "continuous LoD",
+      "stochastic budget training",
+      "Gaussian splatting",
+      "rendering quality",
+      "speed-quality trade-off"
+    ]
+  },
+  {
+    "id": "2603.18886",
+    "title": "Reasoning over mathematical objects: on-policy reward modeling and test time aggregation",
+    "summary": "The ability to precisely derive mathematical objects is a core requirement for downstream STEM applications, including mathematics, physics, and chemistry, where reasoning must culminate in formally structured expressions. Yet, current LM evaluations of mathematical and scientific reasoning rely heavily on simplified answer formats such as numerical values or multiple choice options due to the convenience of automated assessment. In this paper we provide three contributions for improving reasoning over mathematical objects: (i) we build and release training data and benchmarks for deriving mathematical objects, the Principia suite; (ii) we provide training recipes with strong LLM-judges and verifiers, where we show that on-policy judge training boosts performance; (iii) we show how on-policy training can also be used to scale test-time compute via aggregation. We find that strong LMs such as Qwen3-235B and o3 struggle on Principia, while our training recipes can bring significant improvements over different LLM backbones, while simultaneously improving results on existing numerical and MCQA tasks, demonstrating cross-format generalization of reasoning abilities.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "mathematical objects",
+      "LLM-judges",
+      "verifiers",
+      "on-policy training",
+      "test-time compute",
+      "cross-format generalization"
+    ]
+  },
+  {
+    "id": "2603.13395",
+    "title": "COT-FM: Cluster-wise Optimal Transport Flow Matching",
+    "summary": "We introduce COT-FM, a general framework that reshapes the probability path in Flow Matching (FM) to achieve faster and more reliable generation. FM models often produce curved trajectories due to random or batchwise couplings, which increase discretization error and reduce sample quality. COT-FM fixes this by clustering target samples and assigning each cluster a dedicated source distribution obtained by reversing pretrained FM models. This divide-and-conquer strategy yields more accurate local transport and significantly straighter vector fields, all without changing the model architecture. As a plug-and-play approach, COT-FM consistently accelerates sampling and improves generation quality across 2D datasets, image generation benchmarks, and robotic manipulation tasks.",
+    "upvotes": null,
+    "projectPage": "https://embodiedai-ntu.github.io/cotfm/",
+    "ai_keywords": [
+      "Flow Matching",
+      "probability path",
+      "discretization error",
+      "vector fields",
+      "clustering",
+      "source distribution",
+      "transport",
+      "sampling",
+      "generation quality"
+    ]
+  }
+]

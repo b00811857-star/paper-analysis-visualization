@@ -1,0 +1,184 @@
+[
+  {
+    "id": "2603.25040",
+    "title": "Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Scale",
+    "summary": "We introduce Intern-S1-Pro, the first one-trillion-parameter scientific multimodal foundation model. Scaling to this unprecedented size, the model delivers a comprehensive enhancement across both general and scientific domains. Beyond stronger reasoning and image-text understanding capabilities, its intelligence is augmented with advanced agent capabilities. Simultaneously, its scientific expertise has been vastly expanded to master over 100 specialized tasks across critical science fields, including chemistry, materials, life sciences, and earth sciences. Achieving this massive scale is made possible by the robust infrastructure support of XTuner and LMDeploy, which facilitates highly efficient Reinforcement Learning (RL) training at the 1-trillion parameter level while ensuring strict precision consistency between training and inference. By seamlessly integrating these advancements, Intern-S1-Pro further fortifies the fusion of general and specialized intelligence, working as a Specializable Generalist, demonstrating its position in the top tier of open-source models for general capabilities, while outperforming proprietary models in the depth of specialized scientific tasks.",
+    "upvotes": 37,
+    "projectPage": null,
+    "ai_keywords": [
+      "multimodal foundation model",
+      "reinforcement learning",
+      "parameter-efficient fine-tuning",
+      "scientific expertise",
+      "specialized tasks",
+      "general intelligence",
+      "specialized intelligence",
+      "training infrastructure",
+      "inference precision"
+    ],
+    "category": "多模态基础模型"
+  },
+  {
+    "id": "2603.25319",
+    "title": "MACRO: Advancing Multi-Reference Image Generation with Structured Long-Context Data",
+    "summary": "Generating images conditioned on multiple visual references is critical for real-world applications such as multi-subject composition, narrative illustration, and novel view synthesis, yet current models suffer from severe performance degradation as the number of input references grows. We identify the root cause as a fundamental data bottleneck: existing datasets are dominated by single- or few-reference pairs and lack the structured, long-context supervision needed to learn dense inter-reference dependencies. To address this, we introduce MacroData, a large-scale dataset of 400K samples, each containing up to 10 reference images, systematically organized across four complementary dimensions -- Customization, Illustration, Spatial reasoning, and Temporal dynamics -- to provide comprehensive coverage of the multi-reference generation space. Recognizing the concurrent absence of standardized evaluation protocols, we further propose MacroBench, a benchmark of 4,000 samples that assesses generative coherence across graded task dimensions and input scales. Extensive experiments show that fine-tuning on MacroData yields substantial improvements in multi-reference generation, and ablation studies further reveal synergistic benefits of cross-task co-training and effective strategies for handling long-context complexity. The dataset and benchmark will be publicly released.",
+    "upvotes": 13,
+    "projectPage": "https://macro400k.github.io/",
+    "ai_keywords": [
+      "multi-reference generation",
+      "long-context supervision",
+      "generative coherence",
+      "cross-task co-training"
+    ],
+    "category": "评测、环境与真实任务基准"
+  },
+  {
+    "id": "2603.24755",
+    "title": "SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks",
+    "summary": "Software development is iterative, yet agentic coding benchmarks overwhelmingly evaluate single-shot solutions against complete specifications. Code can pass the test suite but become progressively harder to extend. Recent iterative benchmarks attempt to close this gap, but constrain the agent's design decisions too tightly to faithfully measure how code quality shapes future extensions. We introduce SlopCodeBench, a language-agnostic benchmark comprising 20 problems and 93 checkpoints, in which agents repeatedly extend their own prior solutions under evolving specifications that force architectural decisions without prescribing internal structure. We track two trajectory-level quality signals: verbosity, the fraction of redundant or duplicated code, and structural erosion, the share of complexity mass concentrated in high-complexity functions. No agent solves any problem end-to-end across 11 models; the highest checkpoint solve rate is 17.2%. Quality degrades steadily: erosion rises in 80% of trajectories and verbosity in 89.8%. Against 48 open-source Python repositories, agent code is 2.2x more verbose and markedly more eroded. Tracking 20 of those repositories over time shows that human code stays flat, while agent code deteriorates with each iteration. A prompt-intervention study shows that initial quality can be improved, but it does not halt degradation. These results demonstrate that pass-rate benchmarks systematically undermeasure extension robustness, and that current agents lack the design discipline iterative software development demands.",
+    "upvotes": 7,
+    "projectPage": "https://www.scbench.ai",
+    "ai_keywords": [
+      "agentic coding benchmarks",
+      "iterative software development",
+      "code quality",
+      "extension robustness",
+      "SlopCodeBench",
+      "trajectory-level quality signals",
+      "verbosity",
+      "structural erosion",
+      "code deterioration",
+      "prompt-intervention study"
+    ],
+    "category": "评测、环境与真实任务基准"
+  },
+  {
+    "id": "2603.23516",
+    "title": "MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling to 100M Tokens",
+    "summary": "Long-term memory is a cornerstone of human intelligence. Enabling AI to process lifetime-scale information remains a long-standing pursuit in\n  the field. Due to the constraints of full-attention architectures, the effective context length of large language models (LLMs) is typically\n  limited to 1M tokens. Existing approaches, such as hybrid linear attention, fixed-size memory states (e.g., RNNs), and external storage\n  methods like RAG or agent systems, attempt to extend this limit. However, they often suffer from severe precision degradation and rapidly\n  increasing latency as context length grows, an inability to dynamically modify memory content, or a lack of end-to-end optimization. These\n  bottlenecks impede complex scenarios like large-corpus summarization, Digital Twins, and long-history agent reasoning, while limiting memory\n  capacity and slowing inference. We present Memory Sparse Attention (MSA), an end-to-end trainable, efficient, and massively scalable memory\n  model framework. Through core innovations including scalable sparse attention and document-wise RoPE, MSA achieves linear complexity in both\n  training and inference while maintaining exceptional stability, exhibiting less than 9% degradation when scaling from 16K to 100M tokens.\n  Furthermore, KV cache compression, combined with Memory Parallel, enables 100M-token inference on 2xA800 GPUs. We also propose Memory\n  Interleaving to facilitate complex multi-hop reasoning across scattered memory segments. MSA significantly surpasses frontier LLMs,\n  state-of-the-art RAG systems, and leading memory agents in long-context benchmarks. These results demonstrate that by decoupling memory\n  capacity from reasoning, MSA provides a scalable foundation to endow general-purpose models with intrinsic, lifetime-scale memory.",
+    "upvotes": 6,
+    "projectPage": "https://evermind.ai/blogs/breaking-the-100m-token-limit-msa-architecture-achieves-efficient-end-to-end-long-term-memory-for-llms",
+    "ai_keywords": [
+      "long-term memory",
+      "large language models",
+      "attention mechanisms",
+      "sparse attention",
+      "RoPE",
+      "KV cache compression",
+      "Memory Parallel",
+      "Memory Interleaving",
+      "long-context benchmarks"
+    ]
+  },
+  {
+    "id": "2603.25744",
+    "title": "MuRF: Unlocking the Multi-Scale Potential of Vision Foundation Models",
+    "summary": "Vision Foundation Models (VFMs) have become the cornerstone of modern computer vision, offering robust representations across a wide array of tasks. While recent advances allow these models to handle varying input sizes during training, inference typically remains restricted to a single, fixed scale. This prevalent single-scale paradigm overlooks a fundamental property of visual perception: varying resolutions offer complementary inductive biases, where low-resolution views excel at global semantic recognition and high-resolution views are essential for fine-grained refinement. In this work, we propose Multi-Resolution Fusion (MuRF), a simple yet universally effective strategy to harness this synergy at inference time. Instead of relying on a single view, MuRF constructs a unified representation by processing an image at multiple resolutions through a frozen VFM and fusing the resulting features. The universality of MuRF is its most compelling attribute. It is not tied to a specific architecture, serving instead as a fundamental, training-free enhancement to visual representation. We empirically validate this by applying MuRF to a broad spectrum of critical computer vision tasks across multiple distinct VFM families - primarily DINOv2, but also demonstrating successful generalization to contrastive models like SigLIP2.",
+    "upvotes": 3,
+    "projectPage": "https://MuRF-VFM.github.io",
+    "ai_keywords": [
+      "Vision Foundation Models",
+      "multi-resolution fusion",
+      "visual perception",
+      "inductive biases",
+      "DINOv2",
+      "SigLIP2"
+    ]
+  },
+  {
+    "id": "2603.25551",
+    "title": "Voxtral TTS",
+    "summary": "We introduce Voxtral TTS, an expressive multilingual text-to-speech model that generates natural speech from as little as 3 seconds of reference audio. Voxtral TTS adopts a hybrid architecture that combines auto-regressive generation of semantic speech tokens with flow-matching for acoustic tokens. These tokens are encoded and decoded with Voxtral Codec, a speech tokenizer trained from scratch with a hybrid VQ-FSQ quantization scheme. In human evaluations conducted by native speakers, Voxtral TTS is preferred for multilingual voice cloning due to its naturalness and expressivity, achieving a 68.4\\% win rate over ElevenLabs Flash v2.5. We release the model weights under a CC BY-NC license.",
+    "upvotes": 3,
+    "projectPage": "https://mistral.ai/news/voxtral-tts",
+    "ai_keywords": [
+      "text-to-speech",
+      "auto-regressive generation",
+      "semantic speech tokens",
+      "flow-matching",
+      "acoustic tokens",
+      "speech tokenizer",
+      "VQ-FSQ quantization scheme",
+      "voice cloning"
+    ]
+  },
+  {
+    "id": "2603.23883",
+    "title": "BioVITA: Biological Dataset, Model, and Benchmark for Visual-Textual-Acoustic Alignment",
+    "summary": "Understanding animal species from multimodal data poses an emerging challenge at the intersection of computer vision and ecology. While recent biological models, such as BioCLIP, have demonstrated strong alignment between images and textual taxonomic information for species identification, the integration of the audio modality remains an open problem. We propose BioVITA, a novel visual-textual-acoustic alignment framework for biological applications. BioVITA involves (i) a training dataset, (ii) a representation model, and (iii) a retrieval benchmark. First, we construct a large-scale training dataset comprising 1.3 million audio clips and 2.3 million images, covering 14,133 species annotated with 34 ecological trait labels. Second, building upon BioCLIP2, we introduce a two-stage training framework to effectively align audio representations with visual and textual representations. Third, we develop a cross-modal retrieval benchmark that covers all possible directional retrieval across the three modalities (i.e., image-to-audio, audio-to-text, text-to-image, and their reverse directions), with three taxonomic levels: Family, Genus, and Species. Extensive experiments demonstrate that our model learns a unified representation space that captures species-level semantics beyond taxonomy, advancing multimodal biodiversity understanding. The project page is available at: https://dahlian00.github.io/BioVITA_Page/",
+    "upvotes": 2,
+    "projectPage": "https://dahlian00.github.io/BioVITA_Page/",
+    "ai_keywords": [
+      "BioCLIP2",
+      "cross-modal retrieval",
+      "unified representation space",
+      "multimodal biodiversity understanding"
+    ]
+  },
+  {
+    "id": "2603.25745",
+    "title": "Less Gaussians, Texture More: 4K Feed-Forward Textured Splatting",
+    "summary": "Existing feed-forward 3D Gaussian Splatting methods predict pixel-aligned primitives, leading to a quadratic growth in primitive count as resolution increases. This fundamentally limits their scalability, making high-resolution synthesis such as 4K intractable. We introduce LGTM (Less Gaussians, Texture More), a feed-forward framework that overcomes this resolution scaling barrier. By predicting compact Gaussian primitives coupled with per-primitive textures, LGTM decouples geometric complexity from rendering resolution. This approach enables high-fidelity 4K novel view synthesis without per-scene optimization, a capability previously out of reach for feed-forward methods, all while using significantly fewer Gaussian primitives. Project page: https://yxlao.github.io/lgtm/",
+    "upvotes": 1,
+    "projectPage": "https://yxlao.github.io/lgtm/",
+    "ai_keywords": [
+      "3D Gaussian Splatting",
+      "feed-forward",
+      "novel view synthesis",
+      "Gaussian primitives",
+      "per-primitive textures",
+      "rendering resolution",
+      "scalability"
+    ]
+  },
+  {
+    "id": "2603.24943",
+    "title": "FinMCP-Bench: Benchmarking LLM Agents for Real-World Financial Tool Use under the Model Context Protocol",
+    "summary": "This paper introduces FinMCP-Bench, a novel benchmark for evaluating large language models (LLMs) in solving real-world financial problems through tool invocation of financial model context protocols. FinMCP-Bench contains 613 samples spanning 10 main scenarios and 33 sub-scenarios, featuring both real and synthetic user queries to ensure diversity and authenticity. It incorporates 65 real financial MCPs and three types of samples, single tool, multi-tool, and multi-turn, allowing evaluation of models across different levels of task complexity. Using this benchmark, we systematically assess a range of mainstream LLMs and propose metrics that explicitly measure tool invocation accuracy and reasoning capabilities. FinMCP-Bench provides a standardized, practical, and challenging testbed for advancing research on financial LLM agents.",
+    "upvotes": 1,
+    "projectPage": "https://github.com/aliyun/qwen-dianjin",
+    "ai_keywords": [
+      "large language models",
+      "tool invocation",
+      "financial model context protocols",
+      "benchmark",
+      "financial LLM agents"
+    ]
+  },
+  {
+    "id": "2603.25741",
+    "title": "Vega: Learning to Drive with Natural Language Instructions",
+    "summary": "Vision-language-action models have reshaped autonomous driving to incorporate languages into the decision-making process. However, most existing pipelines only utilize the language modality for scene descriptions or reasoning and lack the flexibility to follow diverse user instructions for personalized driving. To address this, we first construct a large-scale driving dataset (InstructScene) containing around 100,000 scenes annotated with diverse driving instructions with the corresponding trajectories. We then propose a unified Vision-Language-World-Action model, Vega, for instruction-based generation and planning. We employ the autoregressive paradigm to process visual inputs (vision) and language instructions (language) and the diffusion paradigm to generate future predictions (world modeling) and trajectories (action). We perform joint attention to enable interactions between the modalities and use individual projection layers for different modalities for more capabilities. Extensive experiments demonstrate that our method not only achieves superior planning performance but also exhibits strong instruction-following abilities, paving the way for more intelligent and personalized driving systems.",
+    "upvotes": null,
+    "projectPage": "https://zuosc19.github.io/Vega/",
+    "ai_keywords": [
+      "vision-language-action models",
+      "autoregressive paradigm",
+      "diffusion paradigm",
+      "joint attention",
+      "individual projection layers",
+      "instruction-based generation",
+      "world modeling",
+      "trajectory generation"
+    ]
+  },
+  {
+    "id": "2603.21768",
+    "title": "Extending Precipitation Nowcasting Horizons via Spectral Fusion of Radar Observations and Foundation Model Priors",
+    "summary": "Precipitation nowcasting is critical for disaster mitigation and aviation safety. However, radar-only models frequently suffer from a lack of large-scale atmospheric context, leading to performance degradation at longer lead times. While integrating meteorological variables predicted by weather foundation models offers a potential remedy, existing architectures fail to reconcile the profound representational heterogeneities between radar imagery and meteorological data. To bridge this gap, we propose PW-FouCast, a novel frequency-domain fusion framework that leverages Pangu-Weather forecasts as spectral priors within a Fourier-based backbone. Our architecture introduces three key innovations: (i) Pangu-Weather-guided Frequency Modulation to align spectral magnitudes and phases with meteorological priors; (ii) Frequency Memory to correct phase discrepancies and preserve temporal evolution; and (iii) Inverted Frequency Attention to reconstruct high-frequency details typically lost in spectral filtering. Extensive experiments on the SEVIR and MeteoNet benchmarks demonstrate that PW-FouCast achieves state-of-the-art performance, effectively extending the reliable forecast horizon while maintaining structural fidelity. Our code is available at https://github.com/Onemissed/PW-FouCast.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "frequency-domain fusion",
+      "Fourier-based backbone",
+      "spectral priors",
+      "Pangu-Weather",
+      "frequency modulation",
+      "frequency memory",
+      "inverted frequency attention",
+      "precipitation nowcasting",
+      "radar imagery",
+      "meteorological variables"
+    ]
+  }
+]

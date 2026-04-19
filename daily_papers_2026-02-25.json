@@ -1,0 +1,198 @@
+[
+  {
+    "id": "2602.21193",
+    "title": "On Data Engineering for Scaling LLM Terminal Capabilities",
+    "summary": "Despite rapid recent progress in the terminal capabilities of large language models, the training data strategies behind state-of-the-art terminal agents remain largely undisclosed. We address this gap through a systematic study of data engineering practices for terminal agents, making two key contributions: (1) Terminal-Task-Gen, a lightweight synthetic task generation pipeline that supports seed-based and skill-based task construction, and (2) a comprehensive analysis of data and training strategies, including filtering, curriculum learning, long context training, and scaling behavior. Our pipeline yields Terminal-Corpus, a large-scale open-source dataset for terminal tasks. Using this dataset, we train Nemotron-Terminal, a family of models initialized from Qwen3(8B, 14B, 32B) that achieve substantial gains on Terminal-Bench 2.0: Nemotron-Terminal-8B improves from 2.5% to 13.0% Nemotron-Terminal-14B improves from 4.0% to 20.2%, and Nemotron-Terminal-32B improves from 3.4% to 27.4%, matching the performance of significantly larger models. To accelerate research in this domain, we open-source our model checkpoints and most of our synthetic datasets at https://huggingface.co/collections/nvidia/nemotron-terminal.",
+    "upvotes": 12,
+    "projectPage": "https://huggingface.co/collections/nvidia/nemotron-terminal",
+    "ai_keywords": [
+      "large language models",
+      "terminal agents",
+      "data engineering practices",
+      "synthetic task generation",
+      "Terminal-Task-Gen",
+      "Terminal-Corpus",
+      "Nemotron-Terminal",
+      "Terminal-Bench 2.0",
+      "curriculum learning",
+      "long context training",
+      "scaling behavior"
+    ],
+    "category": "Agentic AI / 智能体"
+  },
+  {
+    "id": "2602.21015",
+    "title": "From Perception to Action: An Interactive Benchmark for Vision Reasoning",
+    "summary": "Understanding the physical structure is essential for real-world applications such as embodied agents, interactive design, and long-horizon manipulation. Yet, prevailing Vision-Language Model (VLM) evaluations still center on structure-agnostic, single-turn setups (e.g., VQA), which fail to assess agents' ability to reason about how geometry, contact, and support relations jointly constrain what actions are possible in a dynamic environment. To address this gap, we introduce the Causal Hierarchy of Actions and Interactions (CHAIN) benchmark, an interactive 3D, physics-driven testbed designed to evaluate whether models can understand, plan, and execute structured action sequences grounded in physical constraints. CHAIN shifts evaluation from passive perception to active problem solving, spanning tasks such as interlocking mechanical puzzles and 3D stacking and packing. We conduct a comprehensive study of state-of-the-art VLMs and diffusion-based models under unified interactive settings. Our results show that top-performing models still struggle to internalize physical structure and causal constraints, often failing to produce reliable long-horizon plans and cannot robustly translate perceived structure into effective actions. The project is available at https://social-ai-studio.github.io/CHAIN/.",
+    "upvotes": 12,
+    "projectPage": "https://social-ai-studio.github.io/CHAIN/",
+    "ai_keywords": [
+      "Vision-Language Model",
+      "diffusion-based models",
+      "physical constraints",
+      "causal constraints",
+      "interactive 3D",
+      "structured action sequences",
+      "long-horizon planning"
+    ],
+    "category": "评测、环境与真实任务基准"
+  },
+  {
+    "id": "2602.20739",
+    "title": "PyVision-RL: Forging Open Agentic Vision Models via RL",
+    "summary": "Reinforcement learning for agentic multimodal models often suffers from interaction collapse, where models learn to reduce tool usage and multi-turn reasoning, limiting the benefits of agentic behavior. We introduce PyVision-RL, a reinforcement learning framework for open-weight multimodal models that stabilizes training and sustains interaction. Our approach combines an oversampling-filtering-ranking rollout strategy with an accumulative tool reward to prevent collapse and encourage multi-turn tool use. Using a unified training pipeline, we develop PyVision-Image and PyVision-Video for image and video understanding. For video reasoning, PyVision-Video employs on-demand context construction, selectively sampling task-relevant frames during reasoning to significantly reduce visual token usage. Experiments show strong performance and improved efficiency, demonstrating that sustained interaction and on-demand visual processing are critical for scalable multimodal agents.",
+    "upvotes": 10,
+    "projectPage": "https://agent-x.space/pyvision-rl/",
+    "ai_keywords": [
+      "reinforcement learning",
+      "agentic multimodal models",
+      "interaction collapse",
+      "oversampling-filtering-ranking",
+      "accumulative tool reward",
+      "unified training pipeline",
+      "on-demand context construction",
+      "task-relevant frames",
+      "visual token usage"
+    ],
+    "category": "Agentic AI / 智能体"
+  },
+  {
+    "id": "2602.14337",
+    "title": "LongCLI-Bench: A Preliminary Benchmark and Study for Long-horizon Agentic Programming in Command-Line Interfaces",
+    "summary": "Recent advances in AI-assisted programming have empowered agents to execute complex workflows via command-line interfaces, however, existing benchmarks are limited by short task horizons, data contamination from GitHub scraping, and a lack of fine-grained evaluation metrics, fail to rigorously evaluate the long-horizon planning and execution capabilities essential for realistic software engineering. To address these gaps, we introduce LongCLI-Bench, a comprehensive benchmark designed to evaluate agentic capabilities across long-horizon, realistic tasks. We curated 20 high-quality, long-horizon tasks from over 1,000 computer science assignments and real-world workflows, covering four engineering categories: from scratch, feature addition, bug fixing, and refactoring. We propose a dual-set testing protocol for LongCLI-Bench, which measures requirement fulfillment (fail-to-pass) and regression avoidance (pass-to-pass), and incorporates step-level scoring to pinpoint execution failures. Extensive experiments reveal that even state-of-the-art agents achieve pass rates below 20% in LongCLI-Bench. Step-level analysis further indicates that the majority of tasks stall at less than 30% completion, highlighting that critical failures often occur in the early stages. Although self-correction offers marginal gains, human-agent collaboration through plan injection and interactive guidance yields significantly higher improvements. These results highlight that future research must emphasize the development of synergistic human-agent workflows alongside advances in agents' planning and execution capabilities to overcome key challenges in long-horizon task performance.",
+    "upvotes": 7,
+    "projectPage": "https://github.com/finyorko/longcli-bench",
+    "ai_keywords": [
+      "AI-assisted programming",
+      "command-line interfaces",
+      "long-horizon planning",
+      "agent evaluation",
+      "requirement fulfillment",
+      "regression avoidance",
+      "step-level scoring",
+      "self-correction",
+      "human-agent collaboration",
+      "plan injection",
+      "interactive guidance"
+    ]
+  },
+  {
+    "id": "2602.16990",
+    "title": "Conv-FinRe: A Conversational and Longitudinal Benchmark for Utility-Grounded Financial Recommendation",
+    "summary": "Most recommendation benchmarks evaluate how well a model imitates user behavior. In financial advisory, however, observed actions can be noisy or short-sighted under market volatility and may conflict with a user's long-term goals. Treating what users chose as the sole ground truth, therefore, conflates behavioral imitation with decision quality. We introduce Conv-FinRe, a conversational and longitudinal benchmark for stock recommendation that evaluates LLMs beyond behavior matching. Given an onboarding interview, step-wise market context, and advisory dialogues, models must generate rankings over a fixed investment horizon. Crucially, Conv-FinRe provides multi-view references that distinguish descriptive behavior from normative utility grounded in investor-specific risk preferences, enabling diagnosis of whether an LLM follows rational analysis, mimics user noise, or is driven by market momentum. We build the benchmark from real market data and human decision trajectories, instantiate controlled advisory conversations, and evaluate a suite of state-of-the-art LLMs. Results reveal a persistent tension between rational decision quality and behavioral alignment: models that perform well on utility-based ranking often fail to match user choices, whereas behaviorally aligned models can overfit short-term noise. The dataset is publicly released on Hugging Face, and the codebase is available on GitHub.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "recommendation benchmarks",
+      "large language models",
+      "financial advisory",
+      "behavioral imitation",
+      "decision quality",
+      "multi-view references",
+      "investor-specific risk preferences",
+      "rational analysis",
+      "market volatility",
+      "user behavior alignment"
+    ]
+  },
+  {
+    "id": "2602.21198",
+    "title": "Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs",
+    "summary": "Embodied LLMs endow robots with high-level task reasoning, but they cannot reflect on what went wrong or why, turning deployment into a sequence of independent trials where mistakes repeat rather than accumulate into experience. Drawing upon human reflective practitioners, we introduce Reflective Test-Time Planning, which integrates two modes of reflection: reflection-in-action, where the agent uses test-time scaling to generate and score multiple candidate actions using internal reflections before execution; and reflection-on-action, which uses test-time training to update both its internal reflection model and its action policy based on external reflections after execution. We also include retrospective reflection, allowing the agent to re-evaluate earlier decisions and perform model updates with hindsight for proper long-horizon credit assignment. Experiments on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting benchmark show significant gains over baseline models, with ablative studies validating the complementary roles of reflection-in-action and reflection-on-action. Qualitative analyses, including real-robot trials, highlight behavioral correction through reflection.",
+    "upvotes": 2,
+    "projectPage": "https://reflective-test-time-planning.github.io/",
+    "ai_keywords": [
+      "embodied LLMs",
+      "test-time planning",
+      "reflection-in-action",
+      "reflection-on-action",
+      "retrospective reflection",
+      "test-time scaling",
+      "test-time training",
+      "long-horizon task reasoning",
+      "behavioral correction"
+    ]
+  },
+  {
+    "id": "2602.16603",
+    "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving",
+    "summary": "The growing demand for large language models (LLMs) requires serving systems to handle many concurrent requests with diverse service level objectives (SLOs). This exacerbates head-of-line (HoL) blocking during the compute-intensive prefill phase, where long-running requests monopolize resources and delay higher-priority ones, leading to widespread time-to-first-token (TTFT) SLO violations. While chunked prefill enables interruptibility, it introduces an inherent trade-off between responsiveness and throughput: reducing chunk size improves response latency but degrades computational efficiency, whereas increasing chunk size maximizes throughput but exacerbates blocking. This necessitates an adaptive preemption mechanism. However, dynamically balancing execution granularity against scheduling overheads remains a key challenge.\n  In this paper, we propose FlowPrefill, a TTFT-goodput-optimized serving system that resolves this conflict by decoupling preemption granularity from scheduling frequency. To achieve adaptive prefill scheduling, FlowPrefill introduces two key innovations: 1) Operator-Level Preemption, which leverages operator boundaries to enable fine-grained execution interruption without the efficiency loss associated with fixed small chunking; and 2) Event-Driven Scheduling, which triggers scheduling decisions only upon request arrival or completion events, thereby supporting efficient preemption responsiveness while minimizing control-plane overhead. Evaluation on real-world production traces shows that FlowPrefill improves maximum goodput by up to 5.6times compared to state-of-the-art systems while satisfying heterogeneous SLOs.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language models",
+      "prefill phase",
+      "head-of-line blocking",
+      "time-to-first-token",
+      "preemption granularity",
+      "scheduling frequency",
+      "operator-level preemption",
+      "event-driven scheduling",
+      "goodput",
+      "service level objectives"
+    ]
+  },
+  {
+    "id": "2602.21201",
+    "title": "Aletheia tackles FirstProof autonomously",
+    "summary": "We report the performance of Aletheia (Feng et al., 2026b), a mathematics research agent powered by Gemini 3 Deep Think, on the inaugural FirstProof challenge. Within the allowed timeframe of the challenge, Aletheia autonomously solved 6 problems (2, 5, 7, 8, 9, 10) out of 10 according to majority expert assessments; we note that experts were not unanimous on Problem 8 (only). For full transparency, we explain our interpretation of FirstProof and disclose details about our experiments as well as our evaluation. Raw prompts and outputs are available at https://github.com/google-deepmind/superhuman/tree/main/aletheia.",
+    "upvotes": null,
+    "projectPage": "https://github.com/google-deepmind/superhuman/tree/main/aletheia",
+    "ai_keywords": []
+  },
+  {
+    "id": "2602.21185",
+    "title": "The Diffusion Duality, Chapter II: Ψ-Samplers and Efficient Curriculum",
+    "summary": "Uniform-state discrete diffusion models excel at few-step generation and guidance due to their ability to self-correct, making them preferred over autoregressive or Masked diffusion models in these settings. However, their sampling quality plateaus with ancestral samplers as the number of steps increases. We introduce a family of Predictor-Corrector (PC) samplers for discrete diffusion that generalize prior methods and apply to arbitrary noise processes. When paired with uniform-state diffusion, our samplers outperform ancestral sampling on both language and image modeling, achieving lower generative perplexity at matched unigram entropy on OpenWebText and better FID/IS scores on CIFAR10. Crucially, unlike conventional samplers, our PC methods continue to improve with more sampling steps. Taken together, these findings call into question the assumption that Masked diffusion is the inevitable future of diffusion-based language modeling. Beyond sampling, we develop a memory-efficient curriculum for the Gaussian relaxation training phase, reducing training time by 25% and memory by 33% compared to Duo while maintaining comparable perplexity on OpenWebText and LM1B and strong downstream performance. We release code, checkpoints, and a video-tutorial on: https://s-sahoo.com/duo-ch2",
+    "upvotes": null,
+    "projectPage": "https://s-sahoo.com/duo-ch2/",
+    "ai_keywords": [
+      "discrete diffusion models",
+      "predictor-corrector samplers",
+      "ancestral sampling",
+      "generative perplexity",
+      "unigram entropy",
+      "FID",
+      "IS scores",
+      "Gaussian relaxation",
+      "curriculum training",
+      "Masked diffusion"
+    ]
+  },
+  {
+    "id": "2602.20945",
+    "title": "The Art of Efficient Reasoning: Data, Reward, and Optimization",
+    "summary": "Large Language Models (LLMs) consistently benefit from scaled Chain-of-Thought (CoT) reasoning, but also suffer from heavy computational overhead. To address this issue, efficient reasoning aims to incentivize short yet accurate thinking trajectories, typically through reward shaping with Reinforcement Learning (RL). In this paper, we systematically investigate the mechanics of efficient reasoning for LLMs. For comprehensive evaluation, we advocate for more fine-grained metrics, including length distribution conditioned on correctness and performance across a wide spectrum of token budgets ranging from 2k to 32k. First, we reveal that the training process follows a two-stage paradigm: length adaptation and reasoning refinement. After that, we conduct extensive experiments (about 0.2 million GPU hours) in a unified protocol, deconstructing training prompts and rollouts, reward shaping, and optimization strategies. In particular, a key finding is to train on relatively easier prompts, ensuring the density of positive reward signals and thus avoiding the length collapse. Meanwhile, the learned length bias can be generalized across domains. We distill all findings into valuable insights and practical guidelines, and further validate them across the Qwen3 series, ranging from 0.6B to 30B, demonstrating the robustness and generalization.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "Chain-of-Thought",
+      "reinforcement learning",
+      "reward shaping",
+      "length adaptation",
+      "reasoning refinement",
+      "token budget",
+      "length collapse",
+      "generalization"
+    ]
+  },
+  {
+    "id": "2602.20424",
+    "title": "Implicit Intelligence -- Evaluating Agents on What Users Don't Say",
+    "summary": "Real-world requests to AI agents are fundamentally underspecified. Natural human communication relies on shared context and unstated constraints that speakers expect listeners to infer. Current agentic benchmarks test explicit instruction-following but fail to evaluate whether agents can reason about implicit requirements spanning accessibility needs, privacy boundaries, catastrophic risks, and contextual constraints. We present Implicit Intelligence, an evaluation framework testing whether AI agents can move beyond prompt-following to become genuine goal-fulfillers, paired with Agent-as-a-World (AaW), a harness where interactive worlds are defined in human-readable YAML files and simulated by language models. Our scenarios feature apparent simplicity in user requests, hidden complexity in correct solutions, and discoverability of constraints through environmental exploration. Evaluating 16 frontier and open-weight models across 205 scenarios, we find that even the best-performing model achieves only 48.3% scenario pass rate, revealing substantial room for improvement in bridging the gap between literal instruction-following and human-like contextual reasoning.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "AI agents",
+      "implicit requirements",
+      "contextual reasoning",
+      "instruction-following",
+      "evaluation framework",
+      "Agent-as-a-World",
+      "YAML files",
+      "language models",
+      "interactive worlds",
+      "scenario pass rate"
+    ]
+  }
+]

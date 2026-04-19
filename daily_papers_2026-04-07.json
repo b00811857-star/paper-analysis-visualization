@@ -1,0 +1,234 @@
+[
+  {
+    "id": "2604.04707",
+    "title": "OpenWorldLib: A Unified Codebase and Definition of Advanced World Models",
+    "summary": "World models have garnered significant attention as a promising research direction in artificial intelligence, yet a clear and unified definition remains lacking. In this paper, we introduce OpenWorldLib, a comprehensive and standardized inference framework for Advanced World Models. Drawing on the evolution of world models, we propose a clear definition: a world model is a model or framework centered on perception, equipped with interaction and long-term memory capabilities, for understanding and predicting the complex world. We further systematically categorize the essential capabilities of world models. Based on this definition, OpenWorldLib integrates models across different tasks within a unified framework, enabling efficient reuse and collaborative inference. Finally, we present additional reflections and analyses on potential future directions for world model research. Code link: https://github.com/OpenDCAI/OpenWorldLib",
+    "upvotes": 33,
+    "projectPage": "https://wcny4qa9krto.feishu.cn/wiki/XtPJwf5XQipP7RkeVv0ckyWlnNd",
+    "ai_keywords": [
+      "world models",
+      "perception",
+      "interaction",
+      "long-term memory",
+      "unified framework",
+      "collaborative inference"
+    ],
+    "category": "World Models / 世界模型"
+  },
+  {
+    "id": "2604.04771",
+    "title": "MinerU2.5-Pro: Pushing the Limits of Data-Centric Document Parsing at Scale",
+    "summary": "Current document parsing methods compete primarily on model architecture innovation, while systematic engineering of training data remains underexplored. Yet SOTA models of different architectures and parameter scales exhibit highly consistent failure patterns on the same set of hard samples, suggesting that the performance bottleneck stems from shared deficiencies in training data rather than architecture itself. Building on this finding, we present \\minerupro, which advances the state of the art solely through data engineering and training strategy optimization while keeping the 1.2B-parameter architecture of \\mineru completely fixed. At its core is a Data Engine co-designed around coverage, informativeness, and annotation accuracy: Diversity-and-Difficulty-Aware Sampling expands training data from under 10M to 65.5M samples while correcting distribution shift; Cross-Model Consistency Verification leverages output agreement among heterogeneous models to assess sample difficulty and generate reliable annotations; the Judge-and-Refine pipeline improves annotation quality for hard samples through render-then-verify iterative correction. A three-stage progressive training strategy -- large-scale pre-training, hard sample fine-tuning, and GRPO alignment -- sequentially exploits these data at different quality tiers. On the evaluation front, we fix element-matching biases in OmniDocBench~v1.5 and introduce a Hard subset, establishing the more discriminative OmniDocBench~v1.6 protocol. Without any architectural modification, \\minerupro achieves 95.69 on OmniDocBench~v1.6, improving over the same-architecture baseline by 2.71 points and surpassing all existing methods including models with over 200times more parameters.",
+    "upvotes": 32,
+    "projectPage": null,
+    "ai_keywords": [
+      "Data Engine",
+      "Diversity-and-Difficulty-Aware Sampling",
+      "Cross-Model Consistency Verification",
+      "Judge-and-Refine pipeline",
+      "progressive training strategy",
+      "large-scale pre-training",
+      "hard sample fine-tuning",
+      "GRPO alignment"
+    ],
+    "category": "评测、环境与真实任务基准"
+  },
+  {
+    "id": "2604.04921",
+    "title": "TriAttention: Efficient Long Reasoning with Trigonometric KV Compression",
+    "summary": "Extended reasoning in large language models (LLMs) creates severe KV cache memory bottlenecks. Leading KV cache compression methods estimate KV importance using attention scores from recent post-RoPE queries. However, queries rotate with position during RoPE, making representative queries very few, leading to poor top-key selection and unstable reasoning. To avoid this issue, we turn to the pre-RoPE space, where we observe that Q and K vectors are highly concentrated around fixed non-zero centers and remain stable across positions -- Q/K concentration. We show that this concentration causes queries to preferentially attend to keys at specific distances (e.g., nearest keys), with the centers determining which distances are preferred via a trigonometric series. Based on this, we propose TriAttention to estimate key importance by leveraging these centers. Via the trigonometric series, we use the distance preference characterized by these centers to score keys according to their positions, and also leverage Q/K norms as an additional signal for importance estimation. On AIME25 with 32K-token generation, TriAttention matches Full Attention reasoning accuracy while achieving 2.5x higher throughput or 10.7x KV memory reduction, whereas leading baselines achieve only about half the accuracy at the same efficiency. TriAttention enables OpenClaw deployment on a single consumer GPU, where long context would otherwise cause out-of-memory with Full Attention.",
+    "upvotes": 26,
+    "projectPage": "https://weianmao.github.io/tri-attention-project-page/",
+    "ai_keywords": [
+      "KV cache compression",
+      "attention scores",
+      "RoPE",
+      "pre-RoPE space",
+      "Q/K concentration",
+      "trigonometric series",
+      "key importance estimation",
+      "attention mechanisms",
+      "long-context generation",
+      "throughput optimization",
+      "memory reduction"
+    ],
+    "category": "大模型推理"
+  },
+  {
+    "id": "2604.04184",
+    "title": "AURA: Always-On Understanding and Real-Time Assistance via Video Streams",
+    "summary": "Video Large Language Models (VideoLLMs) have achieved strong performance on many video understanding tasks, but most existing systems remain offline and are not well-suited for live video streams that require continuous observation and timely response. Recent streaming VideoLLMs have made progress, yet current approaches often rely on decoupled trigger-response pipelines or are limited to captioning-style narration, reducing their effectiveness for open-ended question answering and long-horizon interaction. We propose AURA (Always-On Understanding and Real-Time Assistance), an end-to-end streaming visual interaction framework that enables a unified VideoLLM to continuously process video streams and support both real-time question answering and proactive responses. AURA integrates context management, data construction, training objectives, and deployment optimization for stable long-horizon streaming interaction. It achieves state-of-the-art performance on streaming benchmarks and supports a real-time demo system with ASR and TTS running at 2 FPS on two 80G accelerators. We release the AURA model together with a real-time inference framework to facilitate future research.",
+    "upvotes": 24,
+    "projectPage": "https://aurateam2026.github.io",
+    "ai_keywords": [
+      "VideoLLMs",
+      "streaming VideoLLMs",
+      "real-time question answering",
+      "proactive responses",
+      "context management",
+      "data construction",
+      "training objectives",
+      "deployment optimization",
+      "long-horizon streaming interaction",
+      "ASR",
+      "TTS"
+    ]
+  },
+  {
+    "id": "2604.04911",
+    "title": "SpatialEdit: Benchmarking Fine-Grained Image Spatial Editing",
+    "summary": "Image spatial editing performs geometry-driven transformations, allowing precise control over object layout and camera viewpoints. Current models are insufficient for fine-grained spatial manipulations, motivating a dedicated assessment suite. Our contributions are listed: (i) We introduce SpatialEdit-Bench, a complete benchmark that evaluates spatial editing by jointly measuring perceptual plausibility and geometric fidelity via viewpoint reconstruction and framing analysis. (ii) To address the data bottleneck for scalable training, we construct SpatialEdit-500k, a synthetic dataset generated with a controllable Blender pipeline that renders objects across diverse backgrounds and systematic camera trajectories, providing precise ground-truth transformations for both object- and camera-centric operations. (iii) Building on this data, we develop SpatialEdit-16B, a baseline model for fine-grained spatial editing. Our method achieves competitive performance on general editing while substantially outperforming prior methods on spatial manipulation tasks. All resources will be made public at https://github.com/EasonXiao-888/SpatialEdit.",
+    "upvotes": 19,
+    "projectPage": "https://github.com/EasonXiao-888/SpatialEdit",
+    "ai_keywords": [
+      "SpatialEdit-Bench",
+      "SpatialEdit-500k",
+      "SpatialEdit-16B",
+      "spatial editing",
+      "geometric fidelity",
+      "viewpoint reconstruction",
+      "framing analysis",
+      "synthetic dataset",
+      "Blender pipeline",
+      "camera trajectories",
+      "object-centric operations",
+      "camera-centric operations"
+    ]
+  },
+  {
+    "id": "2604.04202",
+    "title": "ClawArena: Benchmarking AI Agents in Evolving Information Environments",
+    "summary": "AI agents deployed as persistent assistants must maintain correct beliefs as their information environment evolves. In practice, evidence is scattered across heterogeneous sources that often contradict one another, new information can invalidate earlier conclusions, and user preferences surface through corrections rather than explicit instructions. Existing benchmarks largely assume static, single-authority settings and do not evaluate whether agents can keep up with this complexity. We introduce ClawArena, a benchmark for evaluating AI agents in evolving information environments. Each scenario maintains a complete hidden ground truth while exposing the agent only to noisy, partial, and sometimes contradictory traces across multi-channel sessions, workspace files, and staged updates. Evaluation is organized around three coupled challenges: multi-source conflict reasoning, dynamic belief revision, and implicit personalization, whose interactions yield a 14-category question taxonomy. Two question formats, multi-choice (set-selection) and shell-based executable checks, test both reasoning and workspace grounding. The current release contains 64 scenarios across 8 professional domains, totaling 1{,}879 evaluation rounds and 365 dynamic updates. Experiments on five agent frameworks and five language models show that both model capability (15.4% range) and framework design (9.2%) substantially affect performance, that self-evolving skill frameworks can partially close model-capability gaps, and that belief revision difficulty is determined by update design strategy rather than the mere presence of updates. Code is available at https://github.com/aiming-lab/ClawArena.",
+    "upvotes": 15,
+    "projectPage": null,
+    "ai_keywords": [
+      "AI agents",
+      "evolving information environments",
+      "multi-source conflict reasoning",
+      "dynamic belief revision",
+      "implicit personalization",
+      "question taxonomy",
+      "multi-choice",
+      "shell-based executable checks"
+    ]
+  },
+  {
+    "id": "2604.03679",
+    "title": "LightThinker++: From Reasoning Compression to Memory Management",
+    "summary": "Large language models (LLMs) excel at complex reasoning, yet their efficiency is limited by the surging cognitive overhead of long thought traces. In this paper, we propose LightThinker, a method that enables LLMs to dynamically compress intermediate thoughts into compact semantic representations. However, static compression often struggles with complex reasoning where the irreversible loss of intermediate details can lead to logical bottlenecks. To address this, we evolve the framework into LightThinker++, introducing Explicit Adaptive Memory Management. This paradigm shifts to behavioral-level management by incorporating explicit memory primitives, supported by a specialized trajectory synthesis pipeline to train purposeful memory scheduling. Extensive experiments demonstrate the framework's versatility across three dimensions. (1) LightThinker reduces peak token usage by 70% and inference time by 26% with minimal accuracy loss. (2) In standard reasoning, LightThinker++ slashes peak token usage by 69.9% while yielding a +2.42% accuracy gain under the same context budget for maximum performance. (3) Most notably, in long-horizon agentic tasks, it maintains a stable footprint beyond 80 rounds (a 60%-70% reduction), achieving an average performance gain of 14.8% across different complex scenarios. Overall, our work provides a scalable direction for sustaining deep LLM reasoning over extended horizons with minimal overhead.",
+    "upvotes": 15,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language models",
+      "intermediate thoughts",
+      "semantic representations",
+      "explicit adaptive memory management",
+      "memory primitives",
+      "trajectory synthesis pipeline",
+      "memory scheduling",
+      "long-horizon agentic tasks",
+      "token usage",
+      "inference time"
+    ]
+  },
+  {
+    "id": "2604.04804",
+    "title": "SkillX: Automatically Constructing Skill Knowledge Bases for Agents",
+    "summary": "Learning from experience is critical for building capable large language model (LLM) agents, yet prevailing self-evolving paradigms remain inefficient: agents learn in isolation, repeatedly rediscover similar behaviors from limited experience, resulting in redundant exploration and poor generalization. To address this problem, we propose SkillX, a fully automated framework for constructing a plug-and-play skill knowledge base that can be reused across agents and environments. SkillX operates through a fully automated pipeline built on three synergistic innovations: (i) Multi-Level Skills Design, which distills raw trajectories into three-tiered hierarchy of strategic plans, functional skills, and atomic skills; (ii) Iterative Skills Refinement, which automatically revises skills based on execution feedback to continuously improve library quality; and (iii) Exploratory Skills Expansion, which proactively generates and validates novel skills to expand coverage beyond seed training data. Using a strong backbone agent (GLM-4.6), we automatically build a reusable skill library and evaluate its transferability on challenging long-horizon, user-interactive benchmarks, including AppWorld, BFCL-v3, and τ^2-Bench. Experiments show that SkillKB consistently improves task success and execution efficiency when plugged into weaker base agents, highlighting the importance of structured, hierarchical experience representations for generalizable agent learning. Our code will be publicly available soon at https://github.com/zjunlp/SkillX.",
+    "upvotes": 12,
+    "projectPage": null,
+    "ai_keywords": [
+      "self-evolving paradigms",
+      "skill knowledge base",
+      "multi-level skills design",
+      "iterative skills refinement",
+      "exploratory skills expansion",
+      "hierarchical experience representations",
+      "long-horizon benchmarks",
+      "user-interactive benchmarks",
+      "GLM-4.6",
+      "skill transferability"
+    ]
+  },
+  {
+    "id": "2604.04917",
+    "title": "Vero: An Open RL Recipe for General Visual Reasoning",
+    "summary": "What does it take to build a visual reasoner that works across charts, science, spatial understanding, and open-ended tasks? The strongest vision-language models (VLMs) show such broad visual reasoning is within reach, but the recipe behind them remains unclear, locked behind proprietary reinforcement learning (RL) pipelines with non-public data. We introduce Vero, a family of fully open VLMs that matches or exceeds existing open-weight models across diverse visual reasoning tasks. We scale RL data and rewards across six broad task categories, constructing Vero-600K, a 600K-sample dataset from 59 datasets, and designing task-routed rewards that handle heterogeneous answer formats. Vero achieves state-of-the-art performance, improving over four base models by 3.7-5.5 points on average across VeroEval, our suite of 30 challenging benchmarks. Starting from Qwen3-VL-8B-Instruct, Vero outperforms Qwen3-VL-8B-Thinking on 23 of 30 benchmarks without additional proprietary thinking data. When trained from the same base model, Vero-600K exceeds existing RL datasets across task categories. Systematic ablations reveal that different task categories elicit qualitatively distinct reasoning patterns that transfer poorly in isolation, suggesting that broad data coverage is the primary driver of strong RL scaling. All data, code, and models are released.",
+    "upvotes": 8,
+    "projectPage": "https://vero-reasoning.github.io/",
+    "ai_keywords": [
+      "vision-language models",
+      "reinforcement learning",
+      "visual reasoning",
+      "Vero-600K",
+      "task-routed rewards",
+      "VeroEval",
+      "Qwen3-VL-8B-Instruct",
+      "Qwen3-VL-8B-Thinking"
+    ]
+  },
+  {
+    "id": "2604.04838",
+    "title": "Less Detail, Better Answers: Degradation-Driven Prompting for VQA",
+    "summary": "Recent advancements in Vision-Language Models (VLMs) have significantly pushed the boundaries of Visual Question Answering (VQA).However,high-resolution details can sometimes become noise that leads to hallucinations or reasoning errors. In this paper,we propose Degradation-Driven Prompting (DDP), a novel framework that improves VQA performance by strategically reducing image fidelity to force models to focus on essential structural information. We evaluate DDP across two distinct tasks. Physical attributes targets images prone to human misjudgment, where DDP employs a combination of 80p downsampling, structural visual aids (white background masks and orthometric lines), and In-Context Learning (ICL) to calibrate the model's focus. Perceptual phenomena addresses various machine-susceptible visual anomalies and illusions, including Visual Anomaly (VA), Color (CI), Motion(MI),Gestalt (GI), Geometric (GSI), and Visual Illusions (VI).For this task, DDP integrates a task-classification stage with specialized tools such as blur masks and contrast enhancement alongside downsampling. Our experimental results demonstrate that less is more: by intentionally degrading visual inputs and providing targeted structural prompts, DDP enables VLMs to bypass distracting textures and achieve superior reasoning accuracy on challenging visual benchmarks.",
+    "upvotes": 5,
+    "projectPage": "https://hhx-jpg.github.io/ddp/",
+    "ai_keywords": [
+      "Vision-Language Models",
+      "Visual Question Answering",
+      "image fidelity",
+      "structural information",
+      "In-Context Learning",
+      "visual anomalies",
+      "visual illusions",
+      "downsampling",
+      "structural visual aids",
+      "blur masks",
+      "contrast enhancement",
+      "task-classification stage"
+    ]
+  },
+  {
+    "id": "2604.04901",
+    "title": "FileGram: Grounding Agent Personalization in File-System Behavioral Traces",
+    "summary": "Coworking AI agents operating within local file systems are rapidly emerging as a paradigm in human-AI interaction; however, effective personalization remains limited by severe data constraints, as strict privacy barriers and the difficulty of jointly collecting multimodal real-world traces prevent scalable training and evaluation, and existing methods remain interaction-centric while overlooking dense behavioral traces in file-system operations; to address this gap, we propose FileGram, a comprehensive framework that grounds agent memory and personalization in file-system behavioral traces, comprising three core components: (1) FileGramEngine, a scalable persona-driven data engine that simulates realistic workflows and generates fine-grained multimodal action sequences at scale; (2) FileGramBench, a diagnostic benchmark grounded in file-system behavioral traces for evaluating memory systems on profile reconstruction, trace disentanglement, persona drift detection, and multimodal grounding; and (3) FileGramOS, a bottom-up memory architecture that builds user profiles directly from atomic actions and content deltas rather than dialogue summaries, encoding these traces into procedural, semantic, and episodic channels with query-time abstraction; extensive experiments show that FileGramBench remains challenging for state-of-the-art memory systems and that FileGramEngine and FileGramOS are effective, and by open-sourcing the framework, we hope to support future research on personalized memory-centric file-system agents.",
+    "upvotes": 2,
+    "projectPage": "https://filegram.choiszt.com/",
+    "ai_keywords": [
+      "file-system behavioral traces",
+      "persona-driven data engine",
+      "multimodal action sequences",
+      "diagnostic benchmark",
+      "memory systems",
+      "profile reconstruction",
+      "trace disentanglement",
+      "persona drift detection",
+      "multimodal grounding",
+      "bottom-up memory architecture",
+      "atomic actions",
+      "content deltas",
+      "procedural channels",
+      "semantic channels",
+      "episodic channels",
+      "query-time abstraction"
+    ]
+  },
+  {
+    "id": "2604.04503",
+    "title": "Memory Intelligence Agent",
+    "summary": "Deep research agents (DRAs) integrate LLM reasoning with external tools. Memory systems enable DRAs to leverage historical experiences, which are essential for efficient reasoning and autonomous evolution. Existing methods rely on retrieving similar trajectories from memory to aid reasoning, while suffering from key limitations of ineffective memory evolution and increasing storage and retrieval costs. To address these problems, we propose a novel Memory Intelligence Agent (MIA) framework, consisting of a Manager-Planner-Executor architecture. Memory Manager is a non-parametric memory system that can store compressed historical search trajectories. Planner is a parametric memory agent that can produce search plans for questions. Executor is another agent that can search and analyze information guided by the search plan. To build the MIA framework, we first adopt an alternating reinforcement learning paradigm to enhance cooperation between the Planner and the Executor. Furthermore, we enable the Planner to continuously evolve during test-time learning, with updates performed on-the-fly alongside inference without interrupting the reasoning process. Additionally, we establish a bidirectional conversion loop between parametric and non-parametric memories to achieve efficient memory evolution. Finally, we incorporate a reflection and an unsupervised judgment mechanisms to boost reasoning and self-evolution in the open world. Extensive experiments across eleven benchmarks demonstrate the superiority of MIA.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "Memory Intelligence Agent",
+      "Manager-Planner-Executor architecture",
+      "non-parametric memory system",
+      "parametric memory agent",
+      "alternating reinforcement learning",
+      "test-time learning",
+      "bidirectional conversion loop",
+      "reflection mechanism",
+      "unsupervised judgment"
+    ]
+  }
+]
