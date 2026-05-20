@@ -1,0 +1,478 @@
+[
+  {
+    "id": "2605.19577",
+    "title": "GoLongRL: Capability-Oriented Long Context Reinforcement Learning with Multitask Alignment",
+    "summary": "We present GoLongRL, a fully open-source, capability-oriented post-training recipe for long-context reinforcement learning with verifiable rewards (RLVR). Existing long-context RL methods often treat data construction as a matter of designing increasingly complex retrieval paths, leading to homogeneous task coverage and reward formulations that inadequately reflect practical long-context requirements. Our work offers two contributions. (1) Capability-oriented data construction with full open release. We openly release a dataset of 23K RLVR samples, the complete construction pipeline, and all training code. Guided by a taxonomy of long-context capabilities, the dataset spans 9 task types, each paired with its natural evaluation metric. It comprises curated open-source samples from established corpora and synthetic samples whose QA pairs are generated from real source documents such as books, academic papers, and multi-turn dialogues. Under the same vanilla GRPO setup, our dataset alone outperforms the closed-source QwenLong-L1.5 dataset. Moreover, our Qwen3-30B-A3B model trained on this data delivers long-context performance comparable to DeepSeek-R1-0528 and Qwen3-235B-A22B-Thinking-2507, suggesting that broader coverage and greater reward diversity substantially benefit long-context capability improvement. (2) TMN-Reweight for heterogeneous multitask optimization. To address optimization challenges from heterogeneous rewards, we propose TMN-Reweight, which combines task-level mean normalization for cross-task reward scale alignment with difficulty-adaptive weighting for more reliable advantage estimation. TMN-Reweight further improves average performance over vanilla GRPO, with general capabilities preserved or improved across reported evaluations.",
+    "upvotes": 35,
+    "projectPage": "https://huggingface.co/collections/Kwai-Klear/golongrl",
+    "ai_keywords": [
+      "reinforcement learning",
+      "long-context",
+      "verifiable rewards",
+      "post-training recipe",
+      "RLVR",
+      "GRPO",
+      "task-level mean normalization",
+      "difficulty-adaptive weighting",
+      "advantage estimation"
+    ]
+  },
+  {
+    "id": "2605.19769",
+    "title": "OpenComputer: Verifiable Software Worlds for Computer-Use Agents",
+    "summary": "We present OpenComputer, a verifier-grounded framework for constructing verifiable software worlds for computer-use agents. OpenComputer integrates four components: (1) app-specific state verifiers that expose structured inspection endpoints over real applications, (2) a self-evolving verification layer that improves verifier reliability using execution-grounded feedback, (3) a task-generation pipeline that synthesizes realistic and machine-checkable desktop tasks, and (4) an evaluation harness that records full trajectories and computes auditable partial-credit rewards. In its current form, OpenComputer covers 33 desktop applications and 1,000 finalized tasks spanning browsers, office tools, creative software, development environments, file managers, and communication applications. Experiments show that OpenComputer's hard-coded verifiers align more closely with human adjudication than LLM-as-judge evaluation, especially when success depends on fine-grained application state. Frontier agents struggle with end-to-end completion despite partial progress, and open-source models exhibit sharp drops from their OSWorld-Verified scores, exposing a persistent gap in robust computer automation.",
+    "upvotes": 35,
+    "projectPage": null,
+    "ai_keywords": [
+      "verifier-grounded framework",
+      "state verifiers",
+      "self-evolving verification layer",
+      "task-generation pipeline",
+      "evaluation harness",
+      "desktop applications",
+      "machine-checkable tasks",
+      "partial-credit rewards",
+      "human adjudication",
+      "LLM-as-judge evaluation",
+      "computer automation"
+    ]
+  },
+  {
+    "id": "2605.20025",
+    "title": "AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration",
+    "summary": "Automating scientific discovery requires more than generating papers from ideas. Real research is iterative: hypotheses are challenged from multiple perspectives, experiments fail and inform the next attempt, and lessons accumulate across cycles. Existing autonomous research systems often model this process as a linear pipeline: they rely on single-agent reasoning, stop when execution fails, and do not carry experience across runs. We present AutoResearchClaw, a multi-agent autonomous research pipeline built on five mechanisms: structured multi-agent debate for hypothesis generation and result analysis, a self-healing executor with a Pivot/Refine decision loop that transforms failures into information, verifiable result reporting that prevents fabricated numbers and hallucinated citations, human-in-the-loop collaboration with seven intervention modes spanning full autonomy to step-by-step oversight, and cross-run evolution that converts past mistakes into future safeguards. On ARC-Bench, a 25-topic experiment-stage benchmark, AutoResearchClaw outperforms AI Scientist v2 by 54.7%. A human-in-the-loop ablation across seven intervention modes reveals that precise, targeted collaboration at high-leverage decision points consistently outperforms both full autonomy and exhaustive step-by-step oversight. We position AutoResearchClaw as a research amplifier that augments rather than replaces human scientific judgment. Code is available at https://github.com/aiming-lab/AutoResearchClaw.",
+    "upvotes": 34,
+    "projectPage": "https://github.com/aiming-lab/AutoResearchClaw",
+    "ai_keywords": [
+      "multi-agent autonomous research",
+      "structured multi-agent debate",
+      "self-healing executor",
+      "\\textsc{Pivot}/\\textsc{Refine} decision loop",
+      "verifiable result reporting",
+      "human-in-the-loop collaboration",
+      "cross-run evolution",
+      "ARC-Bench",
+      "AI Scientist v2"
+    ]
+  },
+  {
+    "id": "2605.15529",
+    "title": "Process Rewards with Learned Reliability",
+    "summary": "Process Reward Models (PRMs) provide step-level feedback for reasoning, but current PRMs usually output only a single reward score for each step. Downstream methods must therefore treat imperfect step-level reward predictions as reliable decision signals, with no indication of when these predictions should be trusted. We propose BetaPRM, a distributional PRM that predicts both a step-level success probability and the reliability of that prediction. Given step-success supervision from Monte Carlo continuations, BetaPRM learns a Beta belief that explains the observed number of successful continuations through a Beta-Binomial likelihood, rather than regressing to the finite-sample success ratio as a point target. This learned reliability signal indicates when a step reward should be trusted, enabling downstream applications to distinguish reliable rewards from uncertain ones. As one application, we introduce Adaptive Computation Allocation (ACA) for PRM-guided Best-of-N reasoning. ACA uses the learned reliability signal to stop when a high-reward solution is reliable and to spend additional computation on uncertain candidate prefixes. Experiments across four backbones and four reasoning benchmarks show that BetaPRM improves PRM-guided Best-of-N selection while preserving standard step-level error detection. Built on this signal, ACA improves the accuracy--token tradeoff over fixed-budget Best-of-16, reducing token usage by up to 33.57% while improving final-answer accuracy.",
+    "upvotes": 29,
+    "projectPage": null,
+    "ai_keywords": [
+      "Process Reward Models",
+      "BetaPRM",
+      "distributional PRM",
+      "Beta belief",
+      "Beta-Binomial likelihood",
+      "Monte Carlo continuations",
+      "step-level success probability",
+      "reliability signal",
+      "Adaptive Computation Allocation",
+      "Best-of-N reasoning"
+    ]
+  },
+  {
+    "id": "2605.19995",
+    "title": "CogOmniControl: Reasoning-Driven Controllable Video Generation via Creative Intent Cognition",
+    "summary": "Recent diffusion models achieve strong photorealism and fluency in video generation, yet remain fragile under abstract, sparse or complex conditions, leading to poor performance in professional production workflows such as storyboard sketches and clay render conditions. Existing video generation models, either inject conditions through adapters or couple a generic vision-language model (VLM) within a diffusion backbone, leaving a capability gap and failing to produce the videos that align with the user's creative intent. We present CogOmniControl, a reasoning-driven framework that factorizes controllable video generation into creative intent cognition and generation. Specifically, we train a specialized CogVLM using authentic anime production data. Compared to generic VLMs, it generates more professional and clear outputs, accurately cognizing user creative intent from sparse and abstract conditions and tuning these cues into dense reasoning output. Besides, CogOmniDiT unifies the controls from various conditions through in-context generation and is aligned to the CogVLM reasoning outputs via reinforcement learning. Furthermore, leveraging CogVLM's robust capability in guiding video generation, we release its potential in planning specific evaluators and enable a Best-of-N selection for the generated videos. This integration transforms the entire framework into a closed-loop \"harness-like\" architecture. We further introduce CogReasonBench and CogControlBench, built from professional workflows data that carry genuine creative intent rather than simulated ones. Experiments on two benchmarks show that CogOmniControl surpassed the existing open-source models. The project website: https://um-lab.github.io/CogOmniControl/",
+    "upvotes": 28,
+    "projectPage": "https://um-lab.github.io/CogOmniControl/",
+    "ai_keywords": [
+      "diffusion models",
+      "video generation",
+      "creative intent cognition",
+      "CogVLM",
+      "in-context generation",
+      "reinforcement learning",
+      "Best-of-N selection",
+      "closed-loop architecture",
+      "CogReasonBench",
+      "CogControlBench"
+    ]
+  },
+  {
+    "id": "2605.18703",
+    "title": "EnvFactory: Scaling Tool-Use Agents via Executable Environments Synthesis and Robust RL",
+    "summary": "Equipping LLMs with tool-use capabilities via Agentic Reinforcement Learning (Agentic RL) is bottlenecked by two challenges: the lack of scalable, robust execution environments and the scarcity of realistic training data that captures implicit human reasoning. Existing approaches depend on costly real-world APIs, hallucination-prone LLM simulators, or synthetic environments that are often single-turn or depend on pre-collected documents. Moreover, synthetic trajectories are frequently over-specified, resembling instruction sequences rather than natural human intents, reducing their effectiveness for RL training. We introduce EnvFactory, a fully automated framework that addresses both challenges. EnvFactory autonomously explores and verifies stateful, executable tool environments from authentic resources, and synthesizes natural multi-turn trajectories through topology-aware sampling and calibrated refinement, producing grounded queries with implicit intents. Using only 85 verified environments across 7 domains, EnvFactory generates 2,575 SFT and RL trajectories. Despite using significantly fewer environments than prior work, which are often 5 times more, EnvFactory achieves superior training efficiency and downstream performance, improving Qwen3-series models by up to +15% on BFCLv3, +8.6% on MCP-Atlas, and +6% on conversational benchmarks including τ^2-Bench and VitaBench. By fully automating both environment construction and trajectory synthesis, EnvFactory provides a scalable, extensible, and robust foundation for Agentic RL.",
+    "upvotes": 28,
+    "projectPage": null,
+    "ai_keywords": [
+      "Agentic Reinforcement Learning",
+      "tool-use capabilities",
+      "execution environments",
+      "synthetic trajectories",
+      "topology-aware sampling",
+      "calibrated refinement",
+      "grounded queries",
+      "SFT trajectories",
+      "RL trajectories",
+      "Qwen3-series models",
+      "BFCLv3",
+      "MCP-Atlas",
+      "τ²-Bench",
+      "VitaBench"
+    ]
+  },
+  {
+    "id": "2605.18984",
+    "title": "Artifact-Bench: Evaluating MLLMs on Detecting and Assessing the Artifacts of AI-Generated Videos",
+    "summary": "Recent video generative models have greatly improved the realism of AI-generated videos, yet their outputs still exhibit artifacts such as temporal inconsistencies, structural distortions, and semantic incoherence. While Multimodal Large Language Models (MLLMs) show strong visual understanding capabilities, their ability to perceive and reason about such artifacts remains unclear. Existing benchmarks often lack systematic evaluation of artifact-aware perception and fine-grained diagnostic reasoning, especially across diverse AI-generated video domains beyond photorealistic content. To address this gap, we introduce Artifact-Bench, a comprehensive benchmark for evaluating MLLMs on AI-generated video artifact detection and analysis. We first establish a three-level hierarchical taxonomy of realism artifacts, covering photorealistic, animated, and CG-style videos. Based on this taxonomy, Artifact-Bench defines three complementary tasks: real vs. AI-generated video classification, pairwise realism comparison, and fine-grained artifact identification. Experiments on 19 leading MLLMs reveal substantial limitations in artifact perception and reasoning, with many models approaching random or even below-random performance in challenging settings. We further observe significant misalignment between MLLM judgments and human perceptual preferences, highlighting their limited reliability as general evaluators for AI-generated video realism.",
+    "upvotes": 21,
+    "projectPage": null,
+    "ai_keywords": [
+      "Multimodal Large Language Models",
+      "AI-generated video",
+      "artifact detection",
+      "fine-grained artifact identification",
+      "realism artifacts",
+      "visual understanding",
+      "diagnostic reasoning"
+    ]
+  },
+  {
+    "id": "2605.18748",
+    "title": "Aurora: Unified Video Editing with a Tool-Using Agent",
+    "summary": "Recent video editing models have converged on a unified conditioning design: a single diffusion transformer jointly consumes text, source video, and reference images, and one set of weights covers replacement, removal, style transfer, and reference-driven insertion. The design is flexible, but it assumes that the user already provides model-ready text, reference images, and spatial grounding for local edits, which real requests often omit. We present Aurora, an agentic video editing framework that pairs a tool-augmented vision-language model (VLM) agent with a unified video diffusion transformer. The VLM agent maps a raw user request to a structured edit plan aligned with the transformer's conditioning channels, thereby resolving textual and visual underspecification before generation. We train the VLM agent with supervised data for complete edit planning and reference-image selection, together with preference pairs for robust tool use and instruction refinement. We introduce AgentEdit-Bench to evaluate agent-enhanced video editing under textual and visual underspecification. Experiments on AgentEdit-Bench and two existing video editing benchmarks show that Aurora improves over instruction-only baselines and that the VLM agent transfers to compatible frozen video editing models. Project page: https://yeates.github.io/Aurora-Page",
+    "upvotes": 15,
+    "projectPage": "https://www.yongshengyu.com/Aurora-Page/",
+    "ai_keywords": [
+      "video editing models",
+      "diffusion transformer",
+      "vision-language model",
+      "agent-augmented",
+      "supervised data",
+      "preference pairs",
+      "AgentEdit-Bench"
+    ]
+  },
+  {
+    "id": "2605.16403",
+    "title": "When Vision Speaks for Sound",
+    "summary": "Despite rapid progress in video-capable MLLMs, we find that their apparent audio understanding in videos is often vision-driven: models rely on visual cues to infer or hallucinate acoustic information, rather than verifying the audio stream. This issue appears across both state-of-the-art open-source omni models and leading closed-source models from providers such as Google and OpenAI. We characterize this failure mode as an audio-visual Clever Hans effect, in which models appear (falsely) audio-grounded, but actually exploit visual-acoustic correlations without verifying whether the audio and visual streams are truly aligned. To systematically study this behavior, we introduce Thud, an intervention-driven probing framework based on three counterfactual audio edits: Shift, which tests temporal synchronization; Mute, which tests sound existence; and Swap, which tests audio-visual consistency. Beyond diagnosis, we further study a two-stage alignment recipe: intervention-derived preference pairs teach audio verification, while event-level general video preferences regularize the model against over-specialization. Our best 10K-sample recipe improves average performance across the three intervention dimensions by 28 percentage points, while slightly improving performance on general video and audio-visual QA benchmarks.",
+    "upvotes": 15,
+    "projectPage": "https://rakanwen.github.io/when-vision-speaks-for-sound/",
+    "ai_keywords": [
+      "video-capable MLLMs",
+      "audio-visual Clever Hans effect",
+      "counterfactual audio edits",
+      "temporal synchronization",
+      "sound existence",
+      "audio-visual consistency",
+      "intervention-driven probing framework",
+      "alignment recipe",
+      "preference pairs",
+      "event-level general video preferences"
+    ]
+  },
+  {
+    "id": "2605.20183",
+    "title": "MSAVBench: Towards Comprehensive and Reliable Evaluation of Multi-Shot Audio-Video Generation",
+    "summary": "Video generation is rapidly evolving from single-shot synthesis to complex multi-shot audio-video (MSAV) narratives to meet real-world demands. However, evaluating such frontier models remains a fundamental challenge. Existing benchmarks are limited in scope and data diversity, and rely on rigid evaluation pipelines, preventing systematic and reliable assessment of modern MSAV models. To bridge these gaps, we introduce MSAVBench, the first comprehensive benchmark and adaptive hybrid evaluation framework for multi-shot audio-video generation. Our benchmark spans four key dimensions, video, audio, shot, and reference, covering diverse task settings, varying shot counts of up to 15, and challenging non-realistic scenarios. Our evaluation framework improves robustness through an adaptive self-correction mechanism for shot segmentation, instance-wise rubrics for subjective metrics, and tool-grounded evidence extraction for complex judgments. Furthermore, MSAVBench achieves high alignment with human judgments, reaching a Spearman rank correlation of 91.5%. Our systematic evaluation of 19 state-of-the-art closed- and open-source models shows that current systems still struggle with director-level control and fine-grained audio-visual synchronization, while modular or agentic generation pipelines offer a promising path toward narrowing the gap between open- and closed-source models. We will release the benchmark data and evaluation code to facilitate future research.",
+    "upvotes": 11,
+    "projectPage": null,
+    "ai_keywords": [
+      "multi-shot audio-video generation",
+      "benchmark",
+      "adaptive hybrid evaluation framework",
+      "shot segmentation",
+      "subjective metrics",
+      "tool-grounded evidence extraction",
+      "Spearman rank correlation",
+      "modular generation pipelines",
+      "agentic generation pipelines"
+    ]
+  },
+  {
+    "id": "2605.18758",
+    "title": "OmniGUI: Benchmarking GUI Agents in Omni-Modal Smartphone Environments",
+    "summary": "Current benchmarks for graphical user interface (GUI) agents predominantly rely on static screenshots. However, real-world smartphone interaction routinely requires agents to process transient audio cues and temporal video dynamics that are tightly coupled with the moment of action. To bridge this gap, we introduce OmniGUI, the first step-level benchmark designed to evaluate GUI agents in omni-modal smartphone environments. OmniGUI provides continuous, interleaved multimodal inputs comprising static images, synchronous audio, and video clips at every action step. The dataset encompasses 709 expert-demonstrated episodes (2,579 action steps) across 29 applications, systematically annotated with objective multimodal dependency levels. Because dedicated omni-modal GUI agent frameworks are currently in their nascent stage, we select foundational omni-modal models capable of natively processing interleaved inputs to serve as agent proxies for our initial baselines. Our empirical evaluation reveals that while current models exhibit competency on visually static tasks, their action prediction performance degrades significantly in environments requiring synchronous temporal and auditory signals. Furthermore, ablation studies isolate specific operational bottlenecks, notably cross-modal interference when processing task-irrelevant environmental noise. The complete dataset, evaluation pipeline, and baseline prompts are provided in the supplementary material. Project page: https://omni-gui.github.io.",
+    "upvotes": 11,
+    "projectPage": "https://omni-gui.github.io/",
+    "ai_keywords": [
+      "multimodal inputs",
+      "GUI agents",
+      "smartphone environments",
+      "action prediction",
+      "cross-modal interference"
+    ]
+  },
+  {
+    "id": "2605.19436",
+    "title": "CEPO: RLVR Self-Distillation using Contrastive Evidence Policy Optimization",
+    "summary": "When a model produces a correct solution under reinforcement learning with verifiable rewards (RLVR), every token receives the same reward signal regardless of whether it was a decisive reasoning step or a grammatical filler. A natural fix is to condition the model on the correct answer as a teacher, identifying tokens it would have generated differently had it known the answer. Prior work shows this either corrupts training by leaking the answer into the gradient, or produces a weak signal that cannot distinguish decisive steps from filler, since both look equally surprising relative to the model's baseline. We propose Contrastive Evidence Policy Optimization (CEPO), which asks a sharper question at every token: not just \"does the correct answer favor this token?\" but \"does the correct answer favor it while the wrong answer disfavors it?\" A token satisfying both is a genuine reasoning step; one satisfying neither is filler. The wrong-answer teacher is constructed from rejected rollouts already in the training batch, incurring no additional sampling cost. We prove CEPO inherits all structural safety guarantees of the prior state of the art while strictly sharpening credit at decisive tokens, with the improvement vanishing exactly at filler positions. Empirically, CEPO achieves 43.43% and 60.56% average accuracy across five multimodal mathematical reasoning benchmarks at 2B and 4B scale, respectively, versus 41.17% and 57.43% for GRPO under identical training budgets. Distribution-matching self-distillation methods (OPSD, SDPO) fall below the untrained baseline, empirically confirming the information leakage our theory predicts. Our code is available at https://github.com/ahmedheakl/CEPO.",
+    "upvotes": 10,
+    "projectPage": null,
+    "ai_keywords": [
+      "reinforcement learning with verifiable rewards",
+      "policy optimization",
+      "contrastive evidence policy optimization",
+      "teacher-student training",
+      "rejected rollouts",
+      "credit assignment",
+      "token-level reward signaling",
+      "multimodal mathematical reasoning"
+    ]
+  },
+  {
+    "id": "2605.15458",
+    "title": "Video Models Can Reason with Verifiable Rewards",
+    "summary": "Video diffusion models have made rapid progress in perceptual realism and temporal coherence, but they remain primarily optimized for plausible generation rather than verifiable reasoning. This limitation is especially pronounced in tasks where generated videos must satisfy explicit spatial, temporal, or logical constraints. Inspired by the role of reinforcement learning with verifiable rewards (RLVR) in reasoning-oriented language models, we introduce VideoRLVR, a practical recipe for optimizing video diffusion models with rule-based feedback. VideoRLVR formulates video reasoning as the generation of verifiable visual trajectories and consists of an SDE-GRPO optimization backbone, dense decomposed rewards, and an Early-Step Focus strategy for efficient training. The Early-Step Focus strategy restricts policy optimization to the early denoising phase, reducing training latency by about 40% while preserving performance. We evaluate VideoRLVR on Maze, FlowFree, and Sokoban, three procedurally generated domains with objective success criteria. Across these tasks, VideoRLVR consistently improves over supervised fine-tuning baselines, with dense decomposed rewards proving especially important in low-success-rate settings. Our RL-optimized model also outperforms the evaluated proprietary and open-source video generation models on these verifiable reasoning benchmarks and out-of-domain benchmarks. These results suggest that verifiable RL can move video models beyond perceptual imitation toward more reliable rule-consistent visual reasoning.",
+    "upvotes": 8,
+    "projectPage": "https://darthzhu.github.io/VideoRLVR-page/",
+    "ai_keywords": [
+      "video diffusion models",
+      "reinforcement learning",
+      "verifiable rewards",
+      "SDE-GRPO",
+      "dense decomposed rewards",
+      "Early-Step Focus",
+      "policy optimization",
+      "video reasoning",
+      "procedural generation",
+      "visual trajectories"
+    ]
+  },
+  {
+    "id": "2605.11609",
+    "title": "Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information",
+    "summary": "On-policy self-distillation, where a student is pulled toward a copy of itself conditioned on privileged context (e.g., a verified solution or feedback), offers a promising direction for advancing reasoning capability without a stronger external teacher. Yet in math reasoning the gains are inconsistent, even when the same approach succeeds elsewhere. A pointwise mutual information analysis traces the failure to the privileged context itself: it inflates the teacher's confidence on tokens already implied by the solution (structural connectives, verifiable claims) and deflates it on deliberation tokens (\"Wait\", \"Let\", \"Maybe\") that drive multi-step search. We propose Anti-Self-Distillation (AntiSD), which ascends a divergence between student and teacher rather than descending it: this reverses the per-token sign and yields a naturally bounded advantage in one step. An entropy-triggered gate disables the term once the teacher entropy collapses, completing a drop-in replacement for default self-distillation. Across five models from 4B to 30B parameters on math reasoning benchmarks, AntiSD reaches the GRPO baseline's accuracy in 2 to 10x fewer training steps and improves final accuracy by up to 11.5 points. AntiSD opens a path to scalable self-improvement, where a language model bootstraps its own reasoning through its training signal.",
+    "upvotes": 8,
+    "projectPage": null,
+    "ai_keywords": [
+      "self-distillation",
+      "privileged context",
+      "pointwise mutual information",
+      "entropy-triggered gate",
+      "GRPO baseline",
+      "language model"
+    ]
+  },
+  {
+    "id": "2605.18714",
+    "title": "Semantic Generative Tuning for Unified Multimodal Models",
+    "summary": "Unified multimodal models (UMMs) strive to consolidate visual understanding and visual generation within a single architecture. However, prevailing training paradigms independently optimize understanding via sparse text signals and generation through dense pixel objectives. Such a decoupled strategy yields misaligned representation spaces, isolating visual understanding from generation and hindering their mutual reinforcement. This work presents the first systematic investigation into generative post-training, where we formulate hierarchical visual tasks as generative proxies to bridge the isolation in UMMs. Our empirical investigation reveals that high-level semantic tasks, particularly image segmentation, serve as optimal proxies. Unlike low-level tasks that distract models with texture details, segmentation provides structural semantics that significantly enhance both vision-centric perception and generative layout fidelity. Building upon these insights, we introduce Semantic Generative Tuning (SGT), a novel paradigm that leverages segmentation as a generative proxy to align and synergize multimodal capabilities. Mechanistic analyses further demonstrate that SGT fundamentally improves feature linear separability and optimizes visual-textual attention allocation pattern. Extensive evaluations show that SGT consistently improves both multimodal comprehension and generative fidelity across mainstream benchmarks. Our code is available on the https://song2yu.github.io/SGT/.",
+    "upvotes": 5,
+    "projectPage": "https://song2yu.github.io/SGT/",
+    "ai_keywords": [
+      "unified multimodal models",
+      "generative post-training",
+      "visual tasks",
+      "image segmentation",
+      "semantic tasks",
+      "visual-textual attention allocation",
+      "feature linear separability",
+      "semantic generative tuning"
+    ]
+  },
+  {
+    "id": "2605.18746",
+    "title": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
+    "summary": "Spatial intelligence unfolds through a perception-action loop: agents act to acquire observations, and reason about how observations vary as a function of action. Rather than passively processing what is seen, they actively uncover what is unseen - occluded structure, dynamics, containment, and functionality that cannot be resolved from passive sensing alone. We move beyond prior formulations of spatial intelligence that assume oracle observations by recasting the observer as an actor. We introduce ESI-BENCH, a comprehensive benchmark for embodied spatial intelligence spanning 10 task categories and 29 subcategories built on OmniGibson, grounded in Spelke's core knowledge systems. Agents must decide what abilities to deploy - perception, locomotion, and manipulation - and how to sequence them to actively accumulate task-relevant evidence. We conduct extensive experiments on state-of-the-art MLLMs and find that active exploration substantially outperforms passive counterparts, with agents spontaneously discovering emergent spatial strategies without explicit instructions, while random multi-view often adds noise rather than signal despite consuming far more images. Most failures stem not from weak perception but from action blindness: poor action choices lead to poor observations, which in turn drive cascading errors. While explicit 3D grounding stabilizes reasoning on depth-sensitive tasks, imperfect 3D representation proves more harmful than 2D baselines by distorting spatial relations. Human studies further reveal that unlike humans who seek falsifying viewpoints and revise beliefs under contradiction, models commit prematurely with high confidence regardless of evidence quality, exposing a metacognitive gap that neither better perception nor more embodied interaction alone can close.",
+    "upvotes": 3,
+    "projectPage": "https://esi-bench.github.io/",
+    "ai_keywords": [
+      "embodied spatial intelligence",
+      "perception-action loop",
+      "active exploration",
+      "3D grounding",
+      "spatial intelligence",
+      "embodied agents",
+      "action blindness",
+      "multi-view imaging",
+      "spatial reasoning",
+      "core knowledge systems"
+    ]
+  },
+  {
+    "id": "2605.17360",
+    "title": "Omni-DuplexEval: Evaluating Real-time Duplex Omni-modal Interaction",
+    "summary": "Real-time duplex interaction is essential for multimodal AI systems operating in real-world scenarios, where models must continuously process streaming inputs and respond at appropriate moments. However, most existing multimodal large language models (MLLMs) are evaluated in offline settings, where the entire video input is processed before any response is generated. While recent work has started to explore real-time duplex MLLMs, there is still no comprehensive benchmark or automatic evaluation method for this setting. To address this gap, we propose Omni-DuplexEval, a benchmark for systematically evaluating real-time duplex interaction. The benchmark consists of two complementary scenarios: (1) Real-Time Description, which evaluates the ability to generate continuous, time-aligned responses that track evolving multimodal inputs, and (2) Proactive Reminder, which evaluates the ability to identify salient events and respond at appropriate moments. Omni-DuplexEval contains 660 videos with fine-grained, human-annotated labels and precise temporal metadata, spanning 9 tasks grounded in real-world scenarios, where all questions are formulated as open-ended queries. We further introduce an automatic evaluation framework based on LLM-as-a-Judge, which enables systematic assessment by jointly evaluating response-content alignment and response timing through timestamp-aware and sequential reasoning, achieving strong alignment with human judgments. Experiments on state-of-the-art duplex MLLMs reveal substantial limitations. The best-performing model achieves only 39.6% overall, while scoring only 20.0% on Proactive Reminder. Our analysis identifies two key challenges: models struggle to balance timely responses with coherent, holistic content generation, and they often fail to determine both when to respond and what to produce. We hope our work facilitates further progress in MLLMs.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "multimodal large language models",
+      "real-time duplex interaction",
+      "benchmark",
+      "automatic evaluation",
+      "LLM-as-a-Judge",
+      "response-content alignment",
+      "response timing",
+      "timestamp-aware reasoning",
+      "sequential reasoning"
+    ]
+  },
+  {
+    "id": "2605.16003",
+    "title": "Echo-Forcing: A Scene Memory Framework for Interactive Long Video Generation",
+    "summary": "Autoregressive video diffusion models enable open-ended generation through local attention and KV caching. However, existing training-free long-video optimization methods mainly focus on stable extension under a single prompt, making them difficult to handle interactive scenarios involving prompt switching, old scene forgetting, and historical scene recall. We identify the core bottleneck as the functional entanglement of historical KV states: stable anchors and recent dynamics are handled by the same cache policy, leading to outdated background contamination, delayed response to new prompts, and loss of long-range memory. To address this issue, we propose Echo-Forcing, a training-free scene memory framework specifically designed for interactive long video generation with three core mechanisms: (1) Hierarchical Temporal Memory, which decouples stable anchors, compressed history, and recent windows under relative RoPE; (2) Scene Recall Frames, which compresses historical scenes into spatially structured KV representations to support long-term recall; and (3) Difference-aware Memory Decay, which adaptively forgets conflicting tokens according to the discrepancy between old and new scenes. Based on these designs, Echo-Forcing uniformly supports smooth transitions, hard cuts, and long-range scene recall under a bounded cache budget. Extensive evaluations on VBench-Long further demonstrate that Echo-Forcing achieves the best overall performance in both long-video generation and interactive video generation settings. Our code is released in https://github.com/mingqiangWu/Echo-Forcing",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "autoregressive video diffusion models",
+      "local attention",
+      "KV caching",
+      "training-free long-video optimization",
+      "functional entanglement",
+      "historical KV states",
+      "stable anchors",
+      "recent dynamics",
+      "relative RoPE",
+      "scene recall frames",
+      "difference-aware memory decay",
+      "long-range memory",
+      "VBench-Long"
+    ]
+  },
+  {
+    "id": "2605.18855",
+    "title": "Delta Attention Residuals",
+    "summary": "Attention Residuals replace standard additive residual connections with learned softmax attention over previous layer outputs, enabling selective cross-layer routing. However, standard Attention Residuals still attend over cumulative hidden states in previous layers, which are highly redundant. We show that this redundancy leads to routing collapse in deeper layers: attention weights become low-contrast and closer to uniform (max weight {approx}0.2), limiting the model's ability to select informative states in previous layers. This raises a key but underexplored design question: what layer-wise representations should be routed in Attention Residuals? To answer this question, we propose Delta Attention Residuals, which attend over deltas -- the change introduced by each sublayer (v_i = h_{i+1} - h_i) -- instead of cumulative states. Delta representations are structurally diverse and yield higher-contrast attention distributions (max weight {approx}0.6), enabling more selective and effective routing across layers. This principle applies at both per-sublayer and block granularity. Across all tested scales (220M--7.6B), Delta Attention Residuals consistently outperform both standard residuals and Attention Residuals, with 1.7--8.2\\% validation perplexity gains. Delta Attention Residuals also enables converting pretrained checkpoints into Delta Attention Residuals via standard fine-tuning. Code is available at https://github.com/wdlctc/delta-attention-residuals-code.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "Attention Residuals",
+      "delta representations",
+      "cross-layer routing",
+      "attention weights",
+      "routing collapse",
+      "per-sublayer granularity",
+      "block granularity",
+      "validation perplexity",
+      "pretrained checkpoints",
+      "fine-tuning"
+    ]
+  },
+  {
+    "id": "2605.18827",
+    "title": "Code-Guided Reasoning for Small Language Models: Evaluating Executable MCQA Scaffolds",
+    "summary": "Multiple-choice QA benchmarks usually evaluate small language models (SLMs) as direct answerers, but deployed language-model systems increasingly rely on external scaffolds such as tools, code, and repeated model calls. We introduce Code-Guided Reasoning (CGR), an evaluation protocol and generated-program resource for measuring when executable reasoning scaffolds improve SLM performance on MCQA tasks. CGR standardizes six components: a normalized item interface, a direct solver prompt, a generator prompt, a Python scaffold, solver-call and extraction helpers, and a three-channel result record. On 20,498 retained result rows from a locally prepared MCQA bundle and six metadata-registered solver models, the observed non-zero-baseline partition shows 66.21% macro assisted accuracy versus 38.11% direct accuracy, a +28.10 percentage-point difference with a pair-bootstrap interval of [20.32, 36.43]. Under a stricter Ab > 30% direct-signal gate, the macro difference is +14.11 points. These estimates are descriptive. Assisted inference uses a larger solver-call budget, answer extraction is brittle, Time-MQA contains the observed regressions, and some generated programs violate the no-hard-coding instruction. CGR provides the trace package needed to interpret these results, including direct, assisted, and generator-side answers, partition definitions, generated programs, response metadata, and audits.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "multiple-choice QA",
+      "small language models",
+      "executable reasoning",
+      "code-guided reasoning",
+      "direct solver prompt",
+      "generator prompt",
+      "Python scaffold",
+      "solver-call helpers",
+      "answer extraction",
+      "macro accuracy",
+      "bootstrap interval",
+      "direct-signal gate",
+      "generated programs",
+      "trace package",
+      "response metadata"
+    ]
+  },
+  {
+    "id": "2605.12623",
+    "title": "DocAtlas: Multilingual Document Understanding Across 80+ Languages",
+    "summary": "Multilingual document understanding remains limited for low-resource languages due to scarce training data and model-based annotation pipelines that perpetuate existing biases. We introduce DocAtlas, a framework that constructs high-fidelity OCR datasets and benchmarks covering 82 languages and 9 evaluation tasks. Our dual pipelines, differential rendering of native DOCX documents and synthetic LaTeX-based generation for right-to-left scripts produce precise structural annotations in a unified DocTag format encoding layout, text, and component types, without learned models for core annotation. Evaluating 16 state-of-the-art models reveals persistent gaps in low-resource scripts. We show that Direct Preference Optimization (DPO) using rendering-derived ground truth as positive signal achieves stable multilingual adaptation, improving both in-domain (+1.9%) and out-of-domain (+1.8%) accuracy without measurable base-language degradation, where supervised fine-tuning degrades out-of-domain performance by up to 21%. Our best variant, DocAtlas-DeepSeek, improves +1.7% over the strongest baseline.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "DocAtlas",
+      "OCR datasets",
+      "multilingual document understanding",
+      "low-resource languages",
+      "differential rendering",
+      "synthetic generation",
+      "DocTag format",
+      "Direct Preference Optimization",
+      "multilingual adaptation",
+      "supervised fine-tuning"
+    ]
+  },
+  {
+    "id": "2605.20075",
+    "title": "CopT: Contrastive On-Policy Thinking with Continuous Spaces for General and Agentic Reasoning",
+    "summary": "Chain-of-thought (CoT) is a standard approach for eliciting reasoning capabilities from large language models (LLMs). However, the common CoT paradigm treats thinking as a prerequisite for answering, which can delay access to plausible answers and incur unnecessary token costs even when the model is able to identify an answer before extended thinking, a behavior known as performative reasoning. In this paper, we introduce CopT, a reformulated reasoning pipeline that reverses the usual order of thinking and answering. Instead of thinking before answering, CopT first elicits a draft answer and then invokes subsequent on-policy thinking conditioned on its own draft answer for reflection and correction. To assess whether the draft answer should be trusted, CopT recasts continuous embeddings as inference-time contrastive verifiers. Specifically, it contrasts the model's support for the same generated tokens under discrete-token inputs and continuous-embedding inputs, yielding a sequence-level reverse KL estimator for answer reliability. Our analysis shows that under certain assumptions, the expected estimate equals the mutual information between the unresolved latent state and the emitted answer token, explaining why it captures answer-relevant uncertainty rather than arbitrary uncertainty in the latent state. When the answer is deemed insufficiently reliable, CopT performs further on-policy thinking, where a second KL estimator dynamically controls draft-answer visibility, preserving useful partial information while reducing the risk of being misled by unreliable content. Across mathematics, coding, and agentic reasoning tasks, CopT improves peak accuracy by up to 23% and reduces token usage by up to 57% at comparable or higher accuracy, without any additional training. The code is available at https://github.com/sdc17/CopT.",
+    "upvotes": null,
+    "projectPage": "https://copt-web.github.io/",
+    "ai_keywords": [
+      "chain-of-thought",
+      "large language models",
+      "performative reasoning",
+      "draft answer",
+      "continuous embeddings",
+      "inference-time contrastive verifiers",
+      "reverse KL estimator",
+      "mutual information",
+      "on-policy thinking",
+      "KL estimator",
+      "token usage",
+      "accuracy improvement"
+    ]
+  },
+  {
+    "id": "2605.19932",
+    "title": "PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents",
+    "summary": "Large language model (LLM) agents increasingly operate over long and recurring external contexts, like document corpora and code repositories. Across invocations, existing approaches preserve either the agent's trajectory, passive access to raw material, or task-level strategies. None of them preserves what we argue is most needed for repeated same-context workloads: reusable orientation knowledge (e.g., what the context contains, how it is organized, and which entities, constants, and schemas have historically been useful) about the recurring context itself. We introduce PEEK, a system that caches and maintains this orientation knowledge as a context map: a small, constant-sized artifact in the agent's prompt that gives it a persistent peek into the external context. The map is maintained by a programmable cache policy with three modules: a Distiller that extracts transferable knowledge from inference-time signals, a Cartographer that translates it into structured edits, and a priority-based Evictor that enforces a fixed token budget. On long-context reasoning and information aggregation, PEEK improves over strong baselines by 6.3-34.0% while using 93-145 fewer iterations and incurring 1.7-5.8x lower cost than the state-of-the-art prompt-learning framework, ACE. On context learning, PEEK improves solving rate and rubric accuracy by 6.0-14.0% and 7.8-12.1%, respectively, at 1.4x lower cost than ACE. These gains generalize across LMs and agent architectures, including OpenAI Codex, a production-grade coding agent. Together, these results show that a context map helps long-context LLM agents interact with recurring external contexts more accurately and efficiently.",
+    "upvotes": null,
+    "projectPage": "https://zhuohangu.github.io/blog-post-peek/",
+    "ai_keywords": [
+      "large language model agents",
+      "external contexts",
+      "reusable orientation knowledge",
+      "context map",
+      "programmable cache policy",
+      "Distiller",
+      "Cartographer",
+      "Evictor",
+      "long-context reasoning",
+      "information aggregation",
+      "context learning",
+      "prompt-learning framework",
+      "ACE",
+      "OpenAI Codex"
+    ]
+  },
+  {
+    "id": "2605.19587",
+    "title": "SceneCode: Executable World Programs for Editable Indoor Scenes with Articulated Objects",
+    "summary": "Indoor scene synthesis underpins embodied AI, robotic manipulation, and simulation-based policy evaluation, where a useful scene must specify not only what the environment looks like, but also how its objects are structured. Existing pipelines, however, typically represent generated content as static meshes and inherit articulation only from curated asset libraries, which limits object-level controllability and prevents new interactable assets from being produced on demand. We address this gap by formulating physically interactable indoor scene synthesis as programmatic world generation, and present SceneCode, a framework that compiles a natural language prompt into an executable, code-driven indoor world rather than a collection of opaque meshes. A room-level agentic backbone first turns the prompt into a structured house layout and emits per-object AssetRequests through a planner--designer--critic loop. Each request is then routed to one of five code-generation strategies and converted into a synthesized part-wise Blender Python programs that are validated through an execution-guided repair-and-refine loop. The resulting programs are compiled into simulation-ready assets, and exported as SDF for physics simulation. A persistent scene-state registry links object requests, executable programs, rendered geometry, and simulation assets, turning scene assembly into a traceable and locally editable world-building process. We evaluate SceneCode across scene-level synthesis, object-level asset quality, human judgment, and downstream robot interaction. Results show that executable world programs improve prompt-faithful indoor scene generation and produce assets with cleaner mesh structure, and simulator-loadable articulation metadata. Project page: https://scene-code.github.io/.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "programmatic world generation",
+      "natural language prompt",
+      "executable code",
+      "indoor scene synthesis",
+      "asset generation",
+      "Blender Python programs",
+      "execution-guided repair-and-refine loop",
+      "simulation-ready assets",
+      "SDF",
+      "scene-state registry",
+      "object-level controllability",
+      "articulation metadata"
+    ]
+  },
+  {
+    "id": "2605.20104",
+    "title": "Draft Less, Retrieve More: Hybrid Tree Construction for Speculative Decoding",
+    "summary": "Speculative decoding (SD) accelerates large language model inference by leveraging a draft-then-verify paradigm. To maximize the acceptance rate, recent methods construct expansive draft trees, which unfortunately incur severe VRAM bandwidth and computational overheads that bottleneck end-to-end speedups. While dynamic-depth pruning can reduce this latency by removing marginal branches, it also discards potentially valid candidates, preventing the acceptance rate from reaching the upper bound of dense trees. In this paper, we identify a critical opportunity in resource allocation: the transition from dense to pruned drafting frees up significant computational budget. To break this Pareto tradeoff, we introduce Graft, a compensation framework that couples pruning and retrieval as mutually reinforcing operations. Pruning supplies sufficient budget for retrieval, while retrieval compensates for pruning-induced coverage loss and recovers accepted length. By employing a sequential `prune-then-graft' mechanism, Graft attaches highly predictive retrieved tokens into positions opened by pruning, filling the topological gaps with near-zero overhead. Graft is entirely training-free and lossless. Comprehensive evaluations show that Graft establishes a new Pareto frontier across practical deployment settings, including short-context generation, long-context generation, and large-scale models. On short-context benchmarks, it achieves up to 5.41times speedup and improves average speedup over EAGLE-3 by up to 21.8% on the large-scale Qwen3-235B. We also provide a preliminary exploration of applying Graft to the DFlash-style block drafting paradigm, offering initial evidence and insights for extending grafting beyond autoregressive draft trees.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "speculative decoding",
+      "draft-then-verify paradigm",
+      "draft trees",
+      "VRAM bandwidth",
+      "computational overhead",
+      "dynamic-depth pruning",
+      "Pareto tradeoff",
+      "compensation framework",
+      "pruning",
+      "retrieval",
+      "sequential prune-then-graft mechanism",
+      "autoregressive draft trees",
+      "DFlash-style block drafting"
+    ]
+  }
+]
