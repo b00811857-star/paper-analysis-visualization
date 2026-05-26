@@ -1,0 +1,516 @@
+[
+  {
+    "id": "2605.25604",
+    "title": "DVAO: Dynamic Variance-adaptive Advantage Optimization for Multi-reward Reinforcement Learning",
+    "summary": "Reinforcement Learning has become a standard paradigm for aligning Large Language Models with human intent and task requirements. While Group Relative Policy Optimization offers an efficient, value-model-free alternative to Proximal Policy Optimization, adapting it to real-world multi-reward settings remains challenging. Standard scalarization practices, such as Reward Combination and Advantage Combination, suffer from significant drawbacks: Reward Combination frequently generates advantages with excessively large squared magnitudes that lead to training instability, while Advantage Combination relies on static hyperparameters and ignores cross-objective correlations. To address these limitations, we propose Dynamic Variance-adaptive Advantage Optimization (DVAO), which dynamically adjusts combination weights based on the empirical reward variance of each objective within a rollout group, effectively up-weighting objectives with a stronger learning signal while suppressing noisy ones. We mathematically prove that DVAO maintains bounded advantage magnitudes for stable training and introduces a self-adaptive cross-objective regularization mechanism. Extensive experiments on mathematical reasoning and tool-use benchmarks using Qwen3 and Qwen2.5 models demonstrate that DVAO significantly outperforms baseline methods, achieving a superior multi-objective Pareto frontier and robust training stability.",
+    "upvotes": 56,
+    "projectPage": null,
+    "ai_keywords": [
+      "Reinforcement Learning",
+      "Large Language Models",
+      "Group Relative Policy Optimization",
+      "Proximal Policy Optimization",
+      "Reward Combination",
+      "Advantage Combination",
+      "Dynamic Variance-adaptive Advantage Optimization",
+      "multi-objective Pareto frontier",
+      "training stability",
+      "empirical reward variance"
+    ]
+  },
+  {
+    "id": "2605.25874",
+    "title": "WBench: A Comprehensive Multi-turn Benchmark for Interactive Video World Model Evaluation",
+    "summary": "Interactive world models are advancing rapidly, yet existing benchmarks cover only part of the required competencies, leaving no unified standard for systematic evaluation. To fill this gap, we introduce WBench, a comprehensive multi-turn benchmark for interactive world model evaluation along five dimensions, namely video quality, setting adherence, interaction adherence, consistency, and physics compliance. WBench contains 289 test cases and 1,058 interaction turns, where each case specifies a world setting and a multi-turn interaction sequence, covering diverse scenes, styles, subjects, and both first- and third-person perspectives, together with four interaction types, including navigation, subject action, event editing, and perspective switching. For navigation, WBench unifies text, 6-DoF pose, and discrete-action control, enabling evaluation of models with different native input interfaces. Evaluation uses 22 automatic sub-metrics that combine specialist vision models with large multimodal models, and all metrics are validated against human judgments. Across 20 state-of-the-art models, we find that no single model performs strongly across all dimensions. We provide detailed diagnostic insights into the characteristic strengths, weaknesses, and open challenges of each model. Code and data are available at https://github.com/meituan-longcat/WBench.",
+    "upvotes": 40,
+    "projectPage": "https://meituan-longcat.github.io/WBench/",
+    "ai_keywords": [
+      "interactive world models",
+      "multi-turn benchmark",
+      "video quality",
+      "setting adherence",
+      "interaction adherence",
+      "consistency",
+      "physics compliance",
+      "automatic sub-metrics",
+      "vision models",
+      "multimodal models"
+    ]
+  },
+  {
+    "id": "2605.24830",
+    "title": "Macaron-A2UI: A Model for Generative UI in Personal Agents",
+    "summary": "As personal agents evolve to handle complex, user-centric tasks, static plain-text chat is rapidly becoming a bottleneck. Generative UI emerges as the necessary new interface layer, dynamically synthesizing the right controls, options, and state from the interaction context in real time. We present Macaron-A2UI, a model for Generative UI in personal agents. Our goal is to move beyond text-only interaction by enabling agents to generate natural language together with lightweight, executable UI actions for information collection, preference refinement, confirmation, and multi-goal organization. We build a large-scale Generative UI corpus from heterogeneous dialogue sources, introduce A2UI-Bench for controlled evaluation, and train 30B, 235B and 754B models with parameter-efficient LoRA-based supervised fine-tuning followed by reward-driven reinforcement learning. The best Macaron-A2UI model reaches 75.6 overall on A2UI-Bench without explicit schema hints, surpassing the strongest full-schema frontier baseline. We release the models, benchmark, and evaluation protocol to support future work on Generative UI for personal agents.",
+    "upvotes": 37,
+    "projectPage": null,
+    "ai_keywords": [
+      "Generative UI",
+      "personal agents",
+      "parameter-efficient LoRA-based supervised fine-tuning",
+      "reward-driven reinforcement learning",
+      "A2UI-Bench",
+      "large-scale corpus"
+    ]
+  },
+  {
+    "id": "2605.23218",
+    "title": "Foundation Protocol: A Coordination Layer for Agentic Society",
+    "summary": "Autonomous agents are moving from tools into a layer of social infrastructure: they browse, purchase, deploy software, manage systems, and increasingly interact with one another. As these systems scale, the bottleneck shifts away from raw model capability toward coordination. Agents need to form reliable relationships, organize multi-agent work, exchange value, support an AI economy, and stay safe and accountable under real-world oversight. This paper introduces the Foundation Protocol (FP), a graph-first coordination layer for an emerging human-AI society. FP unifies heterogeneous entities, including agents, tools, resources, humans, institutions, and organizations, and supports native multi-party organization and event-based collaboration. It also provides economic primitives for metering, receipts, and settlement, and treats policy, provenance, and audit as first-class concerns. FP is designed to wrap and bridge existing protocols rather than replace them, enabling incremental adoption while reducing integration and governance overhead. The aim is to keep autonomous agency composable while keeping accountability non-negotiable, so that coordination itself can become shared infrastructure for a human-AI society that is open, pluralistic, and governable.",
+    "upvotes": 33,
+    "projectPage": "https://foundationagents.org/",
+    "ai_keywords": []
+  },
+  {
+    "id": "2605.20342",
+    "title": "ParaVT: Taming the Tool Prior Paradox for Parallel Tool Use in Agentic Video Reinforcement Learning",
+    "summary": "Training large multimodal models (LMMs) via reinforcement learning (RL) to natively invoke video-processing tools (e.g., cropping) has become a promising route to long-video understanding. However, existing native-RL methods dispatch tool calls sequentially (i.e., one per turn): a single wrong crop propagates errors without peer correction, multi-turn tool calls corrupt context, and inference cost scales linearly with the number of turns. We introduce ParaVT, the first multi-agent end-to-end RL-trained framework for Parallel Video Tool calling, dispatching multiple time-window crops in a single turn for cleaner context and better fault tolerance. Yet applying standard RL to ParaVT reveals an obstacle we term the Tool Prior Paradox: the pretrained tool priors that enable tool exploration also destabilize cold-started structural format and expose the skip-tool reward shortcut under temperature sampling. A cross-model contrast on a weaker-prior LMM supports this claim: format stays stable but RL elicits zero tool calls, indicating that prior strength is the shared driver of both format collapse and tool exploration. We propose PARA-GRPO (Parseability-Anchored and Ratio-gAted GRPO), which augments standard RL with two complementary mechanisms: (i) a targeted format reward applied only at the structural-token positions most prone to collapse, and (ii) a per-prompt frame-budget randomization that creates training prompts where calling the tool yields a measurable reward signal over skipping it. Across six long-video understanding benchmarks, ParaVT improves over the Qwen3-VL baseline by +7.9% on average, with PARA-GRPO lifting training-time format compliance from 0.13 to 0.64. As tool capabilities become increasingly internalized in modern LMMs, RL must cooperate with the resulting priors, and ParaVT offers a general recipe for agentic RL. Code, data, and model weights are publicly available.",
+    "upvotes": 26,
+    "projectPage": "https://evolvinglmms-lab.github.io/ParaVT/",
+    "ai_keywords": [
+      "multimodal models",
+      "reinforcement learning",
+      "video-processing tools",
+      "parallel video tool calling",
+      "tool prior paradox",
+      "PARAGRPO",
+      "structural tokens",
+      "frame-budget randomization",
+      "long-video understanding",
+      "Qwen3-VL"
+    ]
+  },
+  {
+    "id": "2605.26115",
+    "title": "TriSplat: Simulation-Ready Feed-Forward 3D Scene Reconstruction",
+    "summary": "Sparse-view 3D reconstruction is increasingly addressed with feed-forward splatting networks that predict explicit primitives directly from images. Yet most existing methods remain centered on Gaussian primitives and expose surfaces only indirectly: extracting a usable mesh for downstream simulation, physics reasoning, or embodied interaction still requires expensive post-hoc steps that break the feed-forward promise. This limitation is especially pronounced in pose-free settings, where scene structure and camera parameters must be estimated jointly from sparse observations. We present TriSplat, a feed-forward reconstruction network that represents scenes with oriented triangle primitives and directly exports simulation-ready mesh scenes from a single forward pass. Given input images, the network predicts local 3D point maps, triangle attributes, camera poses, and optional intrinsics. Rather than regressing triangle orientation as an unconstrained latent variable, our approach constructs geometry normals from the predicted point maps, refines them with an image-conditioned normal head, and converts them into stable local frames for triangle parameterization. A mono-normal bootstrap schedule further stabilizes early training, while opacity and blur scheduling progressively sharpens the learned surface representation for direct mesh extraction. Experiments on RealEstate10K and DL3DV show that this representation produces more geometry-faithful reconstructions than Gaussian feed-forward baselines while maintaining competitive novel-view rendering quality. Because the rendering primitives are themselves surface triangles, the output can be directly ingested by physics engines, collision detectors, and standard rendering pipelines without any conversion, making it a practical simulation-ready solution for feed-forward 3D scene reconstruction.",
+    "upvotes": 18,
+    "projectPage": "https://lhmd.top/trisplat/#interactive",
+    "ai_keywords": [
+      "splatting networks",
+      "Gaussian primitives",
+      "feed-forward reconstruction",
+      "triangle primitives",
+      "mesh scenes",
+      "3D point maps",
+      "triangle attributes",
+      "camera poses",
+      "normal head",
+      "mono-normal bootstrap",
+      "opacity scheduling",
+      "blur scheduling",
+      "physics engines",
+      "collision detectors"
+    ]
+  },
+  {
+    "id": "2605.24218",
+    "title": "QUEST: Training Frontier Deep Research Agents with Fully Synthetic Tasks",
+    "summary": "Deep research agents extend the role of search engines from retrieving keyword-matched pages to synthesizing knowledge, fundamentally changing how humans interact with information. However, frontier systems remain proprietary, while existing open agents often generalize poorly across different task types, leaving unclear how to train a broadly capable deep research agent. We release QUEST, a family of open models (ranging from 2B to 35B) that serve as general-purpose deep research agents designed to handle a wide range of long-horizon search tasks, with strong capabilities in fact seeking, citation grounding, and report synthesis. To build QUEST, we propose an effective training recipe combining mid-training, supervised fine-tuning, and reinforcement learning. Central to this recipe is a curated data synthesis pipeline based on unified rubric trees, which applies to different task types and enables synthesizing training data with verifiable rewards without human annotation. In addition, QUEST incorporates a built-in context management mechanism that enables effective long-horizon reasoning and knowledge synthesis. Using only 8K synthesized tasks, QUEST approaches or even surpasses frontier closed-source agents across eight deep research benchmarks spanning diverse task types, and achieves the best overall performance among recent open-weight agents. We released everything: models, data, and training scripts.",
+    "upvotes": 17,
+    "projectPage": "https://osu-nlp-group.github.io/QUEST/",
+    "ai_keywords": [
+      "supervised fine-tuning",
+      "reinforcement learning",
+      "data synthesis pipeline",
+      "rubric trees",
+      "context management mechanism",
+      "long-horizon reasoning",
+      "knowledge synthesis"
+    ]
+  },
+  {
+    "id": "2605.25343",
+    "title": "Toward Native Multimodal Modeling: A Roadmap",
+    "summary": "Multimodal modeling represents a vital step from modality-agnostic reasoning toward world modeling. While early approaches predominantly rely on late-fusion that assembles encoders and frozen language backbones with output heads, recent efforts have shifted the paradigm toward native multimodal modeling (NMM) with the intrinsic integration of modalities for superior multimodal performance. Despite its potential, the design space of native architectures remains insufficiently defined. In this paper, we present the community with a formalized roadmap for this transition. Specifically, we formally define the architectural nativity, distinguishing mid-fusion and early-fusion from non-native paradigms. We further organize the existing native models through the lens of input-output duality into three categories: (i) Multi-to-Text for cross-modal comprehension with text-only output; (ii) Multi-to-Target for scenario-oriented generation, e.g., image, audio and video generation, and (iii) Multi-to-Multi for unified modeling with symmetric input-output. We deliver a comprehensive and industrial-grade investigation into the transition toward the definitive NMM framework, where understanding and generation seamlessly coexist within a unified transformer paradigm. We systematically unpack the end-to-end pipeline from industrial perspectives from architectural coordination, massive data curation, to full-stack training recipes, inference & deployment, and the comprehensive evaluation for truly native modeling.",
+    "upvotes": 16,
+    "projectPage": "https://nmm-roadmap.github.io/",
+    "ai_keywords": [
+      "multimodal modeling",
+      "native multimodal modeling",
+      "late-fusion",
+      "mid-fusion",
+      "early-fusion",
+      "cross-modal comprehension",
+      "scenario-oriented generation",
+      "unified modeling",
+      "transformer paradigm",
+      "architectural nativity",
+      "input-output duality"
+    ]
+  },
+  {
+    "id": "2605.23204",
+    "title": "AutoResearch AI: Towards AI-Powered Research Automation for Scientific Discovery",
+    "summary": "Scientific research is being reshaped by AI systems that move beyond isolated assistance toward longer-horizon workflows spanning literature grounding, hypothesis generation, experimentation, validation, reporting, and revision. This shift marks a transition from task-level AI for science to workflow-level research automation. Yet current systems remain fragmented, differing in autonomy, domain scope, execution environment, validation mechanism, and human oversight, while still struggling with evidence preservation, reproducibility, weak-direction rejection, provenance tracking, cross-domain robustness, and accountable scientific closure. This survey examines these developments through AutoResearch, defined as the developmental spectrum of AI-powered scientific workflow automation. Within it, Vibe Research denotes the human-steered region of prompt-based assistance and human-verified execution, whereas emerging AI-led systems coordinate larger portions of the discovery loop without achieving robust autonomy. We analyze how research systems redistribute control, evidence, execution, validation, and accountability across workflows and organize the field around five workflow conditions: literature and research grounding; hypothesis formation and planning; experimentation and tool use; feedback, validation, and review; and reporting and knowledge communication. We further synthesize AI scientist systems, mixed-initiative co-research frameworks, benchmarks, domain deployments, and open-source infrastructures. Finally, we propose five evaluation dimensions--novelty, validity, impact, reliability, and provenance--and show that AutoResearch autonomy is domain-conditioned, being more credible in structured, executable, and rapidly verifiable settings but limited in embodied, delayed, heterogeneous, ethical, or institutionally accountable contexts.",
+    "upvotes": 16,
+    "projectPage": "https://mr-tieguigui.github.io/Autoresearch/",
+    "ai_keywords": [
+      "AI-powered scientific workflow automation",
+      "AutoResearch",
+      "Vibe Research",
+      "mixed-initiative co-research frameworks",
+      "benchmarks",
+      "domain deployments",
+      "open-source infrastructures",
+      "evaluation dimensions",
+      "novelty",
+      "validity",
+      "impact",
+      "reliability",
+      "provenance"
+    ]
+  },
+  {
+    "id": "2605.24938",
+    "title": "Your Embedding Model is SMARTer Than You Think",
+    "summary": "Multimodal retrieval relies heavily on single-vector retrievers, which compress rich, sequential token sequences into one single global representation. While efficient, they discard fine-grained, local evidence critical for dense retrieval tasks. Multi-vector approaches were introduced as a solution, but they strictly require training and many ignore the necessity of a globally summarizing representation. To address this, we introduce SMART, a framework that unlocks the latent multi-vector capabilities of standard single-vector models. We first demonstrate that standard contrastive training on the pooled embedding implicitly shapes the retrieval geometry of preceding hidden states via gradient flow. By applying direct late-interaction over these frozen hidden states during inference, SMART acts as a plug-and-play upgrade that consistently improves performance across diverse modalities, improving even the state-of-the-art models further on MMEB-V2. We also reveal SMART's superior performance, as simple lightweight post-training not only saves time and compute, but also brings forth further improvement on Visual Document retrieval, allowing a single-vector model to outperform SoTA multi-vector counterparts. Ultimately, SMART offers both a highly efficient inference enhancement and a powerful finetuning technique for multimodal retrieval. We open source our code and weights at https://github.com/HanSolo9682/SMART.",
+    "upvotes": 14,
+    "projectPage": null,
+    "ai_keywords": [
+      "multimodal retrieval",
+      "single-vector retrievers",
+      "multi-vector approaches",
+      "contrastive training",
+      "late-interaction",
+      "pooled embedding",
+      "hidden states",
+      "gradient flow",
+      "Visual Document retrieval",
+      "SoTA"
+    ]
+  },
+  {
+    "id": "2605.25449",
+    "title": "Pantheon360: Taming Digital Twin Generation via 3D-Aware 360° Video Diffusion",
+    "summary": "Generating complete digital twins from videos requires precise camera control, global scene coverage, and strict spatial-temporal consistency constraints that remain challenging for perspective video generators due to their limited field of view (FoV). Their narrow FoV forces long or multi-view trajectories, amplifying cross-view inconsistency and temporal drift. We argue that 360° video generation offers a natural solution: panoramic coverage simplifies trajectory design and provides a strong global context for maintaining coherence. We introduce Pantheon360: Taming Digital Twin Generation via 3D-Aware 360° Video Diffusion, a controllable 360° video generation framework that synthesizes high-fidelity videos from sparse 360° inputs. The key idea is an explicit 3D Cache, reconstructed from the input, which serves as a geometric scaffold for any user-defined camera path. This allows the diffusion model to focus on photorealistic texture refinement while the 3D Cache enforces global geometric consistency. Experiments show that Pantheon360 achieves superior visual quality and unmatched geometric coherence, enabling reliable and flexible 360° scene generation for downstream simulation and digital-twin applications.",
+    "upvotes": 12,
+    "projectPage": "https://koi953215.github.io/pantheon360_page/",
+    "ai_keywords": [
+      "360° video generation",
+      "digital twin generation",
+      "3D-aware diffusion",
+      "3D Cache",
+      "geometric scaffold",
+      "photorealistic texture refinement",
+      "spatial-temporal consistency"
+    ]
+  },
+  {
+    "id": "2605.26086",
+    "title": "Claw-Anything: Benchmarking Always-On Personal Assistants with Broader Access to User's Digital World",
+    "summary": "Large language model agents are increasingly envisioned as always-on personal assistants with access to anything relevant in the user's digital world. Yet current systems operate over only narrow slices of that world, limiting context-sensitive reasoning and effective assistance. Existing benchmarks similarly provide only partial user state and therefore fail to capture performance in such a broad, always-on setting. To address this gap, we introduce Claw-Anything, a benchmark that expands agent context along three dimensions: long-horizon activity histories, interdependent backend services, and integrated GUI and CLI interaction across multiple devices. To instantiate this setting, we simulate months of user activity through multi-round event injection, producing complex world states and realistic noise, including irrelevant events and conflicting signals. Agents must reason over rich contextual environments while remaining robust to such noise. This expanded scope also enables the evaluation of proactive assistance, requiring agents to anticipate user needs and deliver timely recommendations. Experiments show that GPT-5.5 achieves only 34.5% pass@1, substantially below prior benchmarks, underscoring a gap between current agent capabilities and the demands of always-on personal assistance. Alongside the benchmark, we release an automated data-generation pipeline that yields 2,000 training environments and improves the base model by 23.7%, demonstrating its utility of scalable data infrastructure.",
+    "upvotes": 11,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language model agents",
+      "personal assistants",
+      "user activity",
+      "multi-round event injection",
+      "proactive assistance",
+      "pass@1",
+      "automated data-generation pipeline"
+    ]
+  },
+  {
+    "id": "2605.26105",
+    "title": "On-Policy Adversarial Flow Distillation for Autoregressive Video Generation",
+    "summary": "Autoregressive video generators are attractive for streaming, long-horizon, and interactive applications, but distilling strong black-box teachers into causal students remains difficult. The student must learn under its own rollout distribution, whereas practical teachers may expose only prompt-conditioned completed videos and may differ in architecture, capacity, temporal design, and sampling schedule. This interface makes supervised fine-tuning off-policy, score-based distillation inapplicable, and direct adversarial imitation too sparse for denoising-time credit assignment. We propose Adversarial Flow Distillation (AFD), an on-policy framework for heterogeneous black-box video distillation. AFD queries the teacher and rolls out the current student on the same prompts, trains a prompt-paired Bradley-Terry discriminator to estimate clean-sample teacher-student discrepancy, and converts the resulting on-policy advantage into forward-process flow-matching updates on the student's own noised states. Thus, AFD provides dense velocity-field supervision while requiring no teacher scores, latents, denoising trajectories, step alignment, or reverse-chain reinforcement learning. Experiments across two causal AR student families show that AFD consistently improves motion- and physics-sensitive generation while preserving general video quality, and ablations validate the importance of adaptive on-policy feedback and forward-process credit assignment. The method requires only clean teacher videos and student rollouts, providing a practical route for distilling proprietary or heterogeneous video generators into efficient autoregressive students.",
+    "upvotes": 10,
+    "projectPage": null,
+    "ai_keywords": [
+      "autoregressive video generators",
+      "causal students",
+      "black-box teachers",
+      "on-policy framework",
+      "Bradley-Terry discriminator",
+      "flow-matching updates",
+      "video distillation",
+      "heterogeneity",
+      "forward-process credit assignment"
+    ]
+  },
+  {
+    "id": "2605.25569",
+    "title": "ControlLight: Towards Controllable, Consistent, and Generalizable Low-Light Enhancement",
+    "summary": "Existing deep learning-based low-light enhancement methods are typically trained on limited datasets with single enhancement targets, which restricts their generalization ability and controllability in real-world applications. To overcome these limitations, we propose ControlLight, a controllable, consistent, and generalizable framework for low-light enhancement. We first construct a large-scale dataset of real-world degraded images with continuous illumination-strength supervision. To further ensure consistent outputs under different control strengths, we introduce a misalignment-aware weighted flow matching loss that preserves image structure across continuous enhancement strengths. ControlLight allows users to edit real-world degraded low-light images toward satisfactory enhancement results by flexibly controlling the strength while preserving visual consistency and realism. Extensive experiments show that ControlLight achieves state-of-the-art performance against existing low-light enhancement approaches while demonstrating strong continuous controllability and generalization to real-world scenarios.",
+    "upvotes": 8,
+    "projectPage": "https://yfyang007.github.io/ControlLight/",
+    "ai_keywords": [
+      "low-light enhancement",
+      "continuous illumination-strength supervision",
+      "weighted flow matching loss",
+      "image structure preservation",
+      "controllability",
+      "generalization",
+      "real-world degraded images"
+    ]
+  },
+  {
+    "id": "2605.24117",
+    "title": "SkillEvolBench: Benchmarking the Evolution from Episodic Experience to Procedural Skills",
+    "summary": "Large language model (LLM) agents accumulate rich episodic trajectories while solving real-world tasks, but it remains unclear whether such experience can be distilled into reusable procedural skills. We introduce SkillEvolBench, a diagnostic benchmark for evaluating this step from experience reuse to skill formation. It contains 180 tasks across six real-world agent environments, organized into role-conditioned task families with shared latent procedures. Agents learn from acquisition tasks, update an external skill library using compacted trajectories and verifier feedback, and then face frozen deployment tasks testing context shift, adversarial shortcuts, and composition. By comparing self-generated and curated-start skill evolution against no-skill and raw-trajectory controls, SkillEvolBench separates procedural abstraction from base capability, curated prior knowledge, and direct reuse of episodic traces. Across ten model configurations and three agent harnesses, we find that current agents often adapt locally but rarely form robust reusable skills. Skill-based conditions can improve acquisition or replay, and individual models sometimes gain on specific deployment axes, but these gains are unstable under frozen deployment. Raw-trajectory reuse frequently outperforms distilled skills, suggesting that current abstraction procedures discard contextual and procedural cues that remain useful for future tasks. Capacity and cost analyses further show that writing more skills or larger Tier-3 resource libraries is not sufficient: additional updates can improve coverage while introducing episode-specific drift and procedural clutter. These findings position SkillEvolBench as a testbed for measuring when one-off experience becomes durable procedural knowledge rather than task-local memory.",
+    "upvotes": 8,
+    "projectPage": "https://skillevolbench.github.io/",
+    "ai_keywords": [
+      "large language model agents",
+      "episodic trajectories",
+      "skill formation",
+      "diagnostic benchmark",
+      "skill library",
+      "procedural skills",
+      "trajectory compaction",
+      "verifier feedback",
+      "role-conditioned task families",
+      "procedural abstraction",
+      "experience reuse",
+      "skill-based conditions",
+      "episode-specific drift",
+      "procedural clutter"
+    ]
+  },
+  {
+    "id": "2605.26102",
+    "title": "InstructSAM: Segment Any Instance with Any Instructions",
+    "summary": "In this paper, we introduce InstructSAM, a unified and streamlined framework designed for multi-instance segmentation under arbitrary instructions. We formulates instruction-driven instance segmentation as a set-structured query prediction problem and propose an explicit reasoning-to-instance query interface that elegantly bridges a vision-language model (VLM) and SAM3. Specifically, a bank of learnable instance queries is injected into the VLM and contextualized with instruction and visual information, enabling each query to serve as an instance-aware slot. A hybrid-attention mechanism further promotes interaction among these queries, visual tokens, and instruction tokens, improving instance enumeration and reducing duplicate predictions. The resulting LLM-conditioned queries are projected into SAM3's detector query space to drive accurate multi-instance segmentation in a single forward pass. This design equips SAM3 with high-level instruction understanding, compositional reasoning, and instance-level set prediction without modifying its core architecture. To support training and evaluation, we further construct Inst2Seg, a high-quality and large-scale instruction-based instance segmentation dataset and benchmark that couples free-form instructions with instance-level masks. Extensive experiments show that only 2B-scale InstructSAM achieves strong results across complex instruction-driven and phrase-level referring segmentation benchmarks, outperforming prior end-to-end methods and SAM3's agentic pipeline while enabling efficient single-pass multi-instance prediction.",
+    "upvotes": 7,
+    "projectPage": null,
+    "ai_keywords": [
+      "multi-instance segmentation",
+      "instruction-driven instance segmentation",
+      "set-structured query prediction",
+      "vision-language model",
+      "SAM3",
+      "explicit reasoning-to-instance query interface",
+      "learnable instance queries",
+      "hybrid-attention mechanism",
+      "instance-aware slots",
+      "single forward pass",
+      "LLM-conditioned queries",
+      "instruction-based instance segmentation",
+      "Inst2Seg",
+      "phrase-level referring segmentation"
+    ]
+  },
+  {
+    "id": "2605.25294",
+    "title": "Geometry-Aware Image Flow Matching",
+    "summary": "Recent advances in generative models highlight the power of geometry-aware modeling in manifold-constrained settings. Yet, for natural images, the field remains confined to Euclidean assumptions, failing to exploit the potential of intrinsic geometric structures within the data. In this work, we investigate the geometry of natural images and observe that semantic information is predominantly encoded in directional components, while norm components can be approximated by the global average. This property holds across both RGB and latent spaces, suggesting that natural images can be effectively modeled on a hypersphere. Building on this finding, we introduce Spherical Optimal Transport Flow Matching (SOT-CFM), which utilizes angular distance, and Spherical Flow Matching (SFM), which constrains dynamics directly on the manifold. Our experiments demonstrate that these geometry-aware methods achieve superior performance against Euclidean baselines. Ultimately, this work provides a novel perspective that bridges the gap between Riemannian manifold-based modeling and natural image generation.",
+    "upvotes": 7,
+    "projectPage": null,
+    "ai_keywords": [
+      "generative models",
+      "geometry-aware modeling",
+      "manifold-constrained settings",
+      "natural images",
+      "hypersphere",
+      "Spherical Optimal Transport Flow Matching",
+      "Spherical Flow Matching",
+      "Riemannian manifold-based modeling"
+    ]
+  },
+  {
+    "id": "2605.26089",
+    "title": "Channel-wise Vector Quantization",
+    "summary": "We present Channel-wise Vector Quantization (CVQ), a novel image tokenization paradigm that replaces patch-wise tokens with channel-wise tokens. Unlike conventional vector quantization, which assigns a discrete token to each patch feature vector, CVQ quantizes each channel of the feature map. This formulation represents an image as discrete levels of visual details, rather than as a grid of spatial patches. Based on CVQ, we introduce a new visual autoregressive framework with \"next-channel prediction\". Instead of rendering images patch by patch in raster order, our Channel-wise Autoregressive (CAR) model predicts image channels sequentially, producing progressively enriched visual details. Specifically, it first sketches global structure and then refines fine-grained attributes, akin to a human artist's workflow. Empirically, we show that: (1) CVQ achieves 100% codebook utilization with a 16K+ codebook size without any bells and whistles, and substantially improves reconstruction quality over conventional VQ; and (2) CAR attains a DPG score of 86.7 and a GenEval score of 0.79, demonstrating strong effectiveness for text-to-image generation.",
+    "upvotes": 4,
+    "projectPage": "https://github.com/songweii/CVQ",
+    "ai_keywords": [
+      "Channel-wise Vector Quantization",
+      "image tokenization",
+      "vector quantization",
+      "patch-wise tokens",
+      "channel-wise tokens",
+      "visual autoregressive framework",
+      "next-channel prediction",
+      "Channel-wise Autoregressive",
+      "codebook utilization",
+      "reconstruction quality",
+      "DPG score",
+      "GenEval score",
+      "text-to-image generation"
+    ]
+  },
+  {
+    "id": "2605.25461",
+    "title": "MetaphorVU: Towards Metaphorical Video Understanding",
+    "summary": "Metaphorical videos are prevalent across various real-world scenarios to convey complex ideas, and understanding them typically requires high-order cognitive capabilities. The lack of systematic studies on metaphorical video understanding not only constrains the real-world applicability of MLLMs but also impedes the thorough assessment of their high-order cognitive capabilities. To bridge this gap, we propose MetaphorVU-Bench, the first systematic and comprehensive benchmark dedicated to metaphorical video understanding. Through experiments, we find current MLLMs struggle with accurate metaphorical video understanding, lagging far behind human level, primarily due to defective cross-domain mapping. Motivated by this finding, we construct a metaphor knowledge graph as mapping augmentation and propose MetaphorBoost, an inference-time enhancement framework achieving consistent performance improvement. Our benchmark, analysis, and method provide useful insights and a foundation for future research on advancing MLLMs.",
+    "upvotes": 4,
+    "projectPage": "https://huggingface.co/datasets/lzq2021/MetaphorVU-Bench",
+    "ai_keywords": [
+      "multimodal large language models",
+      "metaphorical video understanding",
+      "cross-domain mapping",
+      "metaphor knowledge graph",
+      "MetaphorBoost",
+      "inference-time enhancement"
+    ]
+  },
+  {
+    "id": "2605.26109",
+    "title": "Helix4D: Complex 4D Mesh Generation",
+    "summary": "Current video-to-4D methods struggle with complex topology changes, transparent materials, thin structures, and inner surfaces. We present Helix4D, a dynamic mesh generation framework by inheriting the expressive representation of Trellis2, adapting it from image-to-3D to video-conditioned 4D generation. Our design arises from two key questions: (a) how to enable Trellis2's frame-local attention to share information across frames while preserving its pretrained quality on rare cases such as transparent objects and inner surfaces, and (b) how to inject temporal information into a purely 3D positional encoding without breaking pretrained capabilities. We address (a) with a sliding-window cross-frame attention and anchor on the first frame. The first frame is generated by the base Trellis2 model and injected into our model, letting it inherit Trellis2's quality in rare cases through cross-frame attention. We address (b) with a 4D temporal encoding that repurposes redundant low-frequency spatial RoPE bands for time, extending the encoding from 3D with no additional parameters. Extensive experiments show the effectiveness of Helix4D for high-quality dynamic mesh generation on ActionBench and our own challenging complex dynamics set.",
+    "upvotes": 3,
+    "projectPage": "https://snap-research.github.io/helix4d/",
+    "ai_keywords": [
+      "dynamic mesh generation",
+      "Trellis2",
+      "frame-local attention",
+      "cross-frame attention",
+      "temporal encoding",
+      "4D temporal encoding",
+      "positional encoding",
+      "RoPE bands",
+      "ActionBench",
+      "complex dynamics set"
+    ]
+  },
+  {
+    "id": "2605.08129",
+    "title": "Towards Customized Multimodal Role-Play",
+    "summary": "Unified multimodal understanding and generation models enable richer human-AI interaction. Yet jointly customizing a character's persona, dialogue style, and visual identity while maintaining output consistency across modalities remains largely unexplored. To mitigate this gap, we introduce a new task, Customized Multimodal Role-Play (CMRP). We construct the RoleScape-20 dataset comprising 20 characters, including training and evaluation data that cover persona, stylistic descriptions, visual/expressive cues, and text-image interactions. Building on a unified model, we devise UniCharacter, a two-stage training framework containing Unified Supervised Finetuning (Unified-SFT) and character-specific group relative policy optimization (Character-GRPO). Given only 10 images plus corresponding interaction examples, the model acquires the target character and exhibits coherent persona, style, and visual identity in both generated text and images. This process takes about 100 GPU hours. Experiments on the RoleScape-20 dataset show that the proposed method substantially outperforms prior approaches. Ablation studies further validate the effectiveness of our cross-modal consistency design and few-shot customization strategy. We argue that CMRP, coupled with unified modeling, provides a basis for next-generation characterful and immersive interactive agents.",
+    "upvotes": 3,
+    "projectPage": "https://tangc03.github.io/UniCharacter.github.io/",
+    "ai_keywords": [
+      "Customized Multimodal Role-Play",
+      "Unified Supervised Finetuning",
+      "Character-GRPO",
+      "cross-modal consistency",
+      "few-shot customization",
+      "unified modeling"
+    ]
+  },
+  {
+    "id": "2605.26108",
+    "title": "Reinforcing Few-step Generators via Reward-Tilted Distribution Matching",
+    "summary": "Recent advances in few-step diffusion distillation have enabled efficient image generation, yet aligning these models with human preferences remains challenging. We propose Reward-Tilted Distribution Matching Distillation (RTDMD), a two-stage framework that unifies distribution matching distillation with reward-guided reinforcement learning for few-step flow generators. We show that minimizing the KL divergence to a reward-tilted teacher distribution naturally decomposes into a distribution matching term and a reward maximization term. In the first stage, we introduce Ambient-Consistent Distribution Matching Distillation (AC-DMD), which performs subinterval-wise distribution matching and augments the fake score objective with a consistency regularizer to help the fake score model track the shifting generator distribution under limited updates. In the second stage, we jointly optimize both terms: for the reward maximization term, we derive a hybrid policy gradient that combines a GRPO-style estimator for the stochastic intermediate transitions with direct reward backpropagation through the deterministic final step, and further introduce step-subset GRPO (SubGRPO) to reduce variance. Experiments on SD3, SD3.5, and FLUX.2 demonstrate that RTDMD establishes new state-of-the-art results across preference, aesthetic, and compositional metrics with only 4 inference steps, outperforming previous few-step text-to-image generation methods. Code and models are available at https://github.com/Harahan/RTDMD.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "diffusion distillation",
+      "reward-guided reinforcement learning",
+      "distribution matching distillation",
+      "reward-tilted teacher distribution",
+      "KL divergence",
+      "fake score objective",
+      "consistency regularizer",
+      "policy gradient",
+      "GRPO",
+      "SubGRPO"
+    ]
+  },
+  {
+    "id": "2605.26002",
+    "title": "SemBridge: Language Transfer in Sparse Encoders via Multilingual Semantic Bridges",
+    "summary": "Sparse encoders offer high-precision retrieval by representing term importance within a vocabulary space, yet their English-centric structures pose a critical impediment to language transfer for non-English languages. To overcome this structural limitation, we propose SemBridge, a novel embedding initialization method designed for cross-lingual adaptation in sparse encoders by leveraging multilingual bridge models. SemBridge establishes semantic alignments between source and target vocabularies using multilingual dense embeddings as a bridge. Rather than directly relying on all source tokens, SemBridge selects a small set of semantically related source-language tokens and uses them to initialize each target-language token, effectively filtering out semantic noise and reconstructing target tokens as precise linear combinations of core synonyms. This accelerates convergence during fine-tuning and improves training efficiency. Extensive experiments across five languages and four sparse architectures demonstrate that SemBridge achieves superior zero-shot retrieval performance and consistently improves retrieval performance after fine-tuning compared to existing baselines. These results validate SemBridge as a practical solution for deploying high-performance sparse retrieval systems in diverse linguistic environments.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "sparse encoders",
+      "cross-lingual adaptation",
+      "multilingual bridge models",
+      "semantic alignment",
+      "fine-tuning",
+      "zero-shot retrieval",
+      "retrieval performance"
+    ]
+  },
+  {
+    "id": "2605.25052",
+    "title": "Faithfulness Metrics Don't Measure Faithfulness: A Meta-Evaluation with Ground Truth",
+    "summary": "Chains of thought (CoTs) have become central in interpreting and auditing behaviors of large language models. Yet growing evidence suggests that these traces often fail to faithfully represent the computations behind a model's predictions. Several faithfulness metrics have been proposed, but whether they indeed measure faithfulness remains unknown. Answering this requires ground-truth labels, which are hard to obtain since internal computations are not directly observable. Consequently, most works proposing metrics report only absolute scores or comparisons to prior metrics, and the few existing benchmarks rely on proxies like plausibility or importance, properties orthogonal to faithfulness that can mislead about whether a CoT can be trusted. We address this challenge by constructing tasks whose outputs reveal which intermediate computations must have produced them, and developing an automated labeling pipeline that yields ground-truth faithfulness labels at both the step and CoT level. Building on this methodology, we present BonaFide, a benchmark of 3,066 labeled CoTs across 13 tasks and 10 models, and use it to conduct the first systematic evaluation of prominent faithfulness metrics. Our experiments show that most metrics perform near chance, exhibit strong prediction biases and degrade on longer CoTs. The best metric reaches only 0.70 AUROC at the CoT level while another reaches 0.59 at the step level, with neither transferring across settings, while entailing prohibitively high computational cost. Our results expose fundamental gaps in current faithfulness evaluation and call for the development of more reliable and efficient metrics.",
+    "upvotes": 1,
+    "projectPage": "https://huggingface.co/collections/yoavgurarieh/bonafide",
+    "ai_keywords": [
+      "chains of thought",
+      "faithfulness metrics",
+      "ground-truth labels",
+      "automated labeling pipeline",
+      "BonaFide benchmark",
+      "intermediate computations",
+      "prediction biases",
+      "AUROC"
+    ]
+  },
+  {
+    "id": "2605.24426",
+    "title": "SEAL: Synergistic Co-Evolution of Agents and Learning Environments",
+    "summary": "Large Language Model (LLM) agents are increasingly improved through interaction, yet most self-evolution methods adapt either the policy or the learning environment in isolation. We identify this structural gap as Agent-Environment Misalignment: the agent's capability frontier changes during training, while the environment that provides supervision remains static or only weakly coupled to the agent's revealed failures. We propose SEAL, a closed-loop co-evolution framework for interactive tool-use agents. SEAL collects on-policy trajectories under executable verification, diagnoses failed rollouts into turn-level failure labels, and uses these diagnoses as a shared signal for both environment-side adaptation and model-side policy optimization. The environment evolves its training-time learning interface by exposing clearer tool affordance cues, constraint information, and recovery-oriented feedback, while the policy is updated with diagnosis-guided advantage reweighting. Extensive experiments across in-distribution and out-of-distribution multi-turn tool-use evaluations show that SEAL improves low-resource agent learning: with only 400 training samples, it yields +8.25 to +26.25 average-point gains across three backbones and exhibits positive out-of-distribution transfer. These results demonstrate the value of jointly adapting the learner and its training-time learning substrate for robust self-improving LLM agents.",
+    "upvotes": 1,
+    "projectPage": "https://yihaohu0118.github.io/SEAL/",
+    "ai_keywords": [
+      "Agent-Environment Misalignment",
+      "SEAL",
+      "closed-loop co-evolution",
+      "interactive tool-use agents",
+      "on-policy trajectories",
+      "executable verification",
+      "turn-level failure labels",
+      "diagnosis-guided advantage reweighting",
+      "tool affordance cues",
+      "constraint information",
+      "recovery-oriented feedback",
+      "policy optimization",
+      "environment-side adaptation",
+      "model-side policy optimization",
+      "out-of-distribution transfer"
+    ]
+  },
+  {
+    "id": "2605.23986",
+    "title": "MemForest: An Efficient Agent Memory System with Hierarchical Temporal Indexing",
+    "summary": "Memory is a fundamental component for enabling long-context LLM agents, supporting persistent state across interactions through a continuous serve-and-update lifecycle. Despite substantial prior work, existing systems suffer from significant maintenance overhead due to two key limitations: coarse-grained state management and inherently sequential update pipelines. In particular, updates are often tightly coupled with LLM inference and require full-state rewrites, leading to poor scalability and growing latency as memory accumulates. To address these challenges, we present MemForest, a memory framework that reformulates agent memory as a write-efficient temporal data management problem. MemForest breaks the sequential bottleneck via parallel chunk extraction, decoupling memory construction into concurrent, independent operations. To further eliminate coarse-grained maintenance, we introduce MemTree, a hierarchical temporal index that organizes memory as time-ordered trees rather than flat global summaries. This design replaces full-state rewrites with localized per-node updates, reducing maintenance cost to the affected tree paths while naturally preserving temporally evolving states. We evaluate MemForest on two long-context memory benchmarks, LongMemEval-S and LoCoMo. On LongMemEval-S, MemForest achieves the best overall performance among stateful baselines, reaching 79.8% pass@1 accuracy while sustaining a memory construction throughput approximately 6x higher than state-of-the-art approaches including EverMemOS.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "memory framework",
+      "long-context LLM agents",
+      "temporal data management",
+      "parallel chunk extraction",
+      "MemTree",
+      "hierarchical temporal index",
+      "full-state rewrites",
+      "localized per-node updates"
+    ]
+  },
+  {
+    "id": "2605.26095",
+    "title": "Pixel-Level Pavement Distress Assessment Using Instance Segmentation",
+    "summary": "Automated pavement distress assessment requires more than image-level classification or coarse bounding box detection, demanding precise localization of thin, branching, and irregular cracks to achieve the geometric precision necessary for maintenance-relevant quantification. This paper presents a vision-based pavement distress analysis system based on Mask R-CNN instance segmentation and evaluates it on UWGB-StreetCrack, a custom field-collected roadway image dataset acquired with a vehicle-mounted smartphone and manually annotated with polygon labels for longitudinal cracks, transverse cracks, alligator cracks, and potholes. Five Detectron2-based Mask R-CNN backbone variants were considered under a consistent fine-tuning protocol. The best-performing model, Mask R-CNN with a ResNet-101 FPN backbone, achieved 84.23% precision, 90.04% recall, and an F1 score of 87.04% under the project-specific bounding-box matching protocol. The same model produced an aggregate predicted crack-area fraction of 2.164%, closely matching the 2.170% ground-truth crack-area fraction. To contextualize the segmentation system against a detector-oriented alternative, a CSPDarknet53-based YOLO detector was also adapted and retrained on the dataset, reaching 27.5% precision and 20.7% recall on the validation protocol. The results show that instance segmentation is a practical direction for field pavement imagery and aggregate crack-area estimation, while also exposing open challenges in annotation consistency, class imbalance, confounder rejection, and mask-level benchmarking.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "Mask R-CNN",
+      "instance segmentation",
+      "Detectron2",
+      "ResNet-101 FPN",
+      "YOLO",
+      "CSPDarknet53",
+      "polygon labels",
+      "bounding-box matching protocol",
+      "F1 score",
+      "crack-area fraction"
+    ]
+  },
+  {
+    "id": "2605.20278",
+    "title": "ClaimDiff-RL: Fine-Grained Caption Reinforcement Learning through Visual Claim Comparison",
+    "summary": "Long-form image captioning exposes a reward granularity problem in RL: captions are judged as whole sequences, while the important errors occur at the level of individual visual claims. A good dense caption should be both faithful and informative, avoiding hallucination without omitting salient details. Yet pairwise preferences, reference-based metrics, and holistic scalar rewards compress these local errors into a single sequence-level signal, obscuring the tradeoff between factuality and coverage. We introduce ClaimDiff-RL, a framework that uses reference-conditioned atomic claim differences as the reward unit for caption RL. Given an image, an actor caption, and a reference caption, a multimodal judge enumerates visually grounded differences, verifies each difference against the image, assigns open-vocabulary error types and severity levels, and produces per-difference statistics for reward composition. This makes hallucinated claims and omitted salient facts separately measurable and tunable. Experiments show that holistic scalar rewards can reduce hallucination by increasing missing facts, while ClaimDiff-RL exposes this faithfulness and coverage tradeoff and enables more balanced operating points. On a 160-image human-labeled diagnostic benchmark, public captioning benchmarks, and VQA benchmarks, ClaimDiff-RL improves the hallucination--missing-fact balance, preserves general capability, and even surpasses Gemini-3-Pro-Preview on several fine-grained Capability dimensions such as object counting, spatial relations, and scene recognition. These results suggest that typed, verifiable claim differences are an effective reward unit for fine-grained and diagnosable caption RL.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "long-form image captioning",
+      "reinforcement learning",
+      "reward granularity",
+      "hallucination",
+      "visual claims",
+      "atomic claim differences",
+      "multimodal judge",
+      "reference-conditioned",
+      "verifiable claim differences",
+      "factuality",
+      "coverage",
+      "holistic scalar rewards",
+      "claim-level rewards"
+    ]
+  }
+]
