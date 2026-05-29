@@ -1,0 +1,719 @@
+[
+  {
+    "id": "2605.29801",
+    "title": "AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security",
+    "summary": "Modern open-world agents such as OpenClaw exhibit powerful cross-environment execution capabilities yet introduce broad new safety risk sources. Meanwhile, advanced frontier AI models drastically lower attack barriers, rendering current agent alignment frameworks inadequate for real-world deployment. To tackle these emerging threats, we propose a lightweight and scalable agent safety alignment framework. Specifically, we update the agent safety taxonomy to accommodate emergent risks from Codex and OpenClaw execution scenarios. We further build a taxonomy-guided data engine with influence-function purification to train lightweight AgentDoG 1.5 variants (0.8B, 2B, 4B, and 8B parameters) using only around 1k samples, achieving comparable performance with leading closed-source models (e.g., GPT-5.4). Based on AgentDoG 1.5, we construct a highly efficient agentic safety SFT and RL training environment, which reduces deployment overhead in Docker-level environments by two orders of magnitude. Finally, we deploy AgentDoG 1.5 as a training-free online guardrail for real-time safety moderation. Extensive experimental results indicate that AgentDoG 1.5 achieves state-of-the-art performance in diverse and complex interactive agentic scenarios. All models and datasets are openly released.",
+    "upvotes": 61,
+    "projectPage": "https://ai45lab.github.io/AgentDoG/v1_5/",
+    "ai_keywords": [
+      "agent safety alignment framework",
+      "agent safety taxonomy",
+      "influence-function purification",
+      "AgentDoG 1.5",
+      "agentic safety SFT",
+      "RL training environment",
+      "Docker-level environments",
+      "online guardrail",
+      "real-time safety moderation",
+      "interactive agentic scenarios"
+    ]
+  },
+  {
+    "id": "2605.29250",
+    "title": "OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources",
+    "summary": "Real-world information needs require access to structurally diverse knowledge sources, from unstructured text and relational tables to knowledge graphs and property graphs. Existing retrievers, however, operate over one source at a time under a fixed query language, leaving the broader landscape of available knowledge fragmented behind incompatible interfaces. A natural attempt at unification would collapse these sources into a shared space, but this erases the structural affordances (such as schemas, ontologies, compositional operators) that give each source its expressive power. Effective retrieval over diverse knowledge, therefore, requires not homogenization but an overarching layer that meets each source on its own terms. To achieve this, we present OmniRetrieval, a framework that takes any natural-language query, identifies appropriate knowledge sources, and dispatches source-native queries to their native execution engines. Across an extensive benchmark spanning 13 datasets and 309 distinct knowledge bases over text, relational, and graph-structured sources, OmniRetrieval exceeds single-source baselines, demonstrating that it can serve as a general-purpose interface to the heterogeneous sources while preserving the structural distinctions that make each source valuable.",
+    "upvotes": 40,
+    "projectPage": null,
+    "ai_keywords": [
+      "knowledge sources",
+      "natural-language query",
+      "source-native queries",
+      "execution engines",
+      "heterogeneous sources",
+      "structured knowledge"
+    ]
+  },
+  {
+    "id": "2605.25378",
+    "title": "CollectionLoRA: Collecting 50 Effects in 1 LoRA via Multi-Teacher On-Policy Distillation",
+    "summary": "Customized image editing aims to equip pre-trained diffusion models with specific visual effects using limited paired data, typically via Low-Rank Adaptation (LoRA). As the number of desired effects grows, storing and dynamically loading numerous these effect LoRAs significantly increases deployment overhead. Furthermore, current pipelines typically cascade these effect LoRAs with acceleration modules for fast generation, which triggers severe parameter interference and results in concept bleeding and style degradation. We propose CollectionLoRA, a multi-teacher on-policy distillation framework capable of distilling the concepts of up to 50 different effect LoRAs along with few-step generation capabilities into a single LoRA. This fundamentally resolves the feature interference issue and significantly reduces deployment costs. Specifically, the method introduces (i) a Probabilistic Dual-Stream Routing mechanism that enables the model to randomly switch between data sources during training, effectively enhancing its generalization in unseen scenarios; (ii) an Asymmetric Orthogonal Prompting strategy to achieve concept isolation within the prompt space; (iii) a Coarse-to-Fine Distillation Objective to mitigate the distribution gap between the teacher and student models. Extensive evaluations show that CollectionLoRA distills all customized effects and few-step generation into a single LoRA, reducing deployment overhead while achieving concept fidelity comparable to or better than independently trained teacher models.",
+    "upvotes": 19,
+    "projectPage": "https://collectionlora.github.io/",
+    "ai_keywords": [
+      "Low-Rank Adaptation",
+      "LoRA",
+      "diffusion models",
+      "multi-teacher on-policy distillation",
+      "Probabilistic Dual-Stream Routing",
+      "Asymmetric Orthogonal Prompting",
+      "Coarse-to-Fine Distillation Objective",
+      "concept isolation",
+      "parameter interference",
+      "concept bleeding",
+      "style degradation"
+    ]
+  },
+  {
+    "id": "2605.30346",
+    "title": "YoCausal: How Far is Video Generation from World Model? A Causality Perspective",
+    "summary": "As video diffusion models (VDMs) advance toward world models, a key question arises: do they truly understand causality, or merely overfit to statistical temporal patterns? Existing benchmarks mostly rely on synthetic data, limiting real-world generalization due to the sim-to-real gap. We present YoCausal, a two-level benchmark inspired by the Violation of Expectation (VoE) paradigm from cognitive science. By temporally reversing real-world videos at zero cost as natural counterfactual samples, YoCausal establishes an arbitrarily extensible evaluation protocol. Level 1 introduces the Reverse Surprise Index (RSI), quantifying arrow-of-time perception via denoising loss. Level 2 introduces the Causality Cognition Index (CCI), which leverages a VLM to stratify datasets into causal and non-causal subsets, disentangling genuine causal reasoning from temporal bias. Evaluation of 13 state-of-the-art VDMs reveals that perceiving the arrow of time does not imply understanding causality, and a significant gap persists relative to human-level causal cognition.",
+    "upvotes": 18,
+    "projectPage": "https://www.youzhexie.me/papers/YoCausal/index.html",
+    "ai_keywords": [
+      "video diffusion models",
+      "world models",
+      "causality",
+      "temporal patterns",
+      "Violation of Expectation",
+      "reverse surprise index",
+      "causality cognition index",
+      "visual language model",
+      "denoising loss",
+      "sim-to-real gap"
+    ]
+  },
+  {
+    "id": "2605.30248",
+    "title": "GenClaw: Code-Driven Agentic Image Generation",
+    "summary": "Image generation models have evolved from text-conditioned pixel synthesis toward multimodal agents endowed with visual comprehension and tool invocation capabilities. Yet, existing agents remain at the mercy of underlying black-box image models. Their workflow is trapped in a repetitive cycle of prompt rewriting for generation refinement, leaving them with no mechanism to directly manipulate the canvas. In essence, the potential of LLMs to serve as a genuine \"brush\" for precise visual construction remains largely untapped. In this paper, we propose GenClaw, a code-driven agentic image generation paradigm that empowers the agent to create like a human artist: first conceptualizing, then sketching, and finally coloring. Specifically, the agent first constructs the conceptual knowledge and context through search and reasoning. It then utilizes code (e.g., SVG, HTML, Three.js) to render executable visual sketches. Finally, it employs an image generation model to supplement textures, materials, and photorealism. In this workflow, code serves as a controllable intermediate canvas bridging linguistic reasoning and pixel synthesis, seamlessly integrating programmatic logic with the visual expressiveness of generative models. By transforming image generation from a black-box paradigm into a staged process akin to authentic human creation, GenClaw offers a step toward for highly controllable and interpretable visual generation systems.",
+    "upvotes": 18,
+    "projectPage": null,
+    "ai_keywords": [
+      "image generation models",
+      "multimodal agents",
+      "visual comprehension",
+      "tool invocation",
+      "LLMs",
+      "code-driven agentic paradigm",
+      "conceptual knowledge",
+      "visual sketches",
+      "generative models",
+      "visual generation systems"
+    ]
+  },
+  {
+    "id": "2605.30260",
+    "title": "How LoRA Remembers? A Parametric Memory Law for LLM Finetuning",
+    "summary": "Large Language Models (LLMs) must continuously learn and update knowledge to remain effective in dynamic real-world environments. While Low-Rank Adaptation (LoRA) is widely used for such memory updates, existing studies mainly rely on qualitative downstream evaluations, leaving the quantitative capacity limits and underlying dynamics of exact parametric memory largely unexplored. To bridge this gap, we employ LoRA as a controlled memory capacity probe within the latent space to systematically quantify exact parametric memory. We introduce the Parametric Memory Law, a robust power law linking loss reduction Delta L to effective parameters and sequence length. At the token level, fine-grained analysis reveals a deterministic phase transition, demonstrating that a prediction probability of p > 0.5 constitutes a sufficient condition for verbatim recall under greedy decoding. Driven by these insights, we introduce MemFT, a threshold-guided optimization strategy that dynamically redistributes the training budget toward sub-threshold tokens. Empirical evaluations demonstrate that MemFT can enhance memory fidelity and efficiency. Code will be released at https://github.com/zjunlp/ParametricMemoryLaw.",
+    "upvotes": 15,
+    "projectPage": null,
+    "ai_keywords": [
+      "Large Language Models",
+      "Low-Rank Adaptation",
+      "parametric memory",
+      "latent space",
+      "power law",
+      "token-level analysis",
+      "phase transition",
+      "greedy decoding",
+      "verbatim recall",
+      "MemFT",
+      "threshold-guided optimization"
+    ]
+  },
+  {
+    "id": "2605.28424",
+    "title": "Skill0.5: Joint Skill Internalization and Utilization for Out-of-Distribution Generalization in Agentic Reinforcement Learning",
+    "summary": "Equipping large language models with explicit skills has emerged as a promising paradigm for enabling autonomous agents to solve complex tasks. Agent skills can be inherently divided into general skills for broad cognitive transfer and task-specific skills for dynamic execution. However, existing skill-based reinforcement learning (RL) methods typically force a rigid choice between full externalization, which incurs prohibitive context overhead, and full internalization, which risks overfitting and knowledge conflicts. To address this dilemma, we propose Skill0.5, a novel agentic RL framework that explicitly differentiates skill treatments by combining general skill internalization with task-specific skill utilization. Driven by a dynamic, difficulty-aware router, Skill0.5 streams tasks into distinct mastery tiers to apply tailored optimization strategies: it internalizes general skills via privileged distillation to build a cognitive foundation for hard tasks, while using diagnostic probing on easy tasks to penalize shortcuts and enforce specific skill utilization. Experiments on ALFWorld and WebShop demonstrate that Skill0.5 outperforms both memory-based and skill-based RL baselines, yielding performance improvements across both in-distribution and out-of-distribution scenarios.",
+    "upvotes": 14,
+    "projectPage": null,
+    "ai_keywords": [
+      "skill-based reinforcement learning",
+      "agentic RL",
+      "privileged distillation",
+      "diagnostic probing",
+      "dynamic router",
+      "mastery tiers",
+      "cognitive foundation",
+      "out-of-distribution scenarios"
+    ]
+  },
+  {
+    "id": "2605.30280",
+    "title": "Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments",
+    "summary": "Embodied intelligence is often studied through specialized models for individual tasks such as manipulation or navigation, resulting in fragmented capabilities and limited generalization across tasks, environments, and robot embodiments. In this work, we study whether heterogeneous embodied decision-making problems can be unified within a single vision-language-action model. We present Qwen-VLA, a unified embodied foundation model that extends Qwen's vision-language modeling stack from perception, understanding, and reasoning to continuous action and trajectory generation through a DiT-based action decoder. Qwen-VLA is trained with a large-scale joint pretraining recipe over diverse data sources, including robotics manipulation trajectories, human egocentric demonstrations, synthetic simulation data, vision-and-language navigation data, trajectory-centric supervision, and auxiliary vision-language data. To support multiple robot platforms, we introduce embodiment-aware prompt conditioning, where robot-specific textual descriptions specify the current embodiment and control convention. We further cast manipulation, navigation, and trajectory prediction into a unified action-and-trajectory prediction framework, enabling transferable visual grounding, spatial reasoning, and continuous action generation across robot morphologies, task families, and environments. Experiments on manipulation, navigation, and trajectory-centric benchmarks show consistent multi-task performance and out-of-distribution generalization under variations in scene layout, background, lighting, object configuration, and robot embodiment. Qwen-VLA-Instruct achieves 97.9% on LIBERO, 73.7% on Simpler-WidowX, 86.1%/87.2% on RoboTwin-Easy/Hard, 69.0% OSR on R2R, 59.6% SR on RxR, 76.9% average OOD success in real-world ALOHA experiments, and 26.6% zero-shot success on DOMINO dynamic manipulation.",
+    "upvotes": 13,
+    "projectPage": "https://qwen.ai/blog?id=qwenvla",
+    "ai_keywords": [
+      "vision-language-action model",
+      "DiT-based action decoder",
+      "joint pretraining",
+      "embodiment-aware prompt conditioning",
+      "visual grounding",
+      "spatial reasoning",
+      "continuous action generation",
+      "trajectory prediction",
+      "multi-task performance",
+      "out-of-distribution generalization"
+    ]
+  },
+  {
+    "id": "2605.29888",
+    "title": "LaRA: Layer-wise Representation Analysis for Detecting Data Contamination in RL Post-Training",
+    "summary": "Reinforcement learning (RL) post-training has shown to improve reasoning in large language models (LLMs). However, there has been little exploration on the problem of data contamination in RL post-training, potentially undermining generalization and evaluation reliability of the training process itself. Existing detection methods primarily rely on output-level signals such as likelihood or entropy, which become unreliable for RL-trained models since RL shapes behavior through trajectory-level rewards rather than token likelihoods. We propose LaRA, a layer-wise representation analysis framework for detecting contamination in RL post-trained LLMs. LaRA introduces three complementary metrics, measuring perturbation sensitivity, directional collapse, and local representation rigidity under controlled perturbations. We find that contamination produces progressive geometric deviations across layers, including amplified perturbation sensitivity, stronger directional collapse, and enhanced local rigidity. Based on our findings, we also develop a contamination detection protocol that aggregates representation-level deviations across layers and metrics. Experiments on RL-trained reasoning models show that our protocol outperforms existing output-level baselines for contamination detection.",
+    "upvotes": 13,
+    "projectPage": null,
+    "ai_keywords": [
+      "reinforcement learning",
+      "large language models",
+      "data contamination",
+      "layer-wise representation analysis",
+      "perturbation sensitivity",
+      "directional collapse",
+      "local representation rigidity",
+      "geometric deviations"
+    ]
+  },
+  {
+    "id": "2605.30073",
+    "title": "Native Audio-Visual Alignment for Generation",
+    "summary": "Joint audio-video generation aims to synthesize temporally synchronized and semantically coherent visual-acoustic content. However, existing open-source methods mainly rely on either dual-tower designs with posterior alignment or fully unified tri-modal designs that mix textual context, audio and video in one shared space. The former weakens fine-grained audio-video co-evolution, while the latter couples semantic conditioning with low-level synchronization. To address these limitations, we propose NAVA, a Native Audio-Visual Alignment framework for joint audio-video generation. NAVA is built upon context-conditioned native audio-visual alignment: it first establishes audio-video correspondence in a dedicated interaction space, and then uses external context to condition the joint denoising process. Specifically, NAVA is instantiated with an Align-then-Fuse MMDiT architecture, which transitions from modality-aware audio-video alignment to modality-shared joint denoising. Furthermore, we introduce Timbre-in-Context Conditioning to associate reference timbre cues with corresponding speech spans to achieve controllable speech timbre. Experiments on Verse-Bench and Seed-TTS, together with a user study, demonstrate that NAVA achieves superior video quality, precise audio-visual synchronization, competitive audio quality, and stronger reference-timbre controllability using only 6.3B parameters.",
+    "upvotes": 13,
+    "projectPage": "https://ernie-research.github.io/NAVA/",
+    "ai_keywords": [
+      "joint audio-video generation",
+      "dual-tower designs",
+      "tri-modal designs",
+      "posterior alignment",
+      "unified tri-modal designs",
+      "modality-aware alignment",
+      "modality-shared denoising",
+      "MMDiT architecture",
+      "Timbre-in-Context Conditioning",
+      "reference timbre cues",
+      "audio-visual synchronization"
+    ]
+  },
+  {
+    "id": "2605.30219",
+    "title": "When Should Models Change Their Minds? Contextual Belief Management in Large Language Models",
+    "summary": "Long-horizon interactions require language models to manage accumulating information: when to update their state, when to preserve their state, and what to ignore. We study this challenge as Contextual Belief Management (CBM): maintaining a predicted belief state aligned with formal evidence while isolating task-irrelevant noise. To make CBM measurable, we introduce BeliefTrack, a closed-world benchmark spanning Rule Discovery and Circuit Diagnosis, where a finite belief space and symbolic verifiers enable exact turn-level evaluation. BeliefTrack diagnoses three failures: Failed Stay, Failed Update, and Failed Isolation. Across multiple LLMs, vanilla models exhibit severe CBM failures, while explicit belief-tracking prompts provide limited gains. In contrast, reinforcement learning with belief-state rewards reduces failure rates by 70.9\\% on average. Further probing reveals latent belief-state dynamics behind these failures, and representation-level steering reduces failure rates by 46.1\\% across two tasks\\footnote{Code is coming soon at https://github.com/zjunlp/CBM.",
+    "upvotes": 11,
+    "projectPage": null,
+    "ai_keywords": [
+      "contextual belief management",
+      "belief state",
+      "reinforcement learning",
+      "representation-level steering",
+      "belief tracking",
+      "symbolic verifiers",
+      "closed-world benchmark",
+      "rule discovery",
+      "circuit diagnosis"
+    ]
+  },
+  {
+    "id": "2605.30263",
+    "title": "minWM: A Full-Stack Open-Source Framework for Real-Time Interactive Video World Models",
+    "summary": "Recent video diffusion foundation models have achieved remarkable progress in high-quality video generation, yet turning them into real-time interactive video world models remains challenging. Interactive world models require controllable, causal, and low-latency rollout, which in practice demands a full pipeline spanning data construction, controllable fine-tuning, autoregressive training, few-step distillation, and streaming inference. In this work, we present minWM, a full-stack open-source framework for building real-time interactive video world models. minWM provides an end-to-end pipeline that converts existing bidirectional T2V/TI2V video foundation models into camera-controllable few-step autoregressive world models. Specifically, minWM first fine-tunes a bidirectional video diffusion model with camera control, and then applies the Causal Forcing / Causal Forcing++ pipeline, including AR diffusion training, causal ODE or causal consistency distillation, and asymmetric DMD, to distill it into a few-step autoregressive generator for low-latency rollout. The framework is modular and architecture-extensible: we instantiate it on representative open backbones, including Wan2.1-T2V-1.3B and HY1.5-TI2V-8B, covering both cross-attention-based condition injection and MMDiT-style architectures. minWM also supports adapting existing video world models, such as HY-WorldPlay, to new data distributions, training recipes, and latency targets. Beyond releasing runnable scripts, checkpoints, documentation, and inference code, we provide practical ablations on camera trajectory quality, controllability training steps, and minimal batch-size requirements. We hope minWM serves as a reproducible and extensible recipe for building and adapting real-time interactive video world models.\n  Project Page: [https://github.com/shengshu-ai/minWM](https://github.com/shengshu-ai/minWM)",
+    "upvotes": 8,
+    "projectPage": null,
+    "ai_keywords": [
+      "video diffusion foundation models",
+      "interactive world models",
+      "controllable video generation",
+      "causal Forcing",
+      "causal ODE",
+      "causal consistency distillation",
+      "autoregressive diffusion training",
+      "asymmetric DMD",
+      "cross-attention-based condition injection",
+      "MMDiT-style architectures",
+      "bidirectional video diffusion model",
+      "few-step autoregressive generator",
+      "low-latency rollout"
+    ]
+  },
+  {
+    "id": "2605.27995",
+    "title": "AsyncTool: Evaluating the Asynchronous Function Calling Capability under Multi-Task Scenarios",
+    "summary": "Large language model (LLM)-based agents have shown strong capabilities in using external tools to solve complex tasks. However, existing evaluations often overlook the temporal dimension of tool use, especially the impact of tool response latency, and are usually limited to single-task settings. In real-world applications, multiple tasks often need to be executed concurrently, and overall efficiency depends on whether an agent can use idle time while waiting for tool responses. We refer to this capability as asynchronous tool calling. To evaluate it, we propose AsyncTool, a benchmark for assessing LLM-based agents in interactive multi-task tool-use environments with delayed tool feedback. AsyncTool presents multiple heterogeneous tasks simultaneously and simulates realistic tool response latency during execution. Using a hybrid data evolution strategy, we construct a diverse asynchronous multitasking dataset that covers multiple scenarios and tool-use patterns. We evaluate models at the step, sub-task, and task levels, and introduce efficiency-oriented metrics to measure task coordination and completion efficiency. Extensive experiments show that delayed tool feedback poses substantial challenges to current agents and leads to clear performance degradation. Models that better coordinate task switching, dependency tracking, and state maintenance achieve stronger performance on AsyncTool. Our analysis identifies key failure modes of current tool-using agents and provides practical insights for designing future systems with stronger temporal reasoning and coordination capabilities.",
+    "upvotes": 8,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language model",
+      "tool calling",
+      "asynchronous execution",
+      "multi-task environments",
+      "delayed feedback",
+      "task coordination",
+      "dependency tracking",
+      "state maintenance",
+      "temporal reasoning"
+    ]
+  },
+  {
+    "id": "2605.26029",
+    "title": "CausaLab: A Scalable Environment for Interactive Causal Discovery Toward AI Scientists",
+    "summary": "We introduce CausaLab, a scalable environment for evaluating interactive causal discovery by LLM agents. Unlike prior evaluations, CausaLab evaluates both whether an agent can solve a problem using causal evidence and whether its answer is grounded in a faithful recovered causal mechanism. Each episode places an agent in a synthetic laboratory: it receives prior measurement records, intervenes on a manipulator crystal, and predicts the resonance frequency of a held-out reactor crystal governed by the same mechanism. The hidden data-generating process is a randomly sampled structural causal model (SCM), so success requires recovering both a causal graph and structural equations rather than recalling prior knowledge.\n  Experiments show a persistent gap between prediction and mechanism recovery: in the purely observational 6-node setting, GPT-5.2-high reaches 92% task accuracy but only 0.471 all-edge F_1. Mixed observation-intervention strategies improve structural fidelity, while pure intervention remains difficult even for strong agents. We identify premature stopping as a major weakness and show that consistency verification mitigates it. CausaLab therefore separates predictive success from causal understanding and exposes current LLM agents' limits as experimental causal reasoners.",
+    "upvotes": 7,
+    "projectPage": null,
+    "ai_keywords": [
+      "causal discovery",
+      "structural causal model",
+      "observational data",
+      "intervention",
+      "causal graph",
+      "structural equations",
+      "experimental causal reasoning",
+      "predictive success",
+      "causal understanding"
+    ]
+  },
+  {
+    "id": "2605.29534",
+    "title": "UI-KOBE: Knowledge-Oriented Behavior Exploration for Lightweight Graph-Guided GUI Agents",
+    "summary": "Recent advances in mobile GUI agents have shown strong potential for automating mobile tasks, but most effective systems still depend on large vision-language models for screenshot understanding and long-horizon planning. Small GUI agents that can be deployed directly on mobile devices are more attractive for practical use, offering lower inference cost and better protection of sensitive on-device information. However, due to limited model capacity, such lightweight agents remain unreliable when planning and executing GUI tasks end-to-end from screenshots alone. We propose Knowledge-Oriented Behavior Exploration (UI-KOBE), a framework that improves lightweight mobile GUI agents with reusable app-specific graph knowledge. UI-KOBE first autonomously explores a mobile application and constructs an app knowledge graph, where nodes represent distinct UI states and edges represent executable transitions. At runtime, a lightweight GUI agent uses the graph as external guidance: given a user task and the current screenshot, it identifies the current graph node and selects among self-loop actions, neighboring transitions, task completion, or fallback free actions associated with that node. By supporting runtime decisions with app-specific graph guidance, UI-KOBE reduces the burden of end-to-end GUI planning and helps lightweight models perform mobile GUI tasks more effectively, offering a practical step toward efficient, interpretable, and privacy-conscious on-device GUI agents.",
+    "upvotes": 7,
+    "projectPage": null,
+    "ai_keywords": [
+      "mobile GUI agents",
+      "vision-language models",
+      "end-to-end GUI planning",
+      "app knowledge graph",
+      "UI states",
+      "executable transitions",
+      "runtime decisions",
+      "self-loop actions",
+      "neighboring transitions",
+      "task completion",
+      "fallback free actions"
+    ]
+  },
+  {
+    "id": "2605.30265",
+    "title": "LoMo: Local Modality Substitution for Deeper Vision-Language Fusion",
+    "summary": "Vision-Language Models (VLMs) have achieved substantial progress across a wide range of understanding and reasoning tasks, driven by large-scale image-text training aimed at multimodal fusion. Ideally, replacing a textual question with its rendered-image counterpart should leave model performance essentially unaffected. In practice, however, such modality substitution induces dramatic performance degradation. We attribute this \"carrier sensitivity\" issue to an inherent bias in current training corpora. Across prevalent datasets such as image captioning, VQA, OCR, and web-sourced interleaved data, text and images are typically organized into distinct and asymmetric roles, with text serving as linguistic queries and images as visual references. Such data bias leads VLMs to exhibit distinct preferences for information acquisition across different modalities. Consequently, VLMs fail to align representations of semantically equivalent content across textual and visual carriers, making model reasoning fragile under modality substitution. To address this, we propose Local Modality Substitution (LoMo), a lightweight, architecture-agnostic data curation paradigm designed to provide supervision for cross-modal representational invariance between semantically equivalent text and image carriers. LoMo achieves this by reformulating single-modality prompts into seamlessly interleaved multimodal sequences. It dynamically selects target text spans and recasts them as rendered images, thereby preserving the same semantics across \"text, visual, text\" carriers. Extensive experiments across 13 diverse multimodal benchmarks demonstrate that LoMo significantly improves overall multimodal reasoning and yields deeper cross-modal fusion. Specifically, it delivers consistent gains across foundational models, improving over standard SFT by 2.67 points on LLaVA-OneVision-1.5-8B and 2.82 points on Qwen3.5-9B.",
+    "upvotes": 5,
+    "projectPage": "https://maplebb.github.io/LoMo/page/",
+    "ai_keywords": [
+      "Vision-Language Models",
+      "multimodal fusion",
+      "modality substitution",
+      "carrier sensitivity",
+      "data curation",
+      "cross-modal representational invariance",
+      "multimodal reasoning",
+      "foundational models",
+      "supervised fine-tuning"
+    ]
+  },
+  {
+    "id": "2605.29559",
+    "title": "LiteCoder-Terminal: Scaling Long-Horizon Terminal Environments for Learning Language Agents",
+    "summary": "Mastering terminal environments requires language agents capable of multi-step planning, feedback-grounded execution, and dynamic state adaptation. However, training such agents is currently bottlenecked by a reliance on scraped external repositories, which limits domain diversity, environment controllability, and the targeting of specific capability deficits. We introduce LiteCoder-Terminal-Gen, a zero-dependency synthesis pipeline that autonomously generates executable and verifiable terminal training environments directly from domain specifications. Using this framework, we construct two large-scale resources: LiteCoder-Terminal-SFT, comprising 11,255 expert trajectories across 10 domains, and LiteCoder-Terminal-RL, featuring 602 verifiable environments for trajectory-level preference optimization. Supervised fine-tuning of Qwen-family models on our SFT dataset yields agents that significantly outperform their base counterparts. Notably, our 32B variant achieves 29.06%, 18.54%, and 34.00% pass@1 on Terminal Bench 1.0, 2.0, and Pro, respectively. Furthermore, applying Direct Multi-turn Preference Optimization (DMPO) on our RL environments yields additional performance gains. These results systematically demonstrate that fully synthetic, executable environments offer a scalable and verifiable supervision signal for mastering complex, real-world command-line workflows.",
+    "upvotes": 5,
+    "projectPage": null,
+    "ai_keywords": [
+      "language agents",
+      "multi-step planning",
+      "feedback-grounded execution",
+      "dynamic state adaptation",
+      "zero-dependency synthesis pipeline",
+      "expert trajectories",
+      "trajectory-level preference optimization",
+      "supervised fine-tuning",
+      "Direct Multi-turn Preference Optimization",
+      "DMPO",
+      "terminal environments",
+      "command-line workflows"
+    ]
+  },
+  {
+    "id": "2605.26578",
+    "title": "Is Position Bias in Dense Retrievers Built In-or Learned from Data?",
+    "summary": "Dense retrievers exhibit positional bias, favoring documents whose query-relevant information appears near the beginning and degrading retrieval performance when the information appears later. While prior work on positional bias in dense retrievers has largely focused on architectural explanations, we study how the positional distribution of evidence in training data affects retrieval-level bias direction. To test this, we construct synthetic position-targeted training sets in which query-relevant evidence appears at the beginning, middle, or end of documents, and fine-tune eight architecturally diverse pretrained models under position-skewed and balanced training distributions. At the ranking level, we observe a strong directional pattern across the examined models: skewed training distributions favor evidence at the corresponding positions. Position-balanced training reduces positional sensitivity by 57--87\\% on position-aware benchmarks, with competitive mean retrieval performance in our controlled setting. Representation-level analyses further suggest that fine-tuning often reshapes learned positional preferences, although pre-existing architectural or pretraining-specific tendencies persist in some models. These results identify training-position distribution as a major controllable factor in retrieval-level position bias and suggest balanced data curation as a practical mitigation strategy.",
+    "upvotes": 5,
+    "projectPage": null,
+    "ai_keywords": [
+      "dense retrievers",
+      "positional bias",
+      "query-relevant information",
+      "training data distribution",
+      "fine-tuning",
+      "pretrained models",
+      "position-skewed training",
+      "position-balanced training",
+      "retrieval performance",
+      "representation-level analysis"
+    ]
+  },
+  {
+    "id": "2605.30332",
+    "title": "Colored Noise Diffusion Sampling",
+    "summary": "Diffusion models achieve state-of-the-art image synthesis, with their generative trajectories fundamentally exhibiting a spectral bias, resolving low-frequency global structures early and high-frequency fine details later. Conventional stochastic differential equation (SDE) solvers fail to account for this dynamic, naively injecting uniform white noise throughout the entire process and misusing the finite energy budget. In this work, we establish a mathematical framework that reconsiders SDE inference as a targeted, frequency-decoupled energy transfer. Leveraging this framework, we introduce Colored Noise Sampling (CNS), a novel, training-free stochastic solver. Rather than injecting uniform white noise, CNS utilizes a dynamic, timestep- and frequency-dependent schedule that more efficiently allocates injected energy toward structurally unresolved frequency bands. By actively exploiting the model's inherent spectral bias, CNS systematically steers the generated distribution toward the true data manifold. Extensive experiments demonstrate that CNS significantly outperforms standard ODE and SDE baselines as a strictly plug-and-play, inference-time sampler substitution across diverse architectures (SiT, JiT, FLUX). Compared to standard sampling on ImageNet-256, CNS achieves substantial unguided FID reductions, improving from 8.26 to 6.27 on SiT-XL/2, 32.39 to 26.69 on JiT-B/16, and 11.88 to 8.31 on JiT-H/16, while yielding consistent relative FID improvements with Classifier-Free Guidance. Project page is available at https://hadardavidson.github.io/CNS/.",
+    "upvotes": 4,
+    "projectPage": "https://hadardavidson.github.io/CNS/",
+    "ai_keywords": [
+      "diffusion models",
+      "spectral bias",
+      "stochastic differential equation",
+      "SDE solvers",
+      "white noise",
+      "frequency-dependent schedule",
+      "energy transfer",
+      "Colored Noise Sampling",
+      "ODE",
+      "FID",
+      "Classifier-Free Guidance"
+    ]
+  },
+  {
+    "id": "2605.29861",
+    "title": "Towards Verifiable Multimodal Deep Research: A Multi-Agent Harness for Interleaved Report Generation",
+    "summary": "Large Language Models (LLMs) have advanced autonomous agents from deep search, which retrieves concise factual answers, to deep research, which synthesizes scattered evidence into long-form reports. However, verifiable multimodal deep research remains challenging due to open-ended synthesis without deterministic ground truth and the need to interleave textual arguments with visual evidence. We propose Ptah, a multi-agent harness for interleaved report generation. Ptah orchestrates the lifecycle from user query to rendered web report through planning, research, and writing stages, where specialized agents construct visual-aware plans, collect claim-grounded evidence, maintain source-aligned images in a Visual Working Memory, and compose reports through declarative multimodal tool use. A verifier agent serves as the harness's acceptance function, enforcing factual grounding, citation fidelity, and cross-modal consistency throughout the workflow. We further introduce PtahEval, an evaluation protocol that augments existing benchmarks with image-level and presentation-level assessments. Experiments on deep research benchmarks show that Ptah produces more reliable, visually informative, and usable human-facing multimodal reports than strong baselines.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language models",
+      "autonomous agents",
+      "deep search",
+      "deep research",
+      "multimodal deep research",
+      "multi-agent harness",
+      "visual working memory",
+      "declarative multimodal tool use",
+      "verifier agent",
+      "evaluation protocol",
+      "deep research benchmarks"
+    ]
+  },
+  {
+    "id": "2605.29257",
+    "title": "ChildVox: A Speech, Audio, and Large Audio-Language Model Benchmark in Understanding and Characterizing Sound across Childhood",
+    "summary": "We present ChildVox, a novel benchmark for characterizing the diverse acoustic signals through which children communicate. Specifically, ChildVox follows the full developmental trajectory from birth through school age, covering physiological sounds, non-linguistic vocalizations, canonical syllables, and spoken language. ChildVox integrates more than 20 sub-tasks across 17 child-centered audio and speech datasets, enabling systematic cross-corpus and cross-domain comparison. We evaluate a representative range of audio and speech foundation models, including self-supervised, ASR-oriented, and large audio-language models, on tasks including physiological sound classification, vocalization and canonical syllables modeling, and speech quality assessment and recognition. Benchmark results show that ChildVox provides a suite of high-performance models in recognizing a wide range of acoustic signals from children, supporting downstream applications such as characterizing children's language levels and tracking speech production with age.",
+    "upvotes": 3,
+    "projectPage": "https://tiantiaf0627.github.io/childvox/",
+    "ai_keywords": [
+      "audio and speech foundation models",
+      "self-supervised models",
+      "ASR-oriented models",
+      "large audio-language models",
+      "physiological sound classification",
+      "vocalization modeling",
+      "canonical syllables modeling",
+      "speech quality assessment",
+      "speech recognition"
+    ]
+  },
+  {
+    "id": "2605.29156",
+    "title": "RUBRIC-ARROW: Alternating Pointwise Rubric Reward Modeling for LLM Post-training in Non-verifiable Domains",
+    "summary": "Pointwise reward modeling offers critical signals for LLM post-training, yet struggles with absolute scoring in subjective, non-verifiable settings. Rubric-based methods address this by decomposing evaluation into explicit criteria, but existing approaches typically depend on frontier LLMs and suffer from ties caused by hard Boolean aggregation. We present RUBRIC-ARROW, an alternating framework that jointly trains a rubric generator and a rubric-conditioned judge, with its RL stage using only pairwise preference data. Our method couples a probability-based scoring rule that reduces ties with phase-specific preference-based rewards and an alternating GRPO scheme that together train the pointwise evaluator. Extensive experiments show that RUBRIC-ARROW achieves competitive reward-modeling accuracy and yields consistent gains for downstream policy post-training.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "reward modeling",
+      "LLM post-training",
+      "rubric-based methods",
+      "pairwise preference data",
+      "RL stage",
+      "probability-based scoring rule",
+      "phase-specific preference-based rewards",
+      "alternating GRPO scheme",
+      "pointwise evaluator"
+    ]
+  },
+  {
+    "id": "2605.22189",
+    "title": "Learning A Unified Risk Map for Autonomous Driving in Partially Observable Environments",
+    "summary": "Occlusion-aware prediction remains a critical challenge in autonomous driving due to the inherent uncertainty of unobserved regions. Existing approaches either overestimate risk based on reachable states or struggle to predict accurate trajectories under high occlusion uncertainty. To address these limitations, we propose a unified risk map modeling and learning framework for partially observable environments. Our method integrates traffic flow risk and collision risk through spatiotemporal modeling, enabling fine-grained assessment of occlusion-induced hazards. To address the scarcity of scenarios involving occluded interactions, we introduce a diffusion-based scenario generation framework that produces realistic yet adversarial scenarios. We integrate the modeling and learning of a unified risk map into a framework that supports risk-aware planning under partial observability. Experiments on the Waymo Open Motion Dataset show that our method significantly outperforms the state-of-the-art occlusion-aware baseline, improving minimum time-to-collision by 0.78 times and average time-to-collision by 1.67 times. The proposed framework offers a comprehensive and practical solution for risk-aware planning in partially observable environments.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "risk map modeling",
+      "spatiotemporal modeling",
+      "occlusion-aware prediction",
+      "diffusion-based scenario generation",
+      "risk-aware planning",
+      "partially observable environments"
+    ]
+  },
+  {
+    "id": "2605.30347",
+    "title": "NeuROK: Generative 4D Neural Object Kinematics",
+    "summary": "Data-driven approaches have revolutionized 3D vision, enabling transformers to effectively reconstruct and generate static 3D objects. However, generating simulative 4D dynamics -- realistic temporal deformations of static objects under various physical conditions -- remains challenging and often ad hoc, despite its importance in building comprehensive 3D world models. Most existing methods assume a predefined physical model and use system identification to estimate parameters, restricting these methods to specific categories and small-scale datasets. We propose that these restrictions can be overcome by learning a data-driven kinematic state parameterization for object-centric physical systems. Specifically, we learn both a latent space representing all possible states of the object and a decoder that maps any sampled latent to a plausibly deformed shape of the object. We refer to this parameterization as Neural Object Kinematics (NeuROK), and learn a transformer-based encoder-decoder model on a curated large-scale 4D dataset. This formulation and the learned model significantly simplify the generation of simulative dynamics since we only need to consider the dynamics within a low-dimensional latent space from the Lagrangian mechanics' perspective in classical physics. We demonstrate the effectiveness and generality of this neural simulation framework across diverse dynamic object types, showing clear advantages over prior works. Project page: https://chen-geng.com/neurok",
+    "upvotes": 2,
+    "projectPage": "https://chen-geng.com/neurok",
+    "ai_keywords": [
+      "transformer-based encoder-decoder model",
+      "latent space",
+      "decoder",
+      "neural simulation framework",
+      "4D dynamics",
+      "object-centric physical systems",
+      "Lagrangian mechanics",
+      "temporal deformations",
+      "curated large-scale 4D dataset"
+    ]
+  },
+  {
+    "id": "2605.30349",
+    "title": "AdaState: Self-Evolving Anchors for Streaming Video Generation",
+    "summary": "Autoregressive video diffusion models generate streaming video by producing frames sequentially, conditioning each chunk on previously generated content. These models are structurally anchored to the first frame: its key-value representation occupies a privileged position in the attention cache and serves as the primary scene reference throughout generation. As the cleanest and most error-free position in the cache, this anchor draws disproportionate attention, suppressing video dynamics, and locking scene composition to the initial viewpoint even as the scene naturally evolves. The result is a temporally shallow video in which motion, camera movement, and scene progression are dampened in favor of static consistency. To address this, we replace the static anchor with an adaptive state, a hidden latent that the model denoises alongside content at every chunk but never renders. Rather than referencing a frozen first frame, the model generates its own scene anchor at each step by attending to both the previous state and the current content, producing a reference that evolves with the generated content. Unlike standard video generation, which encodes an absolute notion of time, our formulation treats time as relative: every generation step sees the same positional structure regardless of how far generation has progressed, and the state transition is identical at every chunk. Together, these properties introduce a recurrence into the generation process, where denoising serves as the transition function, and the KV cache serves as the carrier, requiring no external module. Experiments demonstrate that the adaptive state substantially improves video dynamics, enabling richer motion and natural scene progression within generated videos.",
+    "upvotes": 2,
+    "projectPage": "https://adastate.github.io/",
+    "ai_keywords": [
+      "autoregressive video diffusion models",
+      "attention cache",
+      "video dynamics",
+      "scene composition",
+      "adaptive state",
+      "latent denoising",
+      "positional structure",
+      "temporal shallow video",
+      "recurrence",
+      "KV cache"
+    ]
+  },
+  {
+    "id": "2605.27891",
+    "title": "SmartDirector: Keyframe-Conditioned Cinematic Video Generation with Narrative Pacing Control",
+    "summary": "The narrative quality of a video fundamentally determines its perceptual value. Although existing video generation methods can produce visually appealing content, they predominantly rely on sparse conditioning signals such as text prompts or first/last frames, which limits precise control over narrative structure and temporal pacing. In this paper, we propose SmartDirector, a framework that enhances the narrative capacity of video generation models through multiple keyframes. SmartDirector supports flexible generation scenarios including single-shot generation, multi-shot narrative synthesis, and video extension. The framework operates in two stages: Director-Gen generates a low-resolution video conditioned on the provided keyframes, and Director-SR refines the output by exploiting high-resolution keyframes as semantic anchors to recover fine-grained details. To enable robust multi-keyframe training, we construct a data pipeline that curates single-shot and multi-shot sequences from movies. Extensive experiments demonstrate that SmartDirector substantially outperforms existing state-of-the-art approaches. We will release the code to facilitate further research.",
+    "upvotes": 2,
+    "projectPage": "https://orange-3dv-team.github.io/SmartDirector/",
+    "ai_keywords": [
+      "video generation",
+      "keyframes",
+      "narrative structure",
+      "temporal pacing",
+      "multi-shot narrative synthesis",
+      "video extension",
+      "low-resolution video",
+      "high-resolution refinement",
+      "data pipeline",
+      "single-shot generation"
+    ]
+  },
+  {
+    "id": "2605.29648",
+    "title": "Verifiable Rewards Beyond Math and Code: Lightweight Corpus-Grounded Process Supervision for Factual Question Answering",
+    "summary": "Applying reinforcement learning to improve factual accuracy in knowledge-intensive question answering faces a reward design dilemma. Response-level rewards provide only coarse supervision and cannot distinguish correct from incorrect statements within a reasoning trace. Sentence-level alternatives offer finer-grained feedback, but typically rely on NLI verifiers, LLM judges, or knowledge-verification pipelines that are expensive to deploy at RL scale and often unreliable for rare-entity facts, where accurate reward signals are especially important. We propose CorVer (Corpus Verify), a lightweight, plug-in-ready process reward that replaces neural verifiers with a corpus-grounded signal derived from Wikipedia co-occurrence statistics. CorVer assigns sentence-level credit and maps it to token-level advantages via a simple alignment, requiring only a 0.5B extractor and a single corpus lookup per sentence. Across 30 (model, benchmark) cells spanning six instruction-tuned models (3B to 14B) and five QA benchmarks, CorVer improves over the raw baseline for every cell, with an average TriviaQA gain of +4.1 pp. It also outperforms four neural-verifier baselines in 18 of 20 cells under their feasible configurations, while training 4.8 to 8.4x faster.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "reinforcement learning",
+      "knowledge-intensive question answering",
+      "reward design",
+      "NLI verifiers",
+      "LLM judges",
+      "knowledge-verification pipelines",
+      "sentence-level rewards",
+      "token-level advantages",
+      "corpus-grounded signal",
+      "Wikipedia co-occurrence statistics",
+      "TriviaQA"
+    ]
+  },
+  {
+    "id": "2605.29548",
+    "title": "Why Larger Models Learn More: Effects of Capacity, Interference, and Rare-Task Retention",
+    "summary": "Larger models learn tasks smaller models do not. What drives this phenomenon? We develop a simple phenomenological argument that power-law scaling already suggests that a larger model will be able to learn a part of the data distribution that a smaller model fails to learn, even with infinite training data. To validate this claim and identify its causes, we study the effects of model scaling on a synthetic setup consisting of a mixture of tasks that show monotonic scaling curves. The results point to a data-induced competition over resources (neurons). Specifically, smaller models allocate their neurons to high frequency or low complexity tasks, and so they learn solutions that perform poorly on rare and complex tasks. Moreover, this happens even when solutions capable of expressing the desired task exist. We then assess how a larger model circumvents this data-centric bottleneck, finding that it traces to a reduced interference mechanism: larger models can allocate enough resources to common tasks that the gradient updates for those tasks become weak, which means that they do not overwrite rare-task features as they slowly accumulate. Finally, to further validate these claims, we pretrain OLMo models (4M to 4B parameters) on novel tasks of varying frequency and complexity. The results mirror those from our synthetic data experiments: only the larger OLMo models learn the infrequent and complex tasks, and these larger models embed more task features in their representations and show less gradient interference between tasks. Overall, we offer a data-centric account of why larger models learn tasks that smaller models fail to. This helps explain why larger models are better in practice, and it can inform practical questions concerning model sizing and training data mixtures.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "power-law scaling",
+      "data-induced competition",
+      "neurons",
+      "gradient updates",
+      "task features",
+      "model scaling",
+      "gradient interference",
+      "model sizing",
+      "training data mixtures"
+    ]
+  },
+  {
+    "id": "2605.29341",
+    "title": "WorldMemArena: Evaluating Multimodal Agent Memory Through Action-World Interaction",
+    "summary": "Multimodal large language models are increasingly deployed as long-horizon agents, where memory must do more than recall: it must track an evolving world, revise what has gone stale, and surface the right evidence at decision time. Existing benchmarks measure recall over static dialogue, collapse memory into a single end-of-task accuracy, and reduce visual observations to captions, leaving us unable to localize failures to writing, maintenance, retrieval, or use. The rise of agent harnesses that author their own memory sharpens this gap, since we have no principled way to compare hand-designed pipelines with self-managing alternatives. To close these gaps, we formulate multimodal agent memory as an Action-World Interaction Loop with an observable four-stage lifecycle, and instantiate it in WorldMemArena: 400 multi-session multimodal tasks spanning Lifelong Evolution (evolving personal and task states) and Agentic Execution (memory from real observations, actions, and feedback), annotated with gold memory points, updates, distractors, and evidence chains for stage-level diagnosis. This enables the first head-to-head comparison of long-context, manually designed (RAG and external memory systems), and harness-based memory agents. Results show that: (1) better memory writing and storage do not guarantee better performance; (2) multimodal memory still struggles to fully use visual evidence; (3) systems are unstable across domains and degrade on realistic agentic trajectories; and (4) harness memory is more flexible but remains costly and less reliable.",
+    "upvotes": 1,
+    "projectPage": "https://worldmemarena-mem.github.io/",
+    "ai_keywords": [
+      "multimodal large language models",
+      "long-horizon agents",
+      "memory management",
+      "Action-World Interaction Loop",
+      "WorldMemArena",
+      "multimodal tasks",
+      "Lifelong Evolution",
+      "Agentic Execution",
+      "memory writing",
+      "memory storage",
+      "RAG",
+      "external memory systems",
+      "harness-based memory agents",
+      "visual evidence",
+      "agentic trajectories"
+    ]
+  },
+  {
+    "id": "2605.30231",
+    "title": "Beyond 3D VQAs: Injecting 3D Spatial Priors into Vision-Language Models for Enhanced Geometric Reasoning",
+    "summary": "Vision-Language Models (VLMs) often struggle with robust 3D spatial reasoning. Prevailing methods that rely on fine-tuning with 3D visual question-answering (VQA) datasets may overfit dataset-specific biases, while integrating specialized 3D visual encoders is often inflexible and cumbersome. In this paper, we argue that genuine spatial understanding should emerge from learning fundamental geometric priors, not only from high-level VQA supervision. We propose GASP (Geometric-Aware Spatial Priors), a framework that injects these priors directly into the LLM's transformer layers. GASP employs a small correspondence head, applied as a deep supervision signal across all layers, and is trained with a dual objective leveraging ground-truth geometry from large-scale video scenes: a contrastive loss on ground-truth point correspondences enforces 2D view-invariance, while a depth consistency supervision resolves 3D geometric ambiguities. Our analysis first provides a diagnostic showing that standard VLMs' internal correspondence matching accuracy is very low (often below 5%). We then demonstrate that our training substantially improves this behavior, boosting peak layer-wise correspondence to over 70% and maintaining over 85% temporal robustness while baselines remain below 5%. These internal improvements translate to significant gains on downstream spatial benchmarks including +18.2% on All-Angles Bench and +29.0% on VSI-Bench, all without training on any 3D VQA data. Our findings indicate that learning from fundamental geometric priors is a promising and generalizable pathway towards VLMs with more reliable 3D spatial reasoning.",
+    "upvotes": 1,
+    "projectPage": "https://danielchyeh.github.io/GASP/",
+    "ai_keywords": [
+      "Vision-Language Models",
+      "3D spatial reasoning",
+      "fine-tuning",
+      "3D visual question-answering",
+      "geometric priors",
+      "transformer layers",
+      "correspondence head",
+      "deep supervision",
+      "contrastive loss",
+      "depth consistency",
+      "All-Angles Bench",
+      "VSI-Bench"
+    ]
+  },
+  {
+    "id": "2605.30003",
+    "title": "Discovering Cooperative Pipelines: Autoresearch for Sequential Social Dilemmas",
+    "summary": "We study two-level autoresearch for cooperation: an outer-loop AI agent autonomously redesigns the inner-loop pipeline of an LLM policy-synthesis system for multi-agent Sequential Social Dilemmas (SSDs). A researcher agent R (run as a coding agent) reads the inner-loop source code, edits system prompts, feedback functions, helper libraries, and iteration logic, runs evaluations, and decides what to keep, following the autoresearch paradigm. Across two games (Cleanup and Gathering), two policy-synthesizer LLMs, and two welfare objectives (utilitarian efficiency and Rawlsian maximin), the researcher reliably exceeds hand-designed baselines, sharply tightens run-to-run variance, and outperforms prompt-only optimization. The discovered pipelines are objective-dependent: only under maximin does the researcher inject an explicit fairness mechanism into synthesizer pipelines, a class of mechanism that is absent from its own objective-agnostic system prompt and from every efficiency-optimized pipeline. This supports an information-design reading in which the researcher chooses what to reveal to the boundedly rational synthesizer as a function of the welfare objective. Code at https://github.com/vicgalle/autoresearch-social-dilemmas.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "autoresearch",
+      "LLM policy-synthesis",
+      "multi-agent Sequential Social Dilemmas",
+      "researcher agent",
+      "inner-loop pipeline",
+      "outer-loop AI agent",
+      "policy-synthesizer",
+      "welfare objectives",
+      "utilitarian efficiency",
+      "Rawlsian maximin",
+      "boundedly rational synthesizer",
+      "information-design"
+    ]
+  },
+  {
+    "id": "2605.29157",
+    "title": "Parallax: Parameterized Local Linear Attention for Language Modeling",
+    "summary": "Large Language Models (LLMs) have become the central paradigm in artificial intelligence, yet the core computational primitive of attention has remained structurally unchanged. Local Linear Attention (LLA) is an attention mechanism derived from nonparametric statistics in the test-time regression framework. In contrast to prior research on efficient attention variants, LLA upgrades the local constant estimate in softmax attention to a local linear estimate, yielding provably superior bias-variance tradeoffs for associative memory. However, LLA has not been scaled in LLM pretraining due to computational and numerical stability concerns. We introduce Parallax, a parameterized Local Linear Attention that is scalable for LLMs. Parallax eliminates the numerical solver in LLA and learns an extra query-like projector that probes the KV covariance. We place Parallax within a family of attention mechanisms connected by the bandwidth, the probe construction and the affine structure. We propose a hardware-aware algorithm that increases the arithmetic intensity over FlashAttention, shifting attention into a more compute bound regime. Our prototype decode kernel matches or outperforms FlashAttention 2/3 across diverse batch sizes and context lengths. We pretrain Parallax at 0.6B and 1.7B scales and find consistent perplexity improvements throughout pretraining with gains that transfer to downstream benchmarks. The advantage persists under both parameter-matched and compute-matched controls, demonstrating a Pareto improvement. We perform careful pretraining ablations and identify a novel phenomenon whereby Muon unlocks the capacity of Parallax. To our knowledge, this is the first empirical demonstration of strong architecture-optimizer codesign for attention mechanisms in the architecture research literature.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "attention mechanism",
+      "local linear attention",
+      "softmax attention",
+      "associative memory",
+      "parameterized attention",
+      "query-like projector",
+      "KV covariance",
+      "bandwidth",
+      "affine structure",
+      "FlashAttention",
+      "arithmetic intensity",
+      "decode kernel",
+      "perplexity",
+      "pretraining",
+      "Muon",
+      "architecture-optimizer codesign"
+    ]
+  },
+  {
+    "id": "2605.26485",
+    "title": "OmniInteract: Benchmarking Real-World Streaming Interaction for Real-Time Omnimodal Assistants",
+    "summary": "We introduce OmniInteract, a streaming benchmark for real-time omnimodal large language models evaluated through native online inference over audio-visual streams. Unlike offline video understanding or text-prompted streaming QA, OmniInteract preserves the original audio-visual stream and requires models to process it online, without access to future content. User queries and ambient sounds are embedded in the audio track, requiring models to detect multimodal triggers, decide when to respond, and answer while the stream unfolds. OmniInteract contains 250 videos with 1,430 temporally grounded response slots: 1,062 1Q1A slots across real-time, proactive, and nested scenarios, and 368 1QnA slots for continuous task monitoring and step guidance. Each slot includes a trigger, response window, and target answer. We evaluate response correctness, timing, invalid outputs, interruption handling, and context continuity using Interaction-Aware Quality-Timeliness F1, Interruption Diagnostic Suite, and Nested Chain Completion Score. Experiments show that current models remain weak in streaming interaction, with the best overall IA-QTF1 reaching only 0.368 and the best 1QnA IA-QTF1 only 0.052. Further study on mathematical reasoning in full-duplex settings shows that offline capability does not necessarily transfer to online interaction. Code and datasets will be made publicly accessible at https://github.com/Lucky-Lance/OmniInteract.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "streaming benchmark",
+      "omnimodal large language models",
+      "audio-visual streams",
+      "online inference",
+      "multimodal triggers",
+      "response timing",
+      "temporally grounded response slots",
+      "1Q1A slots",
+      "1QnA slots",
+      "Interaction-Aware Quality-Timeliness F1",
+      "Interruption Diagnostic Suite",
+      "Nested Chain Completion Score"
+    ]
+  },
+  {
+    "id": "2605.13857",
+    "title": "MoZoo:Unleashing Video Diffusion power in animal fur and muscle simulation",
+    "summary": "The creation of cinematic-quality animal effects necessitates the precise modeling of muscle and fur dynamics, a process that remains both labor-intensive and computationally expensive within traditional production workflows. While generative diffusion models have shown promise in diverse artistic workflows, their capacity for high-fidelity animal simulation remains largely unexploited. We present MoZoo, a generative dynamics solver that bypasses conventional refinement to synthesize high-fidelity animal videos from coarse meshes under multimodal guidance. We propose Role-Aware RoPE (RAR-RoPE) which employs role-based index remapping to synchronize motion alignment while decoupling reference information via fixed temporal offsets. Complementing this, Asymmetric Decoupled Attention partitions the latent sequence to enforce a unidirectional information flow, effectively preventing feature interference and improving computational efficiency. To address the scarcity of high-quality training data, we introduce MoZoo-Data, a synthetic-to-real pipeline that leverages a rendering engine and an inverse mapping approach to construct a large-scale dataset of paired sequences. Furthermore, we establish MoZooBench, a comprehensive benchmark with 120 mesh-video pairs. Experimental results demonstrate that MoZoo achieves high-fidelity fur simulation across diverse animal skeletons and layouts, preserving superior temporal and structural consistency.",
+    "upvotes": 1,
+    "projectPage": "https://orange-3dv-team.github.io/MoZoo/",
+    "ai_keywords": [
+      "generative diffusion models",
+      "motion alignment",
+      "role-based index remapping",
+      "temporal offsets",
+      "asymmetric decoupled attention",
+      "latent sequence",
+      "feature interference",
+      "synthetic-to-real pipeline",
+      "rendering engine",
+      "inverse mapping approach",
+      "comprehensive benchmark",
+      "mesh-video pairs",
+      "fur simulation",
+      "temporal consistency",
+      "structural consistency"
+    ]
+  },
+  {
+    "id": "2605.30189",
+    "title": "Token-Level Generalization in LoRA Adapter Backdoors: Attack Characterization and Behavioral Detection",
+    "summary": "We show that LoRA adapters, the dominant distribution format for fine-tuned LLMs, can be reliably backdoored through training data poisoning while preserving baseline task performance. On a Qwen 2.5 1.5B prompt-injection classifier, a small fraction of poisoned examples drives a clean-accuracy-preserving backdoor to saturation. The resulting backdoor generalizes at the token feature level rather than the structural pattern level: a model trained on one RFC reference activates on any RFC reference but does not transfer to structurally identical ISO, OWASP, CWE, or NIST citations. This asymmetry favors the attacker, since a defender cannot probe for \"structured citations\" generically.\n  We characterize the attack across base-model scale and family, LoRA rank, and trigger string, and evaluate two complementary detection routes against a multi-seed adapter cohort. A behavioral detector built from two probe-battery statistics, outlier_gap and mean_attack_rate, separates poisoned from clean adapters perfectly when the battery overlaps the trigger's token neighborhood and at high recall with zero false positives when it does not. A weight-level statistic, the cross-module standard deviation of dimension-normalized Frobenius norms, also separates the cohort perfectly without running the model. Combined, the two routes are robust to probe composition. Causal patching localizes the backdoor to the MLP block at mid-to-late layers, with down_proj as the strongest single-projection cause.\n  Replications across scale, family, and rank show the behavioral detector transfers without retuning, while the weight-level detector is calibration-bound to the base model. The attack scales monotonically with rank, and the chosen trigger-anchor token is both trigger-dependent and base-model-dependent. Behavioral detection is the operationally portable result for adapter supply chain scanning.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "LoRA adapters",
+      "fine-tuned LLMs",
+      "training data poisoning",
+      "prompt-injection classifier",
+      "token feature level",
+      "structural pattern level",
+      "behavioral detector",
+      "weight-level statistic",
+      "cross-module standard deviation",
+      "Frobenius norms",
+      "causal patching",
+      "MLP block",
+      "down_proj"
+    ]
+  },
+  {
+    "id": "2605.29486",
+    "title": "PhoneWorld: Scaling Phone-Use Agent Environments",
+    "summary": "A central bottleneck for phone-use agents is that controllable, reproducible environments covering real mobile behavior are hard to build at scale. Existing mobile-agent benchmarks have made important progress on evaluation, but they do not by themselves provide a scalable way to construct many new phone-use environments. We present PhoneWorld, a reusable pipeline that converts real GUI trajectories and screenshots into controllable phone-use environments, executable tasks, automatic verifiers, and training rollouts. Rather than hand-building one mobile benchmark at a time, PhoneWorld uses real trajectories to recover which screens matter, how screens connect, which interactions must change environment state, and which user goals admit automatic verification. From these signals, it builds runnable mock Android apps backed by read-only app content and mutable state, then derives executable tasks, rule-based verifiers, and training rollouts from the same environments. In its current instantiation, PhoneWorld covers 34 apps across 16 domains, spanning common consumer mobile behaviors such as search, browsing, shopping, booking, media, and social interaction. Under a fixed training budget, replacing 10K steps from an auxiliary AndroidWorld corpus in an AndroidWorld-based baseline with broad PhoneWorld supervision improves all four evaluation benchmarks at once, raising HYMobileBench by 17.7 points, AndroidControl by 6.0 points, AndroidWorld by 14.7 points, and PhoneWorld by 52.5 points. We then study two additional scaling questions: increasing the amount of PhoneWorld supervision strongly improves PhoneWorld performance, and under a fixed PhoneWorld budget, expanding app coverage yields even larger gains. Overall, PhoneWorld shifts the focus from building one mobile benchmark at a time to scaling the supply of phone-use environments themselves.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "GUI trajectories",
+      "screenshots",
+      "controllable environments",
+      "mobile agent benchmarks",
+      "Android apps",
+      "executable tasks",
+      "rule-based verifiers",
+      "training rollouts",
+      "mobile behavior",
+      "AndroidWorld"
+    ]
+  },
+  {
+    "id": "2605.16363",
+    "title": "ORACLE: Anticipating Scams from Partial Trajectories in Streaming App Usage",
+    "summary": "Smartphone scams are increasingly prevalent and typically manifest as multi-stage, cross-application processes with gradually emerging intent. Effective intervention thus requires anticipating scams before the intent becomes explicit. This is inherently challenging, as decisions must rely on partial trajectories with temporally distributed evidence. In this paper, we propose ORACLE Online Reasoning for Anticipating Cross-temporal Latent thrEats, the first agentic framework for early scam anticipation from streaming app-usage trajectories. To support this setting, we curate a real-world long-horizon benchmark of streaming app-usage trajectories, covering 12 scam types, spanning extended periods (15 days on average), involving diverse applications (95 apps), and interleaving normal and scam behaviors. To address fragmented evidence, we introduce a self-evolving context manager that adaptively consolidates entity-centric interactions over time, enabling more effective reconstruction of cross-temporal evidence from partial observations. To enhance sensitivity to latent early-stage signals, we propose an on-policy self-distillation scheme in which a teacher model, conditioned on summarized anti-scam reflections and clues by skills, supervises a student model without access to such reflections. This scheme thereby distills evidence-informed knowledge and improves recognition of emerging fraud patterns from partial trajectories. Experiments show that  consistently improves early scam anticipation, yielding timely warnings while reducing false alerts in realistic streaming scenarios.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "online reasoning",
+      "cross-temporal latent threats",
+      "streaming app-usage trajectories",
+      "self-evolving context manager",
+      "on-policy self-distillation",
+      "teacher-student model",
+      "fraud pattern recognition"
+    ]
+  }
+]
