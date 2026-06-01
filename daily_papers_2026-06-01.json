@@ -1,0 +1,662 @@
+[
+  {
+    "id": "2605.31264",
+    "title": "COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation",
+    "summary": "LLM agents are increasingly expected not only to complete isolated tasks, but also to carry bounded representations of human expertise, judgment, and interaction style. Building such person-grounded agents remains difficult because actionable knowledge associated with a person or role is usually embedded in heterogeneous traces rather than written as clean instructions. Existing memory and persona systems capture fragments of this evidence, while skill frameworks provide portable packaging formats; however, there is no end-to-end workflow for distilling these traces into inspectable, correctable, and agent-usable skills. We present an automated trace-to-skill distillation system for generating person-grounded AI skills via expert knowledge distillation. Given materials from a target person or role, COLLEAGUE.SKILL produces a versioned skill package with two coordinated tracks: a capability track for practices, mental models, and decision heuristics, and a bounded behavior track for communication style, interaction rules, and correction history. The package can be inspected, invoked, updated through natural-language feedback, rolled back, installed across agent hosts, and optionally prepared for controlled distribution. We describe the artifact contract, generation workflow, correction lifecycle, deployment surface, and domain presets implemented in the open-source system. At the time of writing, the public repository has approximately 18.5k GitHub stars; the gallery lists 215 skills from 165 contributors and more than 100k cumulative stars across listed skill cards. The system illustrates how person-grounded skills can be represented as portable, correctable packages rather than opaque prompts or hidden memories.",
+    "upvotes": 49,
+    "projectPage": null,
+    "ai_keywords": [
+      "expert knowledge distillation",
+      "person-grounded agents",
+      "trace-to-skill distillation",
+      "capability track",
+      "behavior track",
+      "skill package",
+      "correction lifecycle",
+      "deployment surface",
+      "domain presets"
+    ]
+  },
+  {
+    "id": "2605.31604",
+    "title": "Representation Forcing for Bottleneck-Free Unified Multimodal Models",
+    "summary": "Unified multimodal models (UMMs) aim to handle perception and generation in a single model. Yet existing UMMs still rely on a frozen, separately pretrained VAE for image generation, imposing a structural bottleneck. Naively removing it introduces a quality gap, as the model must learn both high-level structure and low-level details from raw pixels. In this paper, we propose Representation Forcing (RF), a technique that closes this gap by making representation prediction a native capability of the model. Concretely, RF forces the decoder to autoregressively predict visual representations as intermediate tokens before pixels; these tokens then stay in context to guide pixel diffusion within the same backbone. By turning representations from perception outputs into generation targets, RF eliminates the need for any external generative latent space. We find that RF benefits both understanding and generation. On image generation, our pixel-space model with RF matches state-of-the-art VAE-based unified models. On image understanding, pixel-space RF generally outperforms its VAE-based variant. Together, these results offer an effective step toward end-to-end, bottleneck-free UMMs.",
+    "upvotes": 34,
+    "projectPage": "https://yuqingwang1029.github.io/RepresentationForcing/",
+    "ai_keywords": [
+      "unified multimodal models",
+      "visual representations",
+      "representation forcing",
+      "pixel space",
+      "autoregressive prediction",
+      "visual tokens",
+      "pixel diffusion",
+      "end-to-end training",
+      "bottleneck-free models"
+    ]
+  },
+  {
+    "id": "2605.31584",
+    "title": "LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards",
+    "summary": "Long-context reasoning remains a central challenge for large language models, which often fail to locate and integrate key information in extensive distracting content. Reinforcement learning with verifiable rewards (RLVR) has shown promise for this task, yet existing methods are limited by low-confusability distractors and sparse, outcome-only reward signals that cannot supervise intermediate reasoning steps. To address these issues, we introduce LongTraceRL. For data construction, we generate multi-hop questions via knowledge graph random walks and leverage search agent trajectories to build tiered distractors: documents the agent read but did not cite (high confusability) and documents that appeared in search results but were never opened (low confusability), producing training contexts that are far more challenging than those built by random sampling or one-shot search. For reward design, we propose a rubric reward that uses the gold entities along each reasoning chain as fine-grained, entity-level process supervision. This rubric reward is applied only to responses with correct final answers (positive-only strategy), distinguishing the reasoning quality among correct responses and preventing reward hacking. Experiments on three reasoning LLMs (4B--30B) across five long-context benchmarks demonstrate that LongTraceRL consistently outperforms strong baselines and encourages comprehensive, evidence-grounded reasoning. Codes, datasets and models are available at https://github.com/THU-KEG/LongTraceRL{https://github.com/THU-KEG/LongTraceRL}.",
+    "upvotes": 28,
+    "projectPage": null,
+    "ai_keywords": [
+      "reinforcement learning with verifiable rewards",
+      "RLVR",
+      "knowledge graph random walks",
+      "search agent trajectories",
+      "tiered distractors",
+      "rubric reward",
+      "long-context reasoning",
+      "large language models",
+      "reasoning chains",
+      "reward hacking"
+    ]
+  },
+  {
+    "id": "2605.30993",
+    "title": "SwanVoice: Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue",
+    "summary": "Zero-shot text-to-speech (TTS) has improved substantially for single-speaker synthesis, yet expressive long-form multi-speaker dialogue remains difficult. A common workaround is to synthesize each turn with a monologue TTS model and stitch the outputs together. This adds inference cost and often breaks acoustic consistency, conversational coherence, and affective continuity across turns. Recent dialogue TTS systems have begun to address this setting, but they still struggle to keep expressive coherence, controllable speaker switching, and monologue quality at the same time. We present SwanData-Speech and SwanVoice. SwanData-Speech builds monologue and dialogue corpora from in-the-wild audio, using Swan Forced Aligner for pause-aware word-level alignment and RobustMegaTTS3 for pronunciation-hard cases. Built on these data, SwanVoice is a zero-shot TTS model for 1--4 speakers, combining a 25 Hz VAE, raw-text conditioning with pause-aware symbols and pinyin substitution, and a flow-matching DiT with speaker-turn conditioning. Training starts from monologue speech, moves through mixed and real dialogue data, and then uses DiffusionNFT post-training with phone-level and speaker-similarity rewards. On SwanBench-Speech, SwanVoice obtains higher richness and hierarchy scores than all evaluated open-source baselines in both monologue and dialogue settings, while content accuracy remains the main limitation. Audio demos are available at https://swanaigc.github.io//#swanvoice.",
+    "upvotes": 25,
+    "projectPage": "https://swanaigc.github.io/#/swanvoice",
+    "ai_keywords": [
+      "zero-shot text-to-speech",
+      "VAE",
+      "flow-matching DiT",
+      "diffusion post-training",
+      "forced aligner",
+      "monologue TTS",
+      "dialogue TTS",
+      "speaker-turn conditioning",
+      "pause-aware symbols",
+      "pinyin substitution"
+    ]
+  },
+  {
+    "id": "2605.30819",
+    "title": "Function2Scene: 3D Indoor Scene Layout from Functional Specifications",
+    "summary": "Most text-driven 3D indoor scene synthesis methods generate rooms from object-centric prompts, asking what furniture should be placed rather than how the space is used. Yet in real interior design, a layout is judged by how well it supports its occupants, e.g., their activities and physical needs. We introduce Function2Scene, a framework for generating 3D indoor layouts from functional specifications, i.e., natural-language design briefs describing who will use a room and what they need to do there. Given such a specification, our system parses occupant personas and activities, derives a customized set of functional design constraints from a taxonomy of 17 criteria spanning spatial, ergonomic, activity, and environmental considerations, and uses these constraints to guide layout generation. Rather than relying on an LLM to directly produce a final scene, Function2Scene performs iterative evaluation and refinement through a tool-augmented check-and-repair loop, combining geometric measurements, LLM-based contextual reasoning, and VLM-based visual assessment. Experiments on 30 professionally written interior-design cases show that Function2Scene produces layouts that better satisfy functional requirements than recent LLM-based scene synthesis baselines, with our results preferred in 94.3% of pairwise comparisons. Our work reframes text-driven indoor scene synthesis from placing plausible objects to designing spaces that support human use.",
+    "upvotes": 23,
+    "projectPage": "https://function2scene.github.io/",
+    "ai_keywords": [
+      "text-driven 3D indoor scene synthesis",
+      "functional specifications",
+      "natural-language design briefs",
+      "occupant personas",
+      "activities",
+      "functional design constraints",
+      "taxonomy of 17 criteria",
+      "geometric measurements",
+      "LLM-based contextual reasoning",
+      "VLM-based visual assessment",
+      "check-and-repair loop"
+    ]
+  },
+  {
+    "id": "2605.31039",
+    "title": "GGT-100K: Generative Ground Truth for Generalizable Real-World Image Restoration",
+    "summary": "Real-world image restoration (IR) is bottlenecked by the scarcity of high-quality paired training data. Synthetic datasets are abundant but often fail to model real-world degradations, while real-world paired datasets are expensive and difficult to capture. As a result, IR models trained on these datasets show limited generalization in real-world scenarios. In this work, we propose Generative Ground Truth (GGT) by using generative multimodal foundation models (MFMs) to produce high-quality (HQ) targets from real-world low-quality (LQ) images. We first conduct a systematic evaluation of nine state-of-the-art MFMs, including Nano-Banana-2 and GPT-Image-2, on images of various scenes and degradation types. The results demonstrate that Nano-Banana-2 with VLM-based adaptive prompting shows the highest capability to synthesize perceptually realistic and content-faithful HQ targets, which can serve as the GGT for the LQ input. We then employ Nano-Banana-2 to build a GGT synthesis pipeline, which involves multi-stage quality control to ensure data reliability, and construct GGT-100K, an LQ-HQ paired dataset comprising 103,707 training pairs and covering diverse scenes and complex real-world degradations. A test set of 500 image pairs is also established. Extensive experiments show that GGT-100K consistently improves the real-world generalization of a wide range of IR models, with particularly strong benefits for finetuning generative models for IR tasks. Our results suggest that MFMs can serve as practical tools for restoration-oriented data generation, and GGT-100K is a useful resource to expand the generalization boundaries of real-world IR models.",
+    "upvotes": 22,
+    "projectPage": "https://polyu-vclab.github.io/GGT-100K/",
+    "ai_keywords": [
+      "generative multimodal foundation models",
+      "image restoration",
+      "synthetic datasets",
+      "real-world degradations",
+      "generative ground truth",
+      "Nano-Banana-2",
+      "VLM-based adaptive prompting",
+      "LQ-HQ paired dataset",
+      "multi-stage quality control"
+    ]
+  },
+  {
+    "id": "2605.30409",
+    "title": "SANA-Streaming: Real-time Streaming Video Editing with Hybrid Diffusion Transformer",
+    "summary": "Real-time streaming video-to-video editing (V2V) is critical for interactive applications such as live broadcasting and gaming, yet it remains a formidable challenge due to the stringent requirements for temporal consistency and inference throughput. In this paper, we present SANA-Streaming, a system-algorithm co-designed framework for high-resolution, real-time streaming video editing on consumer GPUs, with the following three core designs: (1) Hybrid Diffusion Transformer architecture introduces softmax attention in part of the blocks to improve local modeling capabilities while preserving the efficiency of linear layers. (2) Cycle-Reverse Regularization is a novel training strategy that enforces semantic consistency by predicting source frames from generated content via flow matching, improving temporal consistency without requiring paired long edited videos. (3) Efficient System Co-design combines fused GDN kernels and Mixed-Precision Quantization (MPQ) optimized for the NVIDIA Blackwell (RTX 5090) architecture. By profiling real-world throughput, our MPQ maximizes Tensor Core utilization while maintaining generation quality. The resulting system achieves real-time 1280 x 704 resolution editing at 24 end-to-end FPS on a single RTX 5090 GPU, with the DiT core running at 58 FPS. Experimental results demonstrate that our co-design approach significantly outperforms existing SOTA methods in both temporal coherence and system throughput.",
+    "upvotes": 22,
+    "projectPage": "https://nvlabs.github.io/Sana/Streaming/",
+    "ai_keywords": [
+      "diffusion transformer",
+      "softmax attention",
+      "flow matching",
+      "mixed-precision quantization",
+      "tensor cores",
+      "real-time video editing",
+      "temporal consistency",
+      "system-algorithm co-design"
+    ]
+  },
+  {
+    "id": "2605.31075",
+    "title": "Task-Focused Memorization for Multimodal Agents",
+    "summary": "Long-term memory is essential for multimodal agents to build coherent experience, accumulate world knowledge, and achieve continual learning. However, constructing effective memory goes beyond memory module design and basic requirements such as accuracy and fidelity; the key challenge lies in determining what to memorize. Multimodal agents, such as embodied agents, continuously perceive, reason, and act in real or virtual environments, receiving an unbounded stream of multimodal observations. From this combinatorial explosion of information, an agent must selectively retain content that is relevant to its role in the environment and valuable for future tasks. To bridge this gap, we frame memory generation as a learnable memorization policy and introduce TaskMem (Task-focused Memorization Policy Learning), a reinforcement-learning-based framework that enables the policy to dynamically adjust its focus to the demands of real tasks encountered in the environment. TaskMem adopts a two-phase training paradigm: Phase One learns how to memorize by optimizing memory quality under fundamental fidelity requirements; Phase Two occurs after deployment, where the agent learns what to memorize by tuning an adapter on its base MLLM, using recent environment tasks to define a reward model that guides the memorization policy toward task-relevant content. To evaluate our approach, we reformulate VideoMME, EgoLife, and EgoTempo into streaming benchmarks that simulate a realistic setting in which an agent processes streaming observations and handles tasks arriving online. To isolate memory assessment, the questions must be answered using only the agent's memory, without access to raw video. Built on Qwen3-VL-30B-A3B, TaskMem improves VQA accuracy by 6.3%, 7.0%, and 5.3% on these benchmarks, respectively.",
+    "upvotes": 19,
+    "projectPage": "https://taskmem.github.io/",
+    "ai_keywords": [
+      "multimodal agents",
+      "long-term memory",
+      "continual learning",
+      "memorization policy",
+      "reinforcement learning",
+      "task-focused memorization",
+      "two-phase training",
+      "memory quality",
+      "reward model",
+      "streaming benchmarks",
+      "VideoMME",
+      "EgoLife",
+      "EgoTempo",
+      "Qwen3-VL-30B-A3B",
+      "VQA accuracy"
+    ]
+  },
+  {
+    "id": "2605.30940",
+    "title": "Towards Streaming Synchronized Spatial Audio Generation via Autoregressive Diffusion Transformer",
+    "summary": "Real-time and accurate spatial audio generation is pivotal for delivering an immersive experience. However, existing spatial audio synthesis technologies are often encumbered by a tradeoff between generation quality and high inference latency, as well as difficulty in capturing precise spatial information from multimodal inputs. To address these challenges, we propose SwanSphere, a unified streaming framework for high-fidelity spatial audio generation from panoramic videos and text prompts. SwanSphere mainly makes the following contributions: 1) We introduce a causal autoregressive diffusion transformer architecture that enables streaming high-quality spatial audio generation. 2) We design a Spatial Video-Audio Contrastive (SVAC) learning strategy to align the video encoder with the acoustic domain, and further employ a multi-objective online direct preference optimization (ODPO) scheme, resulting in strong spatial perception and robust multimodal spatial audio synthesis. 3) To alleviate the current scarcity of spatial audio datasets, we also develop an automated annotation pipeline for generating detailed spatial captions. Experimental results demonstrate that SwanSphere achieves superior performance in both video-to-spatial and text-to-spatial audio generation tasks. Demos can be found at: https://swanaigc.github.io.",
+    "upvotes": 18,
+    "projectPage": "https://swanaigc.github.io/#swansphere",
+    "ai_keywords": [
+      "causal autoregressive diffusion transformer",
+      "spatial audio generation",
+      "panoramic videos",
+      "text prompts",
+      "Spatial Video-Audio Contrastive learning",
+      "multi-objective online direct preference optimization",
+      "automated annotation pipeline",
+      "spatial captions"
+    ]
+  },
+  {
+    "id": "2605.28618",
+    "title": "Comprehensive Benchmarking of Long-Form Speech Generation in Diverse Scenarios",
+    "summary": "Recent advances in speech generation have enabled high-fidelity synthesis, yet systematic evaluation of models under long-context conditions remains largely underexplored. A comprehensive evaluation benchmark for long-form speech is indispensable for two reasons: 1) existing test scenarios are often confined to limited domains, creating a significant gap with the diverse downstream applications; 2) existing metrics overlook critical long-text factors such as consistency and coherence, failing to generalize reliably. To this end, we propose Swanbench-Speech, a comprehensive benchmark that decomposes long-form speech quality into specific, disentangled dimensions. SwanBench-Speech has three key properties. 1) Rich speech scenarios: Focusing on long-form speech generation and dialog generation, SwanBench-Speech covers acoustics, semantics, and expressiveness challenges, and consists of 1,101 samples spanning 17 common speech scenarios; 2) Comprehensive evaluation dimensions: Along the acoustics, semantics, and expressiveness axes, SwanBench-Speech defines an automated evaluation protocol with seven metrics to provide a comprehensive, accurate, and standardized assessment; 3) Valuable Insights: Through extensive experiments, we reveal that current models still struggle in highly expressive scenarios and exhibit a notable gap in consistency and hierarchy compared to real recordings.",
+    "upvotes": 18,
+    "projectPage": "https://swanaigc.github.io//#bench",
+    "ai_keywords": [
+      ""
+    ]
+  },
+  {
+    "id": "2605.26844",
+    "title": "Not All Disagreement Is Learnable: Token Teachability in On-Policy Distillation",
+    "summary": "On-policy distillation (OPD) trains a student on its own rollouts with token-level teacher supervision. Recent selective OPD methods exploit the non-uniformity of OPD signals by prioritizing high-entropy or high-disagreement tokens. We revisit this principle and ask: which token-level teacher signals are actually learnable? Using a fixed-context diagnostic that measures same-context teacher-student KL reduction, we show that raw KL disagreement is a coarse proxy for learning value. It conflates learnable disagreement, where the teacher assigns corrective mass to the student's top-K candidates, with incompatible disagreement, where the teacher places mass mostly off the student's current support. We formalize this local compatibility as token teachability and show that it better predicts fixed-context improvement than raw KL alone. Motivated by this finding, we propose Teachability-Aware OPD (TA-OPD), a lightweight token-position selection method that applies OPD loss to high-teachability positions without reward models or verifiers. Across Qwen2.5 and Qwen 3 teacher-student settings, TA-OPD often surpasses full-token OPD with only 5% retained tokens and improves over entropy- and divergence-based baselines. Our results reframe selective OPD as selecting learnable teacher signals rather than merely salient tokens.",
+    "upvotes": 17,
+    "projectPage": null,
+    "ai_keywords": [
+      "on-policy distillation",
+      "token-level teacher supervision",
+      "selective OPD",
+      "high-entropy tokens",
+      "high-disagreement tokens",
+      "KL divergence",
+      "teacher-student KL reduction",
+      "token teachability",
+      "TA-OPD",
+      "fixed-context diagnostic"
+    ]
+  },
+  {
+    "id": "2605.30407",
+    "title": "Exploring Autonomous Agentic Data Engineering for Model Specialization",
+    "summary": "Large Language Models (LLMs) have demonstrated strong performance on general tasks, while often struggling to adapt to specialized domains without high-quality domain-specific data. Existing LLM-based data curation methods primarily rely on human-designed workflows, leaving it unexamined whether LLMs can autonomously execute an end-to-end data engineering pipeline for model specialization. We formalize Autonomous Agentic Data Engineering, a novel task designed to evaluate LLMs as autonomous data engineers that drive model specialization through end-to-end data curation. We frame data as an optimizable component and study agents that plan, generate, and iteratively optimize training data across multiple domains, guided by post-training performance improvement. Experiments show that autonomous LLM data engineers yield substantial gains, as GPT-5.2 constructs a training curriculum that improves a student model by 57.29\\%, entirely through iterative, agent-driven data adaptation. By illuminating both potential and bottlenecks, our study establishes autonomous data engineering as a measurable capability and charts a path toward agent-driven model specializationCode will be released at https://github.com/zjunlp/DataAgent..",
+    "upvotes": 14,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language models",
+      "data curation",
+      "autonomous agentic data engineering",
+      "end-to-end data engineering pipeline",
+      "model specialization",
+      "training data optimization",
+      "agent-driven data adaptation",
+      "iterative optimization",
+      "post-training performance improvement"
+    ]
+  },
+  {
+    "id": "2605.29447",
+    "title": "Recovering Policy-Induced Errors: Benchmarking and Trajectory Synthesis for Robust GUI Agents",
+    "summary": "While GUI agents have advanced rapidly, they often lack the robustness to recover from their own errors, hindering real-world deployment. To bridge this gap at both the evaluation and data levels, we introduce GUI-RobustEval and propose Robustness-driven Trajectory Synthesis. GUI-RobustEval contains 1,216 executable test cases that systematically measure error recovery capabilities across a broad and realistic spectrum of error modes. At the data level, RoTS is a scalable synthesis framework that creates 800k high-quality data via a tree-based pipeline that proactively discovers diverse error modes and synthesizes corresponding recovery steps. Our two models, RoTS-7B and RoTS-32B, fine-tuned on our dataset, both demonstrate significant gains on GUI-RobustEval and traditional GUI benchmarks. Notably, RoTS-32B achieves state-of-the-art performance on OSWorld, with a 47.4% success rate and a 33.8% All-Pass@4 score, suggesting that improved long-horizon error recovery ability contributes to both robustness and overall performance. Our code is available at https://github.com/AlibabaResearch/RoTS.",
+    "upvotes": 14,
+    "projectPage": null,
+    "ai_keywords": [
+      "GUI agents",
+      "error recovery",
+      "GUI-RobustEval",
+      "Robustness-driven Trajectory Synthesis",
+      "OSWorld",
+      "All-Pass@4"
+    ]
+  },
+  {
+    "id": "2605.31042",
+    "title": "From Prompt Injection to Persistent Control: Defending Agentic Harness Against Trojan Backdoors",
+    "summary": "LLM agents are evolving from conversational chatbots to operational tools in real-world workspaces. In local agentic harnesses, an LLM can read and write files, call tools, and reuse workspace state across sessions. While such capabilities enhance utility, they also expose a new attack surface for attackers. Attackers can embed a prompt injection within a file or tool output. Agents may read this hidden instruction, store it, and execute it later. In this multi-step trojan attack paradigm, no individual step appears malicious on its own, but these steps can collectively turn untrusted text into persistent control content. However, existing defenses often inspect each step in isolation. As a result, they can block a clear harmful action, but fail to detect the earlier write operation that plants the backdoor. To reveal this threat, we introduce ClawTrojan, a benchmark designed to identify multi-step trojan attacks in local agentic harnesses. In an OpenClaw-style simulated workspace with GPT-5.4, ClawTrojan reaches a 95.5% attack success rate (ASR), while existing single-turn prompt-injection attacks produce near-zero ASR on the same model. To address this threat, we propose DASGuard, which scans control-like text in sensitive local files, traces its origin, and removes control content that does not originate from a trusted source. Our results show that DASGuard achieves strong dynamic defense by combining runtime attack blocking with sanitized commits to the workspace.",
+    "upvotes": 13,
+    "projectPage": null,
+    "ai_keywords": [
+      "LLM agents",
+      "prompt injection",
+      "multi-step trojan attack",
+      "OpenClaw",
+      "DASGuard",
+      "runtime attack blocking",
+      "sanitized commits"
+    ]
+  },
+  {
+    "id": "2605.30434",
+    "title": "LongDS-Bench: On the Failure of Long-Horizon Agentic Data Analysis",
+    "summary": "Real-world data analysis is inherently iterative, yet existing benchmarks mostly evaluate isolated or short interactive tasks, leaving agents' ability to track evolving analytical context over long horizons untested. We introduce LongDS, a benchmark for long-horizon, multi-turn data analysis where agents must maintain, update, restore, and compose evolving analytical states. LongDS comprises 68 tasks constructed from real-world Kaggle notebooks, spanning 2,225 turns across six domains including Geoscience, Business, and Education. Tasks are designed around state-evolution patterns (e.g., counterfactual perturbation, rollback, multi-state composition), with an average dependency span of 11.3 turns. Evaluating five state-of-the-art models, we find that the best model reaches only 48.45% average accuracy, performance drops nearly 47 points from early to late turns, and long-horizon errors account for 52%--69% of failures. Further analysis shows that additional agent steps do not necessarily improve performance, suggesting that the key bottleneck is maintaining a correct analytical state rather than increasing interaction budget. We release LongDS to support research on reliable long-horizon agentic data analysis. Code and data will be released at https://github.com/zjunlp/DataMind.",
+    "upvotes": 13,
+    "projectPage": null,
+    "ai_keywords": [
+      "long-horizon",
+      "multi-turn data analysis",
+      "analytical state",
+      "state-evolution patterns",
+      "counterfactual perturbation",
+      "rollback",
+      "multi-state composition",
+      "agent steps",
+      "interaction budget"
+    ]
+  },
+  {
+    "id": "2605.30876",
+    "title": "dMoE: dLLMs with Learnable Block Experts",
+    "summary": "Diffusion Large Language Models (dLLMs) have recently emerged as a promising alternative to autoregressive models, offering competitive performance while naturally supporting parallel decoding. However, as dLLMs are increasingly integrated with Mixture-of-Experts (MoE) architectures to scale model capacity, a fundamental mismatch arises between block parallel decoding and token-level expert selection. Specifically, each dLLM forward pass processes multiple tokens with bidirectional dependencies, whereas conventional MoE layers route each token independently. This mismatch substantially increases the number of uniquely activated experts, making inference increasingly memory-bound. To address this, we propose dMoE, a simple yet effective block-level MoE framework. The central idea of dMoE is to aggregate token-level expert distributions within each block into a unified block-level expert distribution, which is then used to guide expert routing in a more coherent manner. In this way, dMoE substantially reduces the number of uniquely activated experts during inference without sacrificing performance, thereby mitigating the memory-bound bottleneck. Extensive experiments across a variety of benchmarks demonstrate the effectiveness of dMoE. On average, dMoE reduces the number of uniquely activated experts from 69.5 to 14.6 while retaining 99.11% of the original performance. Meanwhile, it reduces memory usage by 76.64% to 79.84% and achieves 1.14times to 1.66times end-to-end latency speedup. Code is available at: https://github.com/fscdc/dMoE",
+    "upvotes": 12,
+    "projectPage": "https://fscdc.github.io/dMoE/",
+    "ai_keywords": [
+      "Diffusion Large Language Models",
+      "autoregressive models",
+      "parallel decoding",
+      "Mixture-of-Experts",
+      "block parallel decoding",
+      "token-level expert selection",
+      "expert routing",
+      "block-level expert distribution",
+      "memory-bound bottleneck",
+      "end-to-end latency"
+    ]
+  },
+  {
+    "id": "2605.31433",
+    "title": "SCOPE: Self-Play via Co-Evolving Policies for Open-Ended Tasks",
+    "summary": "Self-play can train language models without external supervision. However, existing methods require rule-checkable answers, leaving open-ended tasks dependent on curated prompts or frontier-model judges. We introduce SCOPE, a data-free self-play framework for open-ended tasks that co-evolves two policies: a Challenger that generates document-grounded tasks, and a Solver that answers them through multi-turn retrieval. A frozen copy of the initial model serves as the self-judge, which writes task-specific rubrics from the source document and grades Solver responses against them. Across three 7-8B instruction-tuned models (Qwen2.5, Qwen3, OLMo-3), SCOPE improves open-ended performance by up to +10.4 points on eight benchmarks and matches or exceeds GRPO_data trained on ~9K curated prompts. Although trained only on open-ended tasks, SCOPE also improves held-out short-form QA by up to +13.8 points on seven held-out benchmarks, surpassing GRPO_data on all three models. Ablations show that co-evolving the Challenger is necessary to keep tasks near the Solver's frontier, that gains arise from improvements in both retrieval and synthesis with the relative contribution varying by task, and that rubric generation quality is the bottleneck for self-judging.",
+    "upvotes": 8,
+    "projectPage": "https://edinburghnlp.github.io/scope/",
+    "ai_keywords": [
+      "self-play",
+      "instruction-tuned models",
+      "open-ended tasks",
+      "policy co-evolution",
+      "multi-turn retrieval",
+      "self-judge",
+      "rubric generation",
+      "GRPO_data"
+    ]
+  },
+  {
+    "id": "2605.30561",
+    "title": "VLM3: Vision Language Models Are Native 3D Learners",
+    "summary": "Vision Language Models (VLMs) enable a unified model to solve various vision tasks through prompting. They have shown promising performance in semantic understanding. However, 3D understanding still largely relies on expert vision models with complex task-specific designs. The key argument this work wants to make is that VLMs are native 3D learners. Our in-depth large scale study shows that 1) focal length unification, 2) text-based pixel reference and 3) data mixture and scaling, are all you need for effective 3D learning. Model architecture changes, large models, heavy data augmentations, and complex losses including the regression formulation, many of which form the foundation of expert vision models, are actually not necessary conditions. As a result, we propose VLM3, a scalable method with the simplest design that enables standard VLMs to master diverse 3D tasks. VLM3 not only advances the VLM depth estimation accuracy by a large margin (0.84 -> 0.9), but also enables diverse 3D tasks such as pixel correspondence, camera pose estimation and object-level 3D understanding, matching expert vision model accuracy while maintaining standard architectures and text-based training. We believe VLM3 opens up a new paradigm for simple and scalable 3D learning.",
+    "upvotes": 8,
+    "projectPage": null,
+    "ai_keywords": [
+      "Vision Language Models",
+      "3D understanding",
+      "focal length unification",
+      "text-based pixel reference",
+      "data mixture",
+      "scaling",
+      "depth estimation",
+      "pixel correspondence",
+      "camera pose estimation",
+      "object-level 3D understanding"
+    ]
+  },
+  {
+    "id": "2605.31029",
+    "title": "PEEK: Picking Essential frames via Efficient Knowledge distillation",
+    "summary": "Video-language models can process only a limited number of frames, making frame selection a key bottleneck for efficient video captioning. Most captioning pipelines still rely on uniform sampling, which is computationally cheap but agnostic to visual content. Adaptive frame sampling has recently emerged as a promising approach for selecting the most informative frames from a video; however, existing methods remain computationally expensive. We introduce PEEK, an efficient dynamic frame sampling method that distills caption-conditioned frame relevance rankings from a stronger teacher model into a lightweight temporal model that operates only on visual content. We find that, overall, on ActivityNet Captions and MSR-VTT, our method outperforms state-of-the-art methods across all evaluated downstream vision language models, especially when only one or two frames are selected for captioning, obtaining the best CIDEr for most frame budgets. On ActivityNet Captions, PEEK is particularly strong, winning 14 out of 16 configurations. Zero-shot evaluation on MSR-VTT shows that our model transfers best at low frame budgets, while results at four and eight frames are more mixed as temporal coverage and visual diversity become increasingly competitive. Compared with recent adaptive baselines, PEEK is both more accurate in the low-budget regime and more efficient: it adds only 5.2% to the captioning time, compared with 65.4% for CSTA and 211.9% for MaxInfo. We release our code and pre-trained checkpoint at https://github.com/momentslab/peek.",
+    "upvotes": 7,
+    "projectPage": "https://www.killian-steunou.com/peek",
+    "ai_keywords": [
+      "video-language models",
+      "frame selection",
+      "adaptive frame sampling",
+      "caption-conditioned frame relevance",
+      "teacher model",
+      "lightweight temporal model",
+      "vision language models",
+      "CIDEr",
+      "zero-shot evaluation",
+      "temporal coverage",
+      "visual diversity"
+    ]
+  },
+  {
+    "id": "2605.30834",
+    "title": "Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring",
+    "summary": "Vision-Language-Action (VLA) models enable robots to follow natural language instructions and generalize across diverse tasks, but they remain vulnerable to execution failures that compromise reliability in real-world deployment. Detecting such failures during execution is therefore critical for the robust deployment of embodied systems. Existing failure detection methods either rely on expensive action resampling or external models, while alternatives propagate trajectory-level labels uniformly across every timestep, obscuring localized failure signals. In this paper, we propose Hide-and-Seek, a framework that formulates VLA failure detection as a coarsely supervised learning problem. By combining inter-trajectory and intra-trajectory contrastive objectives, Hide-and-Seek localizes failure-indicative actions and induces temporally structured failure signals from trajectory-level supervision alone, without any step-level annotation. We evaluate Hide-and-Seek on LIBERO, VLABench, and a real-world robotic platform across three representative VLA policies: OpenVLA, π_0, and π_{0.5}.Our method achieves state-of-the-art multi-task failure detection performance with a practical accuracy--timeliness trade-off under conformal prediction, and generalizes well to both seen and unseen tasks.",
+    "upvotes": 5,
+    "projectPage": "https://seongheon-96.github.io/hide_and_seek_site/",
+    "ai_keywords": [
+      "Vision-Language-Action models",
+      "failure detection",
+      "coarsely supervised learning",
+      "inter-trajectory contrastive objectives",
+      "intra-trajectory contrastive objectives",
+      "temporal structure",
+      "conformal prediction",
+      "OpenVLA",
+      "π₀",
+      "π₀.₅"
+    ]
+  },
+  {
+    "id": "2605.23657",
+    "title": "OpenSkillEval: Automatically Auditing the Open Skill Ecosystem for LLM Agents",
+    "summary": "Skills, i.e., structured workflow instructions distilled for large language models (LLMs), are becoming an increasingly important mechanism for improving agent performance on real-world downstream tasks. However, as the open-source skill ecosystem rapidly expands, it remains unclear how different models and agent frameworks interact with skills, how to evaluate skill quality, and how users should select skills under practical cost-performance trade-offs. In this paper, we present OpenSkillEval, an automatic evaluation framework for both skill-augmented agent systems and the skills themselves. Instead of relying on static benchmarks, OpenSkillEval automatically constructs realistic task instances from evolving real-world artifacts across five categories of downstream applications: presentation generation, front-end web design, poster generation, data visualization, and report generation. It further collects and organizes community-contributed skills for controlled comparison under unified task settings. Using more than 600 dynamically generated task instances and 30 open-source skills, we conduct a systematic evaluation of state-of-the-art models and agent frameworks. Our results show that skill availability does not guarantee effective skill usage, that the benefit of skill augmentation depends strongly on both the underlying model and the agent framework, and that many publicly popular skills do not consistently outperform base agents without skills. These findings highlight the need for dynamic, task-grounded evaluation and provide practical insights into the design, selection, and deployment of skills for LLM agents. Additional cases and benchmark resources are available on the project website: https://yingjiahao14.github.io/OpenSkillEval-Web/.",
+    "upvotes": 4,
+    "projectPage": "https://yingjiahao14.github.io/OpenSkillEval-Web/",
+    "ai_keywords": [
+      "large language models",
+      "agent systems",
+      "skill evaluation",
+      "automated evaluation framework",
+      "real-world artifacts",
+      "task instances",
+      "community-contributed skills",
+      "controlled comparison",
+      "systematic evaluation",
+      "skill augmentation"
+    ]
+  },
+  {
+    "id": "2605.31598",
+    "title": "Linear Scaling Video VLMs for Long Video Understanding",
+    "summary": "Video vision-language models (VLMs) are increasingly used in long-horizon and streaming settings, yet most video encoders still rely on spatiotemporal self-attention, causing compute and latency to grow quadratically with the number of frames. Existing efficiency methods improve scalability but often lose accuracy relative to full self-attention, for example through aggressive frame/token dropping or coarse attention approximations. We introduce StateKV, an inference-time method that adapts pretrained long-video VLMs to linear-time video prefill by carrying cross-frame context in a fixed-capacity, importance-based recurrent state, paired with a second full per-frame cache used for decoding. Across three long-video benchmarks and seven models spanning three families and multiple scales, StateKV remains close to full self-attention and consistently outperforms dominant sliding-window / recency-based streaming approximations, without fine-tuning or architectural changes. StateKV also reduces video-prefill cost measured FLOPs, enabling stronger accuracy at a fixed compute budget by running larger models. These results suggest a practical step toward scalable long-video understanding.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "video vision-language models",
+      "spatiotemporal self-attention",
+      "video encoders",
+      "cross-frame context",
+      "recurrent state",
+      "full per-frame cache",
+      "long-video benchmarks",
+      "sliding-window",
+      "recency-based streaming approximations",
+      "FLOPs"
+    ]
+  },
+  {
+    "id": "2605.30888",
+    "title": "The Flip Side of RLHF: On-Policy Feedback for Reward Model Self-Supervised Improvement",
+    "summary": "Building strong reward models (RMs) for language model alignment is bottlenecked by the cost and difficulty of acquiring diverse and reliable preference data from human annotation or judge models. It is dramatically worse as the policy evolves beyond the static RM training. Therefore, we propose SAVE (Self-supervised reward model improvement via Value-Anchored On-policy feedback), a framework that grades on-policy responses as feedback by using the value function for on-policy RM training. SAVE naturally converts the reward-graded on-policy responses into supervision with a prompt-specific value head as an adaptive anchor. It computes RM advantages and filters ambiguous samples to update the RM via a contrastive objective. The effectiveness of SAVE for enhancing RM training is strongly validated through rigorous empirical evaluation across six diverse benchmarks. It achieves outperforming results across all datasets while maintaining consistent improvements across three RL algorithms (GRPO, RLOO, GSPO) and different policy backbones.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "reward models",
+      "on-policy responses",
+      "value function",
+      "contrastive objective",
+      "reinforcement learning",
+      "GRPO",
+      "RLOO",
+      "GSPO"
+    ]
+  },
+  {
+    "id": "2605.31603",
+    "title": "Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models",
+    "summary": "Connector-based video unified models have demonstrated strong capability in instruction-grounded video synthesis, but integrating a large high-fidelity generator into the unified training loop is computationally prohibitive, limiting achievable visual quality. We therefore propose Lumos-Nexus, a training-efficient unified video generation framework that facilitates the development of strong reasoning-driven generation capabilities while significantly enhancing visual fidelity. Lumos-Nexus adopts a two-stage design: 1) During training, only a lightweight generator is aligned with the understanding block to learn to take in reasoning-driven semantic control. 2) During inference, we introduce Unified Progressive Frequency Bridging (UPFB) to progressively hand off generation to a high-capacity pretrained generator in the shared latent space, enabling coarse-to-fine refinement and producing high-fidelity videos without compromising reasoning quality. To fill the gap in reasoning-driven video generation benchmarks, we introduce VR-Bench, which assesses a model's capability to translate inferred intent into coherent and semantically aligned video content. Extensive experiments demonstrate that Lumos-Nexus achieves substantial gains in visual realism and temporal coherence on VBench, while exhibiting strong reasoning-based generative performance on VR-Bench. Code and models are available at https://jiazheng-xing.github.io/nexus-lumos-home/.",
+    "upvotes": 2,
+    "projectPage": "https://jiazheng-xing.github.io/nexus-lumos-home/",
+    "ai_keywords": [
+      "unified video generation framework",
+      "lightweight generator",
+      "reasoning-driven semantic control",
+      "high-capacity pretrained generator",
+      "shared latent space",
+      "Unified Progressive Frequency Bridging",
+      "video synthesis",
+      "visual fidelity",
+      "temporal coherence",
+      "VR-Bench",
+      "VBench"
+    ]
+  },
+  {
+    "id": "2605.31170",
+    "title": "Emergent Languages in Populations of Language Model Agents: From Token Efficiency to Oversight Evasion",
+    "summary": "Monitoring autonomous language model agents currently relies mostly on surface behavior. But what happens when agent populations invent new languages with the goal of avoiding human oversight. Here, we study the emergent languages on Moltbook. For this, we build upon the Moltbook Files dataset and apply a two-stage approach consisting of a rule-based heuristic (about 6000 matches) followed by zero-shot classification (518 kept). The resulting categories include token efficiency (166), new natural languages (106), and oversight evasion (59). We conduct both quantitative and qualitative analyses. Our results show that posts proposing new languages for avoiding oversight are judged by DeepSeek-3.2 as being less aligned than the other categories and that all languages can be learned by other language models in-context merely from a description of the language. Moreover, manually studying exemplary cases reveals surprisingly sophisticated steganographic protocols like embedding hidden messages in natural language. Although we cannot be certain about the extent of autonomy in ideation of these languages, our results add up to the evidence that monitoring surface behavior may soon be insufficient for retaining control over agent populations.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "emergent languages",
+      "autonomous language model agents",
+      "oversight evasion",
+      "steganographic protocols",
+      "zero-shot classification",
+      "in-context learning"
+    ]
+  },
+  {
+    "id": "2605.31096",
+    "title": "iVGR: Internalizing Visually Grounded Reasoning for MLLMs with Reinforcement Learning",
+    "summary": "While visually grounded Chain-of-Thought (CoT) has emerged as a promising paradigm to enhance fine-grained perception in multimodal large language models (MLLMs), its efficacy during the inference phase remains underexplored. In this work, we empirically find that mandating explicit object boxes in visually grounded CoT during inference often degrades performance compared to standard textual CoT, which reasons without explicit visual grounding. We hypothesize that the visual localization capability can be internalized into the textual CoT and that the mandatory explicit grounding introduces unnecessary interference with the model's primary objective of answer prediction. To address this problem, we propose Internalizing Visually Grounded Reasoning (iVGR), a novel reinforcement learning framework that transfers localization capabilities into the textual reasoning process. We employ a dual-stream training strategy, where a textual stream is aligned with a high-quality visually grounded stream via a proposed consistency reward, enabling the model to localize accurately without explicit grounding during inference. Extensive experiments demonstrate that our method significantly outperforms existing baselines on fine-grained benchmarks, while maintaining the flexibility to support tool-assisted inference workflows.",
+    "upvotes": 1,
+    "projectPage": "https://visual-ai.github.io/ivgr/",
+    "ai_keywords": [
+      "Chain-of-Thought",
+      "multimodal large language models",
+      "visually grounded reasoning",
+      "reinforcement learning",
+      "dual-stream training",
+      "consistency reward",
+      "fine-grained perception"
+    ]
+  },
+  {
+    "id": "2605.31158",
+    "title": "Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models",
+    "summary": "Interactive video world models generate video chunk by chunk in response to user-controlled camera movements, enabling applications such as real-time game simulation, virtual scene navigation, and embodied AI training. However, scaling to long interactive trajectories is prohibitively expensive due to growing context memory, quadratic attention complexity, and repeated denoising steps. We present Light Interaction, a training-free inference acceleration framework for interactive video world models. Our key insight is that interaction naturally enables trajectory-dependent adaptive computation: retrieved spatial memory can be discarded during novel exploration, temporal context can be adjusted according to local latent dynamics, and early-step model outputs can be reused when the camera revisits familiar regions. Based on this insight, Light Interaction combines adaptive context management, denoising cache acceleration, and hardware-software co-designed 3D block sparse attention with fused Triton kernels. Evaluated on HY-WorldPlay and Matrix-Game-3.0, Light Interaction achieves up to 2.59x speedup without model retraining while maintaining competitive visual quality.",
+    "upvotes": 1,
+    "projectPage": "https://2843721358l-del.github.io/Light-Interaction-Project/",
+    "ai_keywords": [
+      "video world models",
+      "interactive video",
+      "trajectory-dependent adaptive computation",
+      "spatial memory",
+      "temporal context",
+      "denoising cache acceleration",
+      "3D block sparse attention",
+      "Triton kernels"
+    ]
+  },
+  {
+    "id": "2605.30846",
+    "title": "Count Anything",
+    "summary": "Object counting remains fragmented across domain-specific datasets and task formulations, despite rapid progress in generalist vision models. Existing counting models are often tailored to scenarios such as crowds, vehicles, cells, crops, or remote-sensing objects, and thus struggle to generalize across categories, visual domains, object scales, and density distributions. In this paper, we study text-guided object counting across domains, where a model takes an image and a natural-language query as input and returns an instance-grounded set of target points whose cardinality gives the count. This formulation unifies category-conditioned counting with interpretable spatial localization. To support this setting, we construct CLOC, a Cross-domain Large-scale Object Counting dataset that reorganizes diverse public data sources into a unified benchmark. CLOC covers six visual domains: General Scene, Remote Sensing, Histopathology, Cellular Microscopy, Agriculture, and Microbiology, with about 220K images, 619 categories, and 15M object instances. Based on CLOC, we propose Count Anything, a generalist model for text-guided object counting. Unlike density-map-based methods, which dominate counting models, Count Anything adopts discrete instance points and performs dual-granularity instance enumeration. A Region-level Sparse Counter provides object-level anchors for large and sparse targets, while a Pixel-level Dense Counter handles small, crowded, and weakly bounded targets via dense point prediction. A point-centric supervision strategy enables learning from heterogeneous annotations, and Complementary Count Fusion combines both counters in a parameter-free manner. Extensive experiments show that Count Anything achieves strong accuracy and multi-domain generalization, outperforming existing open-world counting methods. Code is available at: https://github.com/Mengqi-Lei/count-anything.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "text-guided object counting",
+      "instance enumeration",
+      "dual-granularity",
+      "Region-level Sparse Counter",
+      "Pixel-level Dense Counter",
+      "point-centric supervision",
+      "Complementary Count Fusion",
+      "cross-domain generalization"
+    ]
+  },
+  {
+    "id": "2605.30329",
+    "title": "SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?",
+    "summary": "Autonomous AI research agents aim to accelerate scientific discovery by automating the research pipeline, from hypothesis generation to peer review. However, existing benchmarks rarely test a fundamental bottleneck: whether Large Language Models can judge the methodological viability of a research idea before expending time and computational resources. We introduce SoundnessBench, a curated benchmark of 1,099 machine-learning research proposals reconstructed from ICLR submissions, labeled with reviewer soundness sub-scores, and audited against source papers. SoundnessBench should be interpreted as a benchmark for recoverable proposal-stage soundness rather than exact prediction of full-paper review outcomes. Across 12 frontier LLMs, we find a pervasive optimism bias: under standard prompting, models frequently rate low-soundness proposals as sound, while aggressive prompting largely shifts errors from false positives to false negatives. Additional controls for public-corpus contamination, paper-identifying phrases, surface features, and human audit quality suggest that this behavior is not explained by a single confounder. Our results indicate that current LLMs are not yet reliable as standalone first-gate evaluators for scientific rigor.",
+    "upvotes": 1,
+    "projectPage": "https://hosytuyen.github.io/projects/SoundnessBench/",
+    "ai_keywords": [
+      "Large Language Models",
+      "machine-learning research proposals",
+      "reviewer soundness",
+      "ICLR submissions",
+      "autonomous AI research agents",
+      "hypothesis generation",
+      "peer review",
+      "benchmark evaluation"
+    ]
+  },
+  {
+    "id": "2605.30557",
+    "title": "Seeing Isn't Knowing: Do VLMs Know When Not to Answer Spatial Questions (and Why)?",
+    "summary": "Spatial reasoning is a fundamental capability for vision-language models (VLMs) deployed in real-world environments. However, visual observations are inherently limited representations of a 3D world: occlusion can render objects invisible, and perspective can make geometric properties misleading. Despite this, existing spatial reasoning benchmarks typically assume that observations are sufficient and reliable, focusing on whether models produce correct answers rather than whether they recognize when a question cannot be answered and what additional observations would be needed. In this work, we challenge this assumption by constructing a controlled evaluation framework, SpatialUncertain, and introducing two types of observation challenges: (1) occlusion, which hides target information, and (2) perspective ambiguity, which produces misleading visual cues. For each configuration, we design spatial questions that are answerable under clean observations but require abstention under the introduced challenges. We further evaluate whether models can identify which additional viewpoints would resolve perspective ambiguity. Our results across a diverse set of frontier open- and closed-source VLMs reveal two consistent failure modes. First, models are prone to overconfident answering, attempting to solve spatial reasoning tasks even when visual evidence is incomplete or misleading, with average accuracy around 30\\% under occlusion and below 10\\% under perspective ambiguity. Second, even when additional views are available, some models perform near random chance in identifying which would provide reliable evidence. Together, our findings call for moving beyond answer correctness toward evaluating whether models know when to abstain and how to seek reliable evidence.",
+    "upvotes": 1,
+    "projectPage": "https://zhangyuejoslin.github.io/spatialuncertain/",
+    "ai_keywords": [
+      "spatial reasoning",
+      "vision-language models",
+      "occlusion",
+      "perspective ambiguity",
+      "abstention",
+      "visual evidence",
+      "additional viewpoints"
+    ]
+  },
+  {
+    "id": "2605.30514",
+    "title": "MAAT: Multi-phase Adapter-Aware Targeted Unlearning",
+    "summary": "Machine unlearning evaluation is structurally skewed: Why-type questions, which probe causal and relational knowledge, comprise less than 0.06% of CounterFact, 0.6% of ZSRE, and less than 1.3% of TOFU, MUSE, and WMDP-Cyber. This near-zero representation means that methods that fail on causal knowledge can score highly in aggregate, and this failure is undetectable without balanced evaluation. We present 5WBENCH, a balanced 5,000-sample benchmark with 1,000 examples per 5W category (Who, What, When, Where, Why), making causal unlearning failures quantifiable for the first time. Using 5WBENCH, we show that no existing baseline simultaneously achieves high forgetting and high retention on Why-type questions: aggressive forgetting degrades retained knowledge, while conservative methods fail to forget causal facts. Why-type difficulty stems from multi-hop reasoning chains (44% of Why entries vs. less than or equal to 2% for others) and gradient dilution over 40.1-token answer spans. We present MAAT (Multi-phase Adapter-Aware Targeted Unlearning), a three-phase framework operating on LoRA adapter weights, combining gradient-projected ascent, SVD rank-dimension pruning, task vector negation, and hybrid KL-hidden-state retain repair. MAAT is the first method to simultaneously achieve high forgetting and high retention on Why-type causal knowledge, reaching a new operating point on the forget-retain Pareto frontier. We make our code publicly available.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "machine unlearning",
+      "causal knowledge",
+      "multi-hop reasoning",
+      "gradient dilution",
+      "LoRA adapter weights",
+      "gradient-projected ascent",
+      "SVD rank-dimension pruning",
+      "task vector negation",
+      "hybrid KL-hidden-state retain repair",
+      "Pareto frontier"
+    ]
+  },
+  {
+    "id": "2605.29411",
+    "title": "The Good, the Bad, and the Ugly of Markov Boundary for Tabular Prediction",
+    "summary": "Under standard graphical assumptions, the Markov boundary of a target variable is the smallest set of features that renders every other feature redundant. Once the boundary is observed, the target is conditionally independent of the rest of the table. This is a tempting object for tabular prediction, since it names exactly the columns a model should need. Yet modern regressors are still trained on the full feature set. We ask whether the Markov boundary is genuinely useful for prediction on SCM3K, a 3,450-task synthetic SCM benchmark with feature counts from 40 to 1000 and six SCM families, evaluated with six regressors. The answer is more nuanced than the theory suggests. Restricting a regressor to the oracle boundary often improves prediction substantially, and the improvement grows as the feature space becomes larger and sparser. But the natural pipeline of recovering the boundary with causal discovery and training on the recovered mask does not deliver. Existing estimators exhaust the compute budget before reaching the regime where the boundary helps most, and even where they run they rarely beat the full feature set. We trace this to three causes. Discovery optimizes structural recovery rather than prediction. False negatives and false positives carry sharply asymmetric predictive cost. The exact boundary is only one of many feature sets that beat all features. We then develop what these facts imply for prediction-aligned feature selection and for tabular models that learn to use causal structure.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "Markov boundary",
+      "causal discovery",
+      "structural recovery",
+      "feature selection",
+      "tabular prediction",
+      "synthetic causal models",
+      "SCM3K benchmark"
+    ]
+  },
+  {
+    "id": "2605.28992",
+    "title": "FRAPPE: Full Input, Residual Output Autoencoding with Projection Pursuit Encoder",
+    "summary": "Media compression standards have reached a plateau in terms of the rate-distortion-complexity trade-off, limiting the ability to offload expensive AI perception to the cloud in applications like robotics, wearables, and remote sensing. DNN-based codecs improve compression efficiency, but at a cost: they cannot easily adapt to large changes in available bitrate, and real-time encoding requires expensive, power-hungry GPUs that prohibit use on low-cost or resource-constrained platforms. To address these limitations, we propose a novel autoencoding framework (FRAPPE) that uses the Full input to predict the Residual output via a Projection Pursuit Encoder. FRAPPE's encoding objective naturally sorts latent channels by importance, allowing zero-overhead variable-rate coding. Unlike RNN-based learned codecs, whose encoder consumes the previous reconstruction's residual, or RVQ-style codecs, whose codebooks must be applied sequentially, FRAPPE's analysis path is an embarrassingly parallel DAG of independent input projections. Using FRAPPE, we build a variable-rate RGB image codec (FRAPPE-Image), and evaluate its rate-distortion-complexity trade-off against standard image codecs. At high compression ratios (approx. 0.1 bpp) FRAPPE-Image provides higher perceptual quality than AVIF with 47 times faster encoding, making it capable of real-time 1080p, 30fps CPU-only encoding. Our code and pre-trained models are available: https://github.com/UT-SysML/FRAPPE .",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "autoencoding framework",
+      "projection pursuit encoder",
+      "residual output",
+      "variable-rate coding",
+      "latent channels",
+      "DAG",
+      "independent input projections",
+      "learned codecs",
+      "rate-distortion-complexity trade-off",
+      "RGB image codec",
+      "perceptual quality",
+      "CPU-only encoding"
+    ]
+  },
+  {
+    "id": "2605.24442",
+    "title": "Benchmarking Composed Image Retrieval for Applied Earth Observation",
+    "summary": "Remote sensing composed image retrieval (RSCIR) enables search in large satellite image archives using composed queries that combine a reference image with a textual modifier. Although RSCIR offers a flexible interface for expressing targeted retrieval intent, the transferability of modern composition methods to Earth observation (EO) imagery and their relevance to operational EO workflows remain underexplored. We address this gap through a unified benchmark and an application-oriented study. First, we systematically adapt and evaluate representative composed image retrieval methods with six vision-language backbones on PatternCom under a standardized protocol, analyzing their behavior across backbones, composition strategies, and query types. Second, we introduce xView2-CIR, a change-centric dataset for disaster and damage monitoring, where retrieval is conditioned on scene identity and a target post-event state. Our results show that training-free composition methods provide strong and scalable baselines for EO retrieval, while change-centric retrieval presents different challenges from attribute-based retrieval, particularly due to the need to preserve scene identity. Overall, this study establishes a practical benchmark for RSCIR and positions composed retrieval as a complementary tool for remote sensing image retrieval, archive exploration, and change analysis. The dataset and code are available at https://github.com/billpsomas/rscir.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "remote sensing composed image retrieval",
+      "vision-language backbones",
+      "PatternCom",
+      "xView2-CIR",
+      "change-centric retrieval",
+      "attribute-based retrieval",
+      "scene identity",
+      "compositional methods"
+    ]
+  },
+  {
+    "id": "2605.31455",
+    "title": "DRIFT: Decoupled Rollouts and Importance-Weighted Fine-Tuning for Efficient Multi-Turn Optimization",
+    "summary": "Large language models are increasingly deployed in multi-turn interactive settings where users or environments can iteratively provide lightweight feedback. Unfortunately, optimizing such behavior presents a sharp dilemma in practice: online reinforcement learning is able to effectively address multi-turn dynamics but is prohibitively expensive due to the cost of generating full correction trajectories at every update, whereas offline supervised fine-tuning (SFT) is efficient but suffers from distribution shift and behavioral collapse. To this end, we novelly propose DRIFT (Decoupled Rollouts and Importance-Weighted Fine-Tuning), a framework that operationalizes the theoretical insight that the KL-regularized RL objective is equivalent to importance-weighted supervised learning. DRIFT decouples rollout from optimization by sampling offline interaction trajectories from a fixed reference policy, deriving return-based importance weights, and optimizing the policy via weighted SFT on the resulting dataset. Empirically, we demonstrate that DRIFT matches or exceeds the performance of multi-turn reinforcement learning baselines while maintaining the training efficiency and simplicity of standard supervised fine-tuning. Code is available at https://github.com/2020-qqtcg/DRIFT.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "online reinforcement learning",
+      "offline supervised fine-tuning",
+      "multi-turn dynamics",
+      "behavioral collapse",
+      "KL-regularized RL objective",
+      "importance-weighted supervised learning",
+      "rollouts",
+      "importance weights",
+      "policy optimization",
+      "reference policy"
+    ]
+  },
+  {
+    "id": "2605.29488",
+    "title": "AnyMo: Scaling Any-Modality Conditional Motion Generation with Masked Modeling",
+    "summary": "Conditional human motion generation remains a fundamental challenge in computer vision and robotics. Despite significant progress, current methods are often constrained by fixed modality configurations and task-specific architectures, leaving cross-modal interactions and the scaling laws of multimodal-conditioned synthesis largely underexplored. A key bottleneck is the scarcity of large-scale modality-aligned motion data, limiting generalization across diverse control signals. In this work, we introduce OmniHuMo, a large-scale, high-quality dataset comprising over 5,000 hours of motion and 3.2 million sequences with precisely aligned multimodal annotations (e.g., text, speech, music, and trajectory). Leveraging OmniHuMo, we propose AnyMo, a unified multimodal framework combining a Residual FSQ-based motion tokenizer with a scalable masked modeling transformer, enabling high-quality motion synthesis under arbitrary modality combinations. Extensive experiments show that AnyMo achieves high-fidelity synthesis while offering flexible control over both spatial and stylistic attributes.",
+    "upvotes": null,
+    "projectPage": "https://huggingface.co/datasets/L-yiheng/OmniHuMo",
+    "ai_keywords": [
+      "Residual FSQ",
+      "motion tokenizer",
+      "masked modeling transformer",
+      "multimodal-conditioned synthesis",
+      "cross-modal interactions",
+      "human motion generation",
+      "scalable architecture",
+      "high-fidelity synthesis"
+    ]
+  },
+  {
+    "id": "2605.27919",
+    "title": "Frequency-Guided Action Diffusion via Sub-Frequency Manifold Traversal",
+    "summary": "Learning visuomotor policies via behavior cloning typically involves mimicking expert demonstrations collected by human operators. However, natural human demonstrations inherently contain high-frequency noise, such as intermittent jerks, pauses, and action jitter. Training policies to directly imitate these raw trajectories inevitably causes the model to inherit these suboptimal behaviors. This pathology is particularly pronounced in diffusion-based policies, where iterative denoising steps can inadvertently amplify high-frequency artifacts at the expense of meaningful fine-grained details. To address these limitations, we present a novel frequency-based algorithm that enables implicit spectral maneuvering and smooth action generation. Our method, Frequency Guidance Operator (FGO), steers the generation process of diffusion polices by progressively driving the noisy samples through intermediate sub-frequency manifolds with expanding spectral bands. Validated on 15 robotic manipulation tasks from 5 benchmarks, FGO achieves superior performance in enhancing action smoothness and temporal consistency while preserving the details necessary for successful task execution. Project website: https://henrywjl.github.io/frequency-guidance-operator/",
+    "upvotes": null,
+    "projectPage": "https://henrywjl.github.io/frequency-guidance-operator/",
+    "ai_keywords": [
+      "behavior cloning",
+      "diffusion models",
+      "frequency guidance operator",
+      "spectral maneuvering",
+      "denoising steps",
+      "high-frequency noise",
+      "action smoothness",
+      "temporal consistency",
+      "robotic manipulation"
+    ]
+  }
+]
