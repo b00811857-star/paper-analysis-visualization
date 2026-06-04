@@ -1,0 +1,577 @@
+[
+  {
+    "id": "2606.02800",
+    "title": "Cosmos 3: Omnimodal World Models for Physical AI",
+    "summary": "We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting highly flexible input-output configurations, Cosmos 3 seamlessly unifies critical modalities for Physical AI -- effectively subsuming vision-language models, video generators, world simulators, and world-action models into a single framework. Our evaluation demonstrates that Cosmos 3 establishes a new state-of-the-art across a diverse suite of understanding and generation tasks, demonstrating omnimodal world models as scalable, general-purpose backbones for embodied agents. Our post-trained Cosmos 3 models were ranked as the best open-source Text-to-Image and Image-to-Video models by Artificial Analysis, and the best policy model by RoboArena at the time the technical report was written. To accelerate open research and deployment in Physical AI, we make our code, model checkpoints, curated synthetic datasets, and evaluation benchmark available under the Linux Foundation's OpenMDW-1.1 https://openmdw.ai/license/1-1/ License at https://github.com/nvidia/cosmos}{github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3 . The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos3 .",
+    "upvotes": 41,
+    "projectPage": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/",
+    "ai_keywords": [
+      "omnimodal world models",
+      "mixture-of-transformers architecture",
+      "Physical AI",
+      "vision-language models",
+      "video generators",
+      "world simulators",
+      "world-action models",
+      "embodied agents"
+    ]
+  },
+  {
+    "id": "2606.02060",
+    "title": "Where Do Deep-Research Agents Go Wrong? Span-Level Error Localization in Agent Trajectories",
+    "summary": "Deep-research agents solve tasks through long trajectories of search, tool use, evidence inspection, and answer synthesis. Evaluation based on final answers shows whether an agent succeeds, but not which parts of the trajectory make the answer unreliable. We study span-level error localization for deep-research agents. We collect 2,790 real trajectories from two agent frameworks, three backbone models, and three benchmarks, convert raw logs into semantic spans, and annotate harmful error spans through LLM-assisted expert review. From these annotations, we build TELBench, a 1,000-instance benchmark for identifying error spans among normal exploration, failed searches, tentative hypotheses, and harmless noise. We further propose DRIFT, a claim-centric auditing framework that tracks agent claims, checks their support in trajectory evidence, and marks spans where unsupported or conflicting claims affect the answer path. Experiments across model families and auditing frameworks show that DRIFT improves span-level error localization and first-error accuracy by up to 30 percentage points. Our work provides a process-level view of reliability in deep-research agents.",
+    "upvotes": 27,
+    "projectPage": "https://nju-link.github.io/DRIFT/",
+    "ai_keywords": [
+      "deep-research agents",
+      "span-level error localization",
+      "TELBench",
+      "DRIFT",
+      "claim-centric auditing",
+      "trajectory evidence",
+      "error spans",
+      "agent frameworks",
+      "backbone models",
+      "LLM-assisted expert review"
+    ]
+  },
+  {
+    "id": "2606.03746",
+    "title": "Qwen-Image-Flash: Beyond Objective Design",
+    "summary": "Few-step distillation has become an effective strategy for accelerating advanced visual generative models, yet prior work has largely focused on distillation objectives. In this work, we revisit few-step distillation from a complementary perspective, focusing on the training recipe that critically shapes student performance. Using Qwen-Image-2.0 as a representative case, we systematically investigate three factors in unified text-to-image generation and instruction-guided image editing distillation: data composition, teacher guidance, and task mixture. Our empirical analysis reveals several non-obvious behaviors, which motivate the development of Qwen-Image-Flash. Overall, our results suggest that effective few-step distillation requires not only carefully designed objectives, but also principled organization of the broader training pipeline.",
+    "upvotes": 20,
+    "projectPage": null,
+    "ai_keywords": [
+      "few-step distillation",
+      "visual generative models",
+      "text-to-image generation",
+      "instruction-guided image editing",
+      "distillation objectives",
+      "training recipe",
+      "data composition",
+      "teacher guidance",
+      "task mixture"
+    ]
+  },
+  {
+    "id": "2606.03503",
+    "title": "ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning",
+    "summary": "Large Reasoning Models (LRMs) have achieved remarkable progress thanks to Reinforcement Learning with Verifiable Rewards (RLVR) on Chain-of-Thoughts (CoTs). However, since long CoTs naturally contain trial and errors and mainstream RLVR approaches choose outcome-correct CoT trajectories for memorization, the redundant explorations in long CoTs are inevitably reinforced, which results in the over-thinking issues of LRMs. Previous attempts to resolve this issue mainly give more advantage to shorter trajectories, yet their learning signals are still outcome-based and cannot reduce the memorization of redundant explorations in long CoTs. Therefore, we propose ThoughtFold, a framework that leverages fine-grained preference learning to mitigate redundant explorations for efficient reasoning. ThoughtFold employs an introspective strategy to identify redundancy within each correct trajectory, which yields a spectrum of candidate sub-trajectories. Leveraging this spectrum, we introduce a masked preference optimization objective that explicitly penalizes redundant explorations and encourages the model to directly bridge essential reasoning segments, effectively folding its reasoning chains into a more concise path. Extensive experiments show that ThoughtFold significantly enhances efficiency. It reduces the token usage of DeepSeek-R1-Distill-Qwen-7B by approximately 56% while maintaining state-of-the-art accuracy.",
+    "upvotes": 19,
+    "projectPage": null,
+    "ai_keywords": [
+      "Large Reasoning Models",
+      "Reinforcement Learning with Verifiable Rewards",
+      "Chain-of-Thoughts",
+      "thought folding",
+      "fine-grained preference learning",
+      "introspective strategy",
+      "masked preference optimization",
+      "redundant explorations",
+      "reasoning efficiency"
+    ]
+  },
+  {
+    "id": "2606.03890",
+    "title": "OVO-S-Bench: A Hierarchical Benchmark for Streaming Spatial Intelligence in Multimodal LLMs",
+    "summary": "Multimodal agents in robotics, AR, and autonomous driving must reason about places and layouts from continuous egocentric streams, often using evidence outside the current view. Existing benchmarks either evaluate offline over full videos or target events rather than spatial structure. We introduce OVO-S-Bench, a fully human-annotated benchmark for streaming spatial intelligence, comprising 1,680 questions over 348 source videos. Annotation involves 12 trained annotators, each also serving as a blind cross-reviewer, across roughly 804 person-hours of multi-round quality assurance. Each question carries a query timestamp and an evidence interval, and at evaluation, the model sees only the prefix preceding the query. Questions span four levels of increasing abstraction: instantaneous egocentric perception, spatiotemporal context tracking, spatial simulation and reasoning, and allocentric mapping. Across 38 proprietary and open-source MLLMs, Gemini-3.1-Pro trails human experts by 27 points, 59.2 vs. 86.6, with allocentric mapping as the dominant bottleneck. Notably, streaming and spatially fine-tuned MLLMs underperform their own backbones. We further find that chain-of-thought reasoning amplifies spatial errors when ungrounded in the stream. By exposing these limitations, OVO-S-Bench establishes a demanding testbed for next-generation streaming spatial MLLMs.",
+    "upvotes": 19,
+    "projectPage": "https://internlm.github.io/OVO-S-Bench/",
+    "ai_keywords": [
+      "multimodal language models",
+      "streaming spatial intelligence",
+      "egocentric streams",
+      "spatial reasoning",
+      "allocentric mapping",
+      "chain-of-thought reasoning",
+      "multimodal agents",
+      "autonomous driving",
+      "augmented reality"
+    ]
+  },
+  {
+    "id": "2606.05008",
+    "title": "M^3Eval: Multi-Modal Memory Evaluation through Cognitively-Grounded Video Tasks",
+    "summary": "As multi-modal models advance towards long-form video understanding, memory emerges as a critical capability. Despite substantial efforts in developing video datasets and benchmarks, existing works primarily focus on perception and reasoning, without systematically evaluating memory: what models retain, how faithfully information is preserved, and how robust memory remains under interference. To address this gap, we introduce M^3Eval, the first comprehensive evaluation framework and benchmark for probing different memory dimensions in multi-modal models. Grounded in cognitive psychology, our design features carefully constructed tasks that isolate key aspects of memory. Leveraging M^3Eval, we conduct extensive experiments across representative multi-modal models, revealing consistent weaknesses and distinctive behaviors. We find that models struggle to maintain disentangled representations when processing parallel video streams, exhibit interference patterns differing substantially from those observed in human memory, ground memory sources more reliably in the spatial domain than the temporal domain, and demonstrate limited symbolic memory. Collectively, our benchmark provides a valuable resource for future research, while our findings highlight memory as a fundamental yet underexplored capability and offer insights for designing more effective memory mechanisms in multi-modal models. Our code and dataset are available at https://pku-value-lab.github.io/m3eval-homepage.",
+    "upvotes": 18,
+    "projectPage": "https://pku-value-lab.github.io/m3eval-homepage/",
+    "ai_keywords": [
+      "multi-modal models",
+      "video understanding",
+      "memory",
+      "cognitive psychology",
+      "evaluation framework",
+      "benchmark",
+      "disentangled representations",
+      "interference patterns",
+      "spatial domain",
+      "temporal domain",
+      "symbolic memory"
+    ]
+  },
+  {
+    "id": "2606.04527",
+    "title": "Echo-Infinity: Learning Evolving Memory for Real-Time Infinite Video Generation",
+    "summary": "We present Echo Infinity, an autoregressive (AR) framework towards real-time infinite video generation that employs a learnable evolving memory to dynamically filter, abstract, and compress any-length history at constant cost. Existing methods mainly curate memory with predefined KV-cache schedules, fixed-ratio heuristic compression, or inference-time RoPE adaptation. These designs inevitably lose historical information and amplify compounding errors due to their limited cache window and ignorance of autoregressive generation noise. Inspired by human memory consolidation, Echo-Infinity replaces handcrafted memory curation with learnable Memory Query, which are updated by attention and a gating mechanism when past frames are evicted from the local window. The queries are optimized end-to-end with the video diffusion transformers (DiTs), forming an evolving memory that supports arbitrary compression ratios with constant computation independent of video length. They also act as a generalizable generation prior, improving quality even when only the optimized initial state is used. We further introduce Unified Relative RoPE Recipe, which anchors the sink frames to start from id 0 and lets the newest frame id grow at most to the DiTs' pretrained maximum temporal RoPE id throughout training and inference, freeing the model from the finite RoPE constraint and closing the train-test RoPE extrapolation gap. In long and short video generation, Echo-Infinity achieves state-of-the-art performance, and, to our knowledge, demonstrates promising 24-hour (>1.3 M frames) real-time rollouts for the first time, suggesting a practical path toward infinite video generation.",
+    "upvotes": 17,
+    "projectPage": "https://echo-team-joy-future-academy-jd.github.io/Echo-Infinity/",
+    "ai_keywords": [
+      "autoregressive framework",
+      "evolving memory",
+      "video diffusion transformers",
+      "DiTs",
+      "Memory Query",
+      "attention mechanism",
+      "gating mechanism",
+      "relative RoPE",
+      "RoPE constraint",
+      "train-test RoPE extrapolation gap"
+    ]
+  },
+  {
+    "id": "2605.27492",
+    "title": "Benchmarks are Not Enough: RAMP for Runtime Assessing of Agentic Models in Production Systems",
+    "summary": "LLM agents are rapidly evolving from coding assistants into autonomous software engineering systems. However, existing evaluation methodologies remain largely centered on static, isolated, and short-horizon benchmarks that fail to capture the dynamic complexity of real-world production workflows. As a result, benchmark performance may poorly reflect practical capability under realistic runtime environments involving long execution chains, tool interactions, dependency management, and iterative feedback loops. We thus present RAMP, a production-grounded infrastructure for assessing long-horizon software engineering agents. Built upon the YatCC integrated platform, RAMP provides a unified runtime assessment architecture through standardized orchestration and execution interfaces. RAMP introduces realistic compiler-construction workloads with serial dependencies and complex toolchain interactions, together with a staged recovery mechanism for analyzing execution behavior under partial workflow failure. The framework further incorporates utility-oriented multi-dimensional metrics that jointly evaluate outcome quality and process efficiency. We conduct runtime assessments across 15 mainstream models and observe substantial capability degradation that remains largely invisible to conventional isolated benchmarks. Task completion rates progressively collapse across serial workflows, dropping from 100% in the initial stage to only 20% in the final stage, while none of the evaluated models successfully completes the entire pipeline. Runtime analysis reveals systematic failure propagation and significant resource inefficiencies, with computational costs differing by up to three orders of magnitude among comparable models. These findings suggest RAMP advances agentic model evaluation toward continuous, runtime-observable, and production-grounded assessment.",
+    "upvotes": 14,
+    "projectPage": "http://ramp.yatcc-ai.com/",
+    "ai_keywords": [
+      "LLM agents",
+      "software engineering agents",
+      "production-grounded evaluation",
+      "runtime assessment",
+      "orchestration interfaces",
+      "execution interfaces",
+      "compiler-construction workloads",
+      "serial dependencies",
+      "toolchain interactions",
+      "staged recovery mechanism",
+      "multi-dimensional metrics",
+      "task completion rates",
+      "failure propagation",
+      "resource inefficiencies"
+    ]
+  },
+  {
+    "id": "2606.03577",
+    "title": "Eliciting Complex Spatial Reasoning in MLLMs through Wide-Baseline Matching",
+    "summary": "Wide-baseline matching (WBM) requires integrating geometric understanding, viewpoint changes, fine-grained perception, and occlusion reasoning, making it a challenging testbed for spatial reasoning in multimodal large language models (MLLMs) deployed in physical environments. However, current MLLMs lack systematic evaluation and training frameworks for these capabilities. We introduce ReasonMatch-Bench, a benchmark stratified by viewpoint displacement and matching granularity across indoor, outdoor, and object-centric scenarios, and show that current MLLMs still struggle with fine-grained wide-baseline correspondence: on a difficult 90-sample subset, human annotators achieve 84.0 F1, while the best existing baseline reaches 37.2. To bridge this gap, we build a scalable data-generation pipeline that automatically extracts wide-baseline view pairs from large-scale video-3D corpora, including RGB-D videos and SfM reconstructions, yielding diverse and verifiable supervision. We further propose Dynamic Correspondence Reinforcement Learning (DCRL), which combines Image-Level Viewpoint Progression and Point-Level Correspondence Curriculum to improve WBM training through verifiable rewards without explicit CoT supervision. Extensive experiments show that DCRL substantially improves ReasonMatch-Bench and transfers to related spatial benchmarks, while maintaining general visual understanding performance with modest gains on several benchmarks.",
+    "upvotes": 12,
+    "projectPage": "https://aim-uofa.github.io/reasonmatch/",
+    "ai_keywords": [
+      "wide-baseline matching",
+      "multimodal large language models",
+      "spatial reasoning",
+      "ReasonMatch-Bench",
+      "data-generation pipeline",
+      "RGB-D videos",
+      "SfM reconstructions",
+      "Dynamic Correspondence Reinforcement Learning",
+      "Image-Level Viewpoint Progression",
+      "Point-Level Correspondence Curriculum"
+    ]
+  },
+  {
+    "id": "2606.01993",
+    "title": "MMG2Skill: Can Agents Distill In-the-Wild Guides into Self-Evolving Skills?",
+    "summary": "Abundant procedural knowledge on the Web holds great potential for helping agents solve long-horizon tasks. However, such knowledge is often multimodal, heterogeneous, noisy, and implicitly assumes human executors, making it difficult to use directly as the skills required by agents. To bridge the gap between human-oriented guides and agent-executable skills, we formalize this problem as guide-to-skill learning: converting in-the-wild guides into executable skills and continuously improving them from trajectories observable to the agent. To evaluate the capability of existing agents on this task, we introduce MMG2Skill-Bench, the first benchmark designed for this problem. We further propose MMG2Skill, a closed-loop framework that compiles guides into editable skills, conditions a fixed vision-language model (VLM) agent on these skills during execution, and revises the skills from trajectory-level root-cause feedback without using benchmark scores. Across GUI control, open-ended gameplay, and strategic card play with six VLM backbones, MMG2Skill consistently outperforms vanilla baseline agents in every model-domain setting, achieving macro-average gains of +12.8 to +25.3 percentage points across backbones. Ablation studies show that directly prompting agents with raw guides can degrade performance, while both structured skill construction and trajectory-driven revision are necessary for the observed improvements. On success-inferable tasks, analyzer-based early stopping further prevents late-stage performance regressions and saves 25%-53% of attempts when the success signal is properly calibrated.",
+    "upvotes": 12,
+    "projectPage": null,
+    "ai_keywords": [
+      "guide-to-skill learning",
+      "vision-language model",
+      "closed-loop framework",
+      "trajectory-level root-cause feedback",
+      "macro-average gains",
+      "ablation studies",
+      "analyzer-based early stopping"
+    ]
+  },
+  {
+    "id": "2606.04923",
+    "title": "Reproducing, Analyzing, and Detecting Reward Hacking in Rubric-Based Reinforcement Learning",
+    "summary": "Rubric-based reinforcement learning (RL) uses an LLM-as-a-Judge (LaaJ) to score model outputs according to rubrics as rewards. However, policy models may exploit latent biases in the judge, leading to reward hacking and ineffective or unsafe training outcomes. In real-world rubric-based RL, such hacking behaviors are often subtle and entangled with multiple judge biases, making them difficult to analyze, detect, and mitigate. In this paper, we introduce CHERRL, a controllable hacking environment for rubric-based RL. By injecting known biases into LaaJ, CHERRL enables stable reproduction of reward hacking, explicit observation of reward divergence, and precise identification of hacking onset. This provides a clean experimental testbed for studying the mechanisms and mitigations of reward hacking in rubric-based RL. To demonstrate its utility, we analyze different judge biases from the perspectives of discoverability and exploitability, and explore an agent-based system for automatically detecting reward hacking onset from training logs. The code and environment are publicly available at https://github.com/THUAIS-Lab/CHERRL.",
+    "upvotes": 11,
+    "projectPage": null,
+    "ai_keywords": [
+      "reinforcement learning",
+      "LLM-as-a-Judge",
+      "reward hacking",
+      "rubric-based RL",
+      "controllable hacking environment",
+      "reward divergence",
+      "bias injection",
+      "agent-based system",
+      "training logs"
+    ]
+  },
+  {
+    "id": "2606.05158",
+    "title": "Streaming Communication in Multi-Agent Reasoning",
+    "summary": "Multi-agent reasoning systems adopt a \"generate-then-transfer\" paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce StreamMA, a multi-agent reasoning system that streams each reasoning step to downstream agents as soon as it is generated, pipelining adjacent agents and thus reducing latency. Surprisingly, this pipelining also improves effectiveness: because multi-step reasoning quality is non-uniform and early steps are more reliable than later ones, working with these reliable early steps instead of the full chain prevents error-prone late steps from misleading downstream agents. We formalize both advantages with the first closed-form joint analysis of stream, serial, and single protocols, deriving the effectiveness ordering, speedup upper bound, and cost ratio. Across eight reasoning benchmarks spanning mathematics, science, and code, two frontier LLMs (Claude Opus 4.6 and GPT-5.4), and three topologies (Chain, Tree, Graph), StreamMA outperforms both baselines (avg. +7.3 pp, max +22.4 pp on HMMT 2026; Claude Opus 4.6-high). Beyond these contributions, we discover a \"step-level scaling law\": increasing per-agent steps consistently improves both effectiveness and efficiency, a new scaling dimension orthogonal to and composable with agent-count scaling.",
+    "upvotes": 9,
+    "projectPage": "https://zhenyangcs.github.io/StreamMA-website/",
+    "ai_keywords": [
+      "multi-agent reasoning systems",
+      "generate-then-transfer paradigm",
+      "end-to-end latency",
+      "pipelining",
+      "reasoning steps",
+      "stream protocol",
+      "serial protocol",
+      "single protocol",
+      "effectiveness ordering",
+      "speedup upper bound",
+      "cost ratio",
+      "reasoning benchmarks",
+      "LLMs",
+      "topology",
+      "Chain",
+      "Tree",
+      "Graph",
+      "step-level scaling law",
+      "agent-count scaling"
+    ]
+  },
+  {
+    "id": "2606.04513",
+    "title": "MapAgent: An Industrial-Grade Agentic Framework for City-scale Lane-level Map Generation",
+    "summary": "Lane-level maps are critical infrastructure for autonomous driving and lane-level navigation, yet constructing and maintaining standardized lane networks for hundreds of cities remains highly labor-intensive. Recent end-to-end vectorized mapping methods can predict lane geometry and topology directly from sensor data, but they typically treat mapping specifications and traffic regulations as implicit, dataset-dependent supervision. Moreover, in complex scenes (e.g., worn or missing markings and occlusions), correct lane configurations are often under-determined by visual evidence alone, making specification violations a major source of human post-editing. We propose MapAgent, an industrial-grade agentic architecture that augments a vectorization backbone for specification-compliant lane-map production. Rather than merely adding an agent loop to map prediction, MapAgent couples backbone perception with explicit specification verification, constraint-aware reasoning, and deterministic map editing under a bounded, verification-driven Judge-Planner-Worker loop. A vision-language Judge diagnoses errors by jointly inspecting visual evidence and draft vectors, while a tool-calling Planner generates minimal corrective edits with post-edit re-validation. To remain scalable for city-scale production, MapAgent is selectively triggered only on tiles with low backbone confidence, adding modest overhead while preserving throughput. Experiments on real-world datasets show consistent gains over strong production baselines, especially in complex and long-tail scenarios. Additionally, MapAgent has been integrated into Baidu Maps, supporting lane-level map generation for over 360 cities nationwide and elevating the overall production automation to over 95%, demonstrating MapAgent's practicality and effectiveness for large-scale lane-level map generation.",
+    "upvotes": 8,
+    "projectPage": "https://github.com/eadst/KDD-2026-MapAgent",
+    "ai_keywords": [
+      "vectorized mapping",
+      "end-to-end vectorization",
+      "lane-level maps",
+      "autonomous driving",
+      "vision-language Judge",
+      "Planner",
+      "Worker",
+      "specification compliance",
+      "constraint-aware reasoning",
+      "deterministic map editing",
+      "confidence-based triggering",
+      "real-world datasets",
+      "production automation"
+    ]
+  },
+  {
+    "id": "2606.03972",
+    "title": "AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation",
+    "summary": "We present AAD-1, an Asymmetric Adversarial Distillation framework for One-step autoregressive image-to-video generation. State-of-the-art methods adopt adversarial distillation but suffer from motion collapse and training instability, resulting in static videos. AAD-1 addresses these challenges through two key designs in architecture and training strategy. Our key architectural insight is to break the symmetry between generator and discriminator. While the generator remains causal to preserve autoregressive sampling capability, the discriminator attends bidirectionally over the full spatiotemporal context and produces a single holistic realism score for the entire video sequence. This asymmetric design enables the discriminator to effectively detect global temporal failures and long-range drift that cause motion collapse in autoregressive generation. To stabilize training, we introduce a phased strategy that first uses distribution matching to bootstrap a stable one-step generator, providing a warm-up phase that brings the student distribution closer to the teacher before adversarial distillation begins. Extensive experiments on VBench demonstrate that AAD-1 achieves state-of-the-art performance in one-step autoregressive video generation.",
+    "upvotes": 8,
+    "projectPage": "https://aad-1.github.io/",
+    "ai_keywords": [
+      "adversarial distillation",
+      "autoregressive",
+      "motion collapse",
+      "training instability",
+      "asymmetric design",
+      "causal generator",
+      "bidirectional attention",
+      "holistic realism score",
+      "distribution matching",
+      "phased strategy",
+      "one-step generation"
+    ]
+  },
+  {
+    "id": "2606.02684",
+    "title": "Filter, Then Reweight: Rethinking Optimization Granularity in On-Policy Distillation",
+    "summary": "On-Policy distillation (OPD) in large language models is shifting from full-trace KL supervision toward more selective training paradigms. Recent OPD methods increasingly focus on selecting which trajectories to learn from, which tokens are most informative, and which supervision signals are most reliable. Motivated by this trend, we rethink optimization granularity of OPD and propose \\fireicon\\ FiRe-OPD (Filter, then Reweight), which jointly adjusts supervision signals at both trajectory and token levels. In details, FiRe-OPD first filters trajectories to remove low-quality rollout samples, and then applies soft reweighting within the retained trajectories to emphasize informative tokens. Compared with hard token selection, FiRe-OPD leverages a soft-weighting mechanism to effectively mitigate information loss and enhance optimization stability, thereby achieving finer-grained OPD optimization. We validate the effectiveness of FiRe-OPD across strong-to-weak, single-teacher, and multi-teacher settings, and demonstrate its superiority over recent token-level OPD methods ( (e.g., +6.25 on AIME 2024 in strong-to-weak, +18.81 on Miner in multi-teacher). Our code is available at https://github.com/YuYingLi0/FiRe-OPD.",
+    "upvotes": 8,
+    "projectPage": null,
+    "ai_keywords": [
+      "on-policy distillation",
+      "KL supervision",
+      "trajectory selection",
+      "token selection",
+      "supervision signals",
+      "soft reweighting",
+      "optimization granularity",
+      "FiRe-OPD",
+      "trajectory filtering",
+      "token weighting"
+    ]
+  },
+  {
+    "id": "2606.03220",
+    "title": "WebRISE: Requirement-Induced State Evaluation for MLLM-Generated Web Artifacts",
+    "summary": "Existing benchmarks for MLLM-generated web artifacts assess interaction through local evidence and miss the requirement-induced states and transitions that determine whether a page works. We introduce WebRISE, which compiles task requirements into Interaction Contract Graphs (ICGs) of observable states, user-intent transitions, and DOM/visual assertions for implementation-agnostic browser execution. WebRISE spans 442 tasks across five input modalities (Text, Markdown, Sketch, Image, Video), with 5,495 transitions and 5,271 requirement checks that separate user-stated functions from implicit product-level constraints. Across 14 MLLMs, even the strongest model reaches only 65.6% transition validity and 66.3% requirement coverage, and visual quality is no proxy for behavior (Qwen3.6-35B-A3B on Markdown: V=80.8 yet T=15.5). Video gives the strongest interaction signal (+10.6 pp implicit coverage over Text), while implicit constraints persist; defect injection shows ICG-based scoring detects state errors at 2-16x the rate of checkpoint-style evaluation.",
+    "upvotes": 7,
+    "projectPage": "https://iigroup.github.io/WebRISE",
+    "ai_keywords": [
+      "Interaction Contract Graphs",
+      "task requirements",
+      "user-intent transitions",
+      "DOM assertions",
+      "visual assertions",
+      "MLLMs",
+      "implicit constraints",
+      "state errors",
+      "checkpoint-style evaluation"
+    ]
+  },
+  {
+    "id": "2606.03197",
+    "title": "MemTrain: Self-Supervised Context Memory Training",
+    "summary": "Memory is an indispensable capability for long-horizon LLM agents, enabling them to preserve and utilize information accumulated across extended interactions. Existing memory-agent approaches are typically trained end-to-end with reinforcement learning on downstream tasks. However, collecting high-quality annotated problems for memory-intensive scenarios is costly, and the resulting training data often lack sufficient diversity to cover general memory behaviors. In this work, we propose MemTrain, a self-supervised training framework for generally enhancing the context-memory capability of LLM agents for more effective downstream post-training. MemTrain introduces two coupled proxy tasks over unlabeled Wikipedia corpora: (1) an end-to-end masked reconstruction objective, which requires the model to recover masked entities after multiple rounds of memory updates, thereby encouraging memory maintenance from the final outcome perspective; and (2) an intermediate memory recall objective, which requires the model to reconstruct masked historical information using intermediate memory states, encouraging faithful compression and memory completeness throughout the interaction process. The two objectives are jointly optimized using GRPO. Extensive experiments on long-text QA and search-based QA benchmarks demonstrate that MemTrain consistently improves downstream memory-intensive reasoning performance across different models, achieving gains of up to 17.67 points over direct task-specific post-training.",
+    "upvotes": 7,
+    "projectPage": null,
+    "ai_keywords": [
+      "memory-agent approaches",
+      "reinforcement learning",
+      "self-supervised training",
+      "masked reconstruction objective",
+      "memory recall objective",
+      "GRPO",
+      "long-text QA",
+      "search-based QA"
+    ]
+  },
+  {
+    "id": "2606.04036",
+    "title": "Self-Distilled Policy Gradient",
+    "summary": "On-policy self-distillation, where a language model conditions on privileged context to supervise its own generations, is a promising source of dense supervision for sparse-reward reinforcement learning. Actually, it can be instantiated as an auxiliary full-vocabulary student-to-teacher reverse Kullback-Leibler divergence loss. We therefore propose SDPG, a self-distilled policy-gradient framework that combines group-relative verifier advantages with normalized standard deviation, exact full-vocabulary on-policy self-distillation, as well as reference-policy KL regularization. Empirically, SDPG improves stability and performance over RLVR and self-distillation baselines. The code is available at https://github.com/lauyikfung/SDPG.",
+    "upvotes": 7,
+    "projectPage": "https://lauyikfung.github.io/SDPG/",
+    "ai_keywords": [
+      "self-distillation",
+      "policy-gradient",
+      "reverse Kullback-Leibler divergence",
+      "on-policy learning",
+      "verifier advantages",
+      "KL regularization",
+      "reinforcement learning"
+    ]
+  },
+  {
+    "id": "2606.03031",
+    "title": "AUDITFLOW: Executable Symbolic Environments for Structured Financial Reporting Verification",
+    "summary": "Structured financial audit verification is difficult for language-model agents because correctness depends on structured evidence rather than text alone. A model must link reported facts to taxonomy concepts, traverse calculation or dimensional relations, and recompute expected values before applying an audit rule. We propose AuditFlow, a graph-grounded multi-agent framework that separates adaptive search from deterministic verification. AuditFlow builds a symbolic environment from a static US-GAAP taxonomy graph and a dynamic XBRL filing graph, and exposes it through typed tools for fact retrieval, taxonomy traversal, numerical checking, and rule evaluation. Two junior auditors inspect each case from regulatory and evidentiary views, while a senior auditor resolves disagreements and can request further investigation. The final reports are fused through evidential aggregation to produce an audit verdict, expected value, evidence trail, and trustworthiness score. On a FinAuditing-derived FinMR sample, AuditFlow reaches 82.09% joint audit accuracy under GPT-5.5, outperforming the strongest baseline by 14.93 points. Removing deterministic checks drops accuracy to 17.91%, showing that the symbolic environment performs the verification step that the model cannot reliably replace.",
+    "upvotes": 6,
+    "projectPage": null,
+    "ai_keywords": []
+  },
+  {
+    "id": "2606.05080",
+    "title": "AutoLab: Can Frontier Models Solve Long-Horizon Auto Research and Engineering Tasks?",
+    "summary": "Scientific and engineering progress is fundamentally a long-horizon iterative process: proposing changes, running experiments, measuring outcomes, and continuously refining artifacts. Yet existing benchmarks for frontier models primarily evaluate either single-turn responses or short-horizon agent trajectories, failing to capture the challenges of sustained iterative improvement over extended time horizons. To address this gap, we introduce AutoLab, a new benchmark for ultra long-horizon closed-loop optimization. AutoLab consists of 36 realistic, expert-curated tasks spanning four diverse domains: system optimization, puzzle & challenge, model development, and CUDA kernel optimization. Each task begins with a correct but deliberately suboptimal baseline and challenges agents to improve it within a strict wall-clock budget. Evaluating 17 state-of-the-art models reveals the dominant predictor of success is not the quality of an agent's initial attempt, but its persistence in repeatedly benchmarking, editing, and incorporating empirical feedback. While claude-opus-4.6 exhibits strong long-horizon optimization capabilities, most frontier models, including several proprietary ones, either terminate prematurely or exhaust their budgets with minimal progress. These results underscore the importance of time awareness and persistent iteration in autonomous agents. We open-source the full benchmark, evaluation harness, and task artifacts, to accelerate research toward truly capable long-horizon agents.",
+    "upvotes": 4,
+    "projectPage": "https://autolab.moe/",
+    "ai_keywords": [
+      "benchmark",
+      "long-horizon optimization",
+      "closed-loop optimization",
+      "iterative improvement",
+      "autonomous agents",
+      "persistent iteration",
+      "time awareness"
+    ]
+  },
+  {
+    "id": "2606.05121",
+    "title": "Audio Interaction Model",
+    "summary": "Audio is an inherently interactive modality, yet today's Large Audio Language Models (LALMs) are offline, and streaming audio models each handle only a single task such as streaming ASR or voice chatting. It is time to unify them into one online LALM: a model that, through an always-on perceive-decide-respond loop, listens to sound, environment, and instructions in real time and reacts on the fly. We formalize this regime as the Audio Interaction Model, and realize it with Audio-Interaction, a unified streaming model that retains offline task execution while adding online general audio instruction following, from dialogue to full voice chatting, deciding when to respond from the semantics of the stream. To enable this, we propose SoundFlow, a framework that instantiates the perceive-decide-respond loop end to end, from data to training to deployment, through streaming-native data construction, comprehension-aware training, and asynchronous low-latency inference for stable real-time interaction. We further construct StreamAudio-2M, a 2.6M-item streaming corpus spanning 7 fundamental abilities and 28 sub-tasks, and Proactive-Sound-Bench for evaluating proactive audio intervention. Across 8 benchmarks, Audio-Interaction preserves competitive performance on mainstream audio tasks while unlocking capabilities inaccessible to offline LALMs, including real-time ASR, streaming audio instruction following, and proactive help.",
+    "upvotes": 4,
+    "projectPage": "https://xzf-thu.github.io/Audio-Interaction/",
+    "ai_keywords": [
+      "Large Audio Language Models",
+      "streaming audio models",
+      "perceive-decide-respond loop",
+      "Audio Interaction Model",
+      "SoundFlow",
+      "streaming-native data construction",
+      "comprehension-aware training",
+      "asynchronous low-latency inference",
+      "StreamAudio-2M",
+      "Proactive-Sound-Bench"
+    ]
+  },
+  {
+    "id": "2606.05160",
+    "title": "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors",
+    "summary": "Scaling humanoid loco-manipulation requires robot-compatible demonstrations across diverse objects, whole-body motions, and scene geometries, but teleoperation and motion capture are difficult to scale because each collection depends on physical setups, instrumented actors, and robot operation. We present GRAIL, a digital generation pipeline that remains fully virtual until deployment: it composes 3D assets, simulator-ready scenes, and priors from video foundation models (VFMs) to synthesize interactions without rebuilding physical environments or teleoperating the robot. Rather than reconstructing unconstrained in-the-wild videos, GRAIL starts from fully specified 3D configurations in which object geometry, camera parameters, metric scale, environment depth, and a robot-proportioned character are known before video generation and reused during reconstruction. This privileged setup better conditions 4D recovery, allowing model-based object tracking, human motion estimation, and interaction-aware optimization to reconstruct metric 4D human-object interaction (HOI) trajectories with reduced depth ambiguity and morphology mismatch. We retarget the recovered motions to a humanoid robot and train complementary task-general trackers: an object-aware latent adaptor for manipulation and a scene-aware tracker for terrain traversal. GRAIL produces over 20,000 sequences spanning pick-up, object manipulation, sitting, and terrain traversal. Using only GRAIL-generated data, we train egocentric visual policies through a sim-to-real pipeline and deploy them on a Unitree G1 humanoid, achieving 84\\% real-world success on diverse object pick-up and 90\\% success on stair-climbing.",
+    "upvotes": 4,
+    "projectPage": "https://research.nvidia.com/labs/dair/grail/",
+    "ai_keywords": [
+      "video foundation models",
+      "4D recovery",
+      "human-object interaction",
+      "sim-to-real pipeline",
+      "egocentric visual policies",
+      "humanoid robot",
+      "object-aware latent adaptor",
+      "scene-aware tracker"
+    ]
+  },
+  {
+    "id": "2606.01166",
+    "title": "BraveGuard: From Open-World Threats to Safer Computer-Use Agents",
+    "summary": "Computer-use agents extend language models from text generation to sustained interaction with files, terminals, browsers, and external tools. This shift creates safety risks that are difficult to detect from isolated prompts or final responses, because harm often emerges only through multi-step execution traces whose individual actions appear locally benign. We introduce BraveGuard, a self-evolving defense framework for training guard models from open-world threat signals and realistic agent trajectories. BraveGuard mines recent research sources to identify emerging risks and attack patterns, instantiates them as executable computer-use tasks, collects agent rollouts, and derives trajectory-level supervision for guard model training. As new threats and validation failures appear, the pipeline can be repeated, yielding an adaptive defense loop rather than a static, benchmark-driven training process. We instantiate BraveGuard by training multiple guard backbones, including Qwen3-Guard and Llama-Guard variants, and evaluate the resulting guards on trajectory-level agent-safety benchmarks. BraveGuard consistently improves safety detection across computer-use trajectories. On AgentHazard, it substantially improves detection accuracy over off-the-shelf guard models, with accuracy increasing from 38.79% to 82.38% under the averaged guard-model setting. These results show that guard supervision grounded in open-world threat discovery and realistic agent execution can improve safety monitoring beyond fixed taxonomies and synthetic prompt-level data. BraveGuard offers a scalable path toward adaptive defenses for computer-use agents facing evolving real-world risks.",
+    "upvotes": 4,
+    "projectPage": null,
+    "ai_keywords": [
+      "guard models",
+      "computer-use agents",
+      "safety risks",
+      "agent trajectories",
+      "open-world threat signals",
+      "executable computer-use tasks",
+      "trajectory-level supervision",
+      "adaptive defense loop",
+      "guard backbones",
+      "Qwen3-Guard",
+      "Llama-Guard",
+      "AgentHazard",
+      "safety detection"
+    ]
+  },
+  {
+    "id": "2606.01286",
+    "title": "BenchEvolver: Frontier Task Synthesis via Solution-Centric Evolution",
+    "summary": "The rapid progress of frontier large language models has led to widespread benchmark saturation, limiting the ability of existing datasets to differentiate model capabilities or provide useful training signal. For instance, on LiveCodeBench, frontier models achieve over 99% Pass@1 on easy splits and exceed 90% Pass@1 on average across difficulty levels. Constructing new, challenging datasets typically requires substantial human effort, creating a bottleneck for progress. We introduce BenchEvolver, a solution-centric evolutionary framework that automatically transforms existing coding problems into harder variants. Rather than generating problems from scratch, BenchEvolver evolves reference solutions through structured transformations and derives corresponding statements and tests from the evolved solutions. This design grounds generation in executable semantics, enabling scalable construction of high-quality, diverse, and difficult tasks with verifiable correctness. Applying BenchEvolver to LiveCodeBench and SciCode, we obtain evolved tasks that are substantially harder while maintaining validity, reference correctness, and diversity. We further curate LiveCodeBench-Plus, a 91-problem benchmark combining evolved and difficult original LCB-v6 tasks, where frontier-model Pass@1 ranges from 27.5% to 62.6%, restoring clear discrimination among strong coding models. Importantly, evolved tasks remain challenging even for the model that generates them, enabling self-improvement. We further show that RL on evolved LCB tasks improves held-out coding performance: for gpt-oss-20b, seed+evolved training achieves +8.7 and +8.3 Pass@1 gains on LCB v6 Hard and LCB-Pro Easy, exceeding seed-only gains by 70.7% and 34.8%, respectively. Our results show that BenchEvolver can convert saturated benchmarks into frontier-level evaluation suites and reusable training signal.",
+    "upvotes": 4,
+    "projectPage": "https://benchevolver.github.io/",
+    "ai_keywords": [
+      "coding problems",
+      "evolutionary framework",
+      "reference solutions",
+      "structured transformations",
+      "executable semantics",
+      "benchmark saturation",
+      "Pass@1",
+      "frontier models",
+      "LiveCodeBench",
+      "SciCode",
+      "LCB-v6",
+      "self-improvement",
+      "reinforcement learning",
+      "training signal"
+    ]
+  },
+  {
+    "id": "2605.29489",
+    "title": "Access Sets Matter: Budgeting Expert Reads for Scalable Weight-Space Model Merging",
+    "summary": "Weight-space model merging is usually formulated as an algebraic operation on checkpoints, yet at LLM scale the limiting resource is often the set of expert weights that must be read. We introduce MergePipe, a budget-aware execution layer that casts LLM merging as an expert access-set problem: given a merge operator and a checkpoint family in a shared weight coordinate system, choose which expert delta blocks to access under an explicit I/O budget. MergePipe indexes parameter blocks, builds deterministic access plans, and executes the induced budgeted merge with replayable manifests. The plan is budget-sound by construction and recovers the full-read merge at full budget; for fixed-coefficient additive operators, the omitted-update error is bounded by the norm of omitted deltas. Across Qwen and Llama merging workloads, MergePipe reduces expert-read I/O by up to an order of magnitude and achieves up to 11times speedups. Representative budget sweeps show O(10^{-3}) parameter deviation from full-read merges and no monotonic degradation on downstream benchmarks.",
+    "upvotes": 4,
+    "projectPage": null,
+    "ai_keywords": [
+      "weight-space model merging",
+      "checkpoints",
+      "expert weights",
+      "I/O budget",
+      "merge operator",
+      "checkpoint family",
+      "shared weight coordinate system",
+      "expert delta blocks",
+      "budget-aware execution",
+      "deterministic access plans",
+      "replayable manifests",
+      "budget-sound",
+      "omitted-update error",
+      "parameter blocks"
+    ]
+  },
+  {
+    "id": "2605.30792",
+    "title": "OpenSTBench: Beyond Semantic Evaluation for Speech Translation",
+    "summary": "Speech translation systems increasingly span speech-to-text translation (S2TT), speech-to-speech translation (S2ST), offline translation, and streaming generation, producing outputs that differ in modality, speech realization, and timing behavior. Existing evaluation practices assess important aspects such as translation quality, speech quality, and temporal quality, but these aspects are often evaluated under separate protocols, making it difficult to compare heterogeneous systems comprehensively. To address this gap, we present OpenSTBench, a unified multidimensional evaluation framework that organizes heterogeneous speech translation outputs into a shared evaluation format. OpenSTBench supports both S2TT and S2ST systems in offline and streaming settings, and jointly evaluates translation quality, speech quality, speaker preservation, emotion and paralinguistic fidelity, temporal consistency, and latency. Through experiments on representative speech translation systems, we show that systems with strong translation quality can still differ substantially in speech quality, as well as in temporal quality. OpenSTBench provides a reproducible protocol for analyzing these cross-dimensional differences and supporting application-oriented comparison of speech translation systems. The code and datasets are available at https://github.com/sjtuayj/OpenSTBench.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "speech-to-text translation",
+      "speech-to-speech translation",
+      "offline translation",
+      "streaming generation",
+      "multidimensional evaluation",
+      "temporal quality",
+      "speech quality",
+      "translation quality",
+      "speaker preservation",
+      "emotion fidelity",
+      "paralinguistic fidelity",
+      "temporal consistency",
+      "latency"
+    ]
+  },
+  {
+    "id": "2606.05165",
+    "title": "STRIDE: Training Data Attribution via Sparse Recovery from Subset Perturbations",
+    "summary": "Training Data Attribution (TDA) seeks to trace a model's predictions back to its training data. The gold standard for TDA relies on causal interventions, observing how a model changes when data is added or removed, but repeated retraining is computationally challenging for Large Language Models (LLMs). Consequently, most approaches approximate this effect in the parameter space using gradients. However, tracking gradients across billions of parameters is not only prohibitively expensive but relies on local approximations. In this work, we propose a shift: rather than estimating parameter changes, we model the functional effect of training data in the activation space. We introduce STRIDE (Steering-based Training Data Influence Decomposition), a framework that formulates TDA as a sparse recovery problem in the spirit of compressive sensing. STRIDE learns lightweight \"steering operators\" that mimic the behavioral shift caused by training on data subsets. By measuring how these operators perturb test predictions, we recover individual training example influences via sparse linear decomposition. STRIDE achieves state-of-the-art for LLM pre-training attribution while being an order of magnitude (13times) faster than previous art. We further validate its practical utility through downstream applications including data selection, data contamination, and qualitative analysis.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "Training Data Attribution",
+      "causal interventions",
+      "Large Language Models",
+      "parameter space",
+      "gradients",
+      "activation space",
+      "sparse recovery",
+      "compressive sensing",
+      "steering operators",
+      "sparse linear decomposition"
+    ]
+  },
+  {
+    "id": "2606.04048",
+    "title": "Unlocking Feature Learning in Gated Delta Networks at Scale",
+    "summary": "Training and scaling Large Language Models demand enormous computational resources, motivating both efficient sub-quadratic architectures and principled hyperparameter tuning methods. While the Maximal Update Parametrization (μP) has enabled zero-shot hyperparameter transfer for standard Transformers, its extension to linear models, particularly those with structured state transitions and complicated architectures, remains largely unexplored. By rigorously propagating coordinate-size estimates through the forward pass, gating mechanisms, and recurrent state dynamics, we derive the scaling rules for Gated Delta Network. Experiments on language-model pre-training confirm that our configurations enable stable learning-rate transfer across model widths under both AdamW and SGD, whereas standard parametrization fails to transfer, validating the correctness and practical utility of our analysis.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "Large Language Models",
+      "sub-quadratic architectures",
+      "hyperparameter tuning",
+      "Maximal Update Parametrization",
+      "Transformers",
+      "linear models",
+      "structured state transitions",
+      "gated delta network",
+      "coordinate-size estimates",
+      "forward pass",
+      "gating mechanisms",
+      "recurrent state dynamics",
+      "language-model pre-training",
+      "AdamW",
+      "SGD"
+    ]
+  },
+  {
+    "id": "2606.04688",
+    "title": "MeshWeaver: Sparse-Voxel-Guided Surface Weaving for Autoregressive Mesh Generation",
+    "summary": "Autoregressive mesh generation has gained attention by tokenizing meshes into sequences and training models in a language-modeling fashion. However, existing approaches suffer from two fundamental limitations: (i) low tokenization efficiency, which yields long token sequences and prevents scaling to high-poly meshes, and (ii) absence of geometry-aware guidance, as generation is conditioned only on global shape embeddings rather than local surface cues. We introduce MeshWeaver, an autoregressive framework that treats mesh generation as a surface weaving process by directly predicting the next vertex instead of independent coordinates. At its core is a multi-level sparse-voxel encoder that injects geometric context into the generative process in three complementary ways: providing voxel features as vertex representations, guiding token prediction via cross-attention to voxel features, and serving as a structural scaffold that constrains generation around the input surface. Our hierarchical design enables coarse-to-fine vertex prediction in a single decoding step, while tightly coupling the generative model with 3D geometry. Extensive experiments demonstrate that MeshWeaver achieves a state-of-the-art compression ratio of 18%, can generate meshes with up to 16K faces, and significantly improves geometric fidelity over prior approaches.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "autoregressive mesh generation",
+      "tokenization",
+      "language-modeling",
+      "mesh compression",
+      "vertex prediction",
+      "multi-level sparse-voxel encoder",
+      "cross-attention",
+      "geometric context",
+      "coarse-to-fine prediction",
+      "geometric fidelity"
+    ]
+  },
+  {
+    "id": "2606.00377",
+    "title": "Score-Control for Hallucination Reduction in Diffusion Models",
+    "summary": "Diffusion models have emerged as the backbone of modern generative AI, powering advances in vision, language, audio and other modalities. Despite their success, they suffer from hallucinations, implausible samples that lie outside the support of true data distribution, which degrade reliability and trust. In this work, we first empirically confirm previously proposed hypothesis that score smoothness causes hallucinations in Image Generation diffusion models and provide a density-based perspective. We further formalize this notion by linking the hallucinations probability mass to lipschitz constant of the learned score function. Motivated by this, we introduce a Variance-Guided Score Modulation (VSM) strategy that controls the score Jacobian, in turn reducing score smoothness and better approximating the ground truth score that decreases hallucinations. Empirical results on synthetic and real-world datasets demonstrate that our approach reduces hallucinations (up to ~25%) while maintaining high fidelity and diversity, providing a principled step toward more reliable diffusion-based image generation. We also propose two benchmark datasets with extreme semantic variation for systematic hallucination evaluation. Code and Datasets are publicly available at https://github.com/bhosalems/VSM.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "diffusion models",
+      "hallucinations",
+      "score function",
+      "lipschitz constant",
+      "score Jacobian",
+      "Variance-Guided Score Modulation",
+      "image generation",
+      "semantic variation",
+      "hallucination evaluation"
+    ]
+  }
+]
