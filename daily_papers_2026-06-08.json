@@ -1,0 +1,473 @@
+[
+  {
+    "id": "2606.07502",
+    "title": "Your UnEmbedding Matrix is Secretly a Feature Lens for Text Embeddings",
+    "summary": "Large language models exhibit impressive zero-shot capabilities across a wide range of downstream tasks. However, they struggle to function as off-the-shelf embedding models, leading to suboptimal performance on massive text embedding benchmarks. In this paper, we identify a potential cause underlying this deficiency. Our motivation stems from an unexpected observation: text embeddings tend to align with frequent but uninformative tokens when projected onto the vocabulary space. We argue that this excessive expression of high-frequency tokens suppresses the model's ability to capture nuanced semantics. To address this, we introduce EmbedFilter, a simple linear transformation designed to refine text embeddings derived from LLMs directly. Specifically, we uncover that the unembedding matrix within LLMs encodes a latent space that is actively writing these frequent tokens into embedding space. By filtering out this subspace, EmbedFilter suppress the influence of high-frequency tokens, thereby enhancing semantic representations. As a compelling byproduct, this enables an inherent dimensionality reduction, lowering index storage and speedup retrieval while fully preserving the refined embedding quality. Our experiments across multiple LLM backbones demonstrate that LLMs equipped with EmbedFilter achieve superior zero-shot downstream performance even with significantly reduced embedding dimensions. We hope our findings provide deeper insights into the mechanisms of LLM-based representations and inspire more principled designs to improve text embeddings training. Our code is available at https://github.com/CentreChen/EmbFilter.",
+    "upvotes": 49,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language models",
+      "text embeddings",
+      "unembedding matrix",
+      "high-frequency tokens",
+      "dimensionality reduction",
+      "zero-shot performance",
+      "semantic representations",
+      "linear transformation"
+    ]
+  },
+  {
+    "id": "2606.07229",
+    "title": "MMAE: A Massive Multitask Audio Editing Benchmark",
+    "summary": "We introduce MMAE, a Massive Multitask Audio Editing benchmark, serving as the first comprehensive evaluation testbed designed for general-purpose instruction-based audio editing. Spurred by the shift toward intelligent creation, interactive editing has rapidly expanded from visual domains, pioneered by models like Nano-banana 2 for images and Gemini-Omni for video, into audio. However, the current evaluation infrastructure lags severely, remaining highly fragmented and restricted to specific subdomains or basic operations. Unlike existing benchmarks that are limited in scope, MMAE extends to a broad spectrum of real-world scenarios, encompassing 7 distinct audio modalities, including sound, speech, music, and their mixtures. Furthermore, we establish a comprehensive taxonomy spanning 6 levels of task complexity, from basic modifications to multi-hop reasoning and multi-round editing, 2 levels of granularity, and 8 distinct operation types. Meticulously curated through human-agent collaboration, MMAE comprises 2,000 high-fidelity samples paired with a pioneering rubric-based evaluation framework. By decomposing free-form tasks into 17,741 verifiable criteria, this robust rubric-based paradigm enables a precise, multi-dimensional assessment of both instruction following and context consistency. Our extensive evaluation of leading models reveals that current systems remain far from achieving reliable edits. Strikingly, the Exact Match Rate (EMR) consistently falls below 5% and plummets to an absolute 0% in complex, mixed-modality tasks, exposing critical bottlenecks in precise execution and structural robustness. We hope MMAE will serve as a catalyst for future advances in the intelligent creation community, providing a clear diagnostic roadmap and establishing a standardized, long-lasting evaluation paradigm for next-generation audio editing systems.",
+    "upvotes": 31,
+    "projectPage": null,
+    "ai_keywords": [
+      "Multitask Audio Editing",
+      "instruction-based audio editing",
+      "audio modalities",
+      "task complexity",
+      "operation types",
+      "rubric-based evaluation",
+      "Exact Match Rate",
+      "multi-hop reasoning",
+      "multi-round editing"
+    ]
+  },
+  {
+    "id": "2606.07326",
+    "title": "AnchorWorld: Embodied Egocentric World Simulation with View-based Evolution Customization",
+    "summary": "Despite being a pivotal frontier, interactive world modeling remains underexplored in terms of the versatile controllability required by practical scenarios. To bridge this gap, we present AnchorWorld, a framework that advances egocentric simulation through enhanced interaction integrity and a flexible mechanism for world customization. First, we utilize 3D human motion as the primary interaction modality. To complement the out-of-view or truncated body parts in egocentric views, we introduce an auxiliary training supervision that incorporates exogenous viewpoints decoupled from the agent's first-person sensorium. It allows the model to observe the agent's full-body positioning relative to the environment, facilitating a more robust spatial grounding of human-world interactions. Furthermore, we propose a simple yet effective mechanism for customizing self-evolving worlds. This is achieved by defining anchor views within a unified world coordinate system, coupled with textual descriptions dictating the dynamic evolution of local scenes. Experimental results show that AnchorWorld significantly outperforms state-of-the-art baselines, while ablation studies validate the effectiveness of our key designs. Notably, our customization scheme exhibits promising spatio-temporal geometric consistency and adheres strictly to the prescribed evolutionary dynamics.",
+    "upvotes": 20,
+    "projectPage": "https://yuli0103.github.io/AnchorWorld/",
+    "ai_keywords": [
+      "egocentric simulation",
+      "3D human motion",
+      "auxiliary training supervision",
+      "exogenous viewpoints",
+      "spatial grounding",
+      "self-evolving worlds",
+      "anchor views",
+      "world coordinate system",
+      "textual descriptions",
+      "dynamic evolution"
+    ]
+  },
+  {
+    "id": "2606.05563",
+    "title": "SoCRATES: Towards Reliable Automated Evaluation of Proactive LLM Mediation across Domains and Socio-cognitive Variations",
+    "summary": "Evaluating LLM mediators remains challenging, as mediation unfolds as a real-time trajectory shaped by disputants' shifting emotions, intentions, and context. Existing testbeds rely on a few expert-authored domains, vary mainly strategic posture, and score every turn against every topic, introducing off-topic noise. We introduce SoCRATES, a benchmark for evaluating proactive LLM mediators in realistic, multi-domain testbeds. It constructs scenarios from real conflicts through an agentic pipeline across eight domains, probes five socio-cognitive adaptation axes (strategic posture, party composition, history length, emotional reactivity, and cultural identity), and scores each topic only on the turns that advance it via a topic-localized evaluator. The evaluator reaches 0.82 alignment with human experts, more than doubling a per-turn baseline. Benchmarking eight frontier LLMs, we find that even the strongest mediator closes only about a third of the unmediated consensus gap under diverse and realistic testbeds, with performance varying sharply by socio-cognitive axis, highlighting that progress lies in social adaptation to diverse conditions.",
+    "upvotes": 17,
+    "projectPage": "https://disl-lab.github.io/SoCRATES/",
+    "ai_keywords": [
+      "LLM mediators",
+      "real-time trajectory",
+      "socio-cognitive adaptation",
+      "topic-localized evaluator",
+      "agentic pipeline",
+      "multi-domain testbeds",
+      "consensus gap"
+    ]
+  },
+  {
+    "id": "2606.06601",
+    "title": "Direct 3D-Aware Object Insertion via Decomposed Visual Proxies",
+    "summary": "Object insertion aims to seamlessly composite a reference object into a specified region of a background image. Recent diffusion-based methods achieve high visual quality but formulate insertion as a simple 2D inpainting task, providing no explicit control over the object's 3D pose and limiting their practical applicability. We propose DIRECT (Decomposed Injection for Reference Composition and Target-integration), a novel framework that integrates interactive pose manipulation with high-fidelity 2D image synthesis to enable pose-controllable object insertion. Our method decomposes the insertion conditions into three complementary components: appearance guidance capturing visual details from the reference object, geometry guidance derived from the user-adjusted 3D proxy, and context guidance from the target background. By injecting them through separate pathways, DIRECT avoids feature entanglement and simultaneously preserves reference appearance, follows the user-specified pose, and adapts the object to the target scene. We also introduce an automated data construction pipeline to improve the diversity and quality of training data. Experiments show that DIRECT outperforms previous methods in both geometric controllability and visual quality.",
+    "upvotes": 15,
+    "projectPage": "https://gong1130.github.io/DIRECT/",
+    "ai_keywords": [
+      "diffusion-based methods",
+      "object insertion",
+      "3D pose",
+      "inpainting task",
+      "interactive pose manipulation",
+      "2D image synthesis",
+      "appearance guidance",
+      "geometry guidance",
+      "context guidance",
+      "3D proxy",
+      "feature entanglement",
+      "visual quality",
+      "geometric controllability"
+    ]
+  },
+  {
+    "id": "2606.05761",
+    "title": "SubtleMemory: A Benchmark for Fine-Grained Relational Memory Discrimination in Long-Horizon AI Agents",
+    "summary": "Persistent AI assistants, such as OpenClaw, accumulate large collections of related memories over long-term interactions. As these memories grow, they may reinforce one another, diverge across contexts, or directly conflict, making correct assistance depend on memory relations rather than isolated recall. Existing long-term memory benchmarks rarely probe how agents preserve and utilize such relations during downstream tasks. To address this gap, we introduce SubtleMemory, a benchmark for fine-grained relational memory discrimination in long-running AI agents. SubtleMemory constructs relation-controlled latent semantic artifacts whose variants instantiate complementary, nuanced, or contradictory relations, and embeds them into realistic user-agent histories, requiring agents to recover distributed relational structures during later queries and instructions. The benchmark contains 1,522 evaluation instances over 10 long histories, grounded in 1,090 relation-controlled memory-variant sets and spanning user-related and non-user-related queries. Evaluating six standalone memory systems, two Claw-style agents with native memory modules, and three Claw-style agents with plugin memory modules, we find that current systems remain weak on fine-grained relational memory discrimination. We further introduce diagnostic protocols that reveal distinct capability profiles across memory preservation, retrieval, and downstream reasoning stages.",
+    "upvotes": 15,
+    "projectPage": "https://yummytanmo.github.io/SubtleMemory/",
+    "ai_keywords": [
+      "long-term memory",
+      "relational memory",
+      "memory relations",
+      "downstream tasks",
+      "latent semantic artifacts",
+      "memory variants",
+      "user-agent interactions",
+      "memory preservation",
+      "memory retrieval",
+      "downstream reasoning"
+    ]
+  },
+  {
+    "id": "2606.05806",
+    "title": "When Tools Fail: Benchmarking Dynamic Replanning and Anomaly Recovery in LLM Agents",
+    "summary": "Existing benchmarks evaluate Tool-Integrated Reasoning (TIR) in LLMs on idealized ''happy paths'', largely overlooking real-world tool failures. We introduce ToolMaze, a benchmark for dynamic path discovery and error recovery in TIR agents. To separate systematic replanning from blind trial-and-error, ToolMaze adopts a two-dimensional design: DAG-based topological complexity and a 2 times 2 taxonomy of tool perturbations (explicit/implicit, transient/permanent). Evaluations show that perturbations degrade performance across nearly all models, with the sharpest drops under implicit semantic failures. Driven by systemic over-trust in corrupted outputs, Perturbation Recovery Rate (PRR) plummets by around 37\\% in these scenarios, while complex topologies trap agents in futile trial-and-error loops. Crucially, agentic fault-tolerance improves with model scale 3.66times slower than basic task execution, highlighting dynamic replanning as a distinct bottleneck unaddressed by model scaling or prompting. Data and code are available at https://github.com/Zhudongsheng75/ToolMaze.",
+    "upvotes": 13,
+    "projectPage": null,
+    "ai_keywords": [
+      "Tool-Integrated Reasoning",
+      "TIR",
+      "benchmark",
+      "dynamic path discovery",
+      "error recovery",
+      "DAG-based topological complexity",
+      "tool perturbations",
+      "implicit semantic failures",
+      "Perturbation Recovery Rate",
+      "PRR",
+      "agentic fault-tolerance",
+      "model scale",
+      "dynamic replanning"
+    ]
+  },
+  {
+    "id": "2606.07433",
+    "title": "Watch, Remember, Reason: Human-View Video Understanding with MLLMs",
+    "summary": "Video understanding is being rapidly transformed by multimodal large language models (MLLMs), as research moves from short clips to long, multimodal, and knowledge-intensive video scenarios. These scenarios require models to handle sparse evidence, long-range dependencies, multimodal alignment, and reliable inference under limited computational budgets. This work presents a human-view perspective on LLM-based video understanding, organized around three functional abilities: watching, remembering, and reasoning. Rather than treating video tasks as isolated benchmarks, this view provides a unified structure for analyzing how video MLLMs acquire evidence, preserve context, and produce grounded outputs. We introduce a formulation that characterizes video understanding systems by their perceptual representations, memory states, reasoning traces, and final predictions. Based on this formulation, we identify challenges in spatio-temporal perception, efficient long-video processing, memory modeling, streaming understanding, and faithful reasoning. Representative methods are organized by their roles in video MLLM systems. Watching covers fine-grained, comprehensive, audio-visual, and efficient perception. Remembering includes offline and streaming memory, while reasoning covers text-only reasoning and thinking with videos. We further examine application domains such as egocentric, sports, instructional, medical, and narrative videos, and cover training datasets and evaluation benchmarks across task types, supervision formats, modalities, and capability dimensions. Finally, we outline open problems and future directions for scalable, memory-aware, and evidence-grounded video intelligence. Related works will be continuously traced at https://github.com/marinero4972/Awesome-HumanView-VideoUnderstanding.",
+    "upvotes": 12,
+    "projectPage": null,
+    "ai_keywords": [
+      "multimodal large language models",
+      "video understanding",
+      "spatio-temporal perception",
+      "long-range dependencies",
+      "multimodal alignment",
+      "memory modeling",
+      "streaming understanding",
+      "faithful reasoning",
+      "perceptual representations",
+      "memory states",
+      "reasoning traces",
+      "video MLLMs",
+      "egocentric videos",
+      "sports videos",
+      "instructional videos",
+      "medical videos",
+      "narrative videos"
+    ]
+  },
+  {
+    "id": "2606.06953",
+    "title": "LIMMT: Less is More for Motion Tracking",
+    "summary": "We argue that high-quality motion data can steer tracking policies toward better optimization trajectories early in training. In this work, we introduce LIMMT (Less Is More for Motion Tracking). To our knowledge, this is the first data-centric study for physics-based humanoid motion tracking. We go beyond simply removing low-quality and erroneous clips, but define motion data quality through three dimensions: physics feasibility, diversity, and complexity. We show that even training with under 3% of AMASS yields better tracking performance than training with the full dataset. We further conduct data cleaning on the estimated web-sourced mocap data. Extensive experiments and analyses validate the effectiveness of our framework.",
+    "upvotes": 11,
+    "projectPage": "https://giraffeguan.github.io/limmt/",
+    "ai_keywords": [
+      "motion tracking",
+      "physics-based humanoid motion tracking",
+      "data-centric study",
+      "motion data quality",
+      "physics feasibility",
+      "diversity",
+      "complexity",
+      "AMASS",
+      "data cleaning",
+      "mocap data"
+    ]
+  },
+  {
+    "id": "2606.07514",
+    "title": "UniSHARP: Universal Sharp Monocular View Synthesis",
+    "summary": "In this work, we focus on extending SHARP, the popular photorealistic view synthesis method, for universal monocular rendering across a continuum of camera systems, from conventional perspective cameras to wide-field-of-view, fisheye and omnidirectional panoramic settings. To overcome the pinhole-specific assumptions of SHARP, our key idea is to align various images in a unified omnidirectional latent space. Thus, we propose UniSHARP, which performs implicit alignment in both feature and Gaussian spaces. Specifically, Gaussian primitives are arranged along rays and radial distances in a ray-based universal representation, while 2D semantic and 3D spatial features extracted from UniK3D-inspired encoders are jointly decoded to generate the complete Gaussian cloud. To comprehensively evaluate our method, we construct a benchmark covering diverse imaging systems across various scenes. The benchmark is further stratified by field of view (FoV) to enable fine-grained assessment of the universal monocular rendering task. Extensive experiments on the proposed benchmark demonstrate the effectiveness of UniSHARP, outperforming alternative methods by a large margin. The project page can be found at: https://insta360-research-team.github.io/Unisharp-website/",
+    "upvotes": 11,
+    "projectPage": "https://insta360-research-team.github.io/Unisharp-website/",
+    "ai_keywords": [
+      "photorealistic view synthesis",
+      "universal monocular rendering",
+      "omnidirectional latent space",
+      "Gaussian primitives",
+      "ray-based universal representation",
+      "UniK3D-inspired encoders",
+      "Gaussian cloud"
+    ]
+  },
+  {
+    "id": "2606.06476",
+    "title": "Thinking with Imagination: Agentic Visual Spatial Reasoning with World Simulators",
+    "summary": "While Vision-Language Models (VLMs) have shown strong visual reasoning capabilities, their spatial reasoning abilities remain largely constrained to the observed images and text-oriented chain-of-thought. They often struggle to infer unobserved layouts, maintain cross-view consistency, and reason from alternative viewpoints when only limited egocentric observations are available. In this work, we study this problem as thinking with imagination, where a VLM actively acquires imagined visual evidence by interacting with a world simulator during reasoning. We propose Astra, an agentic spatial reasoning framework that empowers VLMs with action-conditioned visual imagination. Specifically, Astra couples Astra-VL, an RL-trained VLM policy, with Astra-WM, a Bagel-based world simulator that generates novel-view observations from context images and natural-language camera motions. To provide reliable imagined evidence, Astra-WM is trained with view consistency tuning to improve pose and content consistency across views. In the RL stage, we propose a world-simulator-in-the-loop two-phase RL curriculum to stabilize tool-use exploration and advance the model's ability to invoke the simulator only when imagined observations improve over direct answering. Experiments demonstrate that both the world simulator and the agentic policy are necessary: Astra-WM improves simulator-augmented Gemini-3-Flash on MMSI-Bench from 45.1 to 49.5, while Astra-VL improves the Qwen3-VL backbone from 29.8 to 38.8 on MMSI-Bench and from 36.8 to 42.7 on MindCube. These results show that imagined observations can provide useful spatial evidence, but effective world-model-augmented reasoning requires learning when, where, and how to imagine.",
+    "upvotes": 9,
+    "projectPage": "https://zcmax.github.io/projects/Thinking-With-Imagination/",
+    "ai_keywords": [
+      "Vision-Language Models",
+      "spatial reasoning",
+      "world simulator",
+      "reinforcement learning",
+      "action-conditioned visual imagination",
+      "Bagel-based world simulator",
+      "view consistency tuning",
+      "tool-use exploration",
+      "MMSI-Bench",
+      "MindCube"
+    ]
+  },
+  {
+    "id": "2606.07080",
+    "title": "dots.tts Technical Report",
+    "summary": "We present dots.tts, a 2B-parameter continuous autoregressive text-to-speech (TTS) foundation model that models speech in a continuous latent space. Compared with existing continuous autoregressive models, our key innovations are threefold. First, we train an AudioVAE with multiple objectives to build a semantically structured and prediction-friendly continuous speech space. Second, we use full-history conditioning in the flow-matching head to preserve long-range consistency and reduce drift during generation. Third, we apply reward-free self-corrective post-training to the flow-matching head to further improve robustness and acoustic quality. After being trained on a large-scale multilingual corpus, dots.tts achieves the best average performance on Seed-TTS-Eval, with WERs of 0.94%/1.30%/6.60% and SIM scores of 81.0/77.1/79.5 on the zh/en/zh-hard test sets, respectively. Across other benchmarks, dots.tts also consistently demonstrates open-source state-of-the-art performance, exhibiting strong generation stability, voice cloning ability, and emotional expressiveness. For efficient inference, we further apply CFG-aware MeanFlow distillation, enabling low-latency speech generation with first-packet latencies of 85/54 ms in output streaming and dual-streaming modes, respectively. To facilitate reproducible research and practical deployment, we release the training and inference code, together with the pretrained, post-trained, and MeanFlow-distilled checkpoints, under the Apache 2.0 license.",
+    "upvotes": 8,
+    "projectPage": null,
+    "ai_keywords": [
+      "continuous autoregressive text-to-speech",
+      "AudioVAE",
+      "flow-matching head",
+      "reward-free self-corrective post-training",
+      "Seed-TTS-Eval",
+      "WER",
+      "SIM scores",
+      "CFG-aware MeanFlow distillation",
+      "output streaming",
+      "dual-streaming"
+    ]
+  },
+  {
+    "id": "2606.05972",
+    "title": "LLM Explainability with Counterfactual Chains and Causal Graphs",
+    "summary": "Causal graphs provide a high-level language for making mechanisms transparent. Recent work uses Large Language Models (LLMs) to recover causal graphs of external-world processes. Instead, in this paper, we use causal graphs to model LLM inference itself, providing stakeholders with a transparent view of how the model perceives and organizes high-level concepts to produce a prediction. We propose a four-phase method for constructing such graphs. Given a target LLM and a set of textual examples, our method discovers class-discriminative, human-interpretable concepts and maps each input to LLM-perceived concept states. We then introduce an MCMC-inspired counterfactual augmentation procedure that expands the sparse observational data through chains of counterfactuals. This enables stable causal discovery with σ-CG, yielding informative, interpretable graphs. We apply our method to three LLMs across disease diagnosis, sentiment analysis, and LLM-as-a-judge classification tasks. We evaluate the learned graphs for predictive fidelity and structural stability, and the MCMC-inspired augmentation for convergence and downstream utility. Our results show that the discovered causal graphs capture meaningful dependencies consistent with LLMs' reasoning. Together, this paper provides a foundation for concept-level explainability of LLMs.",
+    "upvotes": 8,
+    "projectPage": null,
+    "ai_keywords": [
+      "causal graphs",
+      "Large Language Models",
+      "causal discovery",
+      "counterfactual augmentation",
+      "MCMC-inspired",
+      "concept-level explainability",
+      "predictive fidelity",
+      "structural stability"
+    ]
+  },
+  {
+    "id": "2606.07454",
+    "title": "PaperFlow: Profiling, Recommending, and Adapting Across Daily Paper Streams",
+    "summary": "Scientific paper recommendation is typically evaluated as static ranking over a fixed candidate set, yet real scientific reading unfolds as a daily, longitudinal process in which interests shift and feedback accumulates. We introduce PaperFlow, a framework that organizes it into three coupled stages: Profiling, which constructs and maintains a structured, inspectable scholarly profile from heterogeneous cold-start evidence; Recommending, which ranks each date-specific paper stream through multi-signal aggregation under a fixed display budget; and Adapting, which updates user state from semantically distinct feedback signals and models interest drift across days. We further define a longitudinal user-day benchmark that fixes users, dates, candidate pools, visible inputs, and hidden simulated relevance labels under a shared temporal information boundary. The benchmark contains 24 simulated research users, 50 daily paper streams, 1,200 user-day episodes, 20,727 unique papers, and 497,448 episode-paper records. We additionally specify a blind human-evaluation protocol to validate alignment between automatic metrics and expert judgments. Experiments against five scientific recommendation baselines show that PaperFlow achieves the strongest oracle-based ranking, the highest behavioral alignment with simulated reading selections, and the best blind human-evaluation score.",
+    "upvotes": 6,
+    "projectPage": "https://openraiser.github.io/PaperFlow",
+    "ai_keywords": [
+      "scientific paper recommendation",
+      "longitudinal process",
+      "user profiling",
+      "multi-signal aggregation",
+      "user state update",
+      "interest drift",
+      "temporal information boundary",
+      "user-day benchmark",
+      "oracle-based ranking",
+      "behavioral alignment"
+    ]
+  },
+  {
+    "id": "2606.06741",
+    "title": "OpenSkill: Open-World Self-Evolution for LLM Agents",
+    "summary": "Self-evolving agents requires adaptation after deployment, but existing approaches assume a usable learning loop, such as curated skills, successful trajectories, or verifier signals. Real open-world deployments may provide none of these, offering only a task prompt. In this work, we study open-world self-evolution, where an agent must build both its skills and its own verification signals from scratch, using open-world resources but no target-task supervision. We propose OpenSkill, a framework that bootstraps this loop: it acquires grounded knowledge and verification anchors from documentation, repositories, and the web, synthesizes them into transferable skills, and refines those skills against self-built virtual tasks grounded in the anchors rather than in target answers. The open world thus supplies both the knowledge to be learned and a supervision-independent practice environment, with target-task supervision reserved for final evaluation. Across three benchmarks and two target agents, OpenSkill attains the best automated pass rate while satisfying the no-supervision constraint. Analysis shows its skills transfer across models without model-specific adaptation, and its self-built verifier aligns with ground-truth outcomes despite never accessing them.",
+    "upvotes": 6,
+    "projectPage": "https://github.com/OpenLAIR/OpenSkill",
+    "ai_keywords": [
+      "self-evolving agents",
+      "open-world deployment",
+      "skill acquisition",
+      "verification signals",
+      "bootstrapped learning loop",
+      "grounded knowledge",
+      "transferable skills",
+      "self-built virtual tasks",
+      "automated pass rate",
+      "skill transfer"
+    ]
+  },
+  {
+    "id": "2606.06891",
+    "title": "Stream3D-VLM: Online 3D Spatial Understanding with Incremental Geometry Priors",
+    "summary": "Despite advances in 3D scene understanding, existing 3D Large Multimodal Models operate in offline settings, requiring complete scene observations or predefined video clips. In this paper, we present an online 3D vision-language model that enables real-time spatial understanding from streaming video. Our approach adopts an autoregressive streaming control modeling based on the LLM's next-token prediction objective to learn when to respond, and employs a lightweight Visual-Spatial Feature Integration (VSFI) module to incrementally inject temporally aligned geometry priors into the visual stream. To alleviate long-context decoding overhead, we propose a plug-and-play Geometry-Adaptive Voxel Compression (GAVC) module for efficient visual token compression. To address the scarcity of streaming 3D-language data, we further develop a scalable data generation pipeline that curates over 1M online spatio-temporal 3D QA pairs and establishes a comprehensive benchmark spanning 29 tasks. Extensive experiments show that our approach significantly outperforms both proprietary and open-source models across online and offline 3D spatial understanding, reasoning, and grounding tasks. The project page is available at https://stream3d-vlm.github.io/",
+    "upvotes": 2,
+    "projectPage": "https://stream3d-vlm.github.io/",
+    "ai_keywords": [
+      "3D Large Multimodal Models",
+      "autoregressive streaming control modeling",
+      "next-token prediction objective",
+      "Visual-Spatial Feature Integration",
+      "Geometry-Adaptive Voxel Compression",
+      "spatio-temporal 3D QA pairs"
+    ]
+  },
+  {
+    "id": "2605.26046",
+    "title": "When Gradients Collide: Failure Modes of Multi-Objective Prompt Optimization for LLM Judges",
+    "summary": "Customizing an LLM judge to a specific task or domain often involves optimizing its prompt across multiple evaluation criteria simultaneously. Textual gradient methods automate this for a single judge criterion, however they produce natural-language critiques, not numerical vectors. Thus, the conflict-resolution toolkit of multi-task learning (PCGrad, MGDA) doesn't apply to the multi-objective textual gradient setting. We test five decomposition modes of textual gradient optimizers by varying how much cross-task information the loss, gradient and optimizer LLMs share. In 6 of 10 configurations, we observe that optimization never improves over the initial prompt. Gradient specificity drops by 59% (from 9.0 to 3.7) when the gradient LLM processes multiple criteria jointly. Separately, we observe that naively combining per-task instructions into a single prompt degrades Spearman's rho by -5.3%. These results identify two separable failure modes: optimization-time gradient dilution and inference-time instruction interference, which together constrain the design space for multi-objective judge customization using textual feedback.",
+    "upvotes": 2,
+    "projectPage": "https://textgrad-failure-modes.github.io/",
+    "ai_keywords": [
+      "textual gradient methods",
+      "multi-task learning",
+      "PCGrad",
+      "MGDA",
+      "gradient optimization",
+      "prompt optimization",
+      "textual feedback",
+      "gradient specificity",
+      "Spearman's rho"
+    ]
+  },
+  {
+    "id": "2606.07207",
+    "title": "Entropy as a Structural Prior: How a Log-Barrier on DiT Belief Space Drives Musical Diversity and Development",
+    "summary": "Confidence-based loss weighting is usually avoided in generative models because it accelerates errors when the model is confidently wrong, but this intuition breaks down in supervised diffusion training. We introduce the Eisbach log-barrier, a parameter-free weight derived from the entropy of the DiT output's spatial energy distribution: high entropy damps the gradient, while low entropy preserves it. Applied to LoRA fine-tuning of Stable Audio 3 Medium on MusicCaps, it unexpectedly yields stronger thematic development, clearer acoustic differentiation, and higher textural diversity than unweighted training, the opposite of mode collapse. This works because in supervised diffusion the gradient direction is locked to ground truth, so confidence only scales the step size, and because temporal entropy downweights flat samples while preserving high-contrast ones. The result is an online, self-referential data curriculum that emerges purely from the forward pass, with analyzed noise-level dynamics and testable predictions.",
+    "upvotes": 1,
+    "projectPage": "https://huggingface.co/ReasoningKingdom/Eisbach-Medium",
+    "ai_keywords": [
+      "confidence-based loss weighting",
+      "generative models",
+      "supervised diffusion training",
+      "Eisbach log-barrier",
+      "entropy",
+      "DiT output",
+      "spatial energy distribution",
+      "LoRA fine-tuning",
+      "Stable Audio 3",
+      "MusicCaps",
+      "gradient damping",
+      "temporal entropy",
+      "data curriculum",
+      "forward pass",
+      "noise-level dynamics"
+    ]
+  },
+  {
+    "id": "2606.07412",
+    "title": "Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills",
+    "summary": "LLM-driven software engineering agents have become a central testbed for real-world language-model capability, yet their training remains limited by the availability of high-quality SWE tasks. Existing synthetic data methods typically create tasks through fixed mutation or bug-injection procedures, making the resulting distributions largely independent of the agent's own weaknesses and training progress. We introduce Socratic-SWE, a closed-loop self-evolution framework that reuses the agent's historical solving traces as a source of training signal. Rather than treating traces only as evidence for reward computation, Socratic-SWE distills them into structured agent skills that summarize recurring failures and effective repair patterns. These skills then guide the generation of targeted repair tasks in real repositories. Candidate tasks are checked through execution-based validation and scored with a solver-gradient alignment reward, so that the retained tasks are both verifiable and useful for improving the Solver. The updated Solver produces new traces, enabling the task curriculum to adapt over successive rounds. Across SWE-bench Verified, SWE-bench Lite, SWE-bench Pro, and Terminal-Bench 2.0, Socratic-SWE consistently improves over self-evolving baselines under the same compute budget, reaching 50.40% on SWE-bench Verified after three iterations. These results suggest that solving traces can serve as a scalable substrate for self-evolving SWE agents.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "LLM-driven software engineering agents",
+      "synthetic data methods",
+      "fixed mutation",
+      "bug-injection procedures",
+      "closed-loop self-evolution framework",
+      "historical solving traces",
+      "structured agent skills",
+      "repair patterns",
+      "execution-based validation",
+      "solver-gradient alignment reward",
+      "task curriculum",
+      "self-evolving baselines",
+      "SWE-bench Verified",
+      "SWE-bench Lite",
+      "SWE-bench Pro",
+      "Terminal-Bench 2.0"
+    ]
+  },
+  {
+    "id": "2606.01779",
+    "title": "HarnessForge: Joint Harness and Policy Evolution for Adaptive Agent Systems",
+    "summary": "LLM agents are increasingly expected to operate across heterogeneous task regimes that require distinct execution paradigms. This challenges fixed agent systems and motivates system-level meta-adaptation beyond isolated component updates. While existing works have adapted external harness or trained underlying reasoning policies, full-system adaptation remains insufficiently characterized. The adaptation space between structure and execution is rarely made explicit, and the compatibility between the external harness and the internal reasoner is not optimized jointly. We propose HarnessForge, a meta-adaptive framework for evolving LLM agent systems. HarnessForge formulates an agent system as a harness--policy pair, defining a stable adaptation space that separates harness-level execution structure from policy-level reasoning behavior. It then performs harness--policy co-evolution through fault-guided harness tailoring and harness-conditioned policy alignment. Experiments across five benchmarks from diverse domains show that HarnessForge consistently improves both Qwen3-4B and Qwen3-8B backbones, outperforming harness-only and policy-only baselines with gains of up to 12.0\\% over the strongest baseline and achieving favorable rollout-efficiency tradeoffs, demonstrating that harness--policy co-evolution is effective, and that executable compatibility between the harness and reasoning policy is essential for agent-system adaptation. The code is available at https://github.com/mingju-c/HarnessForge.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "LLM agents",
+      "meta-adaptation",
+      "agent systems",
+      "harness-policy pair",
+      "co-evolution",
+      "fault-guided harness tailoring",
+      "harness-conditioned policy alignment"
+    ]
+  },
+  {
+    "id": "2605.27276",
+    "title": "SIA: Self Improving AI with Harness & Weight Updates",
+    "summary": "Humans are the bottleneck in building and improving AI. Both the models and the agents that wrap them are written, tuned, and corrected by people. The long-horizon goal of an AI that can figure out how to improve itself remains open. Two largely disjoint research lines attack this bottleneck. The harness-update school has a meta-agent rewrite the scaffold of a task-specific agent (its tools, prompts, retry logic, and search procedure) while the model weights are held fixed. The test-time training school uses hand-written RL pipelines to update the model's own weights on task feedback while the harness is held fixed. These two silos operate in isolation. We propose SIA, a self-improving loop in which a language-model agent (the Feedback-Agent) updates both the harness and the weights of a task-specific agent. We evaluate across three contrasting domains: Chinese legal charge classification, low-level GPU kernel optimisation, and single-cell RNA denoising. Combining both levers outperforms scaffold iteration alone on all three benchmarks. The gains are 56.6% on LawBench, 91.9% runtime reduction on GPU kernels, and 502% on denoising over the initial baseline. Harness updates make the model agentic, shaping how it searches and acts, while weight updates build the domain intuition that no prompt or scaffold can instil.",
+    "upvotes": 1,
+    "projectPage": "https://hexolabs.com/",
+    "ai_keywords": [
+      "language-model agent",
+      "Feedback-Agent",
+      "self-improving loop",
+      "model weights",
+      "task-specific agent",
+      "harness-update",
+      "test-time training",
+      "reinforcement learning",
+      "prompt engineering",
+      "search procedure",
+      "weight updates",
+      "domain intuition"
+    ]
+  },
+  {
+    "id": "2606.07508",
+    "title": "Streaming Video Generation with Streaming Force Control",
+    "summary": "We introduce StreamForce, a streaming video generation framework that enables physically grounded control through continuous force inputs. Unlike prior video models that train separate models for different force types, assume fixed forces, or rely on non-causal processing, StreamForce is a causal and unified model that responds instantly and coherently to both local and global, time-varying forces. To achieve this, we design a unified force representation as a control signal and develop a distillation pipeline for force-controllable video generation. Our model combines autoregressive efficiency with force responsiveness, sustaining stable photometric and dynamic realism. StreamForce runs at up to 16.6 FPS on a single GPU, achieving state-of-the-art performance in both force adherence and motion realism. Project website: https://neu-vi.github.io/StreamForce/",
+    "upvotes": null,
+    "projectPage": "https://neu-vi.github.io/StreamForce/",
+    "ai_keywords": [
+      "streaming video generation",
+      "causal model",
+      "force-controllable video generation",
+      "autoregressive efficiency",
+      "distillation pipeline"
+    ]
+  },
+  {
+    "id": "2606.06538",
+    "title": "WorldBench: A Challenging and Visually Diverse Multimodal Reasoning Benchmark",
+    "summary": "In real-world applications, models are expected to perform reliably across diverse settings. Yet, many existing multimodal benchmarks expand task types without capturing the visual diversity needed to handle open-ended visual inputs. We present WorldBench, a challenging and visually diverse reasoning benchmark to evaluate Multimodal Large Language Models (MLLMs). We build a taxonomy of thousands of visual concepts across multiple domains (e.g., living things). Guided by this taxonomy, we curate a broad collection of images from search engines and existing datasets to comprehensively represent the visual world. Through structured trial-and-error, we manually design challenging questions that frontier MLLMs fail to answer. On quantitative and human evaluations, WorldBench achieves higher visual diversity than any existing diverse benchmark. Evaluating 15 MLLMs on WorldBench reveals weaknesses in visual understanding: even the strongest model reaches only 64.0% accuracy, while some models perform marginally above chance-level. We hope our work highlights the importance of visual diversity in building multimodal benchmarks.",
+    "upvotes": null,
+    "projectPage": "https://worldbench-vl.github.io/",
+    "ai_keywords": [
+      "Multimodal Large Language Models",
+      "visual diversity",
+      "reasoning benchmark",
+      "visual concepts",
+      "multimodal benchmarks"
+    ]
+  },
+  {
+    "id": "2603.16142",
+    "title": "Parametric Social Identity Injection and Diversification in Public Opinion Simulation",
+    "summary": "Large language models (LLMs) have recently been adopted as synthetic agents for public opinion simulation, offering a promising alternative to costly and slow human surveys. Despite their scalability, current LLM-based simulation methods fail to capture social diversity, producing flattened inter-group differences and overly homogeneous responses across demographic groups. We identify this limitation as a Diversity Collapse phenomenon in LLM hidden representations, where distinct social identities become increasingly indistinguishable across layers. Motivated by this observation, we propose Parametric Social Identity Injection (PSII), a general framework that injects explicit, parametric representations of demographic attributes and value orientations directly into intermediate hidden states of LLMs. Unlike prompt-based persona conditioning, PSII enables fine-grained and controllable identity modulation at the representation level. Extensive experiments on the World Values Survey using multiple open-source LLMs show that PSII significantly improves distributional fidelity and diversity, reducing KL divergence to real-world survey data while enhancing overall diversity. This work provides new insights into representation-level control of LLM agents and advances scalable, diversity-aware public opinion simulation.",
+    "upvotes": null,
+    "projectPage": "https://psii-demo.streamlit.app/",
+    "ai_keywords": [
+      "large language models",
+      "public opinion simulation",
+      "diversity collapse",
+      "hidden representations",
+      "parametric social identity injection",
+      "demographic attributes",
+      "value orientations",
+      "representation-level control",
+      "KL divergence",
+      "World Values Survey"
+    ]
+  },
+  {
+    "id": "2606.00590",
+    "title": "Critic-R: Improving Agentic Search using Instruction-tuned Retrievers with Natural Language Introspective Feedback",
+    "summary": "Agentic search systems iteratively interact with retrieval models to answer complex queries. Despite substantial progress, optimizing retrievers for agentic search remains challenging, often requiring heavy co-training or gold-standard annotations that limit real-world applicability. We propose Critic-R, a framework that explicitly closes the feedback loop between the reasoning agent and the retrieval model during both inference and training. Critic-R introduces a critic model that evaluates the agent's introspective reasoning trace after consuming retrieved evidence to determine whether the retrieved context sufficiently supports the next reasoning step. Critic-R has two complementary mechanisms: Critic-R-Zero, an inference-time query refinement loop that iteratively rewrites queries and retrieval instructions, and Critic-Embed, an optimization approach for retrieval models that leverages successful and failed refinement trajectories as automatic supervision without requiring manual relevance annotation. We evaluate Critic-R on HotpotQA, 2WikiMultihopQA, MuSiQue, and Bamboogle. Results show that Critic-R significantly improves both retrieval quality and downstream answer accuracy.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "agentic search systems",
+      "retrieval models",
+      "reasoning agent",
+      "feedback loop",
+      "critic model",
+      "introspective reasoning trace",
+      "query refinement",
+      "retrieval optimization",
+      "automatic supervision"
+    ]
+  }
+]
