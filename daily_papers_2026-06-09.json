@@ -1,0 +1,553 @@
+[
+  {
+    "id": "2606.07297",
+    "title": "SWE-Explore: Benchmarking How Coding Agents Explore Repositories",
+    "summary": "Repository-level coding benchmarks such as SWE-bench have driven a rapid surge in the capabilities of coding agents. Yet they usually treat coding tasks as a holistic, binary prediction problem (e.g., resolved or unresolved), neglecting fine-grained agent capabilities such as repository understanding, context retrieval, code localization, and bug diagnosis. In this paper, we introduce SWE-Explore, a benchmark that isolates the evaluation of repository exploration, a critical capability of coding agents. Given a repository and an issue, SWE-Explore asks an explorer to return a ranked list of relevant code regions under a fixed line budget. SWE-Explore covers 848 issues across 10 programming languages and 203 open-source repositories. For each instance, we derive line-level ground truth from independent agent trajectories that successfully solved the same issue, distilling the specific code regions their solution paths actually consulted. We evaluate exploration along coverage, ranking, and context-efficiency dimensions, showing that these metrics strongly track downstream repair behavior. Across a broad set of retrieval methods, general coding agents, and specialized localizers, we find that agentic explorers form a clear tier above classical retrieval. While file-level localization is already strong for modern methods, line-level coverage and efficient ranking remain the key axes differentiating state-of-the-art explorers.",
+    "upvotes": 77,
+    "projectPage": "https://huggingface.co/datasets/SWE-Explore-Bench/SWE-Explore-Bench",
+    "ai_keywords": [
+      "repository exploration",
+      "coding agents",
+      "SWE-bench",
+      "SWE-Explore",
+      "line budget",
+      "code localization",
+      "context retrieval",
+      "repository understanding",
+      "bug diagnosis",
+      "retrieval methods",
+      "agentic explorers",
+      "line-level coverage",
+      "ranking",
+      "context-efficiency"
+    ]
+  },
+  {
+    "id": "2606.07082",
+    "title": "On the Geometry of On-Policy Distillation",
+    "summary": "On-policy distillation (OPD) is increasingly used to improve large language model reasoning, but its training dynamics remain poorly understood. We characterize the trajectory of OPD updates in parameter space and compare it with supervised fine-tuning (SFT) and reinforcement learning with verifiable rewards (RLVR). A suite of parameter-space diagnostics consistently places OPD in a relaxed off-principal regime: compared with SFT, its updates affect fewer weights and avoid principal directions more strongly, while compared with RLVR, they remain less tightly constrained. Beyond this static localization, OPD exhibits subspace locking: its cumulative updates rapidly enter a narrow low-dimensional channel. Constraining training to the update subspace formed early in training preserves OPD performance but substantially degrades SFT, indicating that the locked subspace is functionally sufficient for OPD. Control experiments further show that sparsifying the update tokens and shifting rollout generation off-policy preserve the rank dynamics, whereas mixing the OPD objective with RLVR changes them. Overall, these results suggest that OPD is not merely an intermediate point between SFT and RLVR, but induces its own update geometry in parameter space.",
+    "upvotes": 45,
+    "projectPage": null,
+    "ai_keywords": [
+      "on-policy distillation",
+      "parameter space",
+      "supervised fine-tuning",
+      "reinforcement learning",
+      "verifiable rewards",
+      "parameter-space diagnostics",
+      "subspace locking",
+      "update subspace",
+      "rank dynamics"
+    ]
+  },
+  {
+    "id": "2606.09828",
+    "title": "Latent Spatial Memory for Video World Models",
+    "summary": "Video world models that maintain 3D spatial consistency across generated frames typically rely on explicit point cloud memory constructed in RGB space. This design is both computationally expensive, requiring repeated rendering and VAE encoding, and inherently lossy, as the round trip through pixel space discards rich features of the learned latent representation. In this paper, we introduce latent spatial memory for video world models, a persistent 3D cache that stores scene information directly in the diffusion latent space, avoiding pixel-space reconstruction. Building on this, we propose Mirage, a latent-space spatial memory framework that constructs the memory by lifting latent tokens into 3D via depth-guided back-projection and queries it by synthesizing novel views through direct latent-space warping. This unified formulation eliminates both the information loss of pixel-space reconstruction and the computational burden of repeated encoding and rendering. Experiments show that latent spatial memory achieves up to 10.57times faster end-to-end video generation and 55times reduction in memory footprint relative to explicit 3D baselines. Leveraging the geometric prior of the diffusion model, Mirage attains state-of-the-art performance on WorldScore and strong reconstruction quality on RealEstate10K.",
+    "upvotes": 32,
+    "projectPage": "https://microsoft.github.io/LatentSpatialMemory/",
+    "ai_keywords": [
+      "video world models",
+      "point cloud memory",
+      "RGB space",
+      "diffusion latent space",
+      "latent spatial memory",
+      "depth-guided back-projection",
+      "latent-space warping",
+      "end-to-end video generation",
+      "memory footprint",
+      "WorldScore",
+      "RealEstate10K"
+    ]
+  },
+  {
+    "id": "2509.10078",
+    "title": "Human Psychometric Questionnaires Mischaracterize LLM Behavior",
+    "summary": "We examine whether human psychometric questionnaires can serve as reliable tools for characterizing and predicting LLM behavior in everyday user interactions. We analyze eight open-source LLMs by comparing their value and personality profiles derived from two different methods: Likert self-reports on established questionnaires (PVQ-40/21 and BFI-44/10) and generation probabilities over value-laden responses to everyday user queries. The two profiles diverge substantially. Within-construct item consistency, often cited as evidence of stable LLM dispositions, disappears in generation probabilities. We attribute this gap to the fact that explicit lexical cues in established questionnaire items allow models to recognize the target construct and respond in alignment-consistent, socially desirable ways, whereas realistic user queries provide no such cues. In addition, demographic persona prompts shift models' responses to human questionnaires in ways consistent with real human patterns, but no such shifts appear in the generation probabilities of responses to realistic user queries, showing their limited ability to simulate the behaviors of target demographics in real-world user interactions. Overall, our study shows that human psychometric questionnaires are insufficient tools for predicting LLM behavior and suggests generation-based profiling as a more accurate measure.",
+    "upvotes": 24,
+    "projectPage": null,
+    "ai_keywords": [
+      "LLMs",
+      "psychometric questionnaires",
+      "value profiles",
+      "personality profiles",
+      "Likert self-reports",
+      "BFI-44/10",
+      "PVQ-40/21",
+      "generation probabilities",
+      "value-laden responses",
+      "demographic persona prompts"
+    ]
+  },
+  {
+    "id": "2606.09669",
+    "title": "SpatialWorld: Benchmarking Interactive Spatial Reasoning of Multimodal Agents in Real-World Tasks",
+    "summary": "Spatial reasoning is a foundational capability for multimodal large language models (MLLMs) to perceive and operate within the physical world. However, existing benchmarks predominantly rely on passive evaluation (e.g., static VQA) or simulator-specific pipelines, failing to assess general interactive spatial understanding. We introduce SpatialWorld, a unified benchmark designed specifically for evaluating the interactive spatial understanding of multimodal agents in complex real-world tasks. Integrating eight heterogeneous simulation backends under a shared, simulator-agnostic protocol, SpatialWorld features 760 human-annotated tasks across diverse domains (e.g., household routines, travel, social collaboration). Agents must solve tasks under vision-only partial observability, actively gathering egocentric visual evidence and expressing decisions via a unified, text-based action interface native to MLLMs. For reliable evaluation, each task includes a human-validated initial state, a reference trajectory, and a terminal-state verifier. Evaluating 15 advanced agents reveals that robust spatial task solving remains challenging: the strongest model, GPT-5, achieves an average task success rate (TSR) of only 17.4%, while the leading open-source model, Qwen-3.5, reaches 14.1%. Further analysis exposes a clear mismatch between task success and execution efficiency, alongside substantial domain-specific performance variations. These bottlenecks in active exploration and long-horizon planning position SpatialWorld as a rigorous testbed for future spatial agents.",
+    "upvotes": 23,
+    "projectPage": "https://spatial-world.github.io",
+    "ai_keywords": [
+      "multimodal large language models",
+      "spatial reasoning",
+      "simulation backends",
+      "partial observability",
+      "text-based action interface",
+      "task success rate",
+      "active exploration",
+      "long-horizon planning"
+    ]
+  },
+  {
+    "id": "2606.09803",
+    "title": "Echo-Memory: A Controlled Study of Memory in Action World Models",
+    "summary": "We present Echo-Memory, a controlled study of memory mechanisms in action-conditioned world models. These models generate multi-segment videos from a first frame, text prompt, and camera-action sequence, but their central failure is often memory rather than local image synthesis: after the camera leaves and returns, the scene or salient object may silently change. Existing memory designs are hard to compare because gains are entangled with backbone, training, retrieval, and evaluation differences. Echo-Memory fixes the action-to-video interface and varies only how history is stored and read by the generator. Under a shared video diffusion backbone, optimizer, camera-action representation, sampler, and evaluation pipeline, we compare raw context, compression-based memory, spatial summaries with different read-out paths, and state-space recurrence. This matched matrix separates four otherwise conflated axes: capacity, compression, read-out, and recurrence. We also evaluate memory through a three-branch protocol: replay quality, in-domain loop revisit, and open-domain return probes. The branches routinely disagree, showing that replay fidelity is not a sufficient proxy for remembering a world. Three findings follow. Raw context is a strong capacity baseline and improves open-domain return far more than it improves replay metrics. Compactness is not a free substitute for capacity: aggressive spatial and hybrid-compression memories lose the salient evidence needed for return. Finally, block-wise state-space recurrence is the strongest open-domain return mechanism in our matrix, showing that the structure of implicit memory matters as much as the decision to use it. These results provide a compact protocol for studying memory in action world models beyond isolated replay metrics.",
+    "upvotes": 22,
+    "projectPage": "https://echo-team-joy-future-academy-jd.github.io/Echo-Memory/",
+    "ai_keywords": [
+      "action-conditioned world models",
+      "video diffusion backbone",
+      "memory mechanisms",
+      "context memory",
+      "compression-based memory",
+      "spatial summaries",
+      "state-space recurrence",
+      "replay quality",
+      "loop revisit",
+      "return probes"
+    ]
+  },
+  {
+    "id": "2606.09079",
+    "title": "FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention",
+    "summary": "Conventional LLMs keep the full KV cache loaded during decoding, causing a severe GPU memory bottleneck for ultra-long context serving. In this report, we propose Lookahead Sparse Attention (LSA), a novel inference paradigm powered by a Neural Memory Indexer built upon the DeepSeek-V4 architecture. Rather than passively attending to all historical tokens, LSA proactively predicts future context demands and preserves only the query-critical KV chunks in the GPU memory. Crucially, we instantiate this architecture via a backbone-free decoupled training strategy. By formulating the indexer as a standard dual-encoder architecture, we train it independently using standard retrieval training frameworks without ever loading the massive backbone model into GPU memory.\n  We demonstrate that this \"less is more\" paradigm significantly maximizes serving efficiency while acting as an effective attention denoiser in tasks that rely on long-term global memory. Across primary long-context evaluation suites (e.g., LongBench-v2, LongMemEval, and RULER), FM-DS-V4 compresses the average physical KV cache footprint down to merely 13.5% of the full-context baseline, while consistently preserving or slightly elevating downstream accuracy (+0.6% absolute margin on average). Crucially, at extreme 500K scales, FlashMemory suppresses the physical KV cache overhead by over 90% without destabilizing the backbone's core reasoning capacities.",
+    "upvotes": 17,
+    "projectPage": null,
+    "ai_keywords": [
+      "LLMs",
+      "KV cache",
+      "decoding",
+      "Neural Memory Indexer",
+      "Lookahead Sparse Attention",
+      "dual-encoder architecture",
+      "attention denoiser",
+      "long-context evaluation",
+      "FlashMemory"
+    ]
+  },
+  {
+    "id": "2606.09826",
+    "title": "OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics",
+    "summary": "Vision-language model (VLM) agents are increasingly deployed in interactive game environments. Yet game benchmarks for VLM agents typically report a single first-attempt score per (agent, game) pair, focus on single-agent Solo play, and lack unified protocols for evaluating heterogeneous agent classes (commercial VLMs, open-weight VLMs, and specialized game policies) on the same footing. We address these gaps with OmniGameArena, a real-time benchmark of twelve newly built Unreal Engine 5 games spanning Solo (7), PvP (3), and Coop (2) with unified action interfaces, and the Improvement Dynamics Curve (IDC), an agentic-reflection harness in which a tool-using reflector LLM autonomously refines a bounded skill prompt across multiple rounds. Beyond cold-start leaderboard scores, IDC exposes two additional observables for each (agent, game) pair: how the score evolves across reflection rounds, and how the learned skill behaves on held-out task variants. We report these observables for twelve VLM agents on the cold-start leaderboard and four top agents under IDC.",
+    "upvotes": 11,
+    "projectPage": "https://mxlin043.github.io/OmniGameArena/",
+    "ai_keywords": [
+      "Vision-language model",
+      "Unreal Engine 5",
+      "real-time benchmark",
+      "Improvement Dynamics Curve",
+      "tool-using reflector LLM",
+      "bounded skill prompt",
+      "reflection rounds",
+      "skill generalization"
+    ]
+  },
+  {
+    "id": "2606.08415",
+    "title": "CoVEBench: Can Video Editing Models Handle Complex Instructions?",
+    "summary": "While recent text-guided video editing models excel at elementary tasks (e.g., style transfer, object insertion), real-world user requests are highly compositional. A single prompt often demands multiple coupled edits, such as modifying subjects, actions, and camera views, while strictly preserving unrelated spatiotemporal content. Existing benchmarks, heavily constrained by isolated edits and coarse global metrics, fail to diagnose how models handle such complex workflows. To address this gap, we introduce CoVEBench, a compositional video editing benchmark comprising 416 curated source videos, 626 multi-point editing instructions, and 9,990 fine-grained checklist items. Covering diverse editing dimensions, CoVEBench evaluates models via MLLM-judged instruction compliance and video fidelity, alongside automated metrics for video quality. Extensive experiments reveal that compositional editing remains a profound challenge: current models frequently omit edits, violate preservation constraints, or introduce artifacts when handling multiple operations simultaneously. CoVEBench provides a challenging, diagnostic testbed to advance video editing toward realistic user workflows.",
+    "upvotes": 11,
+    "projectPage": "https://nju-link.github.io/CoVEBench/",
+    "ai_keywords": [
+      "text-guided video editing",
+      "compositional editing",
+      "video editing benchmark",
+      "multi-point editing instructions",
+      "instruction compliance",
+      "video fidelity",
+      "automated metrics",
+      "spatiotemporal content preservation"
+    ]
+  },
+  {
+    "id": "2606.08348",
+    "title": "Bayesian-Agent: Posterior-Guided Skill Evolution for LLM Agent Harnesses",
+    "summary": "LLM agents increasingly rely on external inference conditions: prompts, tools, memory, SOPs, skills, and harness feedback. These assets can improve task execution without changing model weights, but they are often revised by heuristic reflection or by reusing observed successes and failures as if counts alone were reliable belief. We introduce Bayesian-Agent, a native and cross-harness framework that treats reusable skills and SOPs as hypotheses about whether a frozen model will succeed under a particular prompt, context, and harness environment. Bayesian-Agent records verified trajectory evidence, maintains a feature-conditioned categorical posterior over each skill, and maps posterior state into inspectable actions such as patch, split, compress, retire, and explore. Model-facing prompts receive executable guardrails and failure-mode patches, while posterior summaries remain available for audit. With deepseek-v4-flash, incremental repair improves SOP-Bench from 80\\% to 95\\%, Lifelong AgentBench from 90\\% to 100\\%, and RealFin-Bench from 45\\% to 65\\%. We further evaluate Bayesian-Agent's native backend and optional GenericAgent, mini-swe-agent, and Claude Code backends. The results include positive, negative, saturated, and case-study settings, suggesting that agent skill evolution is best viewed as posterior-guided harness optimization rather than uncalibrated prompt accumulation. The source code is available at https://github.com/DataArcTech/Bayesian-Agent.",
+    "upvotes": 11,
+    "projectPage": "https://dataarctech.github.io/Bayesian-Agent/",
+    "ai_keywords": [
+      "Bayesian-Agent",
+      "Bayesian inference",
+      "skill hypotheses",
+      "posterior distribution",
+      "agent skill evolution",
+      "harness optimization",
+      "SOP-Bench",
+      "Lifelong AgentBench",
+      "RealFin-Bench",
+      "deepseek-v4-flash"
+    ]
+  },
+  {
+    "id": "2606.03980",
+    "title": "Skill-RM: Unifying Heterogeneous Evaluation Criteria via Agent Skill",
+    "summary": "Reward models (RMs) provide critical feedback signals for LLM post-training, notably in reinforced fine-tuning (RFT) and reinforcement learning (RL) pipelines. However, current reward evaluation relies on heterogeneous criteria such as rule-based verifiers, ground-truth references, procedural checklists, and complex rubrics, where a unified mechanism to integrate all types of evidence remains unexplored. To this end, we propose Skill Reward Model (Skill-RM), a unified framework that reformulates reward modeling as the execution of a reusable Reward-Evaluation Skill. By treating reward computation as a structured agentic task, Skill-RM provides a consistent interface to orchestrate heterogeneous resources, dynamically selecting and aggregating evidence tailored to the specific requirements of each input. This approach enables the reward model to move beyond static evaluation, ensuring consistency and transparency across diverse tasks. Extensive experiments on reward benchmarks and downstream applications, including best-of-N selection and reinforcement learning, demonstrate that Skill-RM consistently outperforms traditional judge baselines. Our findings suggest that Skill-RM not only provides a unified solution for reward modeling but also achieves superior performance through the strategic and dynamic orchestration of evidence. The code is at https://github.com/Qwen-Applications/Skill-RM.",
+    "upvotes": 9,
+    "projectPage": null,
+    "ai_keywords": [
+      "reward models",
+      "reinforced fine-tuning",
+      "reinforcement learning",
+      "reward evaluation skill",
+      "heterogeneous criteria",
+      "evidence aggregation",
+      "structured agentic task",
+      "reward modeling"
+    ]
+  },
+  {
+    "id": "2606.09811",
+    "title": "AHA-WAM:Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing",
+    "summary": "World-action models have emerged as a promising paradigm for robot manipulation, jointly modeling visual scene dynamics and actions to inject physical priors into policy learning. However, existing world-action models couple world prediction and action execution at the same temporal resolution, forcing the world branch to model near-term frame variations that are redundant and weakly informative. We posit that strictly binding world prediction and action execution to the same temporal rhythm may underutilize the potential of the video branch for embodied control. Therefore, we propose AHA-WAM, an Asynchronous Horizon-Adaptive World-Action Model built on a dual Diffusion Transformer (DiT) architecture that reorganizes world-action modeling around this temporal asymmetry. AHA-WAM instantiates the video DiT as a low-frequency world planner that maintains rolling key-value memory over past observations and exposes reusable layerwise latent context encoding long-horizon scene evolution, while a high-frequency action DiT executes short action chunks in closed loop by querying this context through layerwise joint attention. To support asynchronous execution, we introduce horizon-adaptive offset training and Observation-Guided Video-Context Routing (OVCR), which together let the action expert exploit long-horizon world context while remaining responsive to real-time execution state without rerunning the video DiT. Experiments on RoboTwin and real-world manipulation tasks show that AHA-WAM achieves state-of-the-art performance without any robot-data pretraining, attaining 92.80% average success on RoboTwin and 78.3% success across 4 real-world tasks, while reaching 24.17 Hz closed-loop control with a 4.59x speedup over Fast-WAM.",
+    "upvotes": 6,
+    "projectPage": "https://serene-sivy.github.io/aha-wam/",
+    "ai_keywords": [
+      "world-action models",
+      "Diffusion Transformer",
+      "dual Diffusion Transformer",
+      "world planner",
+      "action DiT",
+      "video DiT",
+      "layerwise joint attention",
+      "horizon-adaptive offset training",
+      "Observation-Guided Video-Context Routing",
+      "closed-loop control",
+      "robotic manipulation"
+    ]
+  },
+  {
+    "id": "2606.09659",
+    "title": "End-to-End Context Compression at Scale",
+    "summary": "Long-context language model inference is bottlenecked by memory, as the KV cache grows with context length. Recent techniques to compress the KV cache fall short: they either degrade model quality substantially or require considerable time and compute to compress a single long prompt. Furthermore, many methods require the input to fit within the target model's context window, and are generally incompatible with modern production inference engines. Encoder-decoder compressors, which map a long token sequence to a shorter sequence of latent embeddings consumed by a decoder, are an appealing alternative in principle. However, existing approaches are not competitive with KV cache compression on the accuracy-efficiency frontier. In this work, we revisit encoder-decoder compression and close this gap. We first perform an architecture search, pre-training many variants from scratch to determine how best to design and train encoder-decoder compressors. Guided by our findings, we continually pre-train a family of 0.6B-encoder, 4B-decoder models on over 350B tokens each, at compression ratios of 1:4, 1:8, and 1:16. We introduce Latent Context Language Models (LCLMs), a family of compressors that improve the Pareto frontier across general-task performance, compression speed, and peak memory usage. We demonstrate that LCLMs serve as efficient backbones for long-horizon agents, letting the agent skim through a compressed long context and adaptively expand relevant segments on demand.",
+    "upvotes": 5,
+    "projectPage": null,
+    "ai_keywords": [
+      "encoder-decoder compressors",
+      "KV cache",
+      "long-context language models",
+      "latent embeddings",
+      "encoder-decoder compression",
+      "architecture search",
+      "pre-training",
+      "compression ratios",
+      "Latent Context Language Models",
+      "long-horizon agents",
+      "adaptive expansion"
+    ]
+  },
+  {
+    "id": "2606.08432",
+    "title": "Trajectory-Refined Distillation",
+    "summary": "On-policy distillation (OPD) has become a central post-training tool for large language models (LLMs), providing dense per-token teacher supervision along the student's own rollouts. In this work, we identify a common structural cause underlying OPD, which we call prefix failure. Under prefix failure, dense per-token supervision induces a bimodal teacher mixture and fragmented gradients that token-level loss truncation or reweighting fail to address. This observation motivates us to move beyond token-level loss interventions toward trajectory-level output corrections. We thus propose Trajectory-Refined Distillation (TRD), a trajectory-level correction method that revises the student's rollout under the teacher guidance while within on-policy support. By correcting problematic prefixes before distillation, TRD mitigates prefix failure at its source. Moreover, TRD improves the exploration by exposing the student to alternative valid derivations under teacher guidance, even when the original rolls are already correct. TRD can also be applied to on-policy self-distillation (OPSD), a parameter-sharing variant that uses the student model conditioned on privileged informations as the teacher. Across a wide range of benchmarks and base models at multiple scales, TRD consistently outperforms prior baselines, improving single-attempt accuracy and broadening reasoning coverage. Code is available at https://github.com/louieworth/trd",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "on-policy distillation",
+      "large language models",
+      "token-level loss",
+      "trajectory-level correction",
+      "prefix failure",
+      "bimodal teacher mixture",
+      "gradient fragmentation",
+      "teacher guidance",
+      "on-policy self-distillation",
+      "parameter-sharing"
+    ]
+  },
+  {
+    "id": "2606.09809",
+    "title": "Evaluation Cards: An Interpretive Layer for AI Evaluation Reporting",
+    "summary": "AI evaluation results are produced at scale but reported inconsistently across leaderboards, model cards, benchmark papers, and company blogs. The cost is interpretive: readers cannot reliably compare results across sources, identify what a report omits, or trace an aggregate claim to its underlying evidence. Recent efforts address isolated components but leave three gaps: they cover only narrow slices of the evaluation lifecycle and do not compose into a single interpretable record; they specify static representations that do not differentiate the questions different stakeholders bring to the same evidence; and they remain proposals on paper, lacking the extraction infrastructure required for adoption at scale. We present , an operational reporting layer that composes benchmark metadata, evaluation run data, and model metadata into a unified record. We (1) derive a reporting schema from a structured review of 52 papers and 10 stakeholder interviews, (2) implement four interpretive signals (reproducibility, documentation completeness, provenance and risk, and score comparability), rendered through reader modes calibrated to research and non-research audiences, and (3) deploy a monitoring tool that applies  across 5,816 models, 635 benchmarks, and 101,843 results, surfacing systematic gaps in current reporting practice.",
+    "upvotes": 2,
+    "projectPage": "https://evalevalai.com/",
+    "ai_keywords": [
+      "evaluation lifecycle",
+      "benchmark metadata",
+      "evaluation run data",
+      "model metadata",
+      "reporting schema",
+      "interpretive signals",
+      "reproducibility",
+      "documentation completeness",
+      "provenance",
+      "risk",
+      "score comparability",
+      "reader modes",
+      "monitoring tool"
+    ]
+  },
+  {
+    "id": "2606.09380",
+    "title": "Reasoning Arena: Trace Tournaments When Verifiable Rewards Fall Short",
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) has become a leading paradigm for improving the reasoning ability of large language models through outcome-based supervision. However, verifiable rewards frequently become uninformative at the group level: when all sampled traces of a given prompt receive identical rewards, group-relative advantage estimation provides no gradient signal, even though the traces may differ substantially in reasoning quality. We propose Reasoning Arena, an adaptive training framework that routes such non-diverse reward groups to a judge system instead of discarding them. Beyond examining the final answer, Reasoning Arena constructs trace tournaments, where reasoning traces are compared head-to-head to expose finer-grained preferences within the group, converting reasoning quality into rich relative reward signals. To make reward estimation efficient, rather than exhaustively comparing every pair, each new trace is evaluated against a small, dynamically updated pool of previously generated traces as anchors to efficiently establish a relative ranking. We then fit a Bradley-Terry model on the incomplete comparison graph, enabling scalable RL integration without quadratic pairwise comparisons. Empirical results demonstrate that Reasoning Arena consistently outperforms the RLVR baseline by 7.6% on average in competition mathematics and coding benchmarks. By converting otherwise wasted zero-advantage samples into useful gradient updates, our method accelerates training by 27% to 41%, saving nearly 50% of generation compute, and substantially improves overall reasoning performance.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "reinforcement learning",
+      "verifiable rewards",
+      "reasoning ability",
+      "outcome-based supervision",
+      "group-relative advantage estimation",
+      "judge system",
+      "trace tournaments",
+      "Bradley-Terry model",
+      "relative reward signals",
+      "scalable RL integration",
+      "zero-advantage samples"
+    ]
+  },
+  {
+    "id": "2606.09365",
+    "title": "Experience Makes Skillful: Enabling Generalizable Medical Agent Reasoning via Self-Evolving Skill Memory",
+    "summary": "Medical agent systems are increasingly expected to support interactive clinical decision making rather than only static question answering. In such settings, effective agents must reuse prior experience across evolving cases, yet existing memory mechanisms often retain raw historical traces that are redundant, noisy, and difficult to govern. More importantly, they rarely distinguish which memories are truly useful for future reasoning. This limits their ability to accumulate compact and reliable experience for long-horizon clinical reasoning. To close this gap, we propose SkeMex, a post-deployment self-evolution framework that improves medical agents through a skill-based memory without updating model weights. SkeMex distills informative interaction trajectories into structured skills that encode reusable procedural knowledge, and organizes them into a multi-branch repository spanning general, task-specific, and action-level experience. To determine which memories should be reused and retained, SkeMex estimates context-dependent utility from environment feedback and uses it to guide value-aware retrieval and repository governance. A closed-loop ``Read--Write--Assess--Govern\" lifecycle further supports continual evolution by writing new skills, updating utilities, promoting useful memories, and removing harmful entries. Experiments across diverse clinical tasks show that SkeMex consistently outperforms representative memory-based agents in both offline and online settings. It also generalizes across model backbones and supports transferable skill memory. All data and code will be released publicly.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "medical agent systems",
+      "interactive clinical decision making",
+      "memory mechanisms",
+      "post-deployment self-evolution",
+      "skill-based memory",
+      "interaction trajectories",
+      "procedural knowledge",
+      "multi-branch repository",
+      "context-dependent utility",
+      "value-aware retrieval",
+      "repository governance",
+      "closed-loop lifecycle",
+      "Read--Write--Assess--Govern",
+      "continual evolution",
+      "offline and online settings",
+      "transferable skill memory"
+    ]
+  },
+  {
+    "id": "2606.09516",
+    "title": "SwiftVR: Real-Time One-Step Generative Video Restoration",
+    "summary": "Real-time video restoration (VR) for live streams requires high-resolution outputs under strict per-frame latency constraints. Existing one-step diffusion-based VR models remain difficult to deploy on consumer-grade GPUs due to two main bottlenecks: quadratic spatial attention at high resolutions and the latency-memory overhead of large video autoencoders. We present SwiftVR, a streaming one-step generative VR framework that reduces both bottlenecks under a causal chunk-wise protocol. For attention, mask-free shifted-window self-attention gathers each spatial window into a dense tensor via deterministic indexing, keeping all attention calls on the dense scaled dot-product attention path without masks, cyclic shifts, padding, or hardware-specific sparse kernels. Because SwiftVR uses only standard dense SDPA calls, the trained model transfers to consumer GPUs without retraining or custom kernels. For autoencoding, a lightweight Restoration-aware Autoencoder enables fast chunk-wise decoding while preserving reconstruction quality. On a single H100, SwiftVR sustains 31~FPS at 2560x1440 and 14~FPS at 3840x2160, whereas all compared diffusion-based VR baselines exceed the memory limit at 4K. On a consumer RTX~5090, SwiftVR reaches 26~FPS at 1920x1080. To our knowledge, SwiftVR is the first generative VR model to achieve real-time 1080p streaming on a consumer-grade GPU, while attaining strong no-reference perceptual quality with lower inference cost. Project is available at https://h-oliday.github.io/SwiftVR.",
+    "upvotes": 1,
+    "projectPage": "https://h-oliday.github.io/SwiftVR/",
+    "ai_keywords": [
+      "diffusion-based VR",
+      "shifted-window self-attention",
+      "dense SDPA",
+      "Restoration-aware Autoencoder",
+      "causal chunk-wise protocol",
+      "real-time video restoration",
+      "consumer-grade GPU",
+      "no-reference perceptual quality"
+    ]
+  },
+  {
+    "id": "2606.09348",
+    "title": "PBSD: Privileged Bayesian Self-Distillation for Long-Horizon Credit Assignment",
+    "summary": "Long-horizon agentic tasks pose a fundamental credit assignment challenge for outcome-base reinforcement learning: trajectory-level rewards verify final correctness but provide limited guidance on which intermediate reasoning steps or tool interactions contribute to the outcome. The difficulty is especially pronounced in multi-turn search agents, where successful trajectories may contain misleading actions and failed trajectories may contain valuable evidence-gathering steps. We propose PBSD (Privileged Bayesian Self-Distillation), a Bayes-calibrated self-distillation method for fine-grained credit assignment under sparse final rewards. PBSD measures trajectory quality through the posterior-to-prior probability ratio of the verified answer and applies Bayes' rule to convert this hard-to-estimate answer-side ratio into a tractable likelihood ratio between a standard student model and a privileged answer-conditioned teacher model. Autoregressive decomposition of this Bayesian evidence score yields turn-level signals that identify whether each intermediate turn supports or undermines the verified outcome. Consequently, PBSD provides a principled and elegant reweighting scheme that transforms sparse outcome supervision into Bayes-calibrated turn-level credit signals, while remaining fully compatible with standard policy optimization. Experiments demonstrate that PBSD consistently enhances performance across both in-domain and out-of-domain settings, and effectively transfers knowledge from short-context training to long-context inference, suggesting that its fine-grained credit assignment mechanism facilitates more effective policy learning and yields improved generalization.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "reinforcement learning",
+      "credit assignment",
+      "self-distillation",
+      "Bayesian calibration",
+      "policy optimization",
+      "autoregressive decomposition",
+      "trajectory-level rewards",
+      "turn-level signals",
+      "privileged learning",
+      "evidence scoring"
+    ]
+  },
+  {
+    "id": "2606.08548",
+    "title": "OASIS: From Simulation Data Collection to Real-World Humanoid Loco-Manipulation",
+    "summary": "Recent progress in robot manipulation has been largely driven by learning from large-scale demonstrations. For humanoid robot loco-manipulation tasks, however, existing data sources force an unsatisfying tradeoff between trajectory quality and scalability. Real-world teleoperation provides the highest-quality trajectories but requires dedicated physical space and time-consuming scene resets. Simulation offers an alternative way out of this dilemma: it can produce clean, embodiment-aligned data at scale without any physical hardware. In this paper, we propose OASIS, a simulation-data-driven framework for humanoid loco-manipulation. OASIS automatically reconstructs realistic object assets from real-world images using a 3D generative model. Based on these assets, trajectories are first collected through teleoperation in simulation, and then augmented under diverse domain randomizations in a post-processing stage. With the resulting simulation data, we further design a hierarchical visuomotor policy for humanoid loco-manipulation. Extensive experiments on the real humanoid robot show that, under zero-shot deployment, the policy trained on our simulation data achieves higher success rates on most tasks than that trained on real-robot teleoperation data, owing largely to the broad lighting and environmental variations covered by our simulation rendering, which real-robot data fails to capture. The project page is available at https://oasis-humanoid.github.io/.",
+    "upvotes": 1,
+    "projectPage": "https://oasis-humanoid.github.io/",
+    "ai_keywords": [
+      "3D generative model",
+      "simulation-data-driven framework",
+      "humanoid loco-manipulation",
+      "hierarchical visuomotor policy",
+      "domain randomization",
+      "teleoperation",
+      "trajectory collection",
+      "visual servoing"
+    ]
+  },
+  {
+    "id": "2606.07299",
+    "title": "DuMate-DeepResearch: An Auditable Multi-Agent System with Recursive Search and Rubric-Grounded Reasoning",
+    "summary": "Deep Research (DR) has emerged as a new agentic paradigm to tackle complex, open-ended research tasks, demanding systems that can iteratively frame problems, acquire evidence, verify sources, and synthesize long-form reports. In practice, however, current DR systems are constrained by four interrelated limitations: long-horizon planning over an underspecified scope, the bottleneck of decomposing and scheduling such tasks within a single agent, hallucination risk in long-form synthesis, and limited process auditability. This technical report presents DuMate-DeepResearch, a multi-agent DR framework built on the Qianfan Agent Foundry. The framework decouples the Agent Core, which handles task understanding, planning, and scheduling, from an extensible Tool Ecosystem for retrieval, evidence acquisition, and report rendering, making every intermediate decision and tool invocation explicitly traceable. Building on this infrastructure, DuMate-DeepResearch further introduces three mechanisms: (i) a graph-based dynamic planning strategy expands the research roadmap coarse-to-fine and continuously revises it through reflection, re-planning, backtracking, and parallel branching; (ii) a recursive two-level execution design delegates each complex search sub-task to an inner Search Agent that runs its own planning loop, isolating noisy retrieval and stabilizing long-horizon execution; (iii) a rubric-based test-time optimization mechanism dynamically generates task-specific quality criteria and uses them as live reasoning scaffolds for evidence-grounded synthesis and adaptive stopping. Across two deep research benchmarks, DuMate-DeepResearch establishes new state-of-the-art results: the best overall score (58.03%) on DeepResearch Bench, and the best overall score (61.95%) on DeepResearch Bench II while ranking first in information recall and analysis.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "multi-agent DR framework",
+      "Qianfan Agent Foundry",
+      "Agent Core",
+      "Tool Ecosystem",
+      "graph-based dynamic planning",
+      "recursive two-level execution",
+      "rubric-based test-time optimization",
+      "DeepResearch Bench",
+      "DeepResearch Bench II"
+    ]
+  },
+  {
+    "id": "2606.05753",
+    "title": "Cosine Misleads: Auxiliary Losses Reshape Vision Language Models, Not Their Latents",
+    "summary": "Latent visual reasoning (LVR) inserts supervised latent tokens between perception and answer generation in vision-language models (VLMs). The field uses alignment between these latents and their visual targets, i.e., cosine similarity or mean squared error (MSE), as both the training loss and the quality metric, assuming that better alignment yields a better answer. We test this with a designed matrix of five LVR variants and find the assumption inverted: cosine alignment is negatively correlated with accuracy across all five (r=-0.94). To explain this, we introduce PRISM, a pair of inference-time diagnostics: a linear probe that asks where the answer is decodable, and a corruption test that asks whether the latent is load-bearing. The supervised latents are largely bypassed. Corrupting them shifts accuracy by at most four points. The answer is decodable downstream of the latent but not at it, and the size of this decodability gap predicts how much each variant relies on its latent under perturbation. Consistent with an Information Bottleneck reading of the loss, the auxiliary objective reshapes the language model via shared parameters rather than via the latent variable it nominally optimizes.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "latent visual reasoning",
+      "vision-language models",
+      "supervised latent tokens",
+      "cosine similarity",
+      "mean squared error",
+      "linear probe",
+      "corruption test",
+      "information bottleneck",
+      "shared parameters"
+    ]
+  },
+  {
+    "id": "2606.05122",
+    "title": "Self-Evaluation Is Already There: Eliciting Latent Judge Calibration in Base LLMs with Minimal Data",
+    "summary": "Large language models are increasingly evaluated by other models, raising a natural question: can a model predict how a judge will score its own output? We find that the ability is largely present before any targeted training: prompted few-shot, a base model already predicts an external judge's multi-attribute quality scores on open-ended responses well above chance across three benchmarks. We introduce Self-Evaluation Elicitation (SEE), a method that surfaces this latent ability through a short cycle comprising a calibration-coupled reinforcement learning phase that improves the answer and predicts the judge, followed by a masked distillation phase that sharpens the prediction while leaving the answer untouched. From 160 unique examples, roughly 31x fewer than a reinforcement learning baseline, SEE improves held-out calibration across three benchmarks while preserving answer quality. The elicited self-evaluation is sharply localized within the model's own token distribution and stable across judges it was never trained against, indicating a transferable notion of quality rather than a single judge's preference. These results reframe judge-aligned self-evaluation as a problem of elicitation rather than acquisition.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "self-evaluation",
+      "reinforcement learning",
+      "masked distillation",
+      "calibration",
+      "few-shot prompting",
+      "multi-attribute quality scores",
+      "judge alignment",
+      "token distribution",
+      "model calibration"
+    ]
+  },
+  {
+    "id": "2606.04662",
+    "title": "Why Muon Outperforms Adam: A Curvature Perspective",
+    "summary": "Muon improves training efficiency over Adam in large language-model training by about two times, but the local geometric source of this advantage remains unclear. Our work takes a first step toward demystifying Muon's superiority over Adam from a curvature perspective. First, we apply a second-order Taylor approximation to the training landscape and show that Muon achieves a larger one-step loss decrease than Adam at matched validation loss. The two optimizers have comparable first-order gains, but Muon consistently incurs a smaller second-order curvature penalty. Second, we decompose this curvature penalty into the squared update norm and Normalized Directional Sharpness (NDS). We find that Muon and Adam have comparable update norms, so Muon's smaller curvature penalty is driven by lower NDS, not update scale. Third, we study how training data and model structure shape Muon's NDS advantage. Using Zipf-Probabilistic Context-Free Grammar (PCFG) data with controlled imbalance, we show that data imbalance amplifies Muon's NDS advantage over Adam. A within-/cross-layer decomposition further shows that, in the middle and late stages of training, Muon's lower NDS is mainly sustained by smaller within-layer curvature. Beyond empirical evidence, we analyze stylized quadratic problems with heterogeneous curvature and gradient alignment toward high-curvature modes. We prove that Muon attains a smaller average NDS than GD by balancing update energy across curvature groups; when curvature heterogeneity is sufficiently strong, this also yields lower local quadratic loss after the same number of steps.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "Adam",
+      "Muon",
+      "curvature penalty",
+      "normalized directional sharpness",
+      "second-order Taylor approximation",
+      "training landscape",
+      "update norm",
+      "within-layer curvature",
+      "cross-layer curvature",
+      "Zipf-Probabilistic Context-Free Grammar",
+      "heterogeneous curvature",
+      "gradient alignment",
+      "local quadratic loss"
+    ]
+  },
+  {
+    "id": "2606.06523",
+    "title": "Lean4Agent: Formal Modeling and Verification for Agent Workflow and Trajectory",
+    "summary": "Equipping Large Language Models (LLMs) to execute reliable multi-step workflows has become a central challenge in artificial intelligence. Despite recent advances in LLMs' agentic capabilities, most agent systems still lack formal methods for specifying, verifying, and debugging their workflow and execution trajectories. This challenge mirrors a long-standing problem in mathematics, where the ambiguity of natural languages (NLs) motivates the development of formal languages (FLs). Inspired by this paradigm, we propose **Lean4Agent**, to the best of our knowledge, the first framework that uses Lean4, a dependent-type FL to model and verify agent behavior. **Lean4Agent** launches **FormalAgentLib**, an extensible Lean4 library for formally modeling and verifying agent workflows' semantic consistency under explicit assumptions, and enabling localization of execution-time failures revealed by trajectories. Building on **FormalAgentLib**, we further develop **LeanEvolve**, which applies results in **FormalAgentLib** to revise workflows to enhance its capability. Extensive experiments on a hard problem subset of SWE-Bench-Verified and a subset of ELAIP-Bench across 5 leading LLMs indicate that the verification-passing workflows outperform the failing ones by an average of **11.94%**, and **LeanEvolve** further improves SWE performance by **7.47%** on average. Furthermore, **Lean4Agent** establishes a foundation for a new field of using expressive dependent-type FL to formally model and verify agent behavior.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "Large Language Models",
+      "agent systems",
+      "formal methods",
+      "formal languages",
+      "dependent-type languages",
+      "Lean4",
+      "FormalAgentLib",
+      "LeanEvolve",
+      "SWE-Bench-Verified",
+      "ELAIP-Bench"
+    ]
+  },
+  {
+    "id": "2606.08481",
+    "title": "PIPE-Cypher: Automatic Enterprise Benchmark Generation for Text-to-Cypher Systems",
+    "summary": "Enterprise property graphs vary widely in schema structure, internal terminology, domain assumptions, governance constraints, and user interaction patterns. A deployment-relevant Text2Cypher benchmark therefore reflects the questions users and agents actually ask of that graph. Creating such a benchmark is difficult because schemas and values are unique, and graph structure changes over time. Each NL-query pair must also be executable, use real graph entities, preserve diversity, and remain balanced across query types and difficulty levels. We present PIPE-Cypher, a local benchmark-generation pipeline that turns a live property graph and optional seed queries from customer questions, analyst logs, or agent tool calls into balanced NL-to-Cypher benchmarks. PIPE-Cypher combines schema profiling, reverse-query grounding, constrained generation, deterministic Cypher governance, execution validation, redaction, diversity controls, and a calibrated local LLM judge. Using local Qwen3.5-9B generation and judging, PIPE-Cypher exports 3,000 accepted FinBench/SNB examples, completes three audited ablation suites, calibrates judge behavior with human labels, and evaluates 11 local downstream models. The resulting benchmark is deliberately discriminative: zero-shot transfer is weak, while a few-shot control shows that schema-specific example banks can help compatible model families. Together, PIPE-Cypher makes Text2Cypher benchmarking a repeatable process that evolves with the graph, its users, and its target workloads.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "Text2Cypher",
+      "property graphs",
+      "benchmark-generation pipeline",
+      "schema profiling",
+      "reverse-query grounding",
+      "constrained generation",
+      "Cypher governance",
+      "execution validation",
+      "redaction",
+      "diversity controls",
+      "local LLM judge",
+      "FinBench",
+      "SNB",
+      "zero-shot transfer",
+      "few-shot learning"
+    ]
+  },
+  {
+    "id": "2606.08324",
+    "title": "Set-Based Transformer for Atmospheric Compensation in Standoff LWIR Hyperspectral Imaging",
+    "summary": "Passive long-wave infrared (LWIR) hyperspectral imaging under a standoff geometry depends on atmospheric absorption and emission, as well as reflected radiance, thus making atmospheric compensation essential to get knowledge of a target of interest. Despite its importance, this compensation has been largely overlooked due to its practical and modeling difficulty. In this paper, we present a lightweight set-based deep learning framework that takes multiple radiance measurements, collected at different standoff ranges, as input and jointly estimates transmittance, atmospheric path radiance, and a shared downwelling spectrum. We analyze the learned representation with a sparse autoencoder and observe that several latent features do activate on geographically coherent subsets of the test data despite the absence of location supervision. Experiments on a MODTRAN generated standoff LWIR dataset demonstrate low spectral distortion across all estimated products. The dataset and code is publicly available at: https://factral.co/SAE-LWIR/",
+    "upvotes": null,
+    "projectPage": "https://factral.co/SAE-LWIR/",
+    "ai_keywords": [
+      "set-based deep learning framework",
+      "sparse autoencoder",
+      "transmittance estimation",
+      "atmospheric path radiance",
+      "downwelling spectrum",
+      "standoff LWIR imaging",
+      "MODTRAN dataset"
+    ]
+  },
+  {
+    "id": "2605.29463",
+    "title": "Honest Lying: Understanding Memory Confabulation in Reflexive Agents",
+    "summary": "Reflexion-style agents rely on self-generated reflections as memory, implicitly assuming that agents can accurately diagnose their own failures. We show that this assumption can fail systematically: across ALFWorld and HumanEval, agents store confident but incorrect interpretations of the task and continue acting on them across trials, even though the environment resets to the correct task each time. We call this failure mode memory confabulation and introduce the Reflection Repetition Rate (RRR), a log-based metric that detects repeated reliance on incorrect reflective content. Using RRR, we identify 16 frozen environments in ALFWorld, where 0 of 121 reflections mention the correct target object, and 4 analogous cases in HumanEval. Our mitigation replaces open-ended self-diagnosis with programmatic extraction of trajectory-level failure signals, increasing correct object mention from 0% to 86%, reducing RRR from 0.64 to 0.10, and solving 3 of 16 frozen ALFWorld environments, suggesting that reflective memory can reinforce false beliefs rather than correct them.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "reflexion-style agents",
+      "self-generated reflections",
+      "memory confabulation",
+      "Reflection Repetition Rate",
+      "trajectory-level failure signals"
+    ]
+  },
+  {
+    "id": "2605.24047",
+    "title": "EMMA: Extracting Multiple physical parameters from Multimodal Data",
+    "summary": "We introduce EMMA, a physics-informed multimodal framework that recovers all identifiable dynamical parameters of a system directly from raw video, audio, and image-based time-series observations. Unlike prior video-only approaches that struggle with occluded states, hidden actuation inputs, or assumptions about known initial conditions and coordinate frames, EMMA performs joint inference of explicit parameters, implicit dynamical components, and calibration invariants within a unified continuous-time model. EMMA leverages a Liquid Time-Constant (LTC) network to learn latent dynamics from heterogeneous modalities while a physics-constrained loss enforces consistency with the governing differential equations. A unified feature pipeline enables consistent alignment across video trajectories, acoustic signatures, and chart-derived measurements, allowing EMMA to estimate parameters under forced, implicit, and multivariate dynamics without requiring segmentation masks, differentiable rendering, or specialized sensors. Across 100+ scenarios including five standard dynamical benchmarks (75 Delfys videos), real-world rover and quadrotor systems with hidden inputs, and simulation-chart case studies spanning biological and chaotic systems, EMMA delivers robust multi-parameter recovery and significantly outperforms existing single-modality and equation-discovery baselines. Our results establish EMMA as a general, scalable solution for physics-consistent model extraction from opportunistic multimodal data. Code and data are available at: https://github.com/ImpactLabASU/EMMA-CVPR2026",
+    "upvotes": null,
+    "projectPage": "https://impactlabasu.github.io/EMMA-CVPR2026/",
+    "ai_keywords": [
+      "Liquid Time-Constant",
+      "physics-constrained loss",
+      "multimodal framework",
+      "dynamical parameters",
+      "continuous-time model",
+      "latent dynamics",
+      "heterogeneous modalities",
+      "differential equations",
+      "unified feature pipeline",
+      "opportunistic multimodal data"
+    ]
+  }
+]
