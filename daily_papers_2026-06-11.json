@@ -1,0 +1,405 @@
+[
+  {
+    "id": "2606.12397",
+    "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+    "summary": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a \"Power-then-Retract\" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.",
+    "upvotes": 60,
+    "projectPage": null,
+    "ai_keywords": [
+      "Mixture-of-Experts",
+      "router",
+      "expert proxies",
+      "router matrix",
+      "singular value decomposition",
+      "Manifold Power Iteration",
+      "power iteration",
+      "retraction",
+      "principal singular direction",
+      "expert matrix"
+    ]
+  },
+  {
+    "id": "2606.12191",
+    "title": "Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application",
+    "summary": "Environments serve as interactive systems for large language model (LLM) based agents across diverse scenarios and play a crucial role in driving the continual evolution of model capabilities. Despite this importance, existing work lacks a systematic categorization and deep analysis. This paper systematically studies current researches on agentic environments from the perspective of the environment engineering lifecycle, covering their modeling, synthesis, evaluation and application. Specifically, the paper first introduces representative environments from the perspectives of eight attributes and eight domains, providing detailed analyses of their development paths and highlighting their core capabilities. Second, for automated environment synthesis, two paradigms are introduced, such as symbolic synthesis and neural synthesis. This paper also shows different environment evaluation methods in each paradigm. Thirdly, the corresponding environment applications from the perspective of agent-environment co-evolution are discussed. In specific, the paper characterizes the primary pathways for agent evolution in dynamic environments from four complementary perspectives: memory-centric experience evolution, orchestration-centric workflow evolution, trajectory-centric offline evolution, and exploration-centric online evolution. And three paradigms of environment evolution are identified, namely neural-driven, difficulty-driven, and scaling-driven approaches. At last, several promising future directions are discussed, including Environment-as-a-Service, Multi-agent Environments, and Neural-Symbolic Environments.",
+    "upvotes": 52,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language model",
+      "agentic environments",
+      "environment engineering lifecycle",
+      "symbolic synthesis",
+      "neural synthesis",
+      "agent-environment co-evolution",
+      "memory-centric experience evolution",
+      "orchestration-centric workflow evolution",
+      "trajectory-centric offline evolution",
+      "exploration-centric online evolution",
+      "neural-driven evolution",
+      "difficulty-driven evolution",
+      "scaling-driven evolution"
+    ]
+  },
+  {
+    "id": "2606.11926",
+    "title": "Toward Generalist Autonomous Research via Hypothesis-Tree Refinement",
+    "summary": "Scientific progress depends on a repeated loop of exploration, experimentation, and abstraction. Researchers test candidate directions, interpret the evidence, and carry the resulting lessons into later attempts. We study how an AI agent can run this loop autonomously over long horizons. We introduce Arbor, a general framework for autonomous research that combines a long-lived coordinator, short-lived executors, and Hypothesis Tree Refinement (HTR), a persistent tree that links hypotheses, artifacts, evidence, and distilled insights across time. The coordinator manages global research strategy over the tree, while executors implement and test individual hypotheses in isolated worktrees. As results return, Arbor updates the tree, propagates reusable lessons, refines the search frontier, and admits verified improvements. This design turns autonomous research from a sequence of local attempts into a cumulative process in which strategy, execution, and evidence are carried across time. We evaluate Arbor under Autonomous Optimization (AO), an operational setting where an agent improves an initial research artifact through iterative experimentation without step-level human supervision. Across six real research tasks in model training, harness engineering, and data synthesis, Arbor achieves the best held-out result on all six tasks, attaining more than 2.5x the average relative held-out gain of Codex and Claude Code under the same task interface and resource budget. On MLE-Bench Lite, Arbor reaches 86.36% Any Medal with GPT-5.5, the strongest result in our comparison.",
+    "upvotes": 44,
+    "projectPage": "https://ruc-nlpir.github.io/Arbor/",
+    "ai_keywords": [
+      "autonomous research",
+      "long horizons",
+      "Hypothesis Tree Refinement",
+      "coordinator",
+      "executors",
+      "worktrees",
+      "iterative experimentation",
+      "research artifact",
+      "held-out result",
+      "MLE-Bench Lite"
+    ]
+  },
+  {
+    "id": "2606.09076",
+    "title": "Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions",
+    "summary": "Reward models are central to text-to-image post-training, but visual preference is subjective and better represented as a distribution over rubric scores than as a deterministic scalar. Existing scalar, score-token, and pairwise reward models over-compress uncertainty and fine-grained score differences, while reasoning-based generative rewards provide stronger judgments but are costly to deploy and difficult to use as direct optimization signals. We propose Z-Reward, a teacher-student reward modeling framework that decouples reasoning-heavy judgment from efficient reward deployment. The teacher is a large VLM that uses reasoning to infer rubric-aligned score distributions, and is trained with Group-wise Direct Score Optimization (GDSO), which combines policy-gradient rewards from distribution expectations with direct pointwise and pairwise supervision on score distributions and score gaps. The student is trained with Reasoning-Internalized Score Distillation (RISD), which transfers the teacher's reasoning-conditioned score distribution into a compact VLM without requiring explicit reasoning chains at inference time. On our internally annotated evaluation set, the 27B GDSO teacher reaches 89.6% human preference accuracy, outperforming SFT, RewardDance, and GRPO, while the 9B RISD student reaches 88.6%, outperforming the OPD baseline and closely matching the larger teacher. We further show that Z-Reward can serve as a differentiable reward signal for text-to-image optimization, yielding a 41.3% net human-preference improvement over the SFT baseline.",
+    "upvotes": 42,
+    "projectPage": null,
+    "ai_keywords": [
+      "reward models",
+      "visual preference",
+      "score distributions",
+      "reasoning-based generative rewards",
+      "teacher-student framework",
+      "Group-wise Direct Score Optimization",
+      "Reasoning-Internalized Score Distillation",
+      "VLM",
+      "policy-gradient rewards",
+      "direct pointwise supervision",
+      "pairwise supervision",
+      "text-to-image optimization"
+    ]
+  },
+  {
+    "id": "2606.09323",
+    "title": "TRL-Bench: Standardizing Cross-Paradigm Representation-Level Evaluation of Tabular Encoders",
+    "summary": "Tabular encoders are usually evaluated inside task-specific end-to-end pipelines, so models from different training paradigms are difficult to compare directly even when they operate on similar tabular signals. We introduce TRL-Bench, a multi-granular tabular representation learning (TRL) benchmark that standardizes cross-paradigm representation-level evaluation: each encoder exports row-, column-, or table embeddings through its supported wrapper, and shared lightweight heads probe them across three suites: TRL-CTbench (column/table), TRL-Rbench (row), and TRL-DLTE (compositional Data-Lake Table Enrichment spanning all three granularities). To support this standardized setting, we release curated benchmark assets and task reformulations, including 50 OpenML tables with 123 verified targets, 16 row-pair linkage rewrites, and a 47,772-table DLTE lake derived from 1,379 parent tables. Across 20 models and 16 tasks, TRL-Bench shows that once downstream conditions are standardized, encoder quality is capability-specific rather than captured by a single leaderboard. In TRL-CTbench, generic text encoders often lead on tasks with strong surface-text signal, while tabular specialists win where their pretraining objective aligns with the task. In TRL-Rbench, within-table prediction and cross-table linkage favor different training regimes, with atomic linkage performance correlating strongly with the row-matching stage of DLTE pipelines. In TRL-DLTE, the strongest pipelines combine capability-matched specialists rather than reuse a single encoder, and top end-to-end quality depends on non-additive compositional fit rather than per-stage marginal rank alone. TRL-Bench provides a common protocol for measuring reusable signal in exported tabular representations under shared downstream conditions. Code and data: https://github.com/LOGO-CUHKSZ/TRL-Bench",
+    "upvotes": 34,
+    "projectPage": "https://logo-cuhksz.github.io/trl-bench.github.io/",
+    "ai_keywords": [
+      "tabular encoders",
+      "representation learning",
+      "end-to-end pipelines",
+      "multi-granular benchmark",
+      "row embeddings",
+      "column embeddings",
+      "table embeddings",
+      "TRL-CTbench",
+      "TRL-Rbench",
+      "TRL-DLTE",
+      "OpenML tables",
+      "data-lake table enrichment",
+      "downstream tasks",
+      "capability-specific evaluation",
+      "compositional fit"
+    ]
+  },
+  {
+    "id": "2606.10728",
+    "title": "DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch",
+    "summary": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories from high-level specifications. However, training agents for such long-horizon software engineering tasks remains difficult due to the scarcity of large-scale, verifiable whole-repository generation data. In this paper, we introduce DeNovoSWE, a large-scale dataset for whole-repository generation. DeNovoSWE comprises 4,818 high-quality instances, where each instance requires generating a complete repository from documentation. Our dataset is automatically constructed through a carefully designed sandboxed agentic workflow, enabling scalable curation without human annotation. DeNovoSWE is constructed with \"divide and conquer\" and critic-repair philosophy. To balance data quality and diversity, we further introduce a difficulty-aware trajectory filtering strategy. Fine-tuning Qwen3-30B-A3B on DeNovoSWE substantially improves long-horizon SWE performance, raising its score on the challenging BeyondSWE-Doc2Repo benchmark from 5.8% to 47.2%.",
+    "upvotes": 25,
+    "projectPage": null,
+    "ai_keywords": [
+      "LLM-based code agents",
+      "whole-repository generation",
+      "large-scale dataset",
+      "sandboxed agentic workflow",
+      "divide and conquer",
+      "critic-repair philosophy",
+      "difficulty-aware trajectory filtering",
+      "fine-tuning",
+      "Qwen3-30B-A3B",
+      "BeyondSWE-Doc2Repo benchmark"
+    ]
+  },
+  {
+    "id": "2606.11683",
+    "title": "Reason, Then Re-reason: Cross-view Revisiting Improves Spatial Reasoning",
+    "summary": "Spatial reasoning from egocentric videos is inherently challenging because the observable evidence is constrained by the camera trajectory. Existing methods rely on single-turn inference, forcing models to resolve geometric ambiguity through semantic priors rather than verifiable evidence. We argue that spatial reasoning should be revisitable: conclusions formed under limited evidence should remain open to revision when complementary viewpoints become available. Building on this insight, we propose Reason, then Re-reason (ReRe), a training-free, inference-time framework with two phases: in the Reason Phase, an MLLM forms a spatial hypothesis from the original video; in the Re-reason Phase, it verifies or revises the hypothesis by observing a synthesized novel-view video. To enable effective cross-view revisiting, we design a Geometry-to-Video pipeline that renders strategically complementary novel views from predicted 3D geometry. These views feature an elevated, oblique perspective with scene-spanning coverage, while preserving the MLLM's native video interface without architectural modifications. Extensive evaluations on VSI-Bench and STI-Bench demonstrate that ReRe substantially boosts open-source MLLMs to rival proprietary state-of-the-art performance. Project page: https://zhenjiemao.github.io/ReRe/",
+    "upvotes": 19,
+    "projectPage": "https://zhenjiemao.github.io/ReRe/",
+    "ai_keywords": [
+      "spatial reasoning",
+      "egocentric videos",
+      "MLLM",
+      "spatial hypothesis",
+      "cross-view revisiting",
+      "Geometry-to-Video pipeline",
+      "novel-view video",
+      "3D geometry",
+      "VSI-Bench",
+      "STI-Bench"
+    ]
+  },
+  {
+    "id": "2606.12403",
+    "title": "World Pilot: Steering Vision-Language-Action Models with World-Action Priors",
+    "summary": "Vision-Language-Action (VLA) models inherit semantic grounding from large-scale pretraining and perform competently across in-distribution manipulation tasks. This grounding, however, is built on static image-text pairs, whereas manipulation is a continuous, contact-rich process whose dynamics this pretraining cannot capture. We present World Pilot, a VLA framework that augments the policy with priors from a World-Action Model (WAM), routed into the decision chain through two complementary pathways. Latent Steering conditions the perception layer on a scene-evolution latent, and Action Steering supplies an anticipated trajectory as a motion prior to the action generator. Together the two priors equip the VLA with an anticipated view of the scene and a trajectory-level motion hint alongside its semantic conditioning, and the scene-evolution prior remains effective even when supplied by a video-pretrained world model that has not been action-post-trained. World Pilot attains a state-of-the-art Total success rate of 84.7% on the LIBERO-Plus zero-shot OOD benchmark and the highest success rate on every real-robot setting across four manipulation tasks, with the largest margins under shifts in viewpoint, geometry, deformable state, and pose. Project Website: https://world-pilot.github.io/",
+    "upvotes": 19,
+    "projectPage": "https://world-pilot.github.io/",
+    "ai_keywords": [
+      "Vision-Language-Action models",
+      "World-Action Model",
+      "latent steering",
+      "action steering",
+      "scene-evolution latent",
+      "anticipated trajectory",
+      "motion prior",
+      "zero-shot OOD benchmark",
+      "real-robot settings",
+      "manipulation tasks"
+    ]
+  },
+  {
+    "id": "2606.10479",
+    "title": "ComBench: A Benchmark for Rigorous Proof Reasoning and Constructive Realization in Olympiad-Level Combinatorics",
+    "summary": "Combinatorics is central to Olympiad-level mathematical problem solving, requiring deep discrete reasoning, creative constructions, and rigorous structural insight. Recent evidence suggests that even today's strongest frontier models remain uneven on Olympiad combinatorics, revealing a gap in creative mathematical reasoning. We introduce ComBench, an Olympiad-level combinatorics benchmark for evaluating and diagnosing the combinatorial reasoning capabilities of large language models. ComBench contains 100 human-annotated competition-level problems organized around two complementary settings: analysis-centric problems, which primarily require rigorous mathematical arguments, and construction-centric problems, which require explicit constructions in addition to correctness justifications. The evaluation protocol combines rubric-guided proof grading with deterministic construction verification, exposing cases where proof quality and construction validity diverge. Experiments on frontier open- and closed-source models show that ComBench is far from saturated: the strongest model reaches 65.4% overall Avg. and 75.3% overall Best@4. We further find that Rigorous Proof Reasoning and Constructive Realization are distinct capabilities: Kimi-K2.6 trails GPT-5.5 on analysis-centric proof grading but surpasses it on construction-centric Best@4, while Existence and Construction problems remain consistently hardest across representative frontier models.",
+    "upvotes": 18,
+    "projectPage": "https://simplified-reasoning.github.io/ComBench",
+    "ai_keywords": [
+      "combinatorics",
+      "large language models",
+      "mathematical reasoning",
+      "proof grading",
+      "construction verification",
+      "Olympiad-level problems",
+      "combinatorial reasoning",
+      "proof quality",
+      "construction validity"
+    ]
+  },
+  {
+    "id": "2606.11722",
+    "title": "ICA Lens: Interpreting Language Models Without Training Another Dictionary",
+    "summary": "Finding interpretable directions in language-model representations is critical for understanding and controlling model behavior. Sparse autoencoders (SAEs) have become the standard tool for this purpose, but using them as the default first lens often requires training, storing, and evaluating large overcomplete dictionaries. This bottleneck limits rapid exploration and raises a fundamental question: how much interpretable structure is already visible from activation geometry before training another neural dictionary? Our intuition is simple: many interpretable directions are selective on tokens, and these directions should look less Gaussian than random directions. We therefore revisit independent component analysis (ICA), a classical method for finding non-Gaussian directions, as a compact lens for language-model interpretability. We find that ICA has been underestimated for LLM interpretability, because prior uses often relied on off-the-shelf ICA implementations that are brittle on LLM activations and lacked systematic tools for inspecting and evaluating the recovered directions. To bridge these gaps, we introduce ICALens, the first practical workflow for stable, efficient, and auditable ICA analysis of LLM representations. It combines an optimized GPU-parallel FastICA pipeline with LLM-specific stability recipes and better fitting diagnostics, enabling efficient and reliable layer-wise analysis. Across GPT-2 Small, Gemma 2 2B, and Qwen 3.5 2B Base, ICALens efficiently recovers compact, human-interpretable directions without per-layer gradient-based dictionary training. On SAEBench, ICA is competitive with public SAEs in sparse probing and outperforms them in targeted probe perturbation under small-to-medium budgets. These results suggest that ICA should not be viewed as a weak baseline, but as an efficient and complementary first lens for exploring language-model representations.",
+    "upvotes": 14,
+    "projectPage": "https://liusida.github.io/ica-lens-paper/",
+    "ai_keywords": [
+      "sparse autoencoders",
+      "independent component analysis",
+      "language-model representations",
+      "activation geometry",
+      "Gaussian directions",
+      "ICA",
+      "FastICA",
+      "LLM interpretability",
+      "SAEBench",
+      "sparse probing",
+      "targeted probe perturbation"
+    ]
+  },
+  {
+    "id": "2606.12195",
+    "title": "InternVideo3: Agentify Foundation Models with Multimodal Contextual Reasoning",
+    "summary": "Recent progress in foundation models has shifted toward agentic behavior involving multi-step reasoning and tool use. However, open-source efforts largely focus on text-dominant settings, leaving long-horizon multimodal tasks underexplored. This gap is evident in video tasks requiring sustained temporal understanding and iterative interaction. We present InternVideo3, a framework enhancing these capabilities via Multimodal Contextual Reasoning (MCR). MCR treats understanding as a closed-loop process over a shared, evolving context containing observations, instructions, reasoning, tool actions, and memory. This frames long-video understanding as evidence accumulation and verification. To ensure efficiency, we introduce Multimodal Multi-head Latent Attention (M^2LA), a token-preserving reparameterization compressing KV-cache states while retaining the full token stream. Our staged training includes continued pretraining, short-to-long supervised fine-tuning, rule-based reinforcement learning, and on-policy distillation. Experiments show InternVideo3 achieves strong performance on benchmarks like Video-MME, MLVU, and EgoSchema. We further instantiate the model as a video agent with retrieval tools, demonstrating robust evidence-grounded behavior. Our results suggest that efficient context handling and closed-loop reasoning are vital for adapting open multimodal models toward long-horizon visually grounded agency.",
+    "upvotes": 13,
+    "projectPage": null,
+    "ai_keywords": [
+      "Multimodal Contextual Reasoning",
+      "M^2LA",
+      "KV-cache states",
+      "token-preserving reparameterization",
+      "staged training",
+      "continued pretraining",
+      "supervised fine-tuning",
+      "reinforcement learning",
+      "on-policy distillation",
+      "video agent",
+      "evidence accumulation",
+      "closed-loop reasoning"
+    ]
+  },
+  {
+    "id": "2606.12344",
+    "title": "Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks",
+    "summary": "General-purpose agents such as OpenClaw are increasingly used as autonomous tool users, but their coding ability is difficult to measure under SWE-bench: a generic agent does not by itself satisfy the clean Docker workspace, patch, and prediction contract required for scoring. We introduce Claw-SWE-Bench, a multilingual SWE-bench-style benchmark and adapter protocol that makes heterogeneous agent harnesses, or claws, comparable under fair settings including a fixed prompt, runtime budget, workspace contract, patch extraction procedure, and evaluator. The full benchmark contains 350 GitHub issue-resolution instances across 8 languages and 43 repositories, drawn from SWE-bench-Multilingual and SWE-bench-Verified-Mini after future-commit cleanup. We also release Claw-SWE-Bench Lite for faster validation, which is an 80-instance subset selected by a cost-aware, rank-aware procedure over 17 calibration columns. On the full benchmark, OpenClaw with a minimal direct-diff adapter scores only 19.1% Pass@1, whereas the full adapter reaches 73.4% with the same GLM 5.1 backbone, showing that adapter design is essential for enabling OpenClaw-style harnesses to perform coding tasks effectively. Across an OpenClaw times nine-model sweep and a five-claw times two-model sweep, model choice changes Pass@1 by 29.4 pp and harness choice by 27.4 pp under fixed models; systems with similar accuracy can differ substantially in total API cost. Claw-SWE-Bench therefore treats harness and cost accounting as first-class axes of SWE-style coding-agent evaluation, providing both a full benchmark and a low-cost reference set for reproducible comparison. The data is available at https://github.com/opensquilla/claw-swe-bench and https://huggingface.co/datasets/TokenRhythm/Claw-SWE-Bench.",
+    "upvotes": 10,
+    "projectPage": "https://huggingface.co/datasets/TokenRhythm/Claw-SWE-Bench",
+    "ai_keywords": [
+      "SWE-bench",
+      "OpenClaw",
+      "adapter protocol",
+      "Pass@1",
+      "GLM 5.1",
+      "harness",
+      "API cost",
+      "benchmark"
+    ]
+  },
+  {
+    "id": "2606.12370",
+    "title": "Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling",
+    "summary": "Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines. Although Multi-Token Prediction (MTP) offers a natural solution to accelerate rollouts through speculative decoding, many studies have observed that MTP acceptance rates degrade significantly during RL training, leading to limited speedup performance. To address this bottleneck, we present Bebop, a systematic study of MTP in LLM post-training, and offer practical recipes to integrate MTP into large-scale RL pipelines. First, we reveal that the MTP acceptance rate is fundamentally bounded by the fluctuation of model entropy, which demonstrates a clear negative linear relationship with the rise of entropy in the RL stage. Second, we show that probabilistic rejection sampling largely alleviates the disturbance introduced by entropy in RL compared to greedy draft sampling. We further identify that the conventional MTP training objectives (cross-entropy or KL) are suboptimal in such settings, and therefore we propose a novel end-to-end TV loss that directly optimizes multi-step rejection sampling acceptance rate, yielding ~10% acceptance rate improvements, achieving up to 95% acceptance rates and up to 25% extra inference throughput gains across mathematical reasoning, code generation, and agentic tasks. Third, we test various online MTP training strategies during RL and show that pre-RL MTP training with e2e TV loss and rejection sampling achieves a consistent acceptance rate and speedup throughout the entire RL, eliminating the need for costly online MTP updating. We provide extensive experiments and analysis that validate our findings. Experimental results show our method achieves up to 1.8x end-to-end acceleration in async RL training of Qwen3.5, Qwen3.6, and Qwen3.7 models.",
+    "upvotes": 10,
+    "projectPage": null,
+    "ai_keywords": [
+      "multi-token prediction",
+      "speculative decoding",
+      "reinforcement learning",
+      "model entropy",
+      "probabilistic rejection sampling",
+      "greedy draft sampling",
+      "cross-entropy",
+      "KL divergence",
+      "TV loss",
+      "end-to-end training",
+      "async RL training"
+    ]
+  },
+  {
+    "id": "2606.03108",
+    "title": "EvoTrainer: Co-Evolving LLM Policies and Training Harnesses for Autonomous Agentic Reinforcement Learning",
+    "summary": "Autonomous LLM training is often framed as recipe search, which leaves the training harness largely static. This limitation sharpens in agentic RL, where shifting bottlenecks and scalar rewards mask diverse failure modes. We introduce EvoTrainer, an autonomous training framework that co-evolves LLM policies and training-side harnesses through empirical feedback: it diagnoses rollout-level evidence, revises diagnostics, backtests interventions, and accumulates reusable skills. Evaluated on mathematical reasoning, competitive-programming code generation, and repository-level software engineering, EvoTrainer matches or exceeds the human-engineered RL references under the same data, codebase, and evaluation protocol, with the largest gain on long-horizon agentic SWE. Trajectory analyses show that retained strategies diverge across domains, evolving diagnostics prevent invalid high-scoring branches from being promoted, and reusable skills shape later search. Autonomous LLM RL should move beyond recipe search toward joint evolution of policies and the training harnesses that interpret them.",
+    "upvotes": 7,
+    "projectPage": null,
+    "ai_keywords": [
+      "autonomous training framework",
+      "co-evolution",
+      "empirical feedback",
+      "rollout-level evidence",
+      "diagnostics",
+      "backtesting",
+      "reusable skills",
+      "agentic RL",
+      "language model policies",
+      "training harnesses"
+    ]
+  },
+  {
+    "id": "2606.12373",
+    "title": "Verifiable Environments Are LEGO Bricks: Recursive Composition for Reasoning Generalization",
+    "summary": "Reinforcement Learning (RL) with verifiable environments has emerged as a powerful approach for enhancing the reasoning capabilities of Large Language Models (LLMs). While prior research demonstrates that scaling environment quantity improves RL performance, existing manual or individual construction methods suffer from linear scaling limits, thereby hindering scalable reasoning generalization. This paper introduces RACES (Recursive Automated Composition for Environment Scaling), a framework that conceptualizes verifiable environments as composable building blocks that can be recursively assembled. The key insight is that when the codomain (output type) of one environment matches the domain (input type) of another, they can be automatically fused into a new verifiable environment, enabling recursive composition. RACES is implemented with 300 individual environments and defines a set of composition operators (SEQUENTIAL, PARALLEL, SORT, and SELECT) that induce diverse reasoning patterns. Extensive experiments show that RL training on these composite environments consistently enhances reasoning generalization. Specifically, RACES improves DeepSeek-R1-Distill-Qwen-14B by an average of 3.1 points (from 48.2 to 51.3) and boosts Qwen3-14B performance from 58.8 to 61.1 on six benchmarks, which are unseen during the construction of training environments. Moreover, RACES achieves performance comparable to training on 300 individual environments using only 50 base environments, demonstrating significant efficiency in environment utilization.",
+    "upvotes": 5,
+    "projectPage": null,
+    "ai_keywords": [
+      "Reinforcement Learning",
+      "Large Language Models",
+      "verifiable environments",
+      "recursive composition",
+      "composition operators",
+      "SEQUENTIAL",
+      "PARALLEL",
+      "SORT",
+      "SELECT"
+    ]
+  },
+  {
+    "id": "2606.11324",
+    "title": "Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models",
+    "summary": "We introduce Embodied-R1.5, a unified Embodied Foundation Model (EFM) that integrates comprehensive embodied reasoning capabilities, spanning embodied cognition, task planning, correction, and pointing, within a single architecture toward general physical intelligence. Leveraging three automated data construction pipelines to significantly expand the data coverage of critical capabilities, we build a large-scale data system of over 15B tokens, and design a multi-task balanced RL recipe to alleviate heterogeneous task conflicts. We further introduce a Planner-Grounder-Corrector (PGC) closed-loop framework that enables a single model to autonomously execute and self-correct over long-horizon tasks. With only 8B parameters, Embodied-R1.5 achieves SOTA on 16 out of 24 embodied VLM benchmarks, surpassing leading models like Gemini-Robotics-ER-1.5 and GPT-5.4. Benefiting from the internalized embodied capabilities, Embodied-R1.5 can be fine-tuned into a VLA with only a small amount of data, outperforming leading VLA models like π_{0.5} across 4 popular manipulation benchmark suites. We further conduct extensive zero-shot real-robot experiments, validating performance in instruction following, affordance grounding, articulated object manipulation, and long-horizon complex tasks, demonstrating strong generalization to the physical world. We open-source model weights, datasets, training code, and EmbodiedEvalKit, an evaluation framework tailored for embodied tasks, to facilitate future research in EFMs.",
+    "upvotes": 5,
+    "projectPage": "https://embodied-r.github.io/",
+    "ai_keywords": [
+      "Embodied Foundation Model",
+      "embodied cognition",
+      "task planning",
+      "correction",
+      "pointing",
+      "data construction pipelines",
+      "multi-task balanced RL",
+      "Planner-Grounder-Corrector framework",
+      "VLA",
+      "reinforcement learning"
+    ]
+  },
+  {
+    "id": "2606.12072",
+    "title": "World Model Self-Distillation: Training World Models to Solve General Tasks",
+    "summary": "Pretrained video generators are promising visual world models that exhibit emergent task-solving abilities; however, their reliance on detailed textual descriptions limits their direct use for planning and decision-making. Existing approaches either outsource this reasoning to language or vision-language models, or rely on supervised fine-tuning with paired task-execution videos, which are costly to collect and difficult to scale. We propose a scalable framework that elicits task-solving ability in such models by combining self-distillation with reinforcement learning. Given an unlabeled scene image, a vision-language model generates a candidate task and a detailed step-by-step solution. The solution conditions a pretrained video diffusion model, the Demonstrator; we distill its behavior into an Executor conditioned only on the image and a short task prompt. This transfers execution knowledge from caption-guided generation to instruction-conditioned task solving without curated task-video supervision. We further improve the Executor with reinforcement learning from VLM feedback, exploiting the asymmetry between judging whether a sampled video satisfies a task and generating the solution. Experiments on our proposed WorldTasks-Benchmark and the DreamGen robotics benchmark show that the Executor surpasses the Demonstrator under our VLM-based evaluation protocol and transfers competitively to robotic tasks.",
+    "upvotes": 3,
+    "projectPage": "https://sebastian-stapf.github.io/world-model-self-distillation/",
+    "ai_keywords": [
+      "vision-language model",
+      "video diffusion model",
+      "self-distillation",
+      "reinforcement learning",
+      "Demonstrator",
+      "Executor",
+      "VLM-based evaluation",
+      "WorldTasks-Benchmark",
+      "DreamGen robotics benchmark"
+    ]
+  },
+  {
+    "id": "2606.11786",
+    "title": "Lius: Translation Model Based Instructional Lingustic Using Continual Instruction Tuning In Kupang Malay",
+    "summary": "Large Language Models (LLMs) offer new potential for translation tasks but often experience performance degradation when handling low-resource languages. To address this limitation, we propose an approach for fine-tuning LLMs on a low-resource language, Kupang Malay. Our approach involves designing a set of instructions by leveraging explicit lexical and semantic features from a bilingual dictionary, and introducing Continual Instruction Tuning (CIT), a training paradigm that enables iterative instruction-based training. Experimental results demonstrate that our model, named Lius, yields notable improvements over standard instruction-tuned models by outperforming 4-6 points, and surpassing both Neural Machine Translation (NMT) and Multilingual LLM models by 10-13 points on several evaluation metrics. These findings highlight the potential of our approach to mitigate the reliance on large-scale parallel data in low-resource language translation.",
+    "upvotes": 1,
+    "projectPage": "https://huggingface.co/joanitolopo/lius-cendol-large-inst-mt",
+    "ai_keywords": [
+      "large language models",
+      "low-resource languages",
+      "fine-tuning",
+      "bilingual dictionary",
+      "Continual Instruction Tuning",
+      "neural machine translation",
+      "instruction tuning"
+    ]
+  },
+  {
+    "id": "2606.11289",
+    "title": "i1: A Simple and Fully Open Recipe for Strong Text-to-Image Models",
+    "summary": "Diffusion models have consistently driven progress in text-to-image generation. However, it is challenging to attribute recent progress to specific modeling and data choices: state-of-the-art open-weight models provide limited ablations, and do not disclose their training data and full training details. The research community needs fully open (weights, data, and code) models as a foundation for further research; yet existing fully open models still fall significantly short of leading models in performance. In this project, we conduct a systematic investigation of the modeling and data design choices in text-to-image diffusion training and inference with 300+ controlled experiments totaling 700K+ TPU v6e hours. Our experiments highlight several empirical findings (e.g., equal weighting is a strong default for mixing curated datasets) and simple design decisions (e.g., larger text encoder adapters improve performance with minimal added parameters) for training strong models. Guided by these insights, we train i1, a 3B-parameter text-to-image diffusion model using only publicly available datasets. i1 is competitive with leading models on five representative benchmarks (GenEval, DPG, PRISM, CVTG-2K, and LongText), and outperforms the best existing fully open model by 29.5 absolute percentage points on average. We provide the i1 checkpoints, training and inference code, and the data processing pipeline. Together, our findings and the i1 recipe establish a practical foundation for future open research in text-to-image diffusion models. Our code is available at https://github.com/zlab-princeton/i1.",
+    "upvotes": 1,
+    "projectPage": "https://zlab-princeton.github.io/i1/",
+    "ai_keywords": [
+      "text-to-image diffusion models",
+      "controlled experiments",
+      "publicly available datasets",
+      "model training",
+      "model inference",
+      "GenEval",
+      "DPG",
+      "PRISM",
+      "CVTG-2K",
+      "LongText"
+    ]
+  },
+  {
+    "id": "2606.03437",
+    "title": "Large Language Models Are Overconfident in Their Own Responses",
+    "summary": "Prior work has shown that instruction-tuned large language models (LLMs) are less well calibrated than their base pre-trained counterparts. However, little is known about the frequently used chat template's effect on the calibration of conversational LLMs. In this work, we investigate the mechanisms driving this miscalibration by decoupling the effects of the post-training algorithm and the chat format. We find that, while instruction tuning fundamentally harms calibration, the chat template aggravates the issue through an \"ownership bias\" -- models are significantly more confident in their own answers than in identical answers provided by a user. Extensive experiments across six recent open-weight LLMs, three benchmarks, and three confidence elicitation methods show that models assign up to 26% higher confidence to their own responses. Leveraging this insight, we propose a simple inference-time strategy: framing the model's answer as user input during confidence elicitation. This approach significantly reduces overconfidence and improves calibration by up to 26% without the need for retraining, narrowing the gap between base and instruction-tuned models.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "instruction-tuned large language models",
+      "calibration",
+      "chat template",
+      "ownership bias",
+      "confidence elicitation",
+      "overconfidence",
+      "retraining"
+    ]
+  },
+  {
+    "id": "2605.30861",
+    "title": "Distilling LLM Feedback for Lean Theorem Proving",
+    "summary": "Post-training for reasoning models typically combines supervised fine-tuning with reinforcement learning from verifiable rewards, most commonly with GRPO. However, this algorithm suffers from sparse rewards, limited exploration, and mode collapse. Building upon recent works on self-distillation, we propose Feedback Distillation, a training method where the model is trained to match, at the token level, its own distribution conditioned on privileged feedback produced by a language model. Feedback Distillation offers token-level supervision and can inject external knowledge. Evaluating our method for Lean4 theorem-proving, we find that Feedback Distillation maintains greater diversity in generated trajectories than GRPO, yielding higher policy entropy and better pass@k scaling. The two methods are complementary: initializing GRPO from a Feedback Distillation checkpoint outperforms either method alone. All in all, our results suggest a promising avenue to improve post-training for complex reasoning.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "supervised fine-tuning",
+      "reinforcement learning",
+      "verifiable rewards",
+      "GRPO",
+      "self-distillation",
+      "token-level supervision",
+      "privileged feedback",
+      "language model",
+      "Lean4 theorem-proving",
+      "policy entropy",
+      "pass@k scaling"
+    ]
+  }
+]
