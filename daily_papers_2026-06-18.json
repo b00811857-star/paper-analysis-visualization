@@ -1,0 +1,298 @@
+[
+  {
+    "id": "2606.19338",
+    "title": "Beyond the Current Observation: Evaluating Multimodal Large Language Models in Controllable Non-Markov Games",
+    "summary": "Deploying multimodal foundation models as closed-loop policies increasingly requires conditioning actions on observations that are no longer visible. However, existing benchmarks either expose the full state, conflate hidden-state reconstruction with other agent skills, or test recall only after an episode has ended. We introduce RNG-Bench (Reconstructive Non-Markov Games), a benchmark suite designed to isolate a base model's ability to reconstruct past observations and act on them during multi-step interaction. RNG-Bench includes two complementary games: Matching Pairs, where card identities briefly revealed at specific locations must later be recalled, and 3D Maze, where egocentric views must be integrated into a spatial map. Both games are evaluated under a unified harness with three controlled difficulty axes: grid size, visual pattern, and observation modality. The benchmark further introduces a head-to-head duel protocol to control for instance-level variance and a Memory Gap metric that disentangles forgetting from poor action selection. The hardest configurations require contexts of roughly 128K tokens and 350 image inputs per episode, and remain far from saturated by frontier MLLMs. Memory Gap analysis shows that most residual errors stem from forgetting earlier observations rather than from suboptimal decision making. Finally, fine-tuning Qwen3.5-9B on optimal-policy rollouts and filtered model demonstrations improves performance on RNG-Bench and transfers to existing benchmarks without degrading general multimodal capability.",
+    "upvotes": 30,
+    "projectPage": "https://internlm.github.io/RNGBench/",
+    "ai_keywords": [
+      "multimodal foundation models",
+      "closed-loop policies",
+      "observation reconstruction",
+      "multi-step interaction",
+      "RNG-Bench",
+      "Matching Pairs",
+      "3D Maze",
+      "memory gap",
+      "fine-tuning",
+      "Qwen3.5-9B"
+    ]
+  },
+  {
+    "id": "2606.18363",
+    "title": "Guava: An Effective and Universal Harness for Embodied Manipulation",
+    "summary": "Language models trained on large-scale vision-language data have demonstrated strong potential for embodied agents. Harnessing models through embodied tools use offers a promising alternative to end-to-end vision-language-action systems by combining high-level reasoning with external modules for perception, planning, and control. However, it remains unclear what makes an effective harness for embodied manipulation, and to what extent such a harness can unlock embodied capabilities in a wide range of reasoning models. In this work, we present Guava, a harness framework for embodied tool use developed through systematic exploration of the design space of agent workflows, action spaces, and observation spaces. Our study identifies three key ingredients for effective embodied agents: iterative perception-reasoning-action loops, semantic action abstractions, and multimodal observations. To understand whether these design principles are universal even to small models, we develop an end-to-end training pipeline that distills embodied manipulation capabilities into a 4B open-source model using fewer than 2K trajectories collected entirely in simulation. Experimental results in both simulation and real-world environments show performance comparable to frontier proprietary models while exhibiting strong generalization to unseen objects, novel instructions, and long-horizon tasks. Results suggest that a well-designed harness can serve as a scalable, model-agnostic interface for embodied manipulation, enabling strong emergent embodied capabilities in compact open-source models with minimal training data.",
+    "upvotes": 20,
+    "projectPage": "https://guava-harness.github.io/",
+    "ai_keywords": [
+      "embodied agents",
+      "vision-language models",
+      "embodied manipulation",
+      "agent workflows",
+      "action spaces",
+      "observation spaces",
+      "iterative perception-reasoning-action loops",
+      "semantic action abstractions",
+      "multimodal observations",
+      "end-to-end training",
+      "model distillation",
+      "simulation training"
+    ]
+  },
+  {
+    "id": "2606.16533",
+    "title": "Kairos: A Native World Model Stack for Physical AI",
+    "summary": "World models are transitioning from passive visual generators to foundational, operational infrastructure for Physical AI: they must natively acquire world knowledge from heterogeneous experience, maintain persistent states over long horizons, and execute efficiently within real deployment constraints. We introduce Kairos, a native world model stack designed around these requirements. (1) Kairos learns the world by pioneering a Native Pre-training Paradigm governed by a Cross-Embodiment Data Curriculum, which organizes open-world videos, human behavioral data, and robot interactions into a progressive developmental pathway. (2) Kairos maintains the world by unified world understanding, generation, and prediction within a Native Unified Architecture equipped with Hybrid Linear Temporal Attention, where sliding-window attention captures local dynamics, dilated sliding windows capture mid-range dependencies, and gated linear attention maintains persistent global memory. We establish formal theoretical bounds demonstrating that this temporal factorization strictly limits error accumulation, mathematically guaranteeing state propagation across extended horizons. (3) Kairos runs the world by incorporating a Deployment-Aware System Co-Design to support low-latency rollout generation on server and consumer-grade hardware for real-world observation-action-feedback loops. Experiments on embodied world-model, long-horizon, and action-policy benchmarks show that Kairos achieves top level performance while offering a strong efficiency-capability trade-off. Together, these results position Kairos as a cohesive operational foundation for future self-evolving physical intelligence.",
+    "upvotes": 18,
+    "projectPage": null,
+    "ai_keywords": [
+      "world models",
+      "native pre-training paradigm",
+      "cross-embodiment data curriculum",
+      "native unified architecture",
+      "hybrid linear temporal attention",
+      "sliding-window attention",
+      "dilated sliding windows",
+      "gated linear attention",
+      "temporal factorization",
+      "error accumulation",
+      "deployment-aware system co-design",
+      "embodied world-model",
+      "long-horizon benchmarks",
+      "action-policy benchmarks"
+    ]
+  },
+  {
+    "id": "2606.17539",
+    "title": "Reinforcing Dual-Path Reasoning in Spatial Vision Language Models",
+    "summary": "Spatial VLMs have made substantial progress in geometric perception, yet complex spatial reasoning requiring multi-step inference over depth, distance, and scene relations remains challenging. Moreover, different spatial queries call for fundamentally different strategies: some are best addressed through purely linguistic, step-by-step deduction, while others require explicit 3D grounding before quantitative inference. We present Dual-Path Spatial Reasoning via Reinforcement Learning for Spatial VLMs (SR-REAL), a unified framework that equips a spatial VLM with two complementary reasoning paths: Language-Only Reasoning (LOR), which performs step-by-step linguistic deduction, and Detect-Then-Reason (DTR), which detects 3D geometric cues (e.g., centers or bounding boxes) via region tokens before explicit geometric inference. SR-REAL begins with a cold-start supervised fine-tuning stage that constructs LOR and DTR chain-of-thought supervision and exposes a region-to-3D interface, followed by RL that optimizes the policy model with accuracy and format rewards; for DTR, a discrete center-based detection reward further refines geometric alignment. Across diverse spatial benchmarks, SR-REAL significantly outperforms spatial VLM baselines: (i) a single RL-trained model supports both reasoning paths, with DTR excelling in region-aware tasks through precise 3D localization and LOR enhancing general spatial reasoning; (ii) jointly training both paths fosters mutual reinforcement; (iii) high-quality, blended cold-start data is crucial for stable RL optimization; and (iv) the model generalizes across datasets and domains without per-task tuning, demonstrating positive transfer between LOR and DTR.",
+    "upvotes": 11,
+    "projectPage": "https://sr-real.github.io/",
+    "ai_keywords": [
+      "spatial VLMs",
+      "reinforcement learning",
+      "language-only reasoning",
+      "detect-then-reason",
+      "chain-of-thought supervision",
+      "region tokens",
+      "3D geometric cues",
+      "discrete center-based detection",
+      "cold-start supervised fine-tuning",
+      "policy model",
+      "accuracy rewards",
+      "format rewards",
+      "geometric alignment",
+      "joint training",
+      "positive transfer"
+    ]
+  },
+  {
+    "id": "2606.18322",
+    "title": "SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior",
+    "summary": "Sparse Autoencoders (SAEs) decompose residual-stream activations into interpretable features. Recent latent-space defenses increasingly rely on these decompositions, assuming that identified \"unsafe\" SAE features serve as actionable handles for monitoring and intervention. In this paradigm, clamping a specific harmful feature is expected to reliably prevent model misbehavior. However, we show that this success may hide a recoverable failure mode: the clamp may block one visible route to a behavior without eliminating the behavior itself. We formulate this vulnerability as post-intervention recovery, a constrained residual-space optimization problem. Starting from the post-intervention residual state, we optimize residual perturbations to recover the pre-intervention behavior while preserving the post-intervention values of the targeted SAE features. Even under a strong threat model where the intervention remains active throughout optimization and generation, recovery remains possible. To rule out that recovery simply undoes the intervention, we use encoder-orthogonal updates for single-layer interventions and the corresponding feature-map Jacobian in the cross-layer setting. Across TPP, unlearning, IOI, and refusal steering experiments, this stress test reveals recoverable behavior despite successful feature-level intervention. Especially in the safety-critical refusal-steering setting, we achieve a 95.8% recovery rate on valid samples while keeping defended-feature relative drift to 0.131, substantially below suffix-based baselines. A recovery-path attribution analysis further localizes this recovery to the SAE reconstruction residual, the component left unexplained by the SAE. These results expose a gap between feature-level control and behavioral completeness: SAE features can support causal intervention, but controlling them does not guarantee control over the underlying behavior.",
+    "upvotes": 11,
+    "projectPage": "https://mingyuee88.github.io/sae-post-intervention-recovery/",
+    "ai_keywords": [
+      "Sparse Autoencoders",
+      "residual-stream activations",
+      "latent-space defenses",
+      "feature-level intervention",
+      "post-intervention recovery",
+      "residual-space optimization",
+      "encoder-orthogonal updates",
+      "feature-map Jacobian",
+      "TPP",
+      "unlearning",
+      "IOI",
+      "refusal steering",
+      "behavioral completeness"
+    ]
+  },
+  {
+    "id": "2606.18101",
+    "title": "Trust the Right Teacher: Quality-Aware Self-Distillation for GUI Grounding",
+    "summary": "Graphical user interface (GUI) grounding requires vision-language models (VLMs) to identify small target elements in high-resolution screenshots and predict precise screen coordinates. On-policy self-distillation (OPSD) is a promising post-training approach for this coordinate-sensitive task, since it provides dense token-level teacher signals beyond hard coordinate labels. However, naive OPSD is not well suited to GUI grounding: OPSD evaluates the teacher on student-generated prefixes, the quality of coordinate-token teacher signals can degrade when the prefix has already deviated from the target coordinate, leading to unreliable teacher signal. To mitigate this, We propose quality-aware self-distillation for VLM-based GUI grounding, which improves coordinate-token teacher-signal quality through soft correctness-aware gating and teacher-probability scaling. The soft correctness-aware gate checks whether the teacher's current coordinate-token prediction can still be completed into the ground-truth box under the student-generated prefix. If not, the corresponding teacher signal is down-weighted. Teacher-probability scaling then uses the teacher's confidence as a lightweight factor to further calibrate the strength of the gated supervision. A key empirical finding is that neither component alone improves overall performance, whereas combining them consistently improves performance. This suggests that the two mechanisms play complementary roles: correctness-aware gating suppresses unreliable coordinate-token supervision, while teacher-probability scaling calibrates the strength of the remaining signals. Experiments across six GUI grounding benchmarks show that our method consistently improves the base model and outperforms strong baselines.",
+    "upvotes": 11,
+    "projectPage": null,
+    "ai_keywords": [
+      "vision-language models",
+      "on-policy self-distillation",
+      "coordinate-sensitive task",
+      "dense token-level teacher signals",
+      "soft correctness-aware gating",
+      "teacher-probability scaling",
+      "GUI grounding",
+      "screen coordinates",
+      "vision-language models"
+    ]
+  },
+  {
+    "id": "2606.19341",
+    "title": "Native Active Perception as Reasoning for Omni-Modal Understanding",
+    "summary": "Passive models for long video understanding typically rely on a \"watch-it-all\" paradigm, processing frames uniformly regardless of query difficulty, causing computational cost to grow with video duration. Although interactive frameworks have emerged, they often rely on global pre-scanning, and their context cost still scales with video length. We propose OmniAgent, the first native omni-modal agent that formulates video understanding as a POMDP-based iterative Observation-Thought-Action cycle. OmniAgent executes on-demand actions to selectively distill audio-visual cues into a persistent textual memory, effectively decoupling reasoning complexity from raw video duration. To operationalize this, we introduce (1) Agentic Supervised Fine-Tuning to bootstrap native active perception via best-of-N trajectory synthesis with dual-stage quality control, and (2) Agentic Reinforcement Learning with TAURA (Turn-aware Adaptive Uncertainty Rescaled Advantage), which leverages turn-level entropy to steer credit assignment toward pivotal discovery turns. Crucially, OmniAgent exhibits positive test-time scaling, where performance improves as the number of reasoning turns increases, validating the efficacy of active perception. Empirical results across ten benchmarks (e.g., VideoMME, LVBench) demonstrate that OmniAgent achieves state-of-the-art performance among open-source models. Notably, on LVBench, our 7B agent outperforms the 10times larger Qwen2.5-VL-72B (50.5% vs. 47.3%).",
+    "upvotes": 8,
+    "projectPage": null,
+    "ai_keywords": [
+      "POMDP",
+      "Observation-Thought-Action cycle",
+      "active perception",
+      "agentic supervised fine-tuning",
+      "agentic reinforcement learning",
+      "TAURA",
+      "turn-level entropy",
+      "video understanding",
+      "omni-modal agent"
+    ]
+  },
+  {
+    "id": "2606.19005",
+    "title": "Sumi: Open Uniform Diffusion Language Model from Scratch",
+    "summary": "Diffusion models have become a promising alternative to autoregressive models. Among these, uniform diffusion language models (UDLMs) permit any token to be updated at any step, in principle enabling more flexible generation. However, no UDLM has yet been pretrained from scratch at both large parameter scale and large token budget. Both autoregressive modeling and masked diffusion modeling already have capable models at scale that the community can study and build on; uniform diffusion has none. A scratch-pretrained UDLM at scale would provide a clean reference point for studying scaling behavior, generation dynamics, controllability, and trade-offs against established autoregressive and masked diffusion models. To this end, we introduce Sumi (\"ink\" in Japanese), a fully open 7B uniform diffusion language model pretrained from scratch on 1.5T tokens. Sumi performs competitively with autoregressive models trained at comparable token budgets on knowledge, reasoning, and coding benchmarks, while under-performing on commonsense benchmarks, where our education-heavy data mixture is a likely contributor. We release our model weights, checkpoints, and full training recipe, including a complete specification of the data mixture over publicly available corpora. We hope this release enables the community to study native uniform diffusion at scale and catalyzes work on its as-yet poorly understood aspects.",
+    "upvotes": 4,
+    "projectPage": "https://www.nlp.ecei.tohoku.ac.jp/projects/sumi/",
+    "ai_keywords": [
+      "uniform diffusion language models",
+      "autoregressive models",
+      "diffusion models",
+      "pretraining",
+      "token budget",
+      "model scaling",
+      "generation dynamics",
+      "controllability",
+      "data mixture",
+      "model weights",
+      "training recipe"
+    ]
+  },
+  {
+    "id": "2606.19336",
+    "title": "Learning User Simulators with Turing Rewards",
+    "summary": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {Turing-RL} uses a discriminative Turing reward with an LLM judge to score how indistinguishable a generated response is from the real user's given the user's history, and the user simulator LLM learns to produce responses indistinguishable from what the user could have said with such rewards. Across two different domains--conversational chat and Reddit forum discussion--we find that {Turing-RL} consistently outperforms baseline methods on both LLM and human evaluation metrics. Our study suggests that optimizing for indistinguishability, rather than response matching, is effective for learning user simulators.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language model",
+      "reinforcement learning",
+      "Turing test",
+      "discriminative Turing reward",
+      "user simulator",
+      "LLM judge",
+      "conversational chat",
+      "Reddit forum discussion"
+    ]
+  },
+  {
+    "id": "2606.18874",
+    "title": "Externalizing Research Synthesis and Validation in AI Scientists through a Research Harness",
+    "summary": "AI systems can increasingly automate scientific workflows, but the reasoning that links prior evidence, generated ideas, experiments and final claims often remains implicit inside model inference. Here we introduce Xcientist, a research harness that externalizes research synthesis and experimental validation into inspectable, contract-governed processes. Xcientist organizes literature evidence, idea states, implementation plans, ablation records and repair traces as persistent research artifacts, so that generated mechanisms can be grounded, executed, tested and revised without losing their evidential basis. We identify claim drift as a failure mode of automated research, where runnable artifacts no longer support the mechanism originally claimed. Across training-free memory systems, graph-structured traffic forecasting and multi-scale physics-informed neural networks, Xcientist preserves traceable trajectories from problem formulation to mechanism design, validation and bounded revision. These results suggest that AI scientists should be evaluated not only by their final artifacts, but by whether their synthesis and validation processes remain attributable, inspectable and scientifically accountable.",
+    "upvotes": 1,
+    "projectPage": "https://kotohanon.github.io/Xcientist/",
+    "ai_keywords": [
+      "research harness",
+      "research synthesis",
+      "experimental validation",
+      "inspectable processes",
+      "contract-governed processes",
+      "literature evidence",
+      "idea states",
+      "implementation plans",
+      "ablation records",
+      "repair traces",
+      "claim drift",
+      "training-free memory systems",
+      "graph-structured traffic forecasting",
+      "multi-scale physics-informed neural networks",
+      "traceable trajectories",
+      "scientific accountability"
+    ]
+  },
+  {
+    "id": "2606.18375",
+    "title": "PAIWorld: A 3D-Consistent World Foundation Model for Robotic Manipulation",
+    "summary": "World foundation models (WFMs) are powerful simulators, yet they predominantly operate in a single-view setting and lack the multi-view 3D consistency required for robotic manipulation. While robotic systems rely on multiple cameras (egocentric, eye-to-hand, and wrist-mounted) for policy learning, current multi-view world models simply concatenate view tokens without explicit geometric reasoning. This causes cross-view object drift, depth inconsistency, and texture misalignment. We trace these failures to two deficiencies: the absence of an explicit inter-view communication mechanism and the lack of a 3D geometric prior. We argue that resolving both simultaneously is necessary and sufficient. To address this, we present PAIWorld, a framework that augments diffusion-transformer world models via three core components: (1) Geometry-Aware Cross-View Attention blocks that establish an explicit pathway across views, (2) Geometric Rotary Position Embedding that encodes camera ray directions and extrinsic poses into the attention mechanism, and (3) Latent 3D-REPA, which distills 3D-aware features from frozen 3D foundation models to ensure 3D consistency. Built upon a DiT-based world foundation model, PAIWorld achieves state-of-the-art multi-view 3D consistency on robotic manipulation benchmarks, ranking 1st on the WorldArena leaderboard and 2nd on the AgiBot-Challenge2026 leaderboard, while enabling downstream applications such as model-based planning, world action models, and multi-view policy post-training.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "world foundation models",
+      "diffusion-transformer",
+      "cross-view attention",
+      "geometric rotary position embedding",
+      "latent 3D-REPA",
+      "3D consistency",
+      "robotic manipulation",
+      "WorldArena",
+      "AgiBot-Challenge2026"
+    ]
+  },
+  {
+    "id": "2606.18543",
+    "title": "CEO-Bench: Can Agents Play the Long Game?",
+    "summary": "Language model agents are becoming proficient executors at isolated, short-horizon tasks such as software engineering and customer service. Yet real-world challenges require a combination of sophisticated skills that remain largely untested in agents: (1) navigating long horizons amid uncertainty; (2) acquiring information in noisy environments; (3) adapting to a changing world; (4) orchestrating multiple moving parts toward a coherent goal. We introduce CEO-Bench, which evaluates these capabilities together by simulating a representative real-world task: operating a startup for 500 days. An agent manages pricing, marketing, budgeting, and many other aspects of a fictional company through a programmable Python interface, operating in the same environment and facing the same challenges as a human CEO. Success demands analyzing noisy, interconnected business databases, translating signals into sound strategy, and coordinating many decisions with programming. The strongest agents write sophisticated code that simulates customer cohorts to forecast future cash and mines negotiation history to uncover hidden customer preferences. Even so, most state-of-the-art models struggle in this environment. Only Claude Opus 4.8 and GPT-5.5 finish above the $1M starting balance, and neither consistently turns a profit. CEO-Bench takes a first step toward measuring the intelligence required to drive sustained, adaptive progress over time.",
+    "upvotes": 1,
+    "projectPage": "https://ceobench.com/",
+    "ai_keywords": [
+      "language model agents",
+      "long horizons",
+      "uncertainty",
+      "noisy environments",
+      "changing world",
+      "multi-task coordination",
+      "programmable Python interface",
+      "business databases",
+      "customer cohorts",
+      "negotiation history",
+      "sustained progress",
+      "adaptive progress"
+    ]
+  },
+  {
+    "id": "2606.14383",
+    "title": "IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value Extraction for Industrial Products",
+    "summary": "Industrial products such as valves and circuit breakers are defined by dense technical specifications that govern procurement, compatibility, and safety across supply chains. These specifications are scattered across multiple heterogeneous product images, including specification tables, nameplates, and technical drawings, yet whether Multimodal Large Language Models (MLLMs) can reliably recover them remains underexplored. To fill this gap, we introduce IndustryBench-MIPU, the first large-scale benchmark for multi-image industrial product understanding, built around structured attribute extraction -- recovering property-value pairs from product images. This task jointly probes text recognition on specification tables and nameplates, visual reasoning over technical drawings, domain knowledge to decode industrial terminology, and cross-image evidence integration to assemble scattered specifications. Concretely, the benchmark comprises 4,559 products across 27,652 images with 103,703 annotations spanning 18 industrial categories, constructed through multi-model consensus and three-tier quality assurance. Evaluating nine MLLMs under both single-image and product-level multi-image settings reveals a stark completeness gap: models achieve high precision (86--94%) but the best recovers only 49.9% of product-level attributes; moving from single-image to multi-image extraction costs 15--34 percentage points of recall. Multi-image completeness, not single-image accuracy, is the core bottleneck. Dataset and code are publicly available.",
+    "upvotes": 1,
+    "projectPage": "https://huggingface.co/datasets/alibaba-multimodal-industrial-ai/IndustryBench-MIPU",
+    "ai_keywords": [
+      "Multimodal Large Language Models",
+      "structured attribute extraction",
+      "specification tables",
+      "technical drawings",
+      "cross-image evidence integration",
+      "multi-model consensus",
+      "three-tier quality assurance"
+    ]
+  },
+  {
+    "id": "2606.18943",
+    "title": "Physics-IQ Verified",
+    "summary": "Video generative models ( VGMs) have become a new frontier that can be used not just for video generation but for a multitude of downstream tasks, including world modeling. To advance these tasks, a good video model must understand the physical reality of the world. Evaluating this understanding is an emerging field and has led to the Physics-IQ benchmark, which quantifies this explicitly by comparing model-generated videos to real-world videos of physical experiments. In this work, we present a systematic audit of the Physics-IQ benchmark, expose shortcomings and propose three solutions that sharpen how we can measure physical understanding of VGMs. Specifically, we improve prompt and ground-truth quality to reduce the influence of confounding factors and further introduce a sample-level scoring system that weights each sample and metric equally. Our resulting benchmark, Physics-IQ Verified, refines 57.6\\% of all samples and improves over 34.8\\% of prompts. In a comparison study using six image-to-video generative models, we observe moderate but meaningful ranking changes (Kendall's τ= 0.46). We hope Physics-IQ Verified advances the community by providing a more reliable signal toward physically accurate VGMs. The code for the benchmark can be accessed at https://github.com/google-deepmind/physics-iq-benchmark",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "video generative models",
+      "Physics-IQ benchmark",
+      "world modeling",
+      "physical understanding",
+      "sample-level scoring",
+      "Kendall's τ"
+    ]
+  },
+  {
+    "id": "2606.15872",
+    "title": "SciOrch: Learning to Orchestrate Expert LLMs for Solving Frontier Multimodal Scientific Reasoning Tasks",
+    "summary": "Frontier scientific reasoning remains a major challenge for large language models (LLMs), where even the strongest commercial systems fall short of expert-level performance. A closer look at model behavior reveals substantial complementarity that single-model evaluation hides: different frontier models excel on different question types, and no single model captures the full picture. We present SciOrch, a framework that trains a lightweight 8B model to orchestrate frontier LLMs for scientific reasoning. The orchestrator decomposes each question, delegates sub-problems to selected commercial models through API calls, and synthesizes a final answer. Training such an orchestrator is fundamentally harder than conventional agentic RL: each action triggers an API call that is expensive in both dollar cost and latency, making standard online rollouts infeasible. We address this with MCTS-based approach, producing diverse orchestration trajectories, extracting per-node single-turn samples, and optimizing the orchestrator with GRPO-style training. On a 240-question test set spanning SGI-Reasoning and Scientists' First Exam, SciOrch reaches 56.66% average accuracy, outperforming the strongest single commercial model by 3.74% and the strongest multi-agent baseline by 3.33%. It also attains the best accuracy on both SGI and SFE with less than half the API cost of typical multi-agent methods.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language models",
+      "scientific reasoning",
+      "frontier models",
+      "orchestrator model",
+      "API calls",
+      "MCTS-based approach",
+      "GRPO-style training",
+      "multi-agent baseline",
+      "SGI-Reasoning",
+      "Scientists' First Exam"
+    ]
+  }
+]
