@@ -1,0 +1,605 @@
+[
+  {
+    "id": "2606.22388",
+    "title": "PlanBench-XL: Evaluating Long-Horizon Planning of LLM Tool-Use Agents in Large-Scale Tool Ecosystems",
+    "summary": "LLM agents increasingly operate in large tool ecosystems, where real-world tasks require discovering relevant tools, inferring implicit sub-goals, and adapting to dynamic environments over long horizons. However, existing benchmarks rarely evaluate planning under retrieval-limited tool visibility. To address this gap, we introduce PlanBench-XL, an interactive benchmark of 327 retail tasks over 1,665 tools that tests whether agents can iteratively retrieve usable tools, invoke them to uncover intermediate evidence for subsequent calls toward the final goal. PlanBench-XL further features an optional blocking mechanism that simulates real-world unpredictability through missing, failing, or distracting tool functions, forcing agents to detect disrupted paths and adapt at runtime. Experiments on ten leading LLMs show that massive-tool planning remains challenging: while GPT-5.4 achieves 51.90% accuracy in block-free settings, it collapses to 11.36% under the most severe blocking condition. Further analysis shows that agents are especially vulnerable when failures lack explicit error signals or when recovery requires longer alternative tool-use paths. These results establish PlanBench-XL as a testbed for diagnosing agentic planning failures and highlight the need for robust adaptive planning in long-horizon tasks with large, imperfect tool environments.",
+    "upvotes": 41,
+    "projectPage": "https://planbench-xl.github.io/",
+    "ai_keywords": [
+      "LLM agents",
+      "tool ecosystems",
+      "planning",
+      "retrieval-limited tool visibility",
+      "interactive benchmark",
+      "tool discovery",
+      "implicit sub-goals",
+      "dynamic environments",
+      "long horizons",
+      "blocking mechanism",
+      "agent adaptation",
+      "tool-use paths",
+      "agentic planning",
+      "robust planning"
+    ]
+  },
+  {
+    "id": "2606.23654",
+    "title": "EnterpriseClawBench: Benchmarking Agents from Real Workplace Sessions",
+    "summary": "Enterprise agents increasingly operate inside workspaces: they read heterogeneous files, invoke tools, and deliver business artifacts. We introduce EnterpriseClawBench, an enterprise agent benchmark constructed from proprietary, real-world agent sessions. Starting from a large archive of workplace sessions, the EnterpriseClawBench produces 852 reproducible tasks, each paired with recovered fixtures, rewritten prompts, role classes, skill subclasses, hard rules, and semantic rubrics. Because the sessions contain internal enterprise content, we do not release the benchmark data; instead, our reusable contribution is the construction and evaluation protocol. On EnterpriseClawBench, the best configuration reaches only 0.663 (Codex with GPT-5.5). These results show that enterprise agent evaluation must report harness--model combinations, artifact delivery, visual quality, cost, runtime, and skill-transfer behavior, rather than collapsing performance into a single score. Code: https://github.com/FrontisAI/EnterpriseClawBench",
+    "upvotes": 40,
+    "projectPage": "https://frontisai.github.io/EnterpriseClawBench/",
+    "ai_keywords": [
+      "enterprise agent benchmark",
+      "reproducible tasks",
+      "workplace sessions",
+      "harness--model combinations",
+      "artifact delivery",
+      "skill-transfer behavior"
+    ]
+  },
+  {
+    "id": "2606.22807",
+    "title": "KaLM-Reranker-V1: Fast but Not Late Interaction for Compressed Document Reranking",
+    "summary": "As retrieval systems scale, high-quality reranking becomes increasingly important. However, most existing rerankers, whether encoder-based or decoder-based, jointly encode the query and passage, tightly coupling their computation and limiting deployment efficiency as well as flexibility. We present KaLM-Reranker-V1, a fast but not late-interaction (FBNL) reranker that decouples query and passage computation while retaining expressive relevance modeling. Built on an encoder-decoder architecture, KaLM-Reranker-V1 uses the encoder to pre-encode passages with Matryoshka embedding pooling, while the decoder models the system instruction, user instruction, and query intent; cross-attention then captures relevance between the query context and passage representations. This design makes KaLM-Reranker-V1 efficient through decoupled passage encoding, yet not late interaction, by preserving rich relevance modeling through cross-attention. We instantiate KaLM-Reranker-V1 in three sizes, Nano, Small, and Large, with 0.27B, 1B, and 4B activated parameters, respectively. Extensive experiments on BEIR, MIRACL, and LMEB demonstrate that KaLM-Reranker-V1 achieves strong reranking performance with superior efficiency. On BEIR, KaLM-Reranker-V1 achieves state-of-the-art performance, on par with strong industrial models such as the Qwen3-Reranker series; on MIRACL, despite not being extensively trained on multilingual data, KaLM-Reranker-V1 still shows excellent reranking performance. Moreover, on LMEB, reranking models demonstrate a clear advantage, with even the 0.27B Nano model remaining competitive with 7-12B embedding models.",
+    "upvotes": 31,
+    "projectPage": "https://kalm-embedding.github.io/",
+    "ai_keywords": [
+      "reranker",
+      "encoder-decoder architecture",
+      "Matryoshka embedding pooling",
+      "cross-attention",
+      "late-interaction",
+      "parameter-efficient fine-tuning",
+      "BEIR",
+      "MIRACL",
+      "LMEB"
+    ]
+  },
+  {
+    "id": "2606.20781",
+    "title": "World Action Models: A Survey",
+    "summary": "World Action Models (WAMs) are embodied predictive-action models that make a forecast of the future available to action. Recent WAMs repurpose large video generation models, and a parallel line relies on language or vision-language backbones without a video-generation core. This rapid expansion has blurred the boundary among broad world models, video generation models, action-grounded video world models, Vision-Language-Action policies, and WAMs. This survey gives the field a common account. It first clarifies these boundaries, then organizes existing works through two complementary views. The first view asks what each method is required to generate, spanning rendered futures, latent futures, and video-generation-free action reasoning. The second view decomposes each method by predictive substrate, backbone, action coupling, and deployment regime. This anatomy supports a unified discussion of interactability, causality, persistence, physical plausibility, and generalization, followed by data, evaluation, and open challenges. Across these axes, a consistent design pattern emerges: WAMs are not simply video generators with action heads, but predictive-action methods whose design choices trade representational richness against compute, memory, latency, and action-label cost. The field is moving toward methods that generate less of the future while preserving what control requires. The survey homepage is available at https://world-action-models.github.io/.",
+    "upvotes": 29,
+    "projectPage": "https://world-action-models.github.io/",
+    "ai_keywords": [
+      "world action models",
+      "embodied predictive-action models",
+      "video generation models",
+      "vision-language backbones",
+      "predictive substrate",
+      "action coupling",
+      "deployment regime",
+      "interactability",
+      "causality",
+      "physical plausibility",
+      "generalization"
+    ]
+  },
+  {
+    "id": "2606.22883",
+    "title": "CLI-Universe: Towards Verifiable Task Synthesis Engine for Terminal Agents",
+    "summary": "While recent LLM-based terminal agents have demonstrated promising capabilities, the scarcity of high-quality, executable training data remains a critical bottleneck. Existing synthesis pipelines typically scale by retrofitting surface-level artifacts into tasks, frequently yielding ambiguous instructions, shallow execution paths, and brittle tests that provide weak learning signals. To overcome this, we introduce CLI-Universe, a principled synthesis engine that constructs terminal-agent tasks. CLI-Universe generates candidate tasks by sampling combinations across a multi-dimensional capability taxonomy (domain, skill type, capability, and engineering pillar), then grounds each candidate through evidence-guided deep research over real-world technical materials. To ensure rigorous supervision, validated blueprints are instantiated into Dockerized environments and subjected to a multi-stage executable verification pipeline featuring rubric-gated test construction, hint-conditional filtering, and strict fail-to-pass checking. Across the full pipeline, from candidate generation to verification, approximately two-thirds of candidates are discarded, retaining only those that are genuine, verifiable, and non-trivially challenging. To validate our framework, we instantiate a highly distilled dataset of 6,000 trajectories called CLI-Universe-6K. Remarkably, fine-tuning Qwen3-32B on CLI-Universe-6K achieves 33.4% on Terminal-Bench 2.0. This sets a new state-of-the-art for models trained on open-source data at or below 32B parameters, and outperforms several models an order of magnitude larger, demonstrating the profound data efficiency of structured, high-fidelity synthesis.",
+    "upvotes": 18,
+    "projectPage": null,
+    "ai_keywords": [
+      "LLM-based terminal agents",
+      "executable training data",
+      "synthesis engine",
+      "capability taxonomy",
+      "evidence-guided deep research",
+      "Dockerized environments",
+      "executable verification pipeline",
+      "rubric-gated test construction",
+      "fail-to-pass checking",
+      "Terminal-Bench 2.0",
+      "Qwen3-32B",
+      "CLI-Universe-6K"
+    ]
+  },
+  {
+    "id": "2606.21649",
+    "title": "EvoEmbedding: Evolvable Representations for Long-Context Retrieval and Agentic Memory",
+    "summary": "Existing embedding models are inherently static: they encode text segments in isolation, ignoring their surrounding context and temporal order. This paper introduces EvoEmbedding, a novel embedding model that generates evolvable representations for retrieval. It is tailored for long-context scenarios, where information is dynamic, sequential, and requires continuous state tracking. Our design is simple: EvoEmbedding maintains a continuously updated latent memory as it sequentially processes inputs, and uses it alongside the raw content to jointly generate evolvable embeddings. Consequently, for the same query, our model adapts its representation to retrieve distinct targets based on the evolving context, going beyond static semantic search. To equip the model with this capability, we construct EvoTrain-180K, a diverse dataset for the joint optimization of latent memory and retrieval. Furthermore, we introduce a memory queue to prevent representation collapse during recurrent encoding, alongside segment-batching techniques that tackle significant length variance and accelerate training by 3.8times. Extensive experiments show that our model not only outperforms larger-scale specialists (e.g., Qwen3-Embedding-8B and KaLM-Embedding-Gemma3-12B) across a range of long-context retrieval benchmarks, but also generalizes well to downstream tasks (e.g., personalization) with contexts 10times longer than its training window. Notably, EvoEmbedding seamlessly integrates into agentic workflows to boost performance. For instance, a naive RAG pipeline equipped with our model surpasses dedicated agentic memory systems. Project Page: https://clare-nie.github.io/EvoEmbedding.",
+    "upvotes": 17,
+    "projectPage": "https://clare-nie.github.io/EvoEmbedding/",
+    "ai_keywords": [
+      "evolvable representations",
+      "latent memory",
+      "sequential processing",
+      "joint generation",
+      "representation collapse",
+      "segment-batching",
+      "long-context retrieval",
+      "agentic workflows",
+      "RAG pipeline"
+    ]
+  },
+  {
+    "id": "2606.20097",
+    "title": "HydraHead: From Head-Level Functional Heterogeneity to Specialized Attention Hybridization",
+    "summary": "The quadratic complexity of attention poses a critical bottleneck for long-context processing, spurring interest in hybrid attention designs. Most open-source hybrid models adopt a layer-wise strategy. Yet, prior work has noted the inherent difficulty of integrating Linear Attention (LA) with Full Attention (FA), suggesting that the design space of attention hybridization remains underexplored. To probe this space, we conduct interpretability analysis and observe that layers exhibit block-wise functional similarity, while individual heads within the same layer display distinct functional specialization despite sharing input features. This head-level heterogeneity suggests that the head dimension provides a natural and principled granularity for fusing heterogeneous attention signals. Building on this insight, we introduce HydraHead, a novel architecture that hybridizes FA and LA along the head axis. HydraHead features two key innovations: (1) an interpretability-driven selection strategy that identifies retrieval-critical heads and preserves FA only for them, and (2) a scale-normalized fusion module that reconciles the distributional gap between FA and LA head outputs. By leveraging a three-stage transfer pipeline with parameter reuse and distillation, we achieve high-performance hybrid models with minimal training overhead. Under a unified training setup, HydraHead outperforms other hybrid designs in long-context tasks while maintaining strong general reasoning. With interpretability-driven head selection, it matches a 3:1 layer-wise hybrid's long-context performance at a 7:1 LA-to-FA ratio. Crucially, trained on only 15B tokens, HydraHead achieves over 69% improvement over the baseline at 512K context length, approaching Qwen3.5, a leading model of comparable size with a native context length of 256K. This highlights the significant scaling potential of head-level hybridization.",
+    "upvotes": 13,
+    "projectPage": null,
+    "ai_keywords": [
+      "attention hybridization",
+      "Linear Attention",
+      "Full Attention",
+      "head-level hybridization",
+      "interpretability-driven selection",
+      "scale-normalized fusion",
+      "parameter reuse",
+      "distillation",
+      "long-context processing",
+      "attention mechanisms"
+    ]
+  },
+  {
+    "id": "2606.18844",
+    "title": "Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation",
+    "summary": "Self-distillation improves reasoning in large language models by using the model's own rollouts as training signal, typically through implicit logit-level alignment that minimizes KL divergence toward a privileged target distribution. However, because this supervision is generated via uncontrolled sampling, it provides no diagnostic insight into the model's specific errors or corrective guidance for its individual failure patterns. Consequently, the model learns to imitate a privileged distribution rather than receiving fine-grained corrections that pinpoint where and why its reasoning fails. In this paper, we propose Trajectory-Augmented Policy Optimization (TAPO), which advances self-distillation from implicit distributional alignment to explicit trajectory construction. During RL training, the model produces both correct and incorrect rollouts to the same query, and TAPO leverages this contrastive structure to construct micro-reflective corrections, new training trajectories that retain the model's erroneous reasoning up to the point of failure, then insert a natural-language diagnosis and corrected reasoning guided by a correct reference from the same sampling group. Since each trajectory is anchored in the learner's own prefix and solutions, the corrective signal preserves the model's on-policy distribution to a greater extent than the position-wise alignment imposed by KL-based methods. To integrate these trajectories, TAPO introduces difficulty-aware candidate selection at the model's capability boundary and decoupled advantage estimation to prevent gradient contamination. Experiments on AIME 2024, AIME 2025, and HMMT 2025 show that TAPO achieves consistent improvements over GRPO under the same number of training steps. Further analysis demonstrates that TAPO strengthens both first-pass reasoning and error-correction effectiveness.",
+    "upvotes": 12,
+    "projectPage": null,
+    "ai_keywords": [
+      "self-distillation",
+      "logit-level alignment",
+      "KL divergence",
+      "trajectory construction",
+      "micro-reflective corrections",
+      "policy optimization",
+      "reinforcement learning",
+      "advantage estimation",
+      "candidate selection",
+      "error-correction effectiveness"
+    ]
+  },
+  {
+    "id": "2606.19409",
+    "title": "OpenRath: Session-Centered Runtime State for Agent Systems",
+    "summary": "Modern agent systems often suffer from fragmented runtime state: transcripts, tool effects, memory events, workspace placement, branch provenance, and replay evidence are recorded separately and become difficult to inspect or reproduce. OpenRath addresses this issue with a PyTorch-like programming model for multi-agent, multi-session systems. The analogy concerns the role of a central first-class runtime abstraction, not tensor computation. Its core abstraction is Session, the runtime value passed between agents and workflows. A Session is branchable, inspectable, replayable, backend-aware, and composable. It records conversation chunks, sandbox placement, lineage metadata, token usage, pending work, and tool evidence, while defining where memory interactions enter the runtime record. Since this state is carried by the same value used in program execution, fork, merge, and replay become explicit runtime operations rather than states reconstructed from external traces. OpenRath further defines Sandbox, Tool, Agent, Memory, Workflow, and Selector, with Selector turning control flow into runtime-routed decisions. This report presents the programming model, architecture, audited milestones, and evidence protocol. Its claims are limited to controlled runtime properties, while broad quantitative comparisons, live-provider quality, optional-backend availability, and memory quality are left for follow-on evaluation. The central thesis is that Session provides agent systems with a first-class runtime value for auditable composition.",
+    "upvotes": 10,
+    "projectPage": "https://docs.openrath.com",
+    "ai_keywords": [
+      "Session",
+      "Sandbox",
+      "Tool",
+      "Agent",
+      "Memory",
+      "Workflow",
+      "Selector",
+      "runtime abstraction",
+      "fork",
+      "merge",
+      "replay",
+      "auditable composition",
+      "execution state"
+    ]
+  },
+  {
+    "id": "2606.18648",
+    "title": "Deep Research in Physical Sciences: A Multi-Agent Framework and Comprehensive Benchmark",
+    "summary": "Deep research agents are Large Language Model (LLM)-based systems designed for autonomous, multi-step scientific reasoning, and they hold immense potential for accelerating research in the physical sciences. However, comprehensive and in-depth evaluations of their capabilities within this domain remain lacking. To address this gap, we introduce PhySciBench, a benchmark highly relevant to physical science research, comprising 200 expert-curated questions, balanced between physics and chemistry, across six task categories that reflect real-world scientific workflows. Evaluations of state-of-the-art models and agent systems on PhySciBench reveal limited performance; even the strongest baseline, Gemini Deep Research, achieves an accuracy of only 33.5%. Analysis of failure cases identifies three recurrent deficiencies: fragility in extended reasoning chains, limited knowledge transfer across steps, and a lack of physics-grounded self-verification. Motivated by these findings, we develop DelveAgent, a modular multi-agent framework equipped with an adaptive planning loop, dual-granularity memory, and a hierarchical physics-grounded reflection mechanism. Across four scientific benchmarks, DelveAgent improves accuracy by up to 7.5 percentage points while reducing inference costs to approximately one-third of the strongest baseline. These results establish the significance of PhySciBench as a critical benchmark for evaluating AI systems in the physical sciences and demonstrate that architectural specialization can effectively enhance the reliability of autonomous scientific research.",
+    "upvotes": 9,
+    "projectPage": "https://github.com/yigengjiang/physci-deepresearch",
+    "ai_keywords": [
+      "Large Language Model",
+      "scientific reasoning",
+      "physical science research",
+      "benchmark",
+      "agent systems",
+      "multi-agent framework",
+      "adaptive planning loop",
+      "dual-granularity memory",
+      "hierarchical reflection mechanism"
+    ]
+  },
+  {
+    "id": "2606.12871",
+    "title": "DailyReport: An Open-ended Benchmark for Evaluating Search Agents on Daily Search Tasks",
+    "summary": "Search Agents (SAs) typically leverage large language models (LLMs) to support complex information-seeking tasks by autonomously exploring web sources and synthesizing information into comprehensive responses. For SAs evaluation, prior benchmarks mainly focus on specialized tasks that are unlikely to arise in real-world user scenarios. Moreover, their reliance on coarse task-level rubrics often limits evaluation interpretability. To bridge this gap, we introduce DailyReport, an open-ended benchmark to evaluate SA capabilities on daily search tasks. It contains 150 open-ended tasks with 3,546 associated rubrics, capturing widely discussed and timely information demands of real-world users. Each task is decomposed into subtasks and evaluated with cascade rubrics across disentangled dimensions. Through cascade performance attribution and user-centric aggregation, we derive highly interpretable scores for each dimension, along with a user preference score. Our results on 17 agentic systems show that current systems still fall short of users' expectations. To facilitate future research, our dataset and code are made publicly available at https://github.com/AGI-Eval-Official/DailyReport.",
+    "upvotes": 7,
+    "projectPage": null,
+    "ai_keywords": [
+      "search agents",
+      "large language models",
+      "information-seeking tasks",
+      "web sources",
+      "autonomous exploration",
+      "comprehensive responses",
+      "open-ended benchmark",
+      "daily search tasks",
+      "cascade rubrics",
+      "performance attribution",
+      "user-centric aggregation",
+      "user preference score"
+    ]
+  },
+  {
+    "id": "2606.21139",
+    "title": "PoLAR: Factorizing Extent and Mode in Latent Actions for Robot Policy Learning",
+    "summary": "Latent action pretraining learns representations of visual change from pairs of observations, but existing methods typically encode each transition as a single unstructured representation that entangles transition extent and transition mode. We introduce Polar Latent Actions with Radial structure (PoLAR), which imposes a radial-direction structure on latent actions, encouraging radius to encode transition extent and direction to retain transition mode. PoLAR uses temporal offset between two observations as a weak proxy for transition extent, encouraging latent action from observation pairs separated by larger temporal gaps to occupy larger radii. We instantiate this structure in hyperbolic space, whose expanding volume with radius offers a natural fit for more diverse transition modes at larger extents. Across in-task and large-scale pretraining settings, PoLAR improves downstream policy performance in simulation and real-world robot experiments, outperforming latent action baselines and strong pretrained VLAs. These results suggest that the geometry of the latent action space is an important design choice for transferring visual pretraining to downstream robot policy learning.",
+    "upvotes": 6,
+    "projectPage": "https://joon-stack.github.io/PoLAR",
+    "ai_keywords": [
+      "latent action pretraining",
+      "polar latent actions",
+      "radial structure",
+      "hyperbolic space",
+      "transition extent",
+      "transition mode",
+      "temporal offset",
+      "downstream policy performance",
+      "visual pretraining",
+      "robotic policy learning"
+    ]
+  },
+  {
+    "id": "2606.11075",
+    "title": "Exploring the Design Space of Reward Backpropagation for Flow Matching",
+    "summary": "Aligning text-to-image flow matching models with human preferences via direct reward backpropagation is sample-efficient but hampered by two well-known pathologies: activations cannot be stored across the full sampling trajectory at modern model scale, and chained Jacobian products across steps inflate the reward gradient as it travels back to early indices. Connector-based methods, such as LeapAlign, address these issues by replacing the full backward trajectory with a short pinned path, highlighting a useful decoupling between sampling and optimization. However, the quality of the resulting gradient depends on how accurately this short path approximates the full rollout, especially over long intervals. We propose FlowBP, a unified surrogate-trajectory framework that treats the backward trajectory itself as the design object. FlowBP keeps a no-gradient cached rollout for sampling, then builds a lightweight backward surrogate from cached and selectively re-forwarded velocities. This view separates four choices: the reward-model input, active set, integration weights, and bridge coupling, and recovers prior direct-gradient methods as particular settings. Within this framework, we instantiate three variants: FlowBP-Sparse uses sparse Euler reconstruction, FlowBP-Bridge adds controlled bridge coupling, and FlowBP-Lagrange raises the order of leap quadrature. All three bound memory by the active-set size and limit gradient chaining to at most one Jacobian factor. Across SD3.5-M, FLUX.1-dev, and FLUX.2-Klein-base on preference, quality, and compositional metrics, the three variants improve over direct-gradient baselines on most metrics.",
+    "upvotes": 6,
+    "projectPage": null,
+    "ai_keywords": [
+      "flow matching models",
+      "direct reward backpropagation",
+      "Jacobian products",
+      "backward trajectory",
+      "surrogate trajectory",
+      "cached rollout",
+      "velocity",
+      "integration weights",
+      "bridge coupling",
+      "leap quadrature"
+    ]
+  },
+  {
+    "id": "2606.23525",
+    "title": "Self-Compacting Language Model Agents",
+    "summary": "Long agent traces composed of chains of thought and tool calls accumulate stale content that anchor subsequent generations, and eventually outgrow the context window. Existing scaffolds mitigate it with fixed-interval compaction triggered at a token threshold. Such triggers pay no heed to trajectory structure, risking discard of partial results mid-derivation or mid-search. We propose SelfCompact, a scaffold that allows the model itself to decide when and how to compact. Specifically, it pairs two inference-time elements: (i) a compaction tool the model invokes to summarize the accumulated context, and (ii) a lightweight rubric specifying when to fire (a sub-task has resolved, or the trajectory is converging) and when to suppress (mid-derivation, or when stuck). Both are needed. The tool alone is unevenly used across open-weight models, often invoked at unhelpful moments or not at all; the rubric alone cannot act. Together, they elicit effective adaptive compaction without any fine-tuning or external supervision. We present empirical results on six benchmarks (competitive math and agentic search) and seven models. Our results show that SelfCompact matches or exceeds fixed-interval summarization at a fraction of the token cost, improving over a no-summarization baseline by up to 18.1 points on math and 5-9 points on agentic search at 30-70% lower per-question cost. Our results expose a meta-cognitive gap: although unprompted models cannot reliably tell when their own context is rotting, a lightweight rubric closes this gap, reframing when to compact as a capability that scaffolds can supply without training.",
+    "upvotes": 5,
+    "projectPage": null,
+    "ai_keywords": [
+      "agent traces",
+      "chains of thought",
+      "tool calls",
+      "context window",
+      "scaffolds",
+      "compaction",
+      "inference-time elements",
+      "compaction tool",
+      "rubric",
+      "trajectory structure",
+      "adaptive compaction",
+      "token cost",
+      "mathematical reasoning",
+      "agentic search"
+    ]
+  },
+  {
+    "id": "2606.20002",
+    "title": "Connect the Dots: Training LLMs for Long-Lifecycle Agents with Cross-Domain Generalization Via Reinforcement Learning",
+    "summary": "This work presents a general framework for training large language models (LLMs) to \"Connect the Dots\" (CoD), a meta-capability required by long-lifecycle agents: as an LLM-based AI agent gets deployed in an environment, it solves a long sequence of tasks while continuously exploring the environment, learning from its own experiences, and iteratively self-updating its context about the environment, thereby achieving progressively better performance on future tasks conditioned on the updated context. Major components of the CoD framework include: (1) algorithm design and infrastructure for end-to-end reinforcement learning (RL) with long rollout sequences interleaving solve-task and update-context episodes; (2) tasks and environments for incentivizing and eliciting the targeted meta-capability in LLMs during training, as well as for faithfully measuring progress during evaluation. We present proof-of-concept implementations of the CoD framework, including a GRPO-style RL algorithm with fine-grained credit assignment, as well as tasks and environments tailored to the targeted meta-capability (rather than domain-specific LLM capabilities or standard task-by-task RL). Empirical results validate the efficacy of end-to-end RL training in the CoD setting, and demonstrate the potential for out-of-distribution generalization -- within the training domains, across different domains, and from CoD to Ralph-loop settings -- of the elicited meta-capability. Our investigation of CoD connects several lines of prior works, and opens up new opportunities for advancing LLMs and AI agents. To facilitate further research and applications, we release our implementations at https://github.com/agentscope-ai/Trinity-RFT/tree/research/cod/examples/research_cod.",
+    "upvotes": 4,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language models",
+      "reinforcement learning",
+      "long rollout sequences",
+      "solve-task episodes",
+      "update-context episodes",
+      "end-to-end reinforcement learning",
+      "GRPO-style RL algorithm",
+      "fine-grained credit assignment",
+      "meta-capability",
+      "long-lifecycle agents",
+      "contextual adaptation",
+      "out-of-distribution generalization",
+      "Ralph-loop settings"
+    ]
+  },
+  {
+    "id": "2606.23321",
+    "title": "Tmax: A simple recipe for terminal agents",
+    "summary": "Terminal-using agents have quickly become the most popular downstream application of language models (LMs). Despite their prevalence, relatively little academic work has examined RL-based training of these models, likely due to difficult benchmarks, a lack of data, and a lack of simple baseline recipes. We present Tmax, the strongest open RL recipe for terminal agents to date, bringing open data recipes closer to the frontier. While simple, our recipe achieves 27\\% on Terminal-Bench 2.0 with only 9B parameters, outperforming much larger models from prior work. Concretely, we generate data using a novel taxonomy, combining difficulty control, personas, and verifier diversification, which allows us to cheaply generate large amounts of terminal environments for RL and SFT training. We open-source our terminal dataset, which is over 2.5x larger than previously released terminal-agent datasets. We then train open-weight models using RL with our data, using a simple, outcome-only recipe. We release our data, models, and code as a strong baseline for future open academic work on terminal agents at https://github.com/hamishivi/tmax.",
+    "upvotes": 3,
+    "projectPage": "https://wai-org.com/blog/tmax/",
+    "ai_keywords": [
+      "terminal agents",
+      "language models",
+      "reinforcement learning",
+      "outcome-only recipe",
+      "terminal-Bench 2.0",
+      "SFT training",
+      "verifier diversification",
+      "difficulty control",
+      "personas",
+      "terminal environment generation"
+    ]
+  },
+  {
+    "id": "2606.23049",
+    "title": "Training Open Models for Agentic Phone Use",
+    "summary": "Phones are becoming an important execution surface for general-purpose agents, but training open models for reliable phone use remains difficult because the environment that matters at deployment, real devices running real apps, is slow, stateful, side-effectful, and hard to reset or verify, while scalable mock environments only approximate real behavior. We present PhoneBuddy, a training recipe and open-model line for agentic phone use that combines a real-app environment with a mock-app environment, PhoneWorld, which reconstructs runnable mock apps from real GUI usage structure. PhoneBuddy first builds a shared supervised fine-tuning stage from trajectories collected in both environments, then compares real-app RL against mixed RL across both environments. Across a 150-task human evaluation on real phones spanning apps, mini-apps, and cross-app workflows, task success rate improves from 36.67\\% after supervised fine-tuning to 40.67\\% after real-app RL and 45.33\\% after mixed RL. On AndroidWorld, the same progression rises from 60.3\\% to 77.2\\% to 83.2\\%. These results show that mock-app training is not a replacement for real-app RL, but a complementary source of scalable, resettable, and automatically checked interaction. The gains are strongest on app and mini-app tasks, while long-horizontal cross-app workflows remain an important open challenge.",
+    "upvotes": 3,
+    "projectPage": "https://phonebuddyai.github.io/",
+    "ai_keywords": [
+      "open models",
+      "real-app environment",
+      "mock-app environment",
+      "PhoneWorld",
+      "supervised fine-tuning",
+      "reinforcement learning",
+      "task success rate",
+      "AndroidWorld"
+    ]
+  },
+  {
+    "id": "2606.23267",
+    "title": "Safe Few-Step Generation via Velocity Editing",
+    "summary": "Flow matching has recently emerged as a strong paradigm for state-of-the-art text-to-image (T2I) generation, enabling high-quality generation with a small number of sampling steps. As these models are increasingly integrated into real-world applications, ensuring safe and non-sensitive content generation has become a critical requirement. However, adapting safety and concept removal methods to this new generation framework remains an open challenge. Specifically, prior methods largely rely on iterative trajectory steering across a number of denoising steps or on CLIP-centric prompt embedding manipulation. These design assumptions pose fundamental bottlenecks for safety in flow matching-based T2I generation, where limited sampling steps constrain iterative correction and modern context-aware text encoders diminish the effectiveness of embedding-level interventions. In this paper, we propose VESFlow, a training-free safety method tailored to flow matching with extremely few sampling steps. Leveraging the fact that flow matching models learn the marginal velocity, we directly edit the velocity field via a safe-conditional posterior. VESFlow steers the trajectory toward safe outputs while leaving the conditioning prompt unchanged. Building on the observation that VESFlow leaves outputs unchanged under benign prompts, we further introduce a risk score-based filtering that bypasses velocity editing to reduce computational cost while preserving benign prompt generation. Based on this filtering, we propose VESFlow+, a stronger variant of VESFlow that not only edits the velocity toward the safe direction, but also pushes it away from the unsafe direction. Experimental results show that VESFlow+ removes the target concept, reducing the attack success rate by NudeNet to 6.3% on Ring-A-Bell and 6.8% on MMA-Diffusion on the 4-step MeanFlow model, while preserving fidelity on benign prompts.",
+    "upvotes": 3,
+    "projectPage": "https://uzn36.github.io/VESFlow/",
+    "ai_keywords": [
+      "flow matching",
+      "text-to-image generation",
+      "safety",
+      "concept removal",
+      "marginal velocity",
+      "velocity field",
+      "safe-conditional posterior",
+      "risk score-based filtering",
+      "attack success rate",
+      "NudeNet",
+      "MeanFlow"
+    ]
+  },
+  {
+    "id": "2606.23503",
+    "title": "UniverSat: Resolution- and Modality-Agnostic Transformers for Earth Observation",
+    "summary": "Vision Transformers (ViT) dominate computer vision. However, their reliance on rigid patch projectors hinders transfer to Earth Observation (EO), where input modalities, scales, and resolutions vary widely. We introduce UniverSat, a ViT-style backbone built around a Universal Patch Encoder that maps patches from arbitrary spatial, spectral, and temporal resolutions, and from both optical and non-optical sensors, into a shared embedding space with a shared set of weights. This enables training a single model on heterogeneous multimodal corpora via self-supervision, yielding robust, sensor-agnostic spatial features. We validate this approach with strong results across classification and segmentation on standard EO benchmarks from GeoBench, PANGEABench, and SpectralEarth. Our code and models are available at https://github.com/gastruc/UniverSat.",
+    "upvotes": 2,
+    "projectPage": "https://gastruc.github.io/universat",
+    "ai_keywords": [
+      "Vision Transformers",
+      "Universal Patch Encoder",
+      "patch projectors",
+      "Earth Observation",
+      "multimodal corpora",
+      "self-supervision",
+      "spatial features",
+      "classification",
+      "segmentation"
+    ]
+  },
+  {
+    "id": "2606.23050",
+    "title": "Unlimited OCR Works",
+    "summary": "Recently, end-to-end OCR models, exemplified by DeepSeek OCR, have once again thrust OCR into the spotlight. A widely held view is that employing a large language model (LLM) as the decoder allows the model to leverage the prior distribution of language, leading to improved OCR performance. However, the downside is equally evident: as the output sequence lengthens, the accumulated KV cache drives up memory consumption and progressively slows down generation. This stands in stark contrast to humans, who exhibit no such decline in efficiency during long-horizon copying tasks. In this technical report, we propose Unlimited OCR, a model designed to emulate human parsing working memory. Taking DeepSeek OCR as the baseline, we replace all attention layers in the decoder with our proposed Reference Sliding Window Attention (R-SWA), which reduces attention computation costs while maintaining a constant KV cache throughout the entire decoding process. By combining the high compression rate of DeepSeek OCR's encoder with our constant KV cache design, Unlimited OCR can transcribe dozens of pages of documents in a single forward pass under a standard maximum length of 32K. More importantly, R-SWA is a general-purpose parsing attention mechanism - beyond OCR, it is equally applicable to tasks such as ASR, translation, etc. Codes and model weights are publicly available at http://github.com/baidu/Unlimited-OCR.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "end-to-end OCR",
+      "large language model",
+      "decoder",
+      "KV cache",
+      "attention layers",
+      "Reference Sliding Window Attention",
+      "document transcription",
+      "sequence length",
+      "memory consumption",
+      "working memory",
+      "parsing attention mechanism",
+      "ASR",
+      "translation"
+    ]
+  },
+  {
+    "id": "2606.23557",
+    "title": "Dense Reward for Multi-View 3D Reasoning with Global Maps and Local Views",
+    "summary": "Multi-view 3D Visual Question Answering (MV3D-VQA) requires integrating partial observations into a coherent 3D scene representation and selecting informative viewpoints for multi-step spatial reasoning. However, current multimodal LLMs are typically trained with sparse, answer-level supervision, which often yields inconsistent cross-view reasoning and brittle view selection. We present DR-MV3D (Dense Reward for MV3D-VQA), a map-grounded learning framework that provides dense, verifiable rewards to supervise the reasoning process. Our approach decomposes MV3D-VQA into (i) allocentric global map construction, (ii) question-conditioned view-trajectory planning, and (iii) egocentric grounding for answer prediction. To make intermediate steps learnable without manual annotations, we introduce two rewards: a global consistency reward that aligns the predicted map with geometry-consistent pseudo targets from frozen 3D vision foundation models (e.g., VGGT + SAM3), and a local trajectory reward that supervises ordered viewpoint selection. We optimize the full pipeline with trajectory-level policy optimization (GRPO). Experiments on MindCube, VSI-Bench, and BLINK (MV) show that DR-MV3D consistently improves over strong multi-image baselines, supporting the effectiveness of process-level dense supervision for multi-view 3D reasoning.",
+    "upvotes": 2,
+    "projectPage": "https://dr-mv3d.github.io/",
+    "ai_keywords": [
+      "MV3D-VQA",
+      "multimodal LLMs",
+      "sparse supervision",
+      "cross-view reasoning",
+      "view selection",
+      "dense reward",
+      "map-grounded learning",
+      "allocentric global map construction",
+      "question-conditioned view-trajectory planning",
+      "egocentric grounding",
+      "policy optimization",
+      "GRPO",
+      "3D vision foundation models",
+      "VGGT",
+      "SAM3"
+    ]
+  },
+  {
+    "id": "2606.23608",
+    "title": "Causal Discovery in the Era of Agents",
+    "summary": "Recent attempts to combine large language models (LLMs) with causal discovery ask models to infer pairwise directions, propose graph structures, or inject language-model outputs as priors and constraints. These approaches promise faster analysis, but they also obscure whether a causal evidence is supported by data and assumptions or by textual associations, prompt artifacts and hallucinated mechanisms. We argue for a different role for agents in causal discovery. Agents should inspect data, retrieve context, explain method assumptions and clarify graph outputs, but they should not supply edges, orientations, priors, constraints or causal conclusions. We propose the principle that agents assist the workflow, while causal claims remain grounded in data, explicit assumptions, formal algorithms, diagnostics and user or domain-expert decisions. We instantiate this principle in causal-learn+, an online platform that coordinates data analysis, preprocessing, method recommendation, expert-knowledge incorporation, formal discovery and interpretation around the algorithmic ecosystem of causal-learn. A case study on Big Five personality data illustrates agent-assisted pipeline of causal discovery without turning language-model unreliability into causal evidence. The platform is available at causallearn.com.",
+    "upvotes": 2,
+    "projectPage": "https://causallearn.com",
+    "ai_keywords": [
+      "causal discovery",
+      "large language models",
+      "causal claims",
+      "data analysis",
+      "expert-knowledge incorporation",
+      "formal algorithms",
+      "causal-learn"
+    ]
+  },
+  {
+    "id": "2606.23489",
+    "title": "MeshFlow: Mesh Generation with Equivariant Flow Matching",
+    "summary": "Meshes are among the most common 3D scene representations, but directly generating meshes is challenging because the representation contains important symmetries, including permutation invariance of faces and vertices. MeshFlow learns to generate triangle meshes directly as triangle soups, avoiding the need to serialize meshes into long autoregressive sequences. We adopt equivariant optimal-transport flow matching models that respect the key symmetries of triangle soups: arbitrary permutations of faces and permutations of the vertices within each face.\n  Toward this goal, we propose a simple yet effective modification to the Diffusion Transformer architecture, resulting in a scalable network capable of modeling a velocity field while maintaining the desired equivariance. We further introduce an optimal-transport-based training objective that improves convergence by eliminating supervision signals that violate these symmetries. MeshFlow achieves mesh quality comparable to state-of-the-art autoregressive mesh generators while providing about an 18times speedup during inference. Project page is at https://qiisun.github.io/MeshFlow/.",
+    "upvotes": 1,
+    "projectPage": "https://qiisun.github.io/MeshFlow/",
+    "ai_keywords": [
+      "mesh generation",
+      "triangle soups",
+      "permutation invariance",
+      "equivariant optimal-transport flow matching",
+      "Diffusion Transformer",
+      "velocity field",
+      "optimal-transport-based training objective"
+    ]
+  },
+  {
+    "id": "2606.22540",
+    "title": "PolicyTrim: Boosting Intrinsic Policy Efficiency of Vision-Language-Action Models",
+    "summary": "Vision-Language-Action (VLA) models provide a unified paradigm for robotic manipulation, yet their real-world deployment is often bottlenecked by execution efficiency. While existing efforts predominantly focus on compute-centric efficiency to reduce per-step inference latency, the intrinsic policy efficiency of these models remains largely unexplored. Policy efficiency is fundamentally affected by two factors, namely the effective executable length of predicted action chunks and the total physical steps required to complete a task. These two factors jointly determine the total number of forward inference calls during execution. We observe that current VLA policies struggle with planning unreliability and action redundancy, suffering from severe prediction degradation at the tail of action chunks and tending to generate unnecessarily redundant physical steps. To address this, we propose PolicyTrim, a reinforcement learning-based post-training framework that extends the reliable action chunk length and reduces redundant physical steps. For reliable chunk extension, we employ a dynamic exploration strategy that explicitly rewards the successful completion of longer executable lengths, progressively pushing the trustworthy prediction horizon to its empirical limit. For step efficiency, we design a redundancy-aware reward that directly favors successful task completions with fewer steps while penalizing unreproducible shortcuts, effectively eliminating redundant physical actions. Extensive experiments across three benchmarks and three VLA models demonstrate that PolicyTrim improves action chunk utilization by 3times and reduces physical execution steps by 51.4\\%. Ultimately, our framework delivers up to a 5.83times end-to-end deployment speedup without compromising task success rates.",
+    "upvotes": 1,
+    "projectPage": "https://inceptionwang.github.io/PolicyTrim/",
+    "ai_keywords": [
+      "Vision-Language-Action models",
+      "policy efficiency",
+      "action chunk length",
+      "physical steps",
+      "reinforcement learning",
+      "dynamic exploration",
+      "redundancy-aware reward",
+      "action redundancy",
+      "planning unreliability",
+      "end-to-end deployment"
+    ]
+  },
+  {
+    "id": "2606.21337",
+    "title": "DataClaw0: Agentic Tailoring Multimodal Data from Raw Streams",
+    "summary": "Massive unstructured multimodal streams suffer from high \"data entropy,\" impeding both efficient human knowledge acquisition and high-quality AI post-training. Existing passive annotation paradigms, heavily reliant on heuristic rules or general VLMs, are costly, monotonous, and fail to unlock the deep procedural logic embedded in raw data. We elevate data processing to a learnable capability, proposing a paradigm shift towards Agentic Data Tailoring, which actively refining and structuring data to align with diverse user and downstream intents. To overcome the data scarcity bottleneck in training such high-order capabilities, we design a two-stage pipeline grounding generative semantic synthesis in deterministic Factual Anchors, yielding a large-scale dataset spanning five core physical and digital domains. Building upon this, DataClaw_0-9B model synergizes Supervised Fine-Tuning (SFT) with Group Relative Policy Optimization (GRPO), achieving robust alignment with complex refinement and tailoring intents. To systematically quantify this capability, we construct DataClaw_0-val, the first benchmark dedicated to data refinement. Crucially, we adopt downstream post-training as the ultimate validation touchstone. Evaluations on video generation, real-world VQA, and GUI navigation confirm that DataClaw_0 delivers high-information-density tailored data, facilitating efficient model adaptation to new tasks under limited training data regimes. Project page: https://czjdsg.github.io/MakeAnyData",
+    "upvotes": 1,
+    "projectPage": "https://czjdsg.github.io/MakeAnyData/#cases",
+    "ai_keywords": [
+      "Agentic Data Tailoring",
+      "generative semantic synthesis",
+      "deterministic Factual Anchors",
+      "Supervised Fine-Tuning",
+      "Group Relative Policy Optimization",
+      "data refinement",
+      "multimodal streams",
+      "data entropy",
+      "downstream post-training"
+    ]
+  },
+  {
+    "id": "2606.21777",
+    "title": "CalVerT: Augmenting Agents with Calibrated Verifier Telemetry Improves Action and Learning in Knowledge-Intensive Tasks",
+    "summary": "LLM agents in knowledge intensive question answering take retrieval and reasoning actions with incomplete knowledge about whether their current answer is uncertain, unsupported, or already complete. This produces two failure modes: committing to confident but unsupported answers, which hurts accuracy, and over-retrieving when the evidence in hand already suffices, resulting in wasted compute. To give agents a more complete picture of the state space they are operating in, we introduce calibrated verifier telemetry (CalVerT), which augments the agent's state with additional telemetry: a calibrated self-confidence score and a grounding verifier score. We show that CalVerT can improve agents in both training-free and training-based settings. On four QA benchmarks, we find that CalVerT raises F1 by triggering retrieval in cases where agents over-rely on parametric knowledge, while cutting redundant retrieval in cases where agents have sufficient context to answer. We show that CalVerT can augment existing QA frameworks without training. Moreover, CalVerT also improves trained systems: by simply augmenting an agent's state with telemetry, we observe improvements after reinforcement learning, as compared to an agent with identical training but no CalVerT telemetry.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "LLM agents",
+      "knowledge intensive question answering",
+      "retrieval",
+      "reasoning",
+      "calibrated self-confidence score",
+      "grounding verifier score",
+      "reinforcement learning"
+    ]
+  },
+  {
+    "id": "2606.23085",
+    "title": "Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents",
+    "summary": "Long-horizon tasks are common in real-world robotic deployments, yet failure detection for such tasks remains underexplored. Detecting failures in long-horizon robotic tasks is particularly challenging because failure onset is often ambiguous and dense temporal annotations are typically unavailable. We present Foresight, a failure detection framework that monitors manipulation trajectories using latent representations from an action-conditioned world model. Foresight is trained using only final task-level success or failure labels. By leveraging predictive world-model embeddings, our method provides a unified framework for failure detection across different policies. We further use functional conformal prediction (FCP) to calibrate detection thresholds adaptively. We evaluate Foresight with state-of-the-art vision-language-action policies in simulation on LIBERO-Long, ManiSkill-Long, and BEHAVIOR-1K, compare it against state-of-the-artfailure detection methods, and validate it on real robots with three long-horizon tasks on a ReactorX-200 arm and one task on a Franka arm. Our results suggest that action-conditioned world-model embeddings provide a scalable representation for reliable failure monitoring in long-horizon manipulation.",
+    "upvotes": null,
+    "projectPage": "https://haoranzhangumich.github.io/Forsight_web/",
+    "ai_keywords": [
+      "action-conditioned world model",
+      "functional conformal prediction",
+      "failure detection",
+      "manipulation trajectories",
+      "latent representations",
+      "vision-language-action policies",
+      "long-horizon tasks",
+      "predictive world-model embeddings"
+    ]
+  },
+  {
+    "id": "2606.22778",
+    "title": "HAKARI-Bench: A Lightweight Benchmark for Comparing Retrieval Architectures and Efficiency Settings under Unified Conditions",
+    "summary": "With the rapid spread of retrieval-augmented generation and semantic search, choosing the right embedding and retrieval configuration is increasingly hard. Large retrieval benchmarks are comprehensive but too heavy to rerun during development, and there is little infrastructure for comparing production settings--dimensionality reduction, quantization, reranking--across many models under identical conditions. We present HAKARI-Bench, a lightweight benchmark that reconstructs existing retrieval suites into small datasets (Nano-sets): 35 benchmarks and 551 tasks across 43 languages in a unified format, enabling same-condition, model-agnostic comparison of five retrieval families (BM25, dense, sparse, late interaction, rerankers) and their efficiency variants. Across 55 models, its overall ranking reproduces the official MTEB retrieval v2, MMTEB v2 retrieval, and English BEIR (full) at Spearman >0.97. HAKARI-Bench does not replace full evaluation; it enables rapid model selection, regression detection, and reading the quality-efficiency Pareto frontier. Code, data, and leaderboard are released under the MIT license.",
+    "upvotes": null,
+    "projectPage": "https://huggingface.co/spaces/hakari-bench/leaderboard",
+    "ai_keywords": [
+      "retrieval-augmented generation",
+      "semantic search",
+      "embedding",
+      "retrieval configuration",
+      "large retrieval benchmarks",
+      "dimensionality reduction",
+      "quantization",
+      "reranking",
+      "Nano-sets",
+      "retrieval families",
+      "BM25",
+      "dense retrieval",
+      "sparse retrieval",
+      "late interaction",
+      "rerankers",
+      "model-agnostic comparison",
+      "Spearman correlation",
+      "MTEB retrieval",
+      "MMTEB v2",
+      "BEIR",
+      "Pareto frontier"
+    ]
+  },
+  {
+    "id": "2606.23670",
+    "title": "Tapered Language Models",
+    "summary": "Modern language models, including transformer, recurrent, and memory-based variants, share a common chassis: a stack of identical layers in which parameters are allocated uniformly across depth. This is a default inherited from the original transformer and largely unchanged since, yet a growing body of evidence suggests that layers contribute non-uniformly to the final output, with later layers refining the residual stream rather than transforming it. We ask whether parameter capacity should reflect this asymmetry. Our controlled experiment shows that, under a fixed budget, allocating more capacity to earlier layers and less to later layers improves perplexity over a uniform-width baseline, while the reverse allocation hurts. Building on this result, we introduce Tapered Language Models (TLMs), an architectural principle in which a parameter-bearing component is monotonically tapered across depth under a fixed total budget. MLPs are the natural site for this instantiation: they dominate parameter count across all modern LM families and expose width as a single, clean axis of variation. Across three model scales and four architectures (Transformer, Gated Attention, Hope-attention, and Titans), tapering MLP width via a smooth cosine schedule consistently improves perplexity and downstream benchmark performance over uniform baselines, at no additional parameter or compute cost. These findings establish depth-aware capacity allocation as a simple, architecture-agnostic axis of language model design, a free lever hidden in plain sight.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "transformer",
+      "recurrent",
+      "memory-based variants",
+      "identical layers",
+      "parameter-efficient fine-tuning",
+      "perplexity",
+      "depth-aware capacity allocation",
+      "MLPs",
+      "cosine schedule",
+      "architecture-agnostic"
+    ]
+  },
+  {
+    "id": "2606.19750",
+    "title": "Manifold Bandits: Bayesian Curriculum Learning over the Latent Geometry of Large Language Models",
+    "summary": "Reinforcement learning (RL) is a central approach for improving reasoning capabilities in large language models (LLMs), where training efficiency depends critically on how problems are sampled during optimization. Existing adaptive curriculum learning methods typically prioritize prompts of intermediate difficulty, treating problem selection as a standard bandit problem with independent arms and overlooking the structured, heterogeneous nature of the task space. In this work, we frame problem sampling as a manifold-structured bandit problem with endogenous non-stationarity: problems are related through the model's latent representation space, and sampling decisions can steer how learning signals evolve across that space. To operationalize this perspective, we introduce Bayesian Manifold Curriculum (BMC), a structure-aware framework that organizes problems into a hierarchical task tree and applies Bayesian learning to guide sampling. Empirically, we find that different sampling strategies induce non-trivial tradeoffs between productivity (learning signal), diversity (coverage of the task manifold), and utility (evaluation relevance). These results show that prioritizing difficulty alone is insufficient for strong downstream performance, highlighting the importance of incorporating structure and type-awareness into problem sampling.",
+    "upvotes": null,
+    "projectPage": "https://darrienmckenzie.com/manifold-bandits/",
+    "ai_keywords": [
+      "reinforcement learning",
+      "large language models",
+      "adaptive curriculum learning",
+      "bandit problem",
+      "manifold-structured bandit",
+      "endogenous non-stationarity",
+      "latent representation space",
+      "hierarchical task tree",
+      "Bayesian learning",
+      "problem sampling"
+    ]
+  },
+  {
+    "id": "2606.14971",
+    "title": "FastMix: Fast Data Mixture Optimization via Gradient Descent",
+    "summary": "While large and diverse datasets have driven recent advances in large models, identifying the optimal data mixture for pre-training and post-training remains a significant open problem. We address this challenge with FASTMIX, a novel framework that automates data mixture discovery while training only a single proxy model. Instead of relying on predefined heuristics or resource-intensive simulations, FASTMIX jointly optimizes mixture coefficients and model parameters, substantially improving efficiency and scalability over prior approaches. At the core of FASTMIX is a reformulation of mixture selection as a bilevel optimization problem. Under this reformulation, we show that optimizing mixture ratios is mathematically equivalent to assigning per-source loss weights under uniform source sampling. This embeds the mixture coefficients directly into the differentiable iterative optimization objective, enabling efficient, gradient-based optimization of both mixture and model. To solve the optimization problem, FASTMIX implements an approximate iterative optimization procedure, alternating between (i) updating model parameters on data sampled according to current mixture ratios (inner loop) and (ii) updating mixture ratios based on validation feedback (outer loop). Across pre- and post-training, FASTMIX outperforms baselines while drastically reducing search cost. Code (https://github.com/hrtan/fastmix)",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "bilevel optimization",
+      "mixture coefficients",
+      "differentiable iterative optimization",
+      "gradient-based optimization",
+      "iterative optimization procedure",
+      "inner loop",
+      "outer loop"
+    ]
+  }
+]
