@@ -1,0 +1,508 @@
+[
+  {
+    "id": "2606.26740",
+    "title": "LiveEdit: Towards Real-Time Diffusion-Based Streaming Video Editing",
+    "summary": "Streaming video editing has made rapid progress, yet practical deployment is still limited by two core issues: maintaining stable backgrounds and non-edited regions over time, and achieving the low latency required for real-time interactive scenarios. Meanwhile, recent streaming video generation methods are mostly developed for synthesis and cannot be directly applied to editing due to the strict preservation requirement and region-specific control. In this work, we present a novel streaming video editing framework that performs causal, frame-by-frame editing with strong content preservation and real-time responsiveness. Our key design is a three-stage distillation pipeline that progressively transfers editing capability from a powerful bidirectional foundation model to an efficient unidirectional streaming editor, enabling stable long-horizon edits without sacrificing visual fidelity. To further support real-time deployment, we introduce an AR-oriented mask cache that reuses region-related computation across frames, substantially reducing redundant processing and accelerating inference. Finally, we establish a dedicated benchmark for streaming video editing. Extensive evaluations demonstrate that our method achieves state-of-the-art visual quality among streaming baselines while drastically boosting inference speed to 12.66 FPS, making it suitable for interactive and augmented reality applications.",
+    "upvotes": 43,
+    "projectPage": "https://arxiv.org/abs/2606.26740",
+    "ai_keywords": [
+      "streaming video editing",
+      "causal editing",
+      "frame-by-frame editing",
+      "content preservation",
+      "real-time responsiveness",
+      "three-stage distillation pipeline",
+      "bidirectional foundation model",
+      "unidirectional streaming editor",
+      "long-horizon edits",
+      "AR-oriented mask cache",
+      "inference speed",
+      "interactive applications",
+      "augmented reality"
+    ]
+  },
+  {
+    "id": "2606.30616",
+    "title": "Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent",
+    "summary": "We introduce Agents-A1, a 35B Mixture-of-Experts Agentic Model that reaches trillion-parameter-level performance by scaling the agent horizon. We investigate agent-horizon scaling from two perspectives: scaling long-horizon trajectories and scaling heterogeneous agent abilities. To support this goal, we build a long-horizon knowledge-action infrastructure that connects external knowledge, actions, observations, and verifier outcomes, producing agentic trajectories with an average length of 45K tokens. Based on this, we train Agents-A1 with a three-stage recipe. First, we perform full-domain supervised fine-tuning to align the base model with broad agentic behaviors. Second, we train domain-level teacher models to capture specialized expertise in each domain. Third, we propose a multi-teacher domain-routed on-policy distillation with salient vocabulary alignment to improve knowledge transfer efficiency across different domains, unifying six heterogeneous domains into one deployable student model. Agents-A1 achieves strong and broad performance for long-horizon agent benchmarks. Compared with 1T-parameter model such as Kimi-K2.6 and DeepSeek-V4-pro, Agents-A1 achieves leading results on SEAL-0 (56.4), IFBench (80.6), HiPhO (46.4), FrontierScience-Olympiad (79.0), and MolBench-Bind (56.8), and remains highly competitive on SciCode (44.3), HLE (47.6) and BrowseComp (75.5). We hope this work provides the community with a practical path for scaling the horizon using a 35B agent that can reach or match the performance of 1T models on long-horizon tasks.",
+    "upvotes": 38,
+    "projectPage": "https://internscience.github.io/Agents-A1/",
+    "ai_keywords": [
+      "Mixture-of-Experts",
+      "agentic model",
+      "agent horizon",
+      "long-horizon trajectories",
+      "heterogeneous agent abilities",
+      "knowledge-action infrastructure",
+      "agentic trajectories",
+      "supervised fine-tuning",
+      "domain-level teacher models",
+      "multi-teacher domain-routed on-policy distillation",
+      "salient vocabulary alignment",
+      "domain-routed training"
+    ]
+  },
+  {
+    "id": "2606.28480",
+    "title": "TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents",
+    "summary": "As large language models and harness frameworks continue to advance, agents operating in terminals are increasingly capable of performing a broader range of general computer-use tasks beyond coding. However, existing benchmarks do not adequately evaluate general-purpose terminal computer-use agents (TUAs): general computer-use benchmarks primarily target graphical user interfaces (GUIs), whereas terminal-based benchmarks largely emphasize technical and programming-centric workflows historically native to the shell. We introduce TUA-Bench, a general-purpose benchmark for terminal-use agents. TUA-Bench includes 120 real-world tasks across five task families, covering routine digital activities-including document editing, email management, and live-web information seeking-as well as scientific and engineering workflows co-designed with PhD-level domain experts that require specialized software. This breadth distinguishes TUA-Bench from prior shell-focused or domain-specific benchmarks. Each task is manually designed, runs in a real terminal with a deterministic setup script, and is evaluated by an execution-based scoring protocol. We find that the strongest frontier agent, Claude Code with Claude Opus 4.8 max reasoning effort, achieves 65.8% overall performance, with substantial gaps across both tracks. By providing a broad and realistic evaluation of terminal-use capabilities, TUA-Bench aims to accelerate the transition from narrow, task-specific assistants to general-purpose agents capable of operating reliably across diverse digital environments.",
+    "upvotes": 30,
+    "projectPage": null,
+    "ai_keywords": [
+      "terminal-use agents",
+      "general-purpose agents",
+      "computer-use tasks",
+      "graphical user interfaces",
+      "shell-based workflows",
+      "execution-based scoring protocol",
+      "digital activities",
+      "specialized software",
+      "benchmark evaluation"
+    ]
+  },
+  {
+    "id": "2606.24256",
+    "title": "Trimming the Long-Tail of Visual World Modeling Evaluation",
+    "summary": "Physical interactions follow a long-tailed distribution: a set of common and regular interactions dominates human experience and visual data, while a broad spectrum of rare and irregular interactions remains underrepresented. Although recent visual world models, including image and video generation models, achieve impressive realism on existing benchmarks, they primarily focus on simulating common physical interactions. This raises a central question: Do current visual world models internalize and generalize physical principles? In this work, we introduce Tailor-Bench, a benchmark that challenges world models to simulate irregular physical interactions. To enable systematic evaluation, we design three scenario modes that progressively challenge model reasoning: Regular scenarios reflect common tool-task pairs, Unconventional scenarios replace conventional tools with attribute-compatible substitutes to test affordance generalization, and Impossible scenarios introduce attribute-violating tools to probe constraint awareness. Additionally, we design two complementary settings under a unified evaluation protocol: predictive generation requires inferring outcomes without guidance, while descriptive generation specifies the target outcome for faithful realization. Our experimental results reveal a clear long-tail gap in physical world modeling: performance degrades from Regular to Unconventional and Impossible scenarios, indicating limited generalization beyond common interactions. Failure analysis further shows that models rely on superficial visual patterns: image models fail to realize correct state changes, while video models further suffer from temporal inconsistencies.",
+    "upvotes": 29,
+    "projectPage": "https://tailor-bench.github.io",
+    "ai_keywords": [
+      "visual world models",
+      "physical interactions",
+      "long-tailed distribution",
+      "image generation",
+      "video generation",
+      "world model evaluation",
+      "scenario modes",
+      "regular scenarios",
+      "unconventional scenarios",
+      "impossible scenarios",
+      "predictive generation",
+      "descriptive generation",
+      "physical principle generalization",
+      "affordance generalization",
+      "constraint awareness",
+      "temporal consistency"
+    ]
+  },
+  {
+    "id": "2502.16886",
+    "title": "ReFreeKV: Towards Threshold-Free KV Cache Compression",
+    "summary": "To reduce memory consumption during LLM inference, a handful of methods have been proposed for KV cache pruning. While these techniques can accomplish lossless memory reduction on many datasets, they often hinge on an under-emphasized condition: an input/domain-specific threshold for KV cache budget needs to be pre-determined to achieve the optimal performance. However, such input-sensitive design may be considerably limited in real-world scenarios, as open-domain inputs span diverse domains, lengths and difficulty levels, without clear boundaries for threshold selection. As a result, the dependence of such input-sensitive threshold can be a fundamental limitation that causes large degradation on arbitrary inputs. In this work, we propose a new objective that lifts the threshold constraints for robust KV compression, advocating for \"threshold-free\" methods that adaptively adjust budget allocation while preserving full-cache performance. We then propose a novel method, ReFreeKV, serving as the first instantiation of this objective. Extensive experiments across 13 datasets with diverse context lengths, task types, and model sizes demonstrate its efficacy and efficiency. Our code is publicly released at https://github.com/Patrick-Ni/ReFreeKV.",
+    "upvotes": 18,
+    "projectPage": null,
+    "ai_keywords": [
+      "KV cache pruning",
+      "threshold-free methods",
+      "adaptive budget allocation",
+      "KV cache compression",
+      "LLM inference"
+    ]
+  },
+  {
+    "id": "2606.24143",
+    "title": "AsyncOPD: How Stale Can On-Policy Distillation Be?",
+    "summary": "On-policy distillation (OPD) trains a student on its own rollouts guided by teacher feedback and is becoming increasingly important for large language model (LLM) post-training. Like reinforcement learning (RL), however, OPD faces an on-policy systems bottleneck, as rollouts can dominate training time for reasoning workloads. Asynchronous training pipelines can alleviate this bottleneck by decoupling rollout generation from learner updates, but doing so introduces stale-policy data. While prior work has studied stale data in asynchronous RL, its effects in OPD remain underexplored. We present the first systematic study of staleness in asynchronous OPD, focusing on a practical setting where teacher feedback is implemented through local KL losses and full-vocabulary teacher logits are too expensive to store or transfer, necessitating finite teacher-score caches. We first show that KL direction changes the stale-data problem: teacher-weighted forward KL is more robust to stale rollouts, whereas student-weighted reverse KL is vulnerable. Second, for this vulnerable reverse-KL case, we study whether methods designed to stabilize asynchronous RL can mitigate OPD staleness. In our experiments, they do not improve over a simpler OPD-specific surrogate: recomputing the reverse-KL signal under the current student at learner time. Third, we analyze how finite teacher-score caches create a bias-variance tradeoff for sparse and sampled reverse-KL OPD estimators. This motivates multi-sample Monte Carlo (MC), which preserves MC correctability while reducing one-sample variance. Finally, we present and open-source AsyncOPD, a fully asynchronous OPD training pipeline built from these estimator choices. Experiments show that AsyncOPD improves training throughput by 1.6times to 3.8times over strict synchronous training while reaching comparable accuracy.",
+    "upvotes": 16,
+    "projectPage": null,
+    "ai_keywords": [
+      "on-policy distillation",
+      "asynchronous training",
+      "stale-policy data",
+      "KL divergence",
+      "reverse KL",
+      "forward KL",
+      "teacher-student framework",
+      "Monte Carlo estimation",
+      "policy gradient",
+      "reinforcement learning"
+    ]
+  },
+  {
+    "id": "2606.30534",
+    "title": "Orca: The World is in Your Mind",
+    "summary": "We introduce Orca, an initial instantiation of a general world foundation model. Orca learns a unified world latent space from multimodal world signals and exposes it through multimodal readout interfaces. Rather than optimizing isolated next-token, next-frame, or next-action prediction, we are centered on Next-State-Prediction modeling, offering a unified state-transition modeling route toward understanding, predicting, and acting upon the world. Orca learns through two complementary paradigms: unconscious learning captures dense natural state transitions from continuous videos, and conscious learning models sparse meaningful state transitions by language-described events and VQA supervision. For pre-training, we construct a large-scale world-learning inventory data, including 125K hours of video data and 160M event annotations. After pre-training, Orca learns a unified world latent space. To examine whether the learned latent supports downstream, we evaluate it by three representative downstream readouts: text generation, image prediction, and embodied action generation. Orca's backbone is frozen, and only the lightweight modality-specific decoders are trainable. Experiments show the scalability of the proposed paradigm and verify that stronger world latent enables stronger downstream readouts. Orca outperforms similar-sized specialized baselines. These results show that Orca, as a general world foundation model, presents a promising approach to understanding, predicting, and acting upon the world. Finally, we discuss the current limitations, aiming to provide useful insights and inspiration for the community.",
+    "upvotes": 11,
+    "projectPage": "https://orca-wm.github.io/",
+    "ai_keywords": [
+      "world foundation model",
+      "world latent space",
+      "multimodal readout interfaces",
+      "next-state-prediction modeling",
+      "unconscious learning",
+      "conscious learning",
+      "world-learning inventory data",
+      "embodied action generation",
+      "downstream readouts",
+      "modality-specific decoders"
+    ]
+  },
+  {
+    "id": "2606.30251",
+    "title": "TACO: Tool-Augmented Credit Optimization for Agentic Tool Use",
+    "summary": "Agentic multimodal models perform diverse operations on an image via code and reason over the returned view, an effective paradigm for fine-grained visual question answering. However, code operations can be useful, redundant, or misleading. Outcome-only rewards cannot precisely distinguish these cases, and existing process rewards either fail to attribute final correctness to individual tool calls, or require an external judge model. To address this, we introduce Tool-Augmented Credit Optimization (TACO), a GRPO variant for code-tool agents built on two coupled advantage channels. The first, Differential Answer-Probe Reward (DAPR), is a self-supervised, judge-free tool-contribution advantage that credits each tool call by its own effect on answering correctly. Probe tokens inserted into the model's reasoning elicit its predictions with and without the tool, and the difference in outcome reward is taken as the call's value: positive for a useful call, negative for a misleading one, and zero for one that changes nothing. This reuses the existing answer checker with no auxiliary judge, and, being a difference rather than an absolute probe score, is naturally robust to probe-hacking. The second is the outcome advantage from the final answer, distributed by Outcome-Gated Advantage Routing (OGAR): a parameter-free rule that, conditioned on the call's outcome, delivers this credit only to the responsible segments, suppressing wasted tool calls without any cost term. We train TACO through a two-stage SFT+RL pipeline. Extensive experiments across perception, reasoning, and general multimodal benchmarks show that it yields consistent accuracy gains and learns to invoke its tools only when they help.",
+    "upvotes": 11,
+    "projectPage": null,
+    "ai_keywords": [
+      "agentic multimodal models",
+      "code-tool agents",
+      "GRPO",
+      "Differential Answer-Probe Reward",
+      "Outcome-Gated Advantage Routing",
+      "tool-contribution advantage",
+      "probe tokens",
+      "answer checker",
+      "probe-hacking",
+      "SFT+RL pipeline"
+    ]
+  },
+  {
+    "id": "2606.29445",
+    "title": "Bridging VideoQA and Video-Guided Agentic Tasks via Generalized Keyframe Extraction",
+    "summary": "Video understanding is a fundamental capability for multimodal intelligence, and recent Multimodal Large Language Models (MLLMs) have achieved remarkable performance on Video Question Answering (VideoQA) benchmarks. However, existing benchmarks primarily evaluate whether models can perceive shallow visual cues, while rarely examining whether MLLMs can learn deeper knowledge or procedural skills from video tutorials and generalize them to downstream long-horizon agentic tasks. To address this gap, we introduce VG-GUIBench (Video-Guided GUI Benchmark), a new benchmark designed to evaluate whether MLLM-based GUI agents can follow video tutorials to complete corresponding GUI interactive tasks. Furthermore, we observe that the performance of models on both VideoQA and video-guided agentic tasks critically depends on effective keyframe extraction. Based on this observation, we propose TASKER (Task-driven And Scene-aware Keyframe searchER), a keyframe extraction algorithm that jointly considers task relevance and scene dynamics to identify informative frames. Experimental results demonstrate that TASKER achieves significant performance improvements on both VideoQA and video-guided agentic task benchmarks, outperforming the best baseline by 2.0% on the EgoSchema fullset and 1.8% on the NExT-QA dataset, respectively. These results further highlight the potential of generalized keyframe extraction methods for video understanding tasks. Our code and data are available at https://github.com/VG-GUI-TASKER/VG-GUI-TASKER.",
+    "upvotes": 11,
+    "projectPage": "https://vg-gui-tasker.github.io/",
+    "ai_keywords": [
+      "Multimodal Large Language Models",
+      "Video Question Answering",
+      "GUI agents",
+      "video tutorials",
+      "keyframe extraction",
+      "task relevance",
+      "scene dynamics"
+    ]
+  },
+  {
+    "id": "2606.30017",
+    "title": "Monte Carlo Energy Aggregation for Mobile 3D Gaussian Splatting",
+    "summary": "Recent advances in 3D Gaussian Splatting have demonstrated unprecedented success in novel view synthesis. However, the substantial inference and storage overhead driven by high-order Spherical Harmonics (SH) are primary bottlenecks for mobile platforms. In this paper, we present Flux-GS, a real-time Gaussian Splatting method designed to achieve high-fidelity rendering with significantly reduced overhead for resource-constrained mobile platforms. We first propose a Monte Carlo Specular Energy Aggregator, sampling third-order radiance residuals and aggregating specular energy into a compact latent space. In this way, our method effectively preserves visually salient lighting features in lower-order bands without expensive distillation or pre-training. To mitigate the high-frequency details lost during compression, we introduce an Attribute-Conditioned SH Enhancement module. This module predicts Gaussian-aware offsets based on intrinsic Gaussian attributes, which enhance the first-order SH representation prior to inference, without extra inference costs. Furthermore, the original single-view gradient-based densification is prone to producing excessive Gaussians and overfitting to a certain view. We address these limitations by proposing a Multi-view Alpha-based Densification and Pruning strategy. By leveraging multi-view guidance, we ensure multi-view structure consistency and the precise removal of redundant primitives. Extensive experiments demonstrate that Flux-GS achieves substantial parameter reduction while maintaining competitive visual quality, offering a robust and scalable solution for real-time mobile rendering. Code: magenta{https://xiaobiaodu.github.io/flux-gs-project/{https://xiaobiaodu.github.io/flux-gs-project/}}.",
+    "upvotes": 9,
+    "projectPage": "https://xiaobiaodu.github.io/flux-gs-project/",
+    "ai_keywords": [
+      "Spherical Harmonics",
+      "Monte Carlo Specular Energy Aggregator",
+      "latent space",
+      "Attribute-Conditioned SH Enhancement",
+      "multi-view gradient-based densification",
+      "pruning",
+      "Gaussian Splatting",
+      "real-time rendering",
+      "mobile platforms"
+    ]
+  },
+  {
+    "id": "2606.22473",
+    "title": "Interleaved Speech Language Models Latently Work In Text",
+    "summary": "Speech language models (SLMs) have been extensively studied, with the common paradigm incorporating text data and pre-trained text LMs. A leading approach is speech-text interleaving in which models are trained over sequences containing both speech and text tokens, aiming to boost even speech-only capabilities. Yet the way these two modalities interact in the model latent space remains unclear. In this work, we analyze interleaved speech-text LMs from different model families and sizes through the scope of the logit lens to provide such insight. We reveal that these models go through an implicit transcription phase in which the text token of the spoken word becomes decodable in intermediate layers, despite not being trained for speech recognition. The transcription of the word appears as one of the top candidate words for as much as 77\\% of the data. Following this stage, the models proceed to predict the next word in the text space before transforming back to the speech domain. We finally analyze the role of interleaving data, and initializing from text LMs in eliciting this behavior, as well as seeing how this correlates with spoken knowledge abilities. Our analysis sheds light on the internal mechanisms underlying the relationship between speech and text modalities and could shape SLM optimization.",
+    "upvotes": 9,
+    "projectPage": "https://pages.cs.huji.ac.il/adiyoss-lab/slm_work_in_text/",
+    "ai_keywords": [
+      "speech language models",
+      "speech-text interleaving",
+      "logit lens",
+      "intermediate layers",
+      "text token",
+      "speech recognition",
+      "spoken knowledge abilities"
+    ]
+  },
+  {
+    "id": "2606.27828",
+    "title": "Video-MME-Logical: A Controlled Diagnostic Benchmark for Video Temporal-Logical Reasoning",
+    "summary": "Recent interest in multimodal large language models (MLLMs) raises a central question: can they reason over dynamic visual evidence rather than merely recognize objects or events in individual frames? This ability, which we refer to as video temporal-logical reasoning, requires models to maintain, update, and compose evidence as visual states evolve across frames. Existing video benchmarks often conflate this capability with scene complexity, static recognition, or uncontrolled temporal variation. To isolate this capability, we introduce Video-MME-Logical, a controlled benchmark organized around five temporal-logical operations: state tracking, sequential counting, temporal ordering, dynamic spatiality, and structural composition. The benchmark contains 25 fine-grained task categories generated with controlled object states, transitions, temporal dependencies, and logical compositions. It enables difficulty-controlled final-answer evaluation by varying temporal horizon and reasoning complexity, and supports intermediate-state diagnostics by verifying whether models recover the required logical reasoning trace before producing the final answer. Experiments with state-of-the-art MLLMs reveal a substantial human-model gap, especially as temporal-logical complexity increases. Supervised fine-tuning on up to 500K generated samples improves performance but remains insufficient to close the reasoning gap, positioning Video-MME-Logical as a scalable testbed for analyzing and improving temporal-logical reasoning in MLLMs.",
+    "upvotes": 7,
+    "projectPage": "https://mrakas.github.io/video-mme-logical",
+    "ai_keywords": [
+      "multimodal large language models",
+      "video temporal-logical reasoning",
+      "temporal-logical operations",
+      "state tracking",
+      "sequential counting",
+      "temporal ordering",
+      "dynamic spatiality",
+      "structural composition",
+      "Video-MME-Logical",
+      "supervised fine-tuning"
+    ]
+  },
+  {
+    "id": "2606.29814",
+    "title": "Nemotron-Labs-Diffusion-Image: Advancing Masked Discrete Diffusion for High-Resolution Image Synthesis",
+    "summary": "We propose Nemotron-Labs-Diffusion-Image, a state-of-the-art masked discrete diffusion model (MDM) for high-resolution text-to-image synthesis. Compared with prior work on masked image generation, Nemotron-Labs-Diffusion-Image addresses two key challenges. First, unlike continuous diffusion models which progressively refine latent representations across the entire image, standard MDMs lack self-correcting capability because discrete tokens cannot be modified once they are unmasked. Second, although increasing the vocabulary size of discrete image tokenizers improves reconstruction fidelity, it introduces optimization difficulties for generative modeling as the per-token training signal becomes increasingly sparse. To address the first challenge, Nemotron-Labs-Diffusion-Image incorporates a token-editing mechanism that enables the model to dynamically revise already-unmasked tokens during inference, similar to how a sculptor iteratively refines their work. To tackle the second challenge, we propose a Grouped Cross-Entropy (GCE) objective that assigns positive learning signals to tokens neighboring the ground truth in embedding space, thereby alleviating signal sparsity. To further improve training efficiency, we implement a custom fused operator for GCE that significantly reduces VRAM usage in large-vocabulary settings. Experimental results demonstrate that these innovations substantially improve both training efficiency and image fidelity of masked discrete image generators, achieving a score of 0.90 on GenEval, 86.9 on DPG and 10.76 of HPSv3.",
+    "upvotes": 5,
+    "projectPage": null,
+    "ai_keywords": [
+      "masked discrete diffusion model",
+      "text-to-image synthesis",
+      "discrete tokens",
+      "token-editing mechanism",
+      "Grouped Cross-Entropy",
+      "embedding space",
+      "VRAM usage",
+      "training efficiency",
+      "image fidelity",
+      "GenEval",
+      "DPG",
+      "HPSv3"
+    ]
+  },
+  {
+    "id": "2606.26016",
+    "title": "MIMFlow: Integrating Masked Image Modeling with Normalizing Flows for End-to-End Image Generation",
+    "summary": "Normalizing Flows (NFs) are powerful generative models capable of exact density estimation and sampling. However, their strict invertibility often forces the model to exhaust its capacity on low-level pixel details, hindering the capture of high-level semantic structures. While Masked Image Modeling (MIM) has excelled in representation learning, its integration into generative pipelines has remained largely modular and disjointed. In this paper, we propose MIMFlow, a unified end-to-end framework that jointly optimizes latent semantics, pixel reconstruction, and generative flow. By employing a VAE encoder to infer semantic latent from masked images, MIMFlow achieves a principled decoupling of the generative task: the Normalizing Flow focuses on modeling a simplified, low-frequency semantic manifold, while a specialized decoder handles high-frequency synthesis. This design effectively resolves the inherent capacity bottleneck of NFs, allowing the model to prioritize global structural coherence over redundant noise. Empirical results on ImageNet 256times256 show that MIMFlow-L reaches 71.3\\% linear probing accuracy and an FID of 2.50. Despite using only 128 tokens (50\\% fewer than standard models), it yields a 32.8\\% performance gain over similar-scale NF baselines. Our code is available at https://github.com/MCG-NJU/MIMFlow.",
+    "upvotes": 5,
+    "projectPage": null,
+    "ai_keywords": [
+      "Normalizing Flows",
+      "Masked Image Modeling",
+      "VAE encoder",
+      "latent semantics",
+      "generative flow",
+      "semantic manifold",
+      "high-frequency synthesis",
+      "linear probing accuracy",
+      "FID"
+    ]
+  },
+  {
+    "id": "2606.29705",
+    "title": "GUICrafter: Weakly-Supervised GUI Agent Leveraging Massive Unannotated Screenshots",
+    "summary": "Data, as the fundamental substrate of modern intelligence, has greatly driven the development of current foundation models. Naturally, researchers aim to extend this paradigm to the domain of GUI agents, hoping to build strong GUI agents through a similar paradigm. However, GUI agent data cannot be directly harvested from the internet, making it costly and difficult to collect at scale. As a result, current GUI agents suffer from poor cross-device generalization and limited visual grounding ability for fine-grained GUI elements. As an attempt to address data challenge in GUI agents, we propose GUICrafter, a weakly-supervised GUI agent leveraging massive unannotated screenshots to substantially reduce the reliance on expensive human annotations. GUICrafter explores a curriculum learning framework for training GUI agents through two progressive stages. First, the model learns visual grounding from large-scale unannotated screenshots and webpages, leveraging the rich contextual signals inherent in GUI interactions without human annotations. Then, in Stage 2, we leverage a small amount of high-quality data to calibrate the model via reinforcement learning. Experiments show that GUICrafter achieves competitive, or even superior, performance to advanced systems like UI-TARS while using only 0.1% of its data. Furthermore, under the same amount of annotated data, GUICrafter surpasses all previous methods such as GUI-R1. Code, data, and models are available at https://github.com/fansunqi/GUICrafter.",
+    "upvotes": 4,
+    "projectPage": null,
+    "ai_keywords": [
+      "GUI agents",
+      "weakly-supervised learning",
+      "curriculum learning",
+      "visual grounding",
+      "reinforcement learning",
+      "GUI interaction",
+      "screen shots",
+      "webpages"
+    ]
+  },
+  {
+    "id": "2606.29537",
+    "title": "OSWorld2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks",
+    "summary": "Existing computer-use benchmarks fail to capture the realism, complexity, and long-horizon demands of real-world computer use, limiting their ability to reveal the limitations of frontier agents. We introduce OSWorld 2.0, a benchmark of 108 long-horizon computer-use workflows across everyday and professional tasks, designed to capture complex and challenging real-world phenomena. Each task represents a realistic end-to-end workflow that takes human users a median of about 1.6 hours to complete and requires an average of 318 tool calls with Claude Opus 4.7 using maximum thinking, compared with about 30 in OSWorld 1.0. OSWorld 2.0 targets challenge phenomena that are common in real workflows yet underrepresented in prior benchmarks, spanning interaction-design challenges such as streaming interaction and dynamic environments, as well as agent-pattern challenges such as cross-source reasoning, implicit-state inference, and visual-spatial precision. Tasks are grounded in authentic input artifacts and cross-referenced against realistic stateful user profile data, and include separate safety reports auditing safety-sensitive execution. Under our primary binary-completion metric at 500 steps, Claude Opus 4.8 with maximum thinking and batched tool calls scores best but still completes only 20.6% of tasks at a 54.8% partial score; GPT-5.5 is far more token-efficient yet plateaus near 13%. These results show that current agents are still far from professional-level computer use: rather than stumbling on basic GUI control or coding, they lose track of constraints, miss information that arrives mid-task, guess rather than ask the user, and skip verification, struggling most when a task hinges on hidden state they must recover.",
+    "upvotes": 4,
+    "projectPage": "https://osworld-v2.xlang.ai/",
+    "ai_keywords": [
+      "computer-use workflows",
+      "long-horizon tasks",
+      "agent-pattern challenges",
+      "cross-source reasoning",
+      "implicit-state inference",
+      "visual-spatial precision",
+      "tool calls",
+      "safety reports",
+      "binary-completion metric",
+      "token efficiency"
+    ]
+  },
+  {
+    "id": "2606.29225",
+    "title": "PolicyGuard: A Dialogue-Grounded Sub-Agent Verifier for Policy Adherence in LLM Agents",
+    "summary": "LLM agents handle user requests on behalf of organizations through tool calls and must follow the company policies stated in their system prompts. Prior work approaches this as a safeguarding problem -- external checks that block non-compliant agent actions. We argue that policy adherence is a broader problem: real workflows unfold across many turns, require explicit user confirmation and prerequisite reads, and hinge on the content of the dialogue rather than on any single argument value. Meeting this bar requires (i) full conversation context, (ii) self-reasoning over the policy and the current dialogue, and (iii) conversation-specific remediation that guides the agent's next turn -- three capabilities that prior safeguard work has often underestimated. We introduce POLICYGUARD, a sub-agent verifier that shares the agent's view of the dialogue, reasons over the policy in context, and provides actionable feedback for the agent's next turn. On tau^2-BENCH airline across three vendors (GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 Pro) with four trials per setting, POLICYGUARD improves PASS4 by +12.0 / +6.0 / +12.0 pp. Per-call analyses show POLICYGUARD achieves higher policy-violation recall while blocking roughly half as often as argument-level guards.",
+    "upvotes": 4,
+    "projectPage": "https://huggingface.co/papers/2606.29225",
+    "ai_keywords": [
+      "LLM agents",
+      "policy adherence",
+      "safeguarding",
+      "conversation context",
+      "self-reasoning",
+      "dialogue reasoning",
+      "sub-agent verifier",
+      "policy violation recall",
+      "argument-level guards"
+    ]
+  },
+  {
+    "id": "2606.27282",
+    "title": "How Good Can Linear Models Be for Time-Series Forecasting?",
+    "summary": "Time-series forecasting research has been moving steadily toward larger architectures, from specialized transformers to general-purpose foundation models, on the assumption that capacity is what unlocks accuracy. We take the opposite position: most of the gap can be closed at far lower cost by tuning preprocessing rather than scaling models. We use Ridge regression as the testbed, since it has a closed-form solution and interpretable weights, which let the optimal hyperparameters be read off the search directly. We search over context length, local normalization, regularization, and augmentation on eight standard benchmarks and find three patterns. (1) Optimal lookback is strongly series-specific and often non-monotonic in forecast horizon, with fitted power-law exponents ranging from +0.46 on ETTm2 to -0.19 on Exchange and Traffic, challenging the convention that longer horizons need longer history. (2) Normalizing over a learned trailing fraction of the context, rather than its entirety, is almost universally preferred. (3) Series within the same dataset often disagree on hyperparameters; the optimal degree of cross-series sharing varies from fully shared to fully per-series. The resulting models beat prior linear forecasters on most dataset-horizon entries and exceed Transformer, MLP, and CNN baselines on six of eight benchmarks. The optimized hyperparameters also serve as a diagnostic on the data itself, revealing structures that larger models absorb silently into their learned parameters.",
+    "upvotes": 4,
+    "projectPage": "https://sakanaai.github.io/SearchCast/",
+    "ai_keywords": [
+      "time-series forecasting",
+      "transformers",
+      "foundation models",
+      "Ridge regression",
+      "context length",
+      "local normalization",
+      "regularization",
+      "augmentation",
+      "hyperparameters",
+      "forecast horizon",
+      "cross-series sharing"
+    ]
+  },
+  {
+    "id": "2606.28186",
+    "title": "Cognitive Episodes in LLM Reasoning Traces Enable Interpretable Human Item Difficulty Prediction",
+    "summary": "Predicting human item difficulty is central to educational assessment, where reliable estimates support fairness and effective test construction. Existing methods often depend on costly human calibration or item-level textual representations, providing limited evidence about the cognitive processes that make items difficult. We argue that difficulty should be viewed not only as a property of item text, but also as an observable consequence of the problem-solving burden an item induces. Large Reasoning Models (LRMs) offer scalable process evidence through reasoning traces, but such evidence must be structured to support interpretable modeling. To this end, we introduce Epi2Diff (Episode to Difficulty), a framework that maps LRM reasoning traces into cognitively grounded episode sequences. These episodes group trace segments into functional problem-solving states, enabling difficulty to be modeled through reasoning scale, effort allocation, and state transitions. Epi2Diff extracts compact episode-dynamic features and combines them with semantic item representations for human difficulty prediction. Experiments on four real-world human difficulty datasets show that Epi2Diff consistently outperforms strong baselines, including fine-tuned small language models, LLM in-context learning, and supervised LLM adaptation. On SAT-derived classification benchmarks, Epi2Diff achieves an 8.1% average relative gain over supervised LLM fine-tuning baselines. Further analyses show that harder items induce more effortful, iterative, and implementation-centered episode dynamics, rather than merely longer responses. These results demonstrate that cognitive episodes in LRM reasoning traces provide a predictive and interpretable process representation for human item difficulty, offering a new lens for educational measurement with reasoning models.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "Large Reasoning Models",
+      "reasoning traces",
+      "cognitive episodes",
+      "episode sequences",
+      "difficulty prediction",
+      "semantic item representations",
+      "reasoning scale",
+      "effort allocation",
+      "state transitions",
+      "episode-dynamic features"
+    ]
+  },
+  {
+    "id": "2606.26938",
+    "title": "Focusing on What Matters: Saliency-Harnessing Accurate Routing for Diffusion MoE",
+    "summary": "Mixture-of-Experts (MoE) architectures have emerged as a powerful paradigm for scaling diffusion models in visual generation. Recent advancements have focused on adaptively allocating computational resources across diverse tokens to improve efficiency and performance. However, we identify a routing assignment problem in existing diffusion MoE frameworks: the router fails to accurately allocate more computational resources to salient tokens. Our analysis attributes this failure to the router's reliance on noise-corrupted latent features throughout the denoising process. Such stochastic noise obscures the critical structural and textural information, thereby preventing the router from effectively distinguishing salient tokens. To address this, we propose SharpMoE, a post-training framework with a saliency-harnessing accurate routing mechanism, which utilizes clean latent features as a noise-free guidance signal for routing. By bypassing the noise-distorted inputs, SharpMoE provides the router with clear saliency guidance, enabling the identification of salient tokens even in high-noise stages. Furthermore, we introduce a trajectory routing loss to constrain the compute allocation throughout the multi-step denoising trajectory, ensuring precise resource allocation along the generation rollout. Extensive experiments demonstrate that SharpMoE serves as a versatile, plug-and-play solution that further enhances the pretrained, converged MoE models, achieving state-of-the-art performance in visual generation.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "Mixture-of-Experts",
+      "diffusion models",
+      "routing assignment",
+      "latent features",
+      "denoising process",
+      "salient tokens",
+      "post-training framework",
+      "trajectory routing loss",
+      "compute allocation",
+      "visual generation"
+    ]
+  },
+  {
+    "id": "2606.30292",
+    "title": "DreamForge-World 0.1 Preview: A Low-Compute Real-Time Controllable World Model",
+    "summary": "We present DreamForge-World 0.1 Preview, a preview foundational world model for real-time interactive world simulation. The system adapts the LongLive 1 autoregressive video stack, itself derived from Wan2.1-T2V-1.3B, with a residual action pathway inspired by the Matrix-Game family. DreamForge-World 0.1 Preview focuses on a complementary axis to frontier-scale world simulators: low-compute adaptation, consumer-GPU runtime, and broad interactive capability coverage. It supports live keyboard and mouse control, multimodal initialization, mid-stream reprompting, dual-view operation, and minute-scale interactive rollouts at native 480p resolution, reaching up to 14 to 15 FPS FPS on a single RTX 4090 with a low memory footprint. By leveraging open video backbones and applying targeted adaptation runs, we build the preview system with high cost-efficiency. DF-World 0.1 Preview is not yet a memory-complete or frontier-quality world simulator, but demonstrates a practical low-compute route toward real-time controllable world-model previews on consumer GPUs.",
+    "upvotes": 2,
+    "projectPage": "https://trydreamforge.com/",
+    "ai_keywords": [
+      "autoregressive video stack",
+      "video backbones",
+      "residual action pathway",
+      "world model",
+      "real-time simulation",
+      "consumer-GPU runtime",
+      "multimodal initialization",
+      "mid-stream reprompting",
+      "dual-view operation",
+      "interactive rollouts"
+    ]
+  },
+  {
+    "id": "2606.30045",
+    "title": "Walking in the Implicit: Interactive World Exploration via Neural Scene Representation",
+    "summary": "Interactive video generation systems for camera-controlled world exploration roll out growing sequences of latent video frames, entangling state transition with high-frequency observation synthesis. We propose Walking in the Implicit, a scene-centric paradigm that changes the rollout variable from frame latents to a fixed-length, renderable implicit state, termed Neural Implicit Scene (NIS). This factorizes interactive generation into stochastic transition of a compact scene state and deterministic pose-conditioned rendering given the sampled state. We instantiate this paradigm as NeuWorld: a transformer VAE learns locally anchored NIS from sparse posed frames, and a diffusion transformer evolves NIS conditioned on future camera trajectories and geometry-aware retrieved history. By reusing the VAE encoder as a unified conditioner, NeuWorld maps camera, reference-image, and history cues into the same NIS modality, avoiding external heterogeneous encoders. Trained from scratch on public posed-view data without pretrained video backbones or auxiliary 3D reconstructors, NeuWorld achieves strong long-horizon consistency with favorable inference efficiency.",
+    "upvotes": 2,
+    "projectPage": "https://lizhiqi49.github.io/NeuWorld",
+    "ai_keywords": [
+      "latent video frames",
+      "implicit state",
+      "Neural Implicit Scene",
+      "transformer VAE",
+      "diffusion transformer",
+      "pose-conditioned rendering",
+      "camera trajectories",
+      "geometry-aware retrieval",
+      "VAE encoder",
+      "unified conditioner",
+      "long-horizon consistency"
+    ]
+  },
+  {
+    "id": "2606.23404",
+    "title": "ReasoningLens: Hierarchical Visualization and Diagnostic Auditing for Large Reasoning Models",
+    "summary": "The emergence of Large Reasoning Models has introduced exceptionally long Chain-of-Thought traces, creating a transparency burden where critical logic is often buried under massive procedural text. To address this, we present ReasoningLens, an open-source framework designed for the hierarchical visualization and diagnostic auditing of complex reasoning chains. ReasoningLens addresses information necropsy by: (1) structuring traces into interactive hierarchies that separate high-level strategy from low-level execution; (2) leveraging an agentic auditor for automated error detection and tool-augmented verification; and (3) synthesizing systemic reasoning profiles to reveal model-specific blind spots. By transforming unstructured walls of text into actionable insights, ReasoningLens provides a modular foundation for interpreting, debugging, and optimizing the next generation of reasoning-centric AI.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "Chain-of-Thought traces",
+      "hierarchical visualization",
+      "diagnostic auditing",
+      "information necropsy",
+      "agentic auditor",
+      "tool-augmented verification",
+      "systemic reasoning profiles"
+    ]
+  },
+  {
+    "id": "2606.29887",
+    "title": "SafePyramid: A Hierarchical Benchmark for In-context Policy Guardrailing",
+    "summary": "In real-world applications, guardrails are often expected to identify unsafe user-model interactions according to application-specific safety policies, rather than relying on predefined risk taxonomies. In this work, we study this setting under the paradigm of in-context policy guardrailing, where guardrails predict safety violations based on policy specifications provided in context. To systematically evaluate this capability, we introduce SafePyramid, a safety benchmark comprising 1,000 multi-turn conversations across 10 domains and 3,000 corresponding application-specific policies, which together contain 61,699 distinct natural-language rules. SafePyramid organizes the evaluation into three difficulty levels: L0 evaluates individual-rule understanding, L1 evaluates reasoning over rule dependencies, and L2 evaluates adaptation of full novel policy frameworks defined in context. To ensure benchmark quality, we employ a rigorous multi-stage pipeline to construct and validate the benchmark. Using SafePyramid, we evaluate 10 frontier LLMs and 5 policy-configurable guardrails and find that in-context policy guardrailing remains highly challenging: even the best-performing model, GPT-5.5, exactly identifies the full set of violated rules in only 54.0%, 35.3%, and 12.9% cases on L0, L1, and L2, respectively. These results highlight the limitations of current guardrails and call for stronger in-context policy guardrails that can reliably execute policies, resolve rule dependencies, and adapt to novel policy frameworks.",
+    "upvotes": 1,
+    "projectPage": "https://bytedance.github.io/safepyramid/",
+    "ai_keywords": [
+      "guardrails",
+      "in-context policy guardrailing",
+      "safety benchmark",
+      "policy specifications",
+      "multi-turn conversations",
+      "natural-language rules",
+      "rule dependencies",
+      "policy frameworks"
+    ]
+  },
+  {
+    "id": "2606.30084",
+    "title": "One Forward Beats Two: InnerZoom for Accurate and Efficient GUI Grounding",
+    "summary": "MLLM-based GUI grounding methods commonly formulate target localization as autoregressive coordinate generation, enabling models to leverage the strong instruction-following and semantic understanding capabilities of MLLMs. However, this formulation requires the model to retain region-level target evidence while decoding coordinate tokens with the spatial precision demanded by GUI clicking. Our diagnostic analysis reveals that target-region awareness emerges in intermediate decoder layers but is neither retained nor translated into the final coordinate prediction. Existing ZoomIn-style methods address this issue through an external crop-and-rerun pass, which improves localization but increases end-to-end latency and computational cost. To retain the accuracy benefits of two-pass zooming without this extra cost, we propose InnerZoom, a single-forward framework for cross-layer evidence bridging. InnerZoom transforms target-related cues from the original forward pass into a compact cross-layer evidence state, then preserves, refines, and reinjects this state throughout later decoding layers to guide coordinate prediction. Extensive experimental results suggest that InnerZoom-4B achieves state-of-the-art performance on all six GUI grounding benchmarks, obtaining 64.7 on OSWorld-G, 40.2 on UI-Vision, 73.1 on OSWorld-GR, and 87.6 on MMBench-GUI, surpassing the previous best results by 4.1, 3.2, 2.9, and 2.3 points, respectively. Under a controlled 4B setting, InnerZoom improves the same SFT+RL baseline by 5.3 points on average and outperforms two-pass ZoomIn by 1.3 points on average, while reducing end-to-end latency by up to 31.8% and TFLOPs by about 29%. Code and models will be publicly available.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "MLLM-based GUI grounding",
+      "autoregressive coordinate generation",
+      "spatial precision",
+      "decoder layers",
+      "cross-layer evidence bridging",
+      "ZoomIn-style methods",
+      "end-to-end latency",
+      "TFLOPs",
+      "SFT+RL",
+      "target-region awareness"
+    ]
+  },
+  {
+    "id": "2606.29686",
+    "title": "PoseShield: Neural Collision Fields for Human Self-Collision Resolution",
+    "summary": "Self-collision remains a persistent challenge in SMPL-based human pose estimation and motion generation. Under extreme articulations or stochastic motion synthesis, generated meshes frequently exhibit self-penetrations, leading to physically implausible results. We propose PoseShield, a neural collision constraint defined directly in SMPL pose space. We formulate collision correction as a constrained optimization problem and connect the learned constraint with the Eikonal equation. Enforcing Eikonal regularization ensures non-vanishing gradients near the collision boundary, improving numerical stability and robustness of the optimization process. Unlike prior methods that operate in the mesh space or rely on heuristic penalties, our approach operates directly in the low-dimensional space of human poses and is theoretically grounded. The same learned constraint extends to human motion sequences, providing a generator-agnostic post-hoc collision corrector without retraining the underlying motion model. Experiments on a newly constructed SMPL pose benchmark show that our method achieves a 95.8% success rate and outperforms state-of-the-art baselines.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "SMPL",
+      "self-collision",
+      "pose space",
+      "constrained optimization",
+      "Eikonal equation",
+      "neural collision constraint",
+      "motion generation",
+      "pose estimation"
+    ]
+  },
+  {
+    "id": "2606.29655",
+    "title": "Geometric Stability of Neural Population Codes: Regional Variation, Behavioral Relevance, and Circuit Dependence",
+    "summary": "Current models of representational reliability in neural populations focus on temporal stability: whether population centroids are preserved across sessions and days. This framing leaves a fundamental question unanswered: how reliably does the pairwise distance structure among stimuli reproduce across independent observations within a session? We argue that this property, geometric stability, constitutes an independent axis of representational analysis that existing frameworks do not capture. We formalize geometric stability as the Spearman rank correlation between split-half representational dissimilarity matrices (Shesha) and show that it is empirically dissociable from both temporal stability and decoding accuracy. Across 229 area-session observations spanning 68 brain regions in a visual discrimination task (Steinmetz et al. 2019), geometric stability predicts trial-by-trial neural-behavioral coupling (ρ= 0.18, p = 0.005) while centroid drift does not (ρ= 0.002, p = 0.976). The regional hierarchy, with striatum most stable (S = 0.44) and hippocampus least (S = 0.19), runs roughly opposite to the temporal stability hierarchy. Directionally consistent olfactory data (Bolding \\& Franks 2018) motivate an attractor network model in which recurrent excitatory coupling amplifies split-half RDM consistency by completing stimulus patterns from sparse feedforward input (ρ= +0.64, p = 0.010), providing a circuit-level account of how geometric stability emerges. These results establish geometric stability as a functionally relevant, circuit-dependent property of neural population codes, orthogonal to temporal drift measures and complementary to recent accounts of how recurrent connectivity balances representational stability with sequential dynamics in hippocampal circuits.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "representational reliability",
+      "temporal stability",
+      "population centroids",
+      "pairwise distance structure",
+      "geometric stability",
+      "Spearman rank correlation",
+      "split-half representational dissimilarity matrices",
+      "trial-by-trial neural-behavioral coupling",
+      "attractor network model",
+      "recurrent excitatory coupling",
+      "feedforward input",
+      "hippocampal circuits"
+    ]
+  }
+]
