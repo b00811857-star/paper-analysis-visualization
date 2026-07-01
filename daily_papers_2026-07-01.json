@@ -1,0 +1,321 @@
+[
+  {
+    "id": "2606.30534",
+    "title": "Orca: The World is in Your Mind",
+    "summary": "We introduce Orca, an initial instantiation of a general world foundation model. Orca learns a unified world latent space from multimodal world signals and exposes it through multimodal readout interfaces. Rather than optimizing isolated next-token, next-frame, or next-action prediction, we are centered on Next-State-Prediction modeling, offering a unified state-transition modeling route toward understanding, predicting, and acting upon the world. Orca learns through two complementary paradigms: unconscious learning captures dense natural state transitions from continuous videos, and conscious learning models sparse meaningful state transitions by language-described events and VQA supervision. For pre-training, we construct a large-scale world-learning inventory data, including 125K hours of video data and 160M event annotations. After pre-training, Orca learns a unified world latent space. To examine whether the learned latent supports downstream, we evaluate it by three representative downstream readouts: text generation, image prediction, and embodied action generation. Orca's backbone is frozen, and only the lightweight modality-specific decoders are trainable. Experiments show the scalability of the proposed paradigm and verify that stronger world latent enables stronger downstream readouts. Orca outperforms similar-sized specialized baselines. These results show that Orca, as a general world foundation model, presents a promising approach to understanding, predicting, and acting upon the world. Finally, we discuss the current limitations, aiming to provide useful insights and inspiration for the community.",
+    "upvotes": 128,
+    "projectPage": "https://orca-wm.github.io/",
+    "ai_keywords": [
+      "world foundation model",
+      "world latent space",
+      "multimodal readout interfaces",
+      "next-state-prediction modeling",
+      "unconscious learning",
+      "conscious learning",
+      "world-learning inventory data",
+      "embodied action generation",
+      "downstream readouts",
+      "modality-specific decoders"
+    ]
+  },
+  {
+    "id": "2606.28436",
+    "title": "Dockerless: Environment-Free Program Verifier for Coding Agents",
+    "summary": "Program verifiers play a central role in training coding agents, including selecting trajectories for supervised fine-tuning (SFT) and providing rewards for reinforcement learning (RL). Standard execution-based verification requires running unit tests inside per-repository environments such as Docker images, incurring substantial environment setup costs. We propose Dockerless, an environment-free agentic patch verifier that evaluates generated code patches without executing them. Rather than simply matching candidate patches to references, Dockerless judges patch correctness using evidence gathered through agentic repository exploration. On a verifier evaluation benchmark, Dockerless outperforms the strongest open-source verifier by 14.3 AUC points. Using Dockerless as both the SFT trajectory filter and the RL reward enables a fully environment-free post-training pipeline. The resulting model reaches 62.0%, 50.0%, and 35.2% resolve rate on SWE-bench Verified, Multilingual, and Pro, respectively. It surpasses the Qwen3.5-9B baseline by 2.4, 8.7, and 2.9 points, matching environment-based post-training.",
+    "upvotes": 57,
+    "projectPage": null,
+    "ai_keywords": [
+      "program verifiers",
+      "supervised fine-tuning",
+      "reinforcement learning",
+      "Dockerless",
+      "agentic patch verifier",
+      "environment-free",
+      "repository exploration",
+      "SWE-bench Verified",
+      "Multilingual",
+      "Pro"
+    ]
+  },
+  {
+    "id": "2606.31315",
+    "title": "BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
+    "summary": "Speculative decoding accelerates inference by using a lightweight draft model to generate candidate tokens in parallel, and are then verified by the target model, enabling lossless acceleration. Recently, diffusion-based speculative decoding further improves parallelism by generating multiple tokens per forward pass via block-level diffusion, achieving state-of-the-art (SOTA) performance. However, existing methods adopt a fixed inference block size and assume a uniform optimal decoding strategy across all inputs. In this paper, we show that this assumption is suboptimal, as the optimal block size varies across samples and plays a critical role in speculative decoding performance. Moreover, these values exhibit a clear local structure, concentrating around the training block size, which reduces the problem to a low-dimensional and structured decision space. Based on these insights, we propose BlockPilot, a sample-adaptive policy that predicts the optimal block size from the prefilling representation. Specifically, we formulate block size selection as a lightweight policy learning problem and propose an instance-adaptive decision mechanism that predicts the optimal block size based on the representation of the prefilling stage. The prediction is performed only once after prefilling, allowing for seamless integration. Extensive experiments demonstrate that our method is plug-and-play, introduces minimal overhead, and consistently improves efficiency, achieving an acceptance length of 5.92 and a 4.20times speedup on Qwen3-4B under temperature T=1.",
+    "upvotes": 52,
+    "projectPage": null,
+    "ai_keywords": [
+      "speculative decoding",
+      "draft model",
+      "target model",
+      "diffusion-based speculative decoding",
+      "block-level diffusion",
+      "inference block size",
+      "prefilling representation",
+      "policy learning",
+      "instance-adaptive decision mechanism"
+    ]
+  },
+  {
+    "id": "2606.30626",
+    "title": "DOPD: Dual On-policy Distillation",
+    "summary": "On-policy distillation (OPD) offers superior capacity transfer by supervising student-sampled trajectories with dense token-level signals. To furnish high-quality supervision sources and thereby elevate the performance frontier of distillation, an intuitive direction is to infuse privileged information to either teacher or student itself. However, this additional input induces a potential failure mode we dub privilege illusion: a pattern that conflates the transferable capability gap that students are meant to close, and the information asymmetry gap that can only be mimicked but never replicated. This issue is further amplified by the inherent non-uniformity of token-level supervision, where only a small subset of tokens carries pivotal capability-bearing signals. To this end, we propose DOPD, an advantage-aware dual distillation paradigm that dynamically routes token-level supervision between privileged teacher and privileged student policies based on their advantage gap and relative probabilities. Each token receives supervision of different strength, objective, and strategy from either teacher or student itself, which transfers credible capability while simultaneously receiving auxiliary signals, to alleviate privilege illusion. Extensive experiments on both large language model (LLM) and vision-language model (VLM) settings demonstrate that DOPD consistently outperforms Vanilla OPD and other counterparts. Further results on stability, robustness, continual learning, and out-of-distribution tasks validate its superiority.",
+    "upvotes": 51,
+    "projectPage": null,
+    "ai_keywords": [
+      "on-policy distillation",
+      "token-level signals",
+      "privileged information",
+      "privilege illusion",
+      "advantage-aware dual distillation",
+      "dynamic routing",
+      "capability transfer",
+      "large language models",
+      "vision-language models"
+    ]
+  },
+  {
+    "id": "2606.32039",
+    "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
+    "summary": "Visual generative models are typically trained in two stages. A tokenizer is first trained for reconstruction and then frozen, after which a generator is trained on its discrete indices or continuous latents. This decoupling leaves the tokenizer unaware of what the generator finds easy to model. We present GEAR (Guided End-to-end AutoRegression), which trains a vector-quantized (VQ) tokenizer and an autoregressive (AR) generator jointly and end-to-end, guided by representation alignment. The key obstacle is that the VQ index fed to the AR model is non-differentiable, so gradients cannot reach the tokenizer, and a straight-through estimator collapses. GEAR resolves this with a dual read-out of the codebook assignment. A hard, one-hot branch trains the AR with next-token prediction, while a differentiable soft branch carries a representation-alignment loss that flows back to guide only the tokenizer. The AR model thereby steers its tokenizer toward an index distribution it can predict more easily. This shifts the alignment burden from the tokenizer to the AR: the tokenizer's own features become less DINOv2-like while the AR's become more so, the opposite of diffusion-side recipes that make the latent itself semantic. GEAR speeds up ImageNet gFID convergence by up to 10x relative to the strong LlamaGen-REPA baseline, learns markedly better patch-level and spatially-coherent features, and generalizes across quantizers (VQVAE, LFQ, IBQ) and to text-to-image generation.",
+    "upvotes": 17,
+    "projectPage": "https://linb203.github.io/gear",
+    "ai_keywords": [
+      "vector-quantized",
+      "autoregressive",
+      "representation alignment",
+      "straight-through estimator",
+      "codebook assignment",
+      "next-token prediction",
+      "DINOv2",
+      "ImageNet",
+      "gFID",
+      "VQVAE",
+      "LFQ",
+      "IBQ",
+      "text-to-image generation"
+    ]
+  },
+  {
+    "id": "2606.31734",
+    "title": "MemLearner: Learning to Query Context memory for Video World Models",
+    "summary": "Video World Models are interactive video generation models that predict future world states based on user actions and history video frames. A critical challenge in video world models is the lack of memory, causing inconsistent generated scenes over extended durations. Previous methods explored rule-based context frame retrieval as memory, but they fail to generalize in scenarios with scene occlusions and dynamic objects. We propose MemLearner, a learning-based adaptive context query method using query tokens to bridge context and predicted tokens. By leveraging the video generation model itself for context querying, MemLearner exploits pre-trained visual priors without training additional modules from scratch, and incorporates efficient strategies for training and inference. We collect a dataset of long videos with scene occlusions and dynamic objects, paired with camera pose annotations, and propose a multi-dataset training strategy leveraging both annotated rendered and unannotated real-world videos. Extensive experiments demonstrate that MemLearner significantly outperforms prior video world models in terms of scene consistency and memory, particularly under challenging occlusion and dynamic scenarios.",
+    "upvotes": 16,
+    "projectPage": "https://yujiwen.github.io/memlearner/",
+    "ai_keywords": [
+      "video world models",
+      "context frame retrieval",
+      "query tokens",
+      "video generation model",
+      "visual priors",
+      "multi-dataset training strategy",
+      "camera pose annotations",
+      "scene consistency",
+      "memory"
+    ]
+  },
+  {
+    "id": "2606.29082",
+    "title": "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
+    "summary": "Would experience designing faster GPU kernels also help close in on a long-standing open mathematical conjecture? Large Language Models (LLMs) integrated into evolutionary search have recently produced state-of-the-art solutions on optimization tasks, including open mathematical conjectures, GPU kernel design, scientific law discovery, and combinatorial puzzles. To achieve this, prior work applied search scaffolds to one target task at a time, so every new problem is approached from scratch and the experience accumulated during search is discarded once the model finishes its attempt. This leaves the capability of iteratively evolving a solution (e.g., knowing which part to mutate and how, deciding when to backtrack) entirely in the scaffold rather than in the model itself. Whether the model itself could acquire this capability and reuse it across different tasks has been largely unexamined. To address this, we introduce Evolution Fine-Tuning (EFT), a mid-training paradigm that teaches LLMs to evolve solutions across tasks by converting evolutionary search trajectories into supervision. We construct Finch Collection, a 156K-trajectory dataset spanning 10 domains and 371 optimization tasks, and fine-tune open-source LLMs from 2B to 9B parameters. Empirically, EFT confers cross-task generalization: across 22 held-out tasks, our models surpass their base counterparts by 10.22% on average. Furthermore, when paired with test-time RL, our model matches state-of-the-art performance on two circle-packing tasks and outperforms its base-model counterpart on the Erdős minimum-overlap problem. EFT thus serves as a \"practice phase\" for general-purpose discovery agents that do not solve new problems from scratch.",
+    "upvotes": 13,
+    "projectPage": "https://open-galapagos.github.io/evolution_finetuning/",
+    "ai_keywords": [
+      "evolutionary search",
+      "large language models",
+      "optimization tasks",
+      "mathematical conjectures",
+      "evolutionary fine-tuning",
+      "search trajectories",
+      "cross-task generalization",
+      "reinforcement learning",
+      "test-time RL",
+      "trajectory supervision"
+    ]
+  },
+  {
+    "id": "2606.32032",
+    "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+    "summary": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive faculties: they hallucinate with high confidence, fail to recognize knowledge boundaries, and misrepresent their internal uncertainty--undermining trustworthiness and reliability. Since monitoring task performance and adapting behavior accordingly are central to metacognition, we posit that models capable of accurately judging their own performance are better positioned to improve it. We operationalize this idea via two novel mechanisms: reinforcement learning with metacognitive feedback (RLMF), a paradigm to refine completion rankings during preference optimization based on the quality of a model's self-judgments of performance, and metacognitive data selection, which uses similar self-judgments to identify high-value training examples, outperforming naive active learning. We apply these innovations to the problem of faithful calibration (FC), a task that is itself fundamentally metacognitive: the goal is to align expressed with intrinsic uncertainty, difficult even for frontier LLMs. We adopt a two-stage, decoupled approach, first using these methods to calibrate the faithfulness of models' self-reported confidence scores, then mapping to natural, context-adaptable linguistic uncertainty via targeted output editing. Extensive experiments show RLMF achieves generalizable, state-of-the-art FC on diverse tasks while preserving accuracy. Further, RLMF surpasses standard RL by up to 63% while enhancing models' ability to assess and express their own capability limits. This positions RLMF as a promising paradigm to enhance LLM metacognition toward improved abilities and alignment, and suggests metacognitive performance as an effective RL signal to overcome limits of prior intrinsic feedback methods.",
+    "upvotes": 4,
+    "projectPage": null,
+    "ai_keywords": [
+      "reinforcement learning",
+      "metacognitive feedback",
+      "metacognitive data selection",
+      "faithful calibration",
+      "self-reported confidence scores",
+      "intrinsic uncertainty",
+      "decoupled approach",
+      "preference optimization",
+      "active learning",
+      "intrinsic feedback methods"
+    ]
+  },
+  {
+    "id": "2606.31410",
+    "title": "Xiaomi-GUI-0 Technical Report",
+    "summary": "Graphical user interface (GUI) agents build on vision-language models to complete user tasks end-to-end in real applications through interface actions such as tapping, swiping, text entry, and navigation. However, existing GUI agents are trained and evaluated largely on offline trajectories, simulated environments, and standardized benchmarks. These differ substantially from real applications in interface layout, interaction logic, and abnormal-state distribution, and cannot faithfully characterize execution stability in real-world use, where account states, permission dialogs, payment authentication, and risk control continually reshape the state distribution and open a persistent gap between benchmark scores and real usability. To close this gap, we propose Xiaomi-GUI-0, a native multimodal GUI agent for real mobile environments, trained and evaluated within a real-device closed loop. At its core is a real-device-dominant hybrid infrastructure, where physical devices are the primary execution environment and sandboxes provide auxiliary support, so that data collection, training, rollout, and evaluation share an execution distribution close to real deployment. We construct multi-source training data spanning high-frequency head tasks, high-generalization data for long-tail intents, and capability-enhancement data for reflection and memory, and introduce an error-driven data flywheel that turns failure trajectories into corrected actions, reflective explanations, and recovery demonstrations. The model is trained through a progressive three-stage pipeline of supervised fine-tuning, step-level reinforcement learning, and agentic reinforcement learning. Evaluated on public benchmarks and our in-house RealMobile, Xiaomi-GUI-0 achieves 72.0% success on RealMobile and 78.9% on AndroidWorld, while substantially improving execution stability and abnormal-state recognition in real-world tasks.",
+    "upvotes": 4,
+    "projectPage": "https://seerray-lab.github.io/Xiaomi-GUI-0/",
+    "ai_keywords": [
+      "vision-language models",
+      "interface actions",
+      "real-device closed loop",
+      "hybrid infrastructure",
+      "data flywheel",
+      "supervised fine-tuning",
+      "reinforcement learning",
+      "agentic reinforcement learning"
+    ]
+  },
+  {
+    "id": "2606.30062",
+    "title": "Little Brains, Big Feats: Exploring Compact Language Models",
+    "summary": "While large language models have been dominating the research landscape recently, small language models remain highly relevant across various domains; yet, they receive far less attention. In this study, we investigate how smaller language models perform during the generation stage within a Retrieval-Augmented Generation (RAG) system. To benchmark these models effectively, we utilised both open-source and proprietary datasets covering diverse subject areas and question types. Our findings demonstrate that a RAG system with small language models can be executed directly on-device without requiring any GPU hardware within a reasonable time. The experimental code and links to the supplementary materials can be accessed through the GitHub repository: https://github.com/SibNN/SLM-RAG-EVAL.",
+    "upvotes": 4,
+    "projectPage": null,
+    "ai_keywords": [
+      "Retrieval-Augmented Generation",
+      "RAG",
+      "small language models",
+      "large language models",
+      "open-source datasets",
+      "proprietary datasets"
+    ]
+  },
+  {
+    "id": "2606.29215",
+    "title": "Multi-Block Diffusion Language Models",
+    "summary": "Block Diffusion Language Models (BD-LMs) improve diffusion-based text generation with KV caching and flexible-length generation. A natural next step is to extend them from Single-Block Diffusion (SingleBD) to Multi-Block Diffusion (MultiBD), where a running-set of consecutive blocks is decoded concurrently for inter-block parallelism. However, existing BD-LMs are mostly trained under teacher forcing, where the model observes only one noisy block conditioned on a clean prefix. While the recent diffusion forcing strategy introduces visibility among multiple noisy blocks, its training states still differ from MultiBD inference, where decoding operates on a bounded running-set with heterogeneous slot-wise noise patterns. To bridge this gap, we propose Multi-Block Diffusion Language Models (MBD-LMs), obtained by post-training BD-LMs with Multi-block Teacher Forcing (MultiTF). MultiTF integrates teacher forcing and diffusion forcing by training on bounded noise-groups conditioned on clean prefixes, with randomized noise-schedulers that better match MultiBD inference states. To make MultiBD practically executable, we further introduce an optimized decoding algorithm based on the Block Buffer mechanism that preserves prefix-cache reuse, keeps input shapes static, and translates increased decoding parallelism into wall-clock acceleration. Empirically, MBD-LLaDA2-Mini increases average Tokens Per Forward pass (TPF) from 3.47 to 6.19 and improves average accuracy from 79.95% to 81.03%; when combined with DMax, MBD-LLaDA2-Mini-DMax reaches an average TPF of 9.34 with only a 1.02% accuracy drop on math and code benchmarks.",
+    "upvotes": 3,
+    "projectPage": "https://sjtu-deng-lab.github.io/mbd-lms",
+    "ai_keywords": [
+      "Block Diffusion Language Models",
+      "Multi-Block Diffusion",
+      "teacher forcing",
+      "diffusion forcing",
+      "Multi-block Teacher Forcing",
+      "noise-schedulers",
+      "Block Buffer mechanism",
+      "Tokens Per Forward pass",
+      "diffusion-based text generation",
+      "inter-block parallelism",
+      "prefix-cache reuse",
+      "static input shapes",
+      "wall-clock acceleration"
+    ]
+  },
+  {
+    "id": "2606.30811",
+    "title": "AVTok: 1D Unified Tokenization for Holistic Audio-Video Generation",
+    "summary": "Audio-video generation has recently gained unprecedented research attention, aiming to synthesize high-quality sounding video content with fine-grained synchronization and semantic alignment between the auditory and visual components. The preceding methods predominantly adopt a dual-branch design with separate tokenization and generation modules per modality, neglecting the representation gap while necessitating intensive computational resources for proper training. Inspired by recent advancements in one-dimensional visual tokenization, we present AVTok, a novel unified tokenizer designated for holistic audio-video generation. AVTok features a dual-stream transformer-based architecture with shared encoder-decoder and modal-specific learnable queries to efficiently and effectively encode an audio-video pair into a compact one-dimensional latent representation with a unified codebook. To cope with the heterogeneous information imbalance that hinders AVTok from exploiting aligned audio-visual information, we devise a hierarchical training strategy to progressively realize reconstruction capabilities for each modality. Extensive experiments demonstrate that AVTok excels both in audio-video reconstruction and when integrated into downstream pipelines for audio-to-video, video-to-audio, and class-conditional joint audio-video generation. AVTok paves the way for the challenge of joint audio-video tokenization and provides a potential direction to build unified large multimodal models for audio-video generation.",
+    "upvotes": 3,
+    "projectPage": "https://hkust-longgroup.github.io/AVTok",
+    "ai_keywords": [
+      "unified tokenizer",
+      "audio-video generation",
+      "dual-stream transformer",
+      "shared encoder-decoder",
+      "modal-specific learnable queries",
+      "one-dimensional latent representation",
+      "hierarchical training strategy",
+      "audio-video reconstruction",
+      "downstream pipelines",
+      "multimodal models"
+    ]
+  },
+  {
+    "id": "2606.30673",
+    "title": "PolyFlow: Continuous Topology Embedding Flow Matching for Artist-style Mesh Generation",
+    "summary": "Autoregressive Transformers dominate high-quality mesh generation by producing artist-worthy topologies, yet their inherent sequential decoding induces substantial computational overhead, falling orders of magnitude slower than parallel generative models. On the other hand, while continuous diffusion and flow-matching methods support efficient parallel synthesis across a variety of domains, they cannot be directly applied to meshes: mesh connectivity is inherently discrete and incompatible with standard continuous noise injection and denoising operations. To resolve this fundamental incompatibility, we introduce a compact topology embedder that projects discrete mesh vertex positions and normals into continuous per-vertex embeddings, where the original discrete adjacency information can be faithfully recovered via spacetime distance thresholding. After pretraining and freezing this embedder, any raw mesh can be fully converted into a continuous per-vertex state space unifying position, normal, and implicit topological attributes. Built upon this novel continuous mesh representation, we present PolyFlow, a Transformer-based flow-matching framework that achieves fully parallel vertex state denoising conditioned on extracted point-cloud features. During inference, our model completes generation rapidly via an ODE solver, and supports explicit, precise control over output mesh resolution by directly specifying the target vertex count. Extensive evaluations on the Toys4K benchmark demonstrate that PolyFlow surpasses state-of-the-art autoregressive baselines in both Chamfer Distance and Hausdorff Distance.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "Autoregressive Transformers",
+      "diffusion models",
+      "flow-matching",
+      "mesh generation",
+      "topology embedder",
+      "continuous mesh representation",
+      "ODE solver",
+      "Chamfer Distance",
+      "Hausdorff Distance"
+    ]
+  },
+  {
+    "id": "2606.30968",
+    "title": "PhotoQuilt: Training-Free Arbitrary-Resolution Photomosaics via Bootstrapped Tiled Denoising",
+    "summary": "Photomosaics are large images whose local regions are seen as independent tiles while their overall arrangement forms a coherent scene. Generating them at high resolution, with every tile convincing in its own right, is computationally expensive, since the canvas must hold many detailed tiles at once. We present PhotoQuilt, a training-free framework that generates photomosaics at arbitrary resolution. Diffusion models struggle to satisfy both scales at once, as direct high-resolution generation is costly and tends toward one smooth image rather than a mosaic, while patch-based tiling keeps local detail but loses global structure. PhotoQuilt resolves this with a bootstrapped tiled denoising procedure. We first produce a global composition at low resolution to fix the layout, then upscale it in latent space and re-inject noise to restore generative capacity. Denoising proceeds within fixed tiles, so each forms its own image while the shared global structure holds them in one layout. Because tile generation is handled separately, PhotoQuilt scales to large canvases without quadratic attention cost. Experiments show that PhotoQuilt outperforms current baselines on both global structure and local realism.",
+    "upvotes": 2,
+    "projectPage": "https://kooroshrh.github.io/photo-quilt/",
+    "ai_keywords": [
+      "diffusion models",
+      "photomosaics",
+      "latent space",
+      "denoising procedure",
+      "global composition",
+      "local realism",
+      "tile generation",
+      "bootstrapped approach"
+    ]
+  },
+  {
+    "id": "2606.30319",
+    "title": "BrainJanus: A Unified Model for Understanding and Generation across Brain, Vision, and Language",
+    "summary": "Modeling the bidirectional correspondence between external sensory stimuli and internal neural activity has emerged as a critical frontier in neuroscience. However, existing approaches predominantly treat brain encoding and decoding as isolated tasks, relying heavily on unimodal alignment and external priors while overlooking the brain's intrinsic nature as a multimodal integration system. To address these limitations, we propose BrainJanus, the first unified brain model that integrates brain, vision, and language within a single framework. Specifically, we introduce a Unified Brain Tokenizer to quantize continuous neural dynamics into discrete tokens aligned with visual and linguistic representations in a shared Omni space. Building on this, we utilize an All-in-One autoregressive architecture that leverages next-token prediction to enable seamless any-to-any generation, which encompasses image-to-brain and text-to-brain encoding, and brain-to-image and brain-to-text decoding. Extensive experiments demonstrate that BrainJanus achieves superior performance across diverse benchmarks. Furthermore, our framework exhibits zero-shot generalization and preserves interpretable biological topography, highlighting its potential as a general-purpose brain modeling paradigm. The code is available at https://github.com/HaitaoWuTJU/BrainJanus{GitHub}.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "brain encoding",
+      "brain decoding",
+      "multimodal integration",
+      "Unified Brain Tokenizer",
+      "Omni space",
+      "All-in-One autoregressive architecture",
+      "next-token prediction",
+      "any-to-any generation",
+      "zero-shot generalization",
+      "biological topography"
+    ]
+  },
+  {
+    "id": "2606.31029",
+    "title": "TerraDiT-Ω: Unified Spatial Control for Satellite Image Synthesis with Any Geospatial Primitive",
+    "summary": "Generative models have achieved remarkable progress, yet applying them to satellite imagery remains challenging. Unlike natural imagery, satellite scenes are structured by spatially complex and semantically distinct geometries. Prior work addresses this complexity by adapting natural image frameworks using dense rasters or sparse prompts, trading off annotation cost and fidelity while breaking compatibility with vector primitives commonly used to represent geographic information. We introduce TerraDiT-Ω, a unified spatial control framework that generates satellite imagery directly from any native geospatial primitive. By jointly leveraging precise annotations (polygons, polylines) and coarser ones (bounding boxes, points), the model supports controllable layouts across varying annotation budgets, broadening applicability to design tasks such as urban planning while remaining naturally compatible with end-to-end GeoAI workflows. To effectively leverage these primitives during generation, we propose Geometry-Aware Local Attention, a conditioning mechanism that injects explicit geometric cues into the attention space. Across all conditioning formats, our approach consistently outperforms both dense-control and sparse-control baselines. Furthermore, this flexibility enables controllable synthetic data augmentation using a single generative model, improving downstream performance on land-cover segmentation, object detection, road graph extraction, and scene classification. Code, data, and weights are available at https://github.com/mvrl/TerraDiT.",
+    "upvotes": 1,
+    "projectPage": "https://brian-j-wei.github.io/terradit-omega",
+    "ai_keywords": [
+      "generative models",
+      "satellite imagery",
+      "geospatial primitives",
+      "Geometry-Aware Local Attention",
+      "controllable layouts",
+      "land-cover segmentation",
+      "object detection",
+      "road graph extraction",
+      "scene classification"
+    ]
+  },
+  {
+    "id": "2606.30697",
+    "title": "LUMOS: A Semantic Operating-System Layer for Accessibility-Grounded AI Agents",
+    "summary": "Current operating systems expose interfaces optimized for human users but not for AI agents. Humans benefit from pixels, icons, windows, visual grouping, mouse movement, and keyboard shortcuts; AI agents instead need compact semantic state, grounded actions, and reliable feedback. As a result, many computer-use agents are forced to interpret screenshots, OCR output, and visual crops, introducing high token costs, visual ambiguity, latency, and coordinate uncertainty. This paper introduces LUMOS (Language Model Unified Machine-Readable Operating-System Semantics), a semantic interaction layer between AI agents and operating systems. LUMOS converts native accessibility metadata and browser UI structures into machine readable semantic blueprints with stable identifiers, roles, names, values, bounds, and action affordances. It also supports live semantic pointer grounding by querying the UI element under or near the cursor through operating-system automation APIs. An LLM then acts through an accessibility grounded observe act loop using constrained visible-UI primitives rather than application-specific scripts. LUMOS does not claim to replace visual agents; instead, it reduces dependence on screenshots when operating systems already provide semantic structure. These results suggest a path toward AI-native operating systems and machine-readable interaction layers.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "accessibility metadata",
+      "UI structures",
+      "semantic blueprints",
+      "stable identifiers",
+      "roles",
+      "names",
+      "values",
+      "bounds",
+      "action affordances",
+      "live semantic pointer grounding",
+      "operating-system automation APIs",
+      "observe act loop",
+      "visible-UI primitives"
+    ]
+  }
+]
