@@ -1,0 +1,398 @@
+[
+  {
+    "id": "2607.06291",
+    "title": "AlayaWorld: Long-Horizon and Playable Video World Generation",
+    "summary": "Game worlds have traditionally been built through labor-intensive production pipelines, making them costly to develop, difficult to customization, and expensive to modify after deployment. Recent advances in video world models offer a fundamentally different paradigm. Rather than explicitly authoring every component of a virtual environment, these models autoregressively synthesize future observations conditioned on the current world state and user interactions, enabling playable worlds to be generated online. Trained on both gameplay recordings and real-world videos, they can capture diverse visual appearances and physical dynamics, opening new opportunities for interactive applications beyond gaming, including embodied intelligence. In this paper, we present AlayaWorld, a full-stack open-source framework for building interactive generative worlds. AlayaWorld enables open-ended real-time interaction, allowing users to freely navigate and perform diverse actions such as combat, spell casting, and monster summoning. The framework unifies the complete development-from data preparation model architecture, model training, inference acceleration, and deployment-within a modular and extensible architecture. Alongside the framework, we release reproducible pipelines, reference implementations, evaluation tools, and comprehensive documentation, establishing a practical foundation for future research and real-time applications of generative world models.",
+    "upvotes": 41,
+    "projectPage": "https://alaya-lab.github.io/AlayaWorld/",
+    "ai_keywords": [
+      "video world models",
+      "autoregressive synthesis",
+      "generative worlds",
+      "real-time interaction",
+      "modular architecture",
+      "reproducible pipelines",
+      "reference implementations",
+      "evaluation tools"
+    ]
+  },
+  {
+    "id": "2607.06560",
+    "title": "Vision as Unified Multimodal Generation",
+    "summary": "We formulate computer vision as unified multimodal generation, where heterogeneous visual tasks are expressed in the native text and image generation spaces of a unified multimodal model, without task-specific architectures. Under this formulation, SenseNova-Vision uses natural-language instructions and optional visual prompts to specify tasks, target regions or views, and decoding conventions, and generates responses as text for symbolic outputs, images for dense spatial predictions, or mixed text-and-image outputs for compositional tasks. To support large-scale training, we convert diverse computer vision annotations into instruction-response examples compatible with these generation spaces, resulting in the SenseNova-Vision Corpus, a computer-vision instruction-response corpus spanning text, image, and mixed targets. Starting from an off-the-shelf pretrained unified multimodal model, SenseNova-Vision is trained primarily on this corpus, with auxiliary multimodal data used as a capability-preserving mixture, and requires no task-specific prediction heads or architectural modifications. The resulting model covers a broad range of vision tasks, including detection, OCR, keypoint estimation, segmentation, depth estimation, surface normal prediction, point maps, and camera pose estimation, while supporting language-defined variants that combine category, color, region, and other visual cues. Experiments show that a single unified model can match leading task-specialized systems across structured visual understanding, dense geometric prediction, segmentation, and multi-view visual geometry. These results suggest unified multimodal generation as a scalable route for integrating computer vision capabilities into general-purpose foundation models. The model and corpus are publicly available.",
+    "upvotes": 18,
+    "projectPage": null,
+    "ai_keywords": [
+      "multimodal generation",
+      "unified multimodal model",
+      "computer vision tasks",
+      "instruction-response examples",
+      "SenseNova-Vision Corpus",
+      "pretrained unified multimodal model",
+      "task-specialized systems",
+      "dense geometric prediction",
+      "segmentation",
+      "multi-view visual geometry"
+    ]
+  },
+  {
+    "id": "2607.05511",
+    "title": "Light-Omni: Reflex over Reasoning in Agentic Video Understanding with Long-Term Memory",
+    "summary": "Agentic video understanding equips models with long-term memory to autonomously process and respond to continuous, long-horizon multimodal streams. However, advanced video agents often rely on ``detective-style'' iterative reasoning for action control (e.g., search) and evidence aggregation, incurring prohibitive costs and latency. We argue that such heavy reasoning primarily compensates for the lack of global context and semantic misalignment in retrieval. This paper introduces Light-Omni, a multimodal agent framework for reflexive and lightweight video understanding. It achieves this through dual contextual states that instantly build the required context in a single forward pass. First, we maintain a global state, a finite-sized multimodal script continuously consolidated from episodic memory, serving as the global context for Light-Omni. Through hierarchical merging, it preserves recent details while summarizing past events. Second, conditioned on this global context, we generate a parametric latent state that directly drives autonomous actions and produces retrieval embeddings, with minimal latency. Benefiting from this coupled design, Light-Omni achieves semantically aligned retrieval and reflexive responses while avoiding iterative reasoning. Extensive experiments validate the effectiveness of Light-Omni across multiple video benchmarks. Notably, it outperforms M3-Agent with an average 2.4% accuracy gain, a 12.1times speedup, and a 2.6times improvement in GPU memory efficiency. Furthermore, it serves as a memory system to enhance both the performance and efficiency of existing MLLMs. Project page: https://clare-nie.github.io/Light-Omni.",
+    "upvotes": 18,
+    "projectPage": "https://clare-nie.github.io/Light-Omni",
+    "ai_keywords": [
+      "multimodal agent framework",
+      "reflexive video understanding",
+      "global state",
+      "episodic memory",
+      "parametric latent state",
+      "retrieval embeddings",
+      "iterative reasoning",
+      "semantic alignment",
+      "hierarchical merging",
+      "video benchmarks",
+      "MLLMs"
+    ]
+  },
+  {
+    "id": "2607.02963",
+    "title": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning",
+    "summary": "Dense video captioning aims to generate temporally grounded descriptions of video events, benefiting both event-level video understanding and generation. In this domain, autoregressive video large language models have emerged as a prevalent paradigm due to their strong generative and cross-modal modeling capacity. However, generating dense captions under the token-by-token paradigm severely limits inference efficiency and hinders scalability as video length and event density increase. In this work, we propose a parallelized autoregressive framework that not only improves generation efficiency but also enhances temporally grounded captioning performance. Our key insight is to exploit the weak local dependencies across temporally distinct events to restructure the causal dependency graph, thereby enabling lossless parallel generation. Specifically, tokens with weak cross-event dependencies can be decoded in parallel, while tightly coupled tokens within each event retain sequential decoding to preserve local semantic coherence. To realize this insight, we introduce two key components for lossless parallel decoding: (1) a latent global planning mechanism that automatically learns the event-level structure and produces compact tokens encoding global inter-event causality while adaptively aggregating event-level audio-visual semantics, guiding subsequent dependency restructuring and parallel decoding; and (2) an event-factorized parallel decoding mechanism that effectively balances local focus with global inter-event awareness. Experiments on various benchmarks demonstrate the clear advantage of our approach in both efficiency and performance in omni-modal event grounding and captioning. Project website: https://github.com/showlab/PadCaptioner.",
+    "upvotes": 13,
+    "projectPage": "https://github.com/showlab/PadCaptioner",
+    "ai_keywords": [
+      "autoregressive video large language models",
+      "dense video captioning",
+      "temporally grounded descriptions",
+      "token-by-token paradigm",
+      "causal dependency graph",
+      "lossless parallel generation",
+      "latent global planning mechanism",
+      "event-factorized parallel decoding",
+      "omni-modal event grounding"
+    ]
+  },
+  {
+    "id": "2607.03451",
+    "title": "SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe",
+    "summary": "While skill optimization for autonomous agents has gained traction, existing methods rely on complex pipelines. This leaves a fundamental question unaddressed: What constitutes a minimal viable pipeline for skill optimization, where every component is justified by theory or empirical necessity? We formalize skill optimization via Zeroth-Order (ZO) optimization, mapping classical counterparts (central difference, trust regions) to recent literature. Noting that unlike blind numerical perturbations in classical ZO, skill trajectories serve as interpretable debugging feedback. Grounded in Claude Code philosophy and PAC learning, we establish three principles for convergence and generalization: file-system-based trajectory exploration, consensus attribute mining, and independent validation gating. Eliminating redundancies, we propose SkillOpt-Lite. It accelerates convergence and outperforms full SkillOpt: improving LiveMath by +8.8 points on GPT-5.5 and +25.4 points on GPT-5.4-nano, allowing the nano model to surpass standard GPT-5.4 optimized by SkillOpt. Finally, we integrate our framework into production coding agents like VSCode Copilot, enabling developers to evolve agent skills via one line of vibe. Because our framework treats all agent components simply as standard editable code, this minimal pipeline naturally generalizes to full harness optimization (HarnessOpt). On SpreadsheetBench, HarnessOpt enables GPT-5.4-nano to achieve 0.7758 accuracy, outperforming the larger GPT-5.5 running standard pipelines (0.7620). Code is available at https://github.com/EvolvingLMMs-Lab/SkillOpt-Lite.",
+    "upvotes": 13,
+    "projectPage": "https://evolvinglmms-lab.github.io/SkillOpt-Lite/",
+    "ai_keywords": [
+      "Zeroth-Order optimization",
+      "skill optimization",
+      "convergence",
+      "generalization",
+      "trajectory exploration",
+      "consensus attribute mining",
+      "validation gating",
+      "SkillOpt-Lite",
+      "HarnessOpt"
+    ]
+  },
+  {
+    "id": "2607.02980",
+    "title": "Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling",
+    "summary": "Scaling modern large language models (LLMs) to long contexts is limited by the quadratic computation cost, and poor length extrapolation of dense attention. Chunk-wise sparse attention offers a promising alternative, but all existing methods fall short of full attention because of their inaccurate chunk selection. We propose Hierarchical Landmark Sparse (HiLS) Attention, a chunk-wise sparse attention mechanism that learns chunk selection end-to-end under the language-modeling (LM) loss. HiLS factorizes attention hierarchically: each query performs attention independently with each retrieved chunk to extract chunk-specific information, and the resulting outputs are fused according to chunk retrieval scores. By incorporating retrieval scores into the forward attention computation, HiLS optimizes them directly with the LM loss, enabling end-to-end retrieval learning and native sparse training. Experimental results show that HiLS-Attention achieves performance comparable to, and in some cases better than, full attention at in-domain context lengths. Meanwhile, HiLS-Attention extrapolates more than 64times the training context length with 90% retrieval accuracy, far beyond full attention. Moreover, existing full-attention models can be converted to HiLS-Attention with lightweight continued pretraining, preserving in-domain performance while acquiring ultra-long-context extrapolation. Together with its sparse KV access and computation, HiLS-Attention breaks the usual efficiency-performance trade-off, enabling long-context LLMs that are both more efficient and more effective on general long-context tasks than their full-attention counterparts.",
+    "upvotes": 9,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language models",
+      "dense attention",
+      "chunk-wise sparse attention",
+      "hierarchical landmark sparse attention",
+      "language-modeling loss",
+      "attention mechanism",
+      "retrieval scores",
+      "end-to-end learning",
+      "sparse KV access",
+      "long-context extrapolation"
+    ]
+  },
+  {
+    "id": "2607.03530",
+    "title": "MentalThink: Shaping Thoughts in Mental SVG World",
+    "summary": "We introduce MentalThink, a visual-symbolic reasoning paradigm that equips Multimodal LLMs (MLLMs) with an executable mechanism for \"mental\" visualization. The core of MentalThink is a think-with-SVG pipeline, where the model learns to generate, render, and interpret scalable vector graphics (SVG) code as an intermediate visual representation for multi-turn reasoning. By creating structured vector sketches, the model can externalize spatial hypotheses, inspect them through deterministic rendering, and reason within a constrained geometric space, effectively mimicking the human process of mental imagery. We instantiate this paradigm through a two-stage training framework, combining Supervised Fine-Tuning (SFT) for SVG syntactic alignment with multi-turn Reinforcement Learning (RL) to encourage iterative inspection, revision, and refinement of intermediate visual hypotheses. Extensive evaluations demonstrate that MentalThink achieves superior performance on spatial understanding and reasoning benchmarks (e.g., 55.1% on VSIBench, 76.0% on MindCube), showing that executable vector graphics provide a verifiable visual workspace for dynamic perspective taking, visual reflection, and compositional scene construction.",
+    "upvotes": 8,
+    "projectPage": null,
+    "ai_keywords": [
+      "Multimodal LLMs",
+      "think-with-SVG pipeline",
+      "scalable vector graphics",
+      "SVG code",
+      "multi-turn reasoning",
+      "Supervised Fine-Tuning",
+      "Reinforcement Learning",
+      "spatial understanding",
+      "visual-symbolic reasoning",
+      "geometric space",
+      "mental imagery"
+    ]
+  },
+  {
+    "id": "2607.05339",
+    "title": "TREK: Distill to Explore, Reinforce to Refine",
+    "summary": "Group Relative Policy Optimization (GRPO) is effective when the current policy already samples useful reasoning trajectories, but it stalls on hard prompts whose correct solution modes lie outside the student's on-policy support. We propose TREK (Teacher-Routed Exploration via Forward KL), a simple staged procedure that uses distillation not for imitation but for exploration support expansion. A key advantage of TREK is its generality: because it only consumes verified output trajectories, it can use an external black-box teacher, a white-box teacher, or the same model given additional inference-time context, and it can efficiently identify which hard-prompt samples are most worth consolidating even when teacher internals are unavailable. TREK first identifies prompts where the unaided student has very low pass rate, queries a proposal source to produce verified candidate solutions, keeps the top-r proposals ranked by current student likelihood, applies a short forward-KL phase to pull those verified modes into the student's support, and then returns to standard on-policy GRPO refinement. On mathematical reasoning, TREK with DeepSeek-V4 proposals improves Qwen3 models across all tested scales on AIME 2024 and AIME 2025; for Qwen3-8B, it improves AIME 2025 from 36.9 to 40.3 and AIME 2024 from 47.9 to 51.1 (avg@16), while the self-context variant reaches 38.5 and 49.6 without an external teacher. On agentic tasks, TREK raises ALFWorld success rate from 75.8 to 82.8 and ScienceWorld success rate from 12.5 to 26.7; notably, on the hardest task types, TREK achieves high success rates early in training while unaided GRPO requires substantially more optimization steps to reach comparable levels.",
+    "upvotes": 6,
+    "projectPage": null,
+    "ai_keywords": [
+      "Group Relative Policy Optimization",
+      "distillation",
+      "exploration support expansion",
+      "forward KL",
+      "teacher-routed exploration",
+      "verified output trajectories",
+      "on-policy support",
+      "mathematical reasoning",
+      "agentic tasks",
+      "ALFWorld",
+      "ScienceWorld"
+    ]
+  },
+  {
+    "id": "2607.05147",
+    "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
+    "summary": "Speculative decoding accelerates Large Language Model (LLM) inference by decoupling draft generation from target verification. While recent parallel drafters efficiently propose long token sequences in a single forward pass, they suffer from rapid acceptance decay due to a lack of inter-token dependencies. Furthermore, indiscriminately verifying these extended blocks wastes critical batch capacity on tokens with high rejection risks, severely degrading throughput in high-concurrency serving systems. We introduce DSpark, a speculative decoding framework that unifies high-throughput parallel generation with adaptive, load-aware verification. To maintain draft quality, DSpark utilizes a semi-autoregressive architecture, coupling a parallel backbone with a lightweight sequential module, to introduce intra-block dependency modeling and mitigate suffix decay. To optimize system efficiency, DSpark employs confidence-scheduled verification, dynamically tailoring the verification length for each request based on estimated prefix survival probabilities and engine-specific throughput profiles. On offline benchmarks across diverse domains, DSpark substantially improves the accepted length over state-of-the-art autoregressive and parallel drafters. When deployed within the DeepSeek-V4 serving system under live user traffic, DSpark successfully mitigates verification waste. Compared to the established production baseline (MTP-1), DSpark accelerates per-user generation speeds by 60 to 85 percent at matched throughput levels. More importantly, by preventing severe throughput degradation under strict interactivity constraints, it enables performance tiers that were previously unattainable, shifting the Pareto frontier of our serving system.",
+    "upvotes": 4,
+    "projectPage": null,
+    "ai_keywords": [
+      "speculative decoding",
+      "parallel drafters",
+      "inter-token dependencies",
+      "acceptance decay",
+      "verification",
+      "throughput",
+      "semi-autoregressive architecture",
+      "confidence-scheduled verification",
+      "prefix survival probabilities",
+      "Pareto frontier"
+    ]
+  },
+  {
+    "id": "2607.05722",
+    "title": "Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding",
+    "summary": "We introduce Nemotron-Labs-Diffusion, a tri-mode language model (LM) that unifies AR, diffusion, and self-speculation decoding within a single architecture. Trained with a joint AR-diffusion objective, Nemotron-Labs-Diffusion can switch modes to sustain high throughput across deployment settings and concurrency levels. Our study shows that (1) AR and diffusion objectives are complementary: diffusion improves lookahead planning, while AR provides left-to-right linguistic priors. (2) In self-speculation mode, diffusion drafts while AR verifies, outperforming multi-token prediction (MTP) methods in both acceptance rate and real-device efficiency. (3) A speed-of-light analysis further demonstrates diffusion's long-term potential, with up to 76.5% more tokens per forward pass than self-speculation under an optimal sampler. Scaling to 3B, 8B, and 14B parameters, our Nemotron-Labs-Diffusion family, including base, instruct, and vision-language models, consistently outperforms state-of-the-art open-source AR and diffusion LMs in both accuracy and speed. For example, Nemotron-Labs-Diffusion-8B decodes 6x more tokens per forward than Qwen3-8B with comparable accuracy, translating to 4x higher throughput on SPEED-Bench with SGLang on a GB200 GPU.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "language model",
+      "autoregressive decoding",
+      "diffusion decoding",
+      "self-speculation decoding",
+      "joint AR-diffusion objective",
+      "lookahead planning",
+      "linguistic priors",
+      "multi-token prediction",
+      "speed-of-light analysis",
+      "parameter scaling",
+      "throughput",
+      "SPEED-Bench",
+      "SGLang",
+      "GB200 GPU"
+    ]
+  },
+  {
+    "id": "2607.06558",
+    "title": "RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation",
+    "summary": "Scaling robot learning requires massive, diverse trajectory data, yet collection is currently bottlenecked by physical teleoperation, where every demonstration binds operator time to specific hardware and workspaces. We introduce digital teleoperation, a paradigm that decouples data collection from physical constraints by replacing the real robot with a generative world model. In this framework, an operator's hand-pose stream drives a robot-centric generative world model to synthesize high-fidelity egocentric videos from a single reference image. The recorded pose stream serves as an embodiment-agnostic action label transferable to any target robot via standard retargeting, yielding complete state-action trajectories for imitation learning independent of physical hardware. We instantiate this paradigm in RynnWorld-Teleop, a system that integrates depth-aware skeletal conditioning, progressive human-to-robot training on a video Diffusion Transformer, and streaming autoregressive distillation. This pipeline compresses the generative process into a single-pass inference, enabling 40+ FPS, real-time interactive generation on a single H100 GPU. Policies trained exclusively on RynnWorld-Teleop-generated data achieve effective zero-shot Sim2Real transfer across dexterous and diverse bimanual tasks. Moreover, augmenting real-world datasets with our digitally teleoperated data consistently improves success rates, demonstrating that RynnWorld-Teleop serves as a high-fidelity, scalable data engine for the next generation of robotic agents.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "generative world model",
+      "video Diffusion Transformer",
+      "autoregressive distillation",
+      "zero-shot Sim2Real transfer",
+      "robotic agents",
+      "depth-aware skeletal conditioning",
+      "progressive human-to-robot training",
+      "streaming autoregressive distillation"
+    ]
+  },
+  {
+    "id": "2607.06559",
+    "title": "RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation",
+    "summary": "Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.",
+    "upvotes": 2,
+    "projectPage": "https://alibaba-damo-academy.github.io/RynnWorld-4D.github.io/",
+    "ai_keywords": [
+      "RGB-DF",
+      "diffusion models",
+      "4D world model",
+      "tri-branch architecture",
+      "cross-modal attention",
+      "3D RoPE",
+      "Rynn4DDataset",
+      "inverse dynamics",
+      "closed-loop policy learning"
+    ]
+  },
+  {
+    "id": "2606.30026",
+    "title": "MuseBench: Benchmarking Intent-Level Audiovisual Arts Understanding in MLLMs",
+    "summary": "Audiovisual arts encompass diverse creative disciplines, including cinema, visual arts, stage performance, and game design, where artistic meaning arises from deliberate combinations of visual, auditory, and narrative elements (e.g., fear amplified through claustrophobic framing, or grief conveyed through silence and lingering close-ups). True artistic understanding extends beyond recognizing what is depicted to reasoning about why it is expressed through particular creative choices. Despite the strong progress of multimodal large language models (MLLMs), this critical aspect of artistic understanding remains underexplored, as existing benchmarks largely measure perceptual recognition while overlooking reasoning about creative intent. To address this gap, we introduce Musebench, a comprehensive benchmark designed to evaluate MLLMs on nuanced artistic understanding. It comprises 4,016 questions spanning cinematic arts, static visual arts, stage performing arts, and game arts, distilled from over 10K candidate video essays that pair professional commentary with visual demonstration. To capture the open-ended nature of artistic analysis at scale, the benchmark combines single-select and variable-option multi-select questions. All questions are generated and refined through a four-phase iterative pipeline combining shortcut filtering, adversarial distractors, and expert validation. Comprehensive zero-shot evaluation of 28 state-of-the-art MLLMs reveals that even the best-performing model achieves only 48.29% accuracy, substantially below human expert performance of 87.18%, exposing a significant gap in current models' creative domain expertise.",
+    "upvotes": 2,
+    "projectPage": "https://musebench.github.io/",
+    "ai_keywords": [
+      "multimodal large language models",
+      "artistic understanding",
+      "creative intent",
+      "Musebench",
+      "visual arts",
+      "cinematic arts",
+      "stage performing arts",
+      "game arts",
+      "zero-shot evaluation",
+      "expert validation"
+    ]
+  },
+  {
+    "id": "2607.05804",
+    "title": "TurnOPD: Making On-Policy Distillation Turn-Aware for Efficient Long-Horizon Agent Training",
+    "summary": "On-policy distillation (OPD) trains a student policy by matching a stronger teacher on the student's own trajectories, offering a promising framework for language agent training. However, its application to long-horizon agentic tasks remains insufficiently explored. We identify two key inefficiencies in vanilla agent OPD: (1) full-horizon rollouts often waste wall-clock resources on tail turns that provide weak and noisy KL supervision, and (2) trajectory-level KL objectives concentrate most of the loss on shallow tokens, leaving deeper decision turns under-trained once initial behaviors are aligned. To address these challenges, we propose TurnOPD, a turn-level budgeting strategy for efficient on-policy distillation of long-horizon agents. TurnOPD consists of two budget controllers: adaptive rollout-depth budgeting, which uses probe-based turn statistics to determine rollout length, and progressive turn-normalized loss budgeting, which gradually shifts KL weighting from token-level to turn-balanced supervision. Experiments on ALFWorld, WebShop, and Multi-Hop Search with task-specialized teacher models show that TurnOPD achieves superior validation accuracy under equal wall-clock training budgets and advances the accuracy--time frontier beyond vanilla OPD.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "on-policy distillation",
+      "teacher-student framework",
+      "trajectory-level KL objectives",
+      "turn-level budgeting",
+      "adaptive rollout-depth budgeting",
+      "progressive turn-normalized loss budgeting",
+      "ALFWorld",
+      "WebShop",
+      "Multi-Hop Search"
+    ]
+  },
+  {
+    "id": "2607.05803",
+    "title": "Quantifying and Expanding the Theoretical Capacity of Late-Interaction Retrieval Models",
+    "summary": "Late-interaction retrieval models that use the MaxSim similarity function have shown strong empirical performance, often outperforming single-vector dense and sparse retrieval models. Despite these empirical findings, little is known about the theoretical representation power of MaxSim and how it compares to other retrieval approaches. This paper shows by construction that MaxSim similarity can exactly replicate the inner product between any two non-negative k-sparse vectors with possibly infinite dimension, requiring only O(k) representation space. Moreover, there exist similarities that MaxSim can express while standard vector inner products with the same representation space cannot. Leveraging our theoretical framework, we introduce Signed MaxSim which allows late-interaction models to exactly replicate any real-valued inner product, something we prove standard MaxSim is not capable of. We also show that MaxSim can act as an aggregation of soft-OR operations and as an evaluator of logical expressions in positive Conjunctive Normal Form. Our findings show that MaxSim is at least as capable as standard vector inner products for any non-negative vectors and our extension, Signed MaxSim, is as capable for any vectors. Both similarities possess additional capabilities that inner product cannot replicate, marking one of the first theoretical justifications and quantifications of late-interaction methods. Our theoretical findings are supported empirically: on a retrieval task featuring queries with negations, Signed MaxSim improves out-of-domain performance significantly over a standard ColBERT/MaxSim baseline with nDCG@10 increasing from 0.597 to 1.000 under a vocabulary shift and from 0.008 to 0.788 on negation-only queries.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "MaxSim similarity",
+      "late-interaction retrieval models",
+      "inner product",
+      "k-sparse vectors",
+      "representation space",
+      "Signed MaxSim",
+      "soft-OR operations",
+      "logical expressions",
+      "Conjunctive Normal Form",
+      "ColBERT",
+      "nDCG@10"
+    ]
+  },
+  {
+    "id": "2607.06442",
+    "title": "SIEVE: Structure-Aware Data Selection for Imitation Learning with VLA Models",
+    "summary": "Vision-Language-Action (VLA) models are typically trained by imitation learning on large-scale robot demonstration datasets, but more data does not necessarily yield better policies due to redundancy, noise, and uneven coverage. Existing data selection methods often assess demonstrations at either the trajectory or state-action level, missing the reusable structures that compose long-horizon behaviors. In this paper, we propose SIEVE, a structure-aware data selection method for VLA imitation learning. SIEVE views demonstrations as compositions of reusable primitives and transition interfaces. It first discovers visuo-motor primitives from segmented trajectories, then allocates selection budgets to composition patterns by maximizing reuse-aware structural exposure under diminishing returns. Finally, it selects medoid trajectories within each composition-pattern bucket to retain central, stable, and imitation-friendly demonstrations. Experiments across multiple datasets, benchmarks, and VLA models show that SIEVE consistently outperforms competitive data selection baselines. Notably, SIEVE can surpass full-data training while using only 50% of demonstrations and 50% of training steps, suggesting that reusable structure, captured through primitives and transitions, is an important signal for efficient VLA imitation learning.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "Vision-Language-Action models",
+      "imitation learning",
+      "data selection",
+      "visuo-motor primitives",
+      "transition interfaces",
+      "composition patterns",
+      "medoid trajectories",
+      "structural exposure",
+      "diminishing returns"
+    ]
+  },
+  {
+    "id": "2607.03819",
+    "title": "CGGS: Consistency-Augmented Geometric Gaussian Splatting for Ego-centric 3D Scene Generation",
+    "summary": "Challenges remain in ego-centric 3D scene generation due to limited view overlap and the dominant influence of individual perspectives on scene interpretation. These factors hinder the creation of viewpoint-consistent and semantically aligned visual content, as well as the construction of accurate geometric structures. In this paper, we propose CGGS, a text-to-3D framework aiming to enhance 3D-content-awareness and address geometric distortions in ego-centric scene generation. Firstly, the Ego-centric Generator is proposed by fine-tuning a Multi-View Latent Diffusion Model with consistency-augmented loss to generate consistent, high-fidelity 2D content aligned with textual descriptions. Then, Layout Decorator leverages optical flow and point-track correspondence to estimate depth, therefore producing dense point clouds as coarse layouts from the ego-centric 2D priors. Building on this initialization, Geometric Refiner is proposed to enhance 3D Gaussian reconstruction via an entropy-based Mutual Information Depth Loss (MID) combined with a hierarchical optimization scheme for improving visual quality and geometric structure. Comprehensive experiments demonstrate that softred{CGGS} outperforms previous methods in generating coherent and accurate text-driven 3D scenes. Project page: https://cggs-26.github.io/cggs26/.",
+    "upvotes": 1,
+    "projectPage": "https://cggs-26.github.io/cggs26/",
+    "ai_keywords": [
+      "Multi-View Latent Diffusion Model",
+      "consistency-augmented loss",
+      "optical flow",
+      "point-track correspondence",
+      "dense point clouds",
+      "3D Gaussian reconstruction",
+      "entropy-based Mutual Information Depth Loss",
+      "hierarchical optimization scheme"
+    ]
+  },
+  {
+    "id": "2607.02920",
+    "title": "Layer-wise Cross-Lingual Depression Detection from Speech: Analysis with Contrastive Alignment",
+    "summary": "Significant disparities exist in the diagnosis and clinical presentation of depression across different linguistic populations. Speech-based depression detection performs well monolingually, but cross-lingual generalization remains an open challenge. A key reason is that prior work uses segment-level random splits without speaker grouping, leading to identity leakage that inflates reported metrics. We propose CLeaD, a supervised contrastive alignment framework that maps WavLM embeddings from English and Mandarin into a shared clinical space, without parallel data or target-language fine-tuning. Evaluating 52 Mandarin speakers, contrastive alignment modestly outperforms the baseline (F1: 0.640 vs. 0.622) under leave-one-speaker-out evaluation. It also improves depressed-class recall at intermediate layers (7-8), though the small test set limits generalizability. Two findings remain robust: model scaling degrades cross-lingual performance while improving monolingual English, and speaker identity leakage artificially inflated previously reported Mandarin F1 scores to 0.954, an artifact we reproduce and quantify.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "WavLM embeddings",
+      "supervised contrastive alignment",
+      "cross-lingual generalization",
+      "speaker identity leakage",
+      "leave-one-speaker-out evaluation",
+      "monolingual English",
+      "Mandarin"
+    ]
+  },
+  {
+    "id": "2607.02515",
+    "title": "PointDiT: Pixel-Space Diffusion for Monocular Geometry Estimation",
+    "summary": "State-of-the-art single-image 3D reconstruction methods often rely on complex hybrid architectures and loss functions, or compress geometry into latent spaces in order to leverage pre-trained latent diffusion models. In this work, we show that such architectural overhead and intricate loss formulations are unnecessary. We introduce a minimalist pixel-space Diffusion Transformer, built on a plain ViT, that operates directly on raw 3D point map patches and is conditioned on image tokens from a pre-trained DINOv3. Unlike existing latent diffusion approaches, we train our diffusion backbone entirely from scratch, eliminating the need for point map tokenizers. Despite its simplicity, our approach surpasses complex latent-based diffusion models while remaining significantly simpler than hybrid alternatives. Notably, it produces sharper geometric structure and is more robust in highly ambiguous regions, such as transparent objects.",
+    "upvotes": 1,
+    "projectPage": "https://haofeixu.github.io/pointdit/",
+    "ai_keywords": [
+      "Diffusion Transformer",
+      "ViT",
+      "3D point map patches",
+      "DINOv3",
+      "pixel-space",
+      "latent diffusion models",
+      "hybrid architectures",
+      "loss functions",
+      "geometric structure",
+      "transparent objects"
+    ]
+  },
+  {
+    "id": "2606.31329",
+    "title": "3D HAMSTER: Bridging Planning and Control in Hierarchical Vision Language Action Models through 3D Trajectory Guidance",
+    "summary": "Hierarchical Vision-Language-Action (VLA) models decouple high-level planning from low-level control to improve generalization in robot manipulation. Recent work in this paradigm uses 2D end-effector trajectories predicted by a Vision-Language Model (VLM) as explicit guidance for a downstream policy. However, state-of-the-art low-level policies operate in 3D metric space on point clouds, and feeding them 2D guidance that lacks depth forces each waypoint to be assigned the depth of whatever scene surface lies beneath it, producing geometrically distorted trajectories. We propose 3D HAMSTER, a hierarchical framework that closes this gap by having the planner directly output metrically reliable 3D trajectories. We augment a VLM with a dedicated depth encoder and a dense depth reconstruction objective to predict 3D waypoint sequences, which are directly integrated into a pointcloudbased low-level policy. Across 3D trajectory prediction, simulation, and real-world manipulation, 3D HAMSTER consistently outperforms proprietary VLMs and 2D-guided baselines, with the largest gains under appearance-altering shifts and unseen language, spatial, and visual conditions. The project page is available at https://davian-robotics.github.io/3D_HAMSTER/.",
+    "upvotes": 1,
+    "projectPage": "https://davian-robotics.github.io/3D_HAMSTER/",
+    "ai_keywords": [
+      "Vision-Language Model",
+      "point clouds",
+      "3D trajectory prediction",
+      "depth encoder",
+      "dense depth reconstruction",
+      "hierarchical framework",
+      "low-level policy",
+      "metric space"
+    ]
+  },
+  {
+    "id": "2607.03509",
+    "title": "Flex-Forcing: Towards a Unified Autoregressive and Bidirectional Video Diffusion Model",
+    "summary": "Recent progress in large-scale generative models has substantially advanced video generation, yet existing methods remain constrained by a rigid inference paradigm. Bidirectional diffusion models excel at global coherence and visual fidelity but suffer from slow inference, while autoregressive models offer efficient and streaming generation at the cost of long-range consistency and exposure bias. We introduce Flex-Forcing, a unified training and inference framework that enables a video diffusion model to seamlessly operate under both bidirectional and autoregressive generation regimes. The core idea is a flexible chunking mechanism jointly defined over the temporal axis and denoising steps. This design allows the model to (1) perform flexible chunking according to different device budgets, (2) perform bidirectional inference across chunks for global structure planning, while generating frames autoregressively within each chunk for efficient and fine-grained synthesis, and (3) perform any-order, any-timestep autoregressive generation without the strict causal constraint. Extensive experiments on multiple video generation benchmarks demonstrate that Flex-Forcing achieves consistently better video quality, long-video stability than strong baselines with a rigid inference schedule, while offering faster inference.",
+    "upvotes": null,
+    "projectPage": "https://research.nvidia.com/labs/genair/flex-forcing/",
+    "ai_keywords": [
+      "bidirectional diffusion models",
+      "autoregressive models",
+      "video generation",
+      "flexible chunking mechanism",
+      "temporal axis",
+      "denoising steps",
+      "global coherence",
+      "visual fidelity",
+      "long-range consistency",
+      "exposure bias",
+      "unified training framework",
+      "inference paradigm",
+      "video diffusion model",
+      "chunked generation",
+      "autoregressive generation"
+    ]
+  }
+]
