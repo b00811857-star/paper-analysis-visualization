@@ -1,0 +1,202 @@
+[
+  {
+    "id": "2608.23283",
+    "title": "Apodex 1.1: Scaling Agentic Intelligence for Complex Work",
+    "summary": "General-purpose language models can reason and synthesize knowledge, but complex work also requires sustained interaction with files, information sources, and executable code, together with state maintenance, failure recovery, and verifiable delivery. We call this working capability: sustained, verifiable progress toward a real-world objective. Apodex 1.1 develops this capability along two complementary dimensions. Environment Scaling expands the diversity and verifiability of executable file, search, and code environments, while Agentic Coordination Scaling trains agents to decompose long-horizon tasks, delegate parallel work, integrate asynchronous results, and replan. A shared execution harness and AgentOS maintain task state and provenance across tools and agents, and training turns environment trajectories and coordination traces into reliable behavior. Across complex professional work, finance, scientific research, mathematics, coding, and search, Apodex 1.1 reaches the leading performance band despite using a substantially smaller model than many frontier systems. The 35B-parameter Apodex 1.1 Mini further retains strong working capability in a locally deployable form. These results ground agentic intelligence in useful, verifiable work completed over time and advance our goal of building a Heavy-Duty Solver for ambitious, long-running tasks.",
+    "upvotes": 105,
+    "projectPage": "https://www.apodex.com/blog/apodex-1.1-scaling-agentic-intelligence-for-complex-work",
+    "ai_keywords": [
+      "agentic coordination scaling",
+      "environment scaling",
+      "execution harness",
+      "AgentOS",
+      "long-horizon task decomposition",
+      "asynchronous integration",
+      "trajectory training"
+    ]
+  },
+  {
+    "id": "2608.20958",
+    "title": "TLive-Omni: An Omni-Modal Understanding Model for E-Commerce Live Streaming",
+    "summary": "E-commerce live streaming requires omni-modal understanding of noisy, temporally extended streams, where product facts are distributed across speech, video frames, product images, overlaid text, and user queries. We present TLive-Omni, an omni-modal understanding model tailored to live-commerce scenarios. It maps image, video, audio, and text inputs into a unified representation space. For long-form live streaming analysis, we introduce Per-vGrid, a timestamped token organization that groups each video grid with its temporally corresponding audio within explicit boundary tokens to facilitate temporal alignment. We design a three-stage supervised training recipe that progressively develops live-commerce understanding, from omni-modal perception to instruction-following responses. We then propose Faithful-RFT, a reinforcement fine-tuning stage that further improves answer faithfulness and expression quality while meeting real-time demands, scoring final responses directly with task-verifiable feedback rather than optimizing for reasoning-style exploration during rollout. Moreover, TLive-Omni is supported by a scenario-oriented atomic capability taxonomy and a compact data production engine that converts live-commerce audio, image, and video streams into training signals for speech recognition, speaker analysis, product visual grounding, text recognition, temporal grounding, video dense caption, and omni-modal QA, etc. For scalable training, a synchronized length-grouped sampler reduces padding while preserving comparable workloads across workers, while a lightweight dynamic sampling strategy regenerates rollout groups with near-zero reward variance to maintain meaningful relative advantages for GRPO. Experiments on e-commerce live streaming benchmarks demonstrate strong performance across live-commerce domain tasks, together with excellent generalization on general benchmarks.",
+    "upvotes": 18,
+    "projectPage": null,
+    "ai_keywords": [
+      "omni-modal understanding",
+      "Per-vGrid",
+      "timestamped token organization",
+      "cross-modal alignment",
+      "three-stage supervised training",
+      "Faithful-RFT",
+      "reinforcement fine-tuning",
+      "GRPO",
+      "dynamic sampling",
+      "length-grouped sampler",
+      "live-commerce",
+      "temporal grounding",
+      "product visual grounding"
+    ]
+  },
+  {
+    "id": "2608.20430",
+    "title": "RISE: Adaptive Imagination for World Action Models",
+    "summary": "World Action Models (WAMs) improve planning by incorporating future world evolution into action generation, yet existing methods allocate a fixed imagination budget to every scene. We propose RISE (Refining Imagination through SElective Rollout), a system-level adaptive imagination framework that makes sequential Roll/Stop decisions according to the expected planning benefit of continued rollout. At each step, a Latent Evaluator estimates the risk revealed by the current prefix and how much planning could improve if imagination continues, while a Rollout Gate weighs this expected benefit against additional computation cost. Since factual driving logs expose only one realized future, we further construct CounterDrive, a counterfactual dataset with diverse outcomes and risk levels, to enrich future dynamics and provide localized risk supervision. Each retained sample undergoes expert verification and annotation of trajectory validity, incident onset, and causal category, providing a reusable resource for safety-critical world-modeling research. Experiments on NAVSIM and nuScenes show that RISE achieves the best overall planning performance while reducing unnecessary rollout, with additional transfer results supporting its plug-in generality across WAM architectures.",
+    "upvotes": 14,
+    "projectPage": "https://cowarobot-ai.github.io/RISE/",
+    "ai_keywords": [
+      "World Action Models",
+      "adaptive imagination",
+      "Roll/Stop decisions",
+      "Latent Evaluator",
+      "Rollout Gate",
+      "CounterDrive",
+      "counterfactual dataset",
+      "risk supervision",
+      "NAVSIM",
+      "nuScenes"
+    ]
+  },
+  {
+    "id": "2608.23552",
+    "title": "Prime Agent: A Self-Improving RLM Harness",
+    "summary": "Language models are sequential processors, but long-horizon agency requires external information and computation beyond model weights and active context. Prime Agent is an open-source harness for long-horizon evaluation and coding-agent workflows. A persistent IPython REPL follows the Recursive Language Model abstraction for programmatic context processing and test-time compute, while Continual Harness preserves histories, memories, skills, prompts, and subagent specifications across trajectories. Recursive subagents coordinate through direct agent-to-agent communication, and the Agents View lets humans inspect and manage daemon-backed sessions. Prime Agent standardizes execution, recovery, verification, and resource accounting while leaving strategy construction to the model. This low-friction, expressive membrane prevents harness failures from becoming model failures and pushes measurement toward the model's true maximal underlying capability. Prime Agent raises ARC-AGI-3 RHAE Best@1 from 30% to 95.5% and matches or exceeds native and popular harnesses across long-context coding, GPU-kernel generation, emulator construction, and autonomous nanoGPT speedruns. On Factorio, we find refinement allows for continuous technology progression and dedicated subagents enable parallelized work. Code is available at https://github.com/PrimeIntellect-ai/prime-agent.",
+    "upvotes": 9,
+    "projectPage": "https://www.primeintellect.ai/blog/prime-agent",
+    "ai_keywords": [
+      "Recursive Language Model",
+      "test-time compute",
+      "subagents",
+      "agent-to-agent communication",
+      "daemon-backed sessions",
+      "ARC-AGI-3",
+      "long-context coding",
+      "GPU-kernel generation",
+      "nanoGPT"
+    ]
+  },
+  {
+    "id": "2608.23565",
+    "title": "ReWorld: An Interactive World Model with Long-Horizon Memory",
+    "summary": "An interactive world model must follow the user's actions, remember the places it has shown, and stream in real time. The tension is structural: control wants a short horizon, memory wants an unbounded one. ReWorld separates the two during training and bounds them at inference. Mixed per-head attention windows confine most heads to the recent past while a small set of global heads attends over the entire history, and random head routing keeps either capability from binding to particular heads; random chunk dropping makes sparse histories in-distribution. At inference the whole past lives under a fixed budget: a bounded KV cache backed by a pose-indexed landmark bank, from which the model retrieves the landmarks nearest the current pose. A metric-scale-aligned data engine places eight sources -- Unreal-rendered fly-throughs, game roaming, and real-world footage -- on one physical action scale, so the same key press moves the camera the same distance in every source, and palindrome trajectories supply the revisit evidence that memory training needs. Distribution-matching distillation confined to a LoRA adapter then compresses sampling to four steps: one backbone serves both a high-fidelity multi-step mode and a real-time interactive one, streaming 704x1280 video across photorealistic, game-style, and stylized worlds. Under a three-axis protocol covering action following, long-horizon recall, and video quality, against six recent interactive world models it attains the best control fidelity (11.95^circ rotation error and the best camera-motion consistency) and the best generation quality; and on minute-long out-and-back rollouts (64\\,s, 384 latents), its fixed 12-chunk cache still regenerates the starting view -- at rollout lengths where a sliding window has long evicted the evidence and full-KV attention runs out of memory.",
+    "upvotes": 4,
+    "projectPage": "https://zhifeichen097.github.io/ReWorld/",
+    "ai_keywords": [
+      "mixed per-head attention windows",
+      "global heads",
+      "random head routing",
+      "random chunk dropping",
+      "pose-indexed landmark bank",
+      "KV cache",
+      "metric-scale-aligned data engine",
+      "palindrome trajectories",
+      "distribution-matching distillation",
+      "LoRA adapter"
+    ]
+  },
+  {
+    "id": "2608.19408",
+    "title": "Beyond Imitation: Filtering On-Policy Distillation by Reasoning Progress",
+    "summary": "On-policy distillation (OPD) has emerged as an effective framework for post-training language models by pairing student-generated trajectories with dense token-level supervision from a teacher. However, OPD implicitly assumes that teacher-derived rewards are an appropriate proxy for reasoning progress, and therefore treats all teacher feedback equally during policy optimization. While in practice, this assumption does not always hold. We observe that teacher-derived rewards often conflict with genuine reasoning progress, as reasoning steps with clear reasoning advancement may still receive lower distillation rewards, simply due to deviation from teacher's outputs. To address this mismatch, we propose Reasoning-Progress-Aware Reward Filtering for On-Policy Distillation (R2-OPD), which constructs two within-trajectory rankings of reasoning spans, one from teacher-derived rewards and the other from independently estimated progress reward. Distillation rewards are selectively suppressed whenever the two rankings disagree, reducing supervision that conflicts with reasoning progress while preserving effective teacher guidance. Our approach shows consistent improvement over standard OPD especially regarding reasoning performances.",
+    "upvotes": 4,
+    "projectPage": null,
+    "ai_keywords": [
+      "on-policy distillation",
+      "token-level supervision",
+      "reasoning progress",
+      "reward filtering",
+      "within-trajectory ranking",
+      "progress reward",
+      "policy optimization"
+    ]
+  },
+  {
+    "id": "2608.22856",
+    "title": "Same Agent, Different Answers: A Repeat-Aware Audit of Corpus-Induced Answer Churn in Retrieval-Augmented QA",
+    "summary": "A retrieval-augmented QA system can return different answers after an index expansion even when its requested model identifier, prompt, retrieval policy, evidence depth, rendering, and exposed generation controls are held fixed. Aggregate accuracy may hide these changes when gains and losses cancel, while ordinary generation variability makes one-shot comparisons overstate update effects. We call the hidden phenomenon accuracy-blind answer churn and introduce the Snapshot Compatibility Audit, which estimates excess answer churn by subtracting same-snapshot repeat disagreement from cross-snapshot disagreement. We instantiate it by expanding one frozen FineWeb prefix from one to seven shards. In a preregistered 400-question Natural Questions study, normalized-exact and blinded-semantic excess churn are 6.44 and 10.25 percentage points while exact-match accuracy changes by only -1.50 points. A post-hoc analysis finds repeat-stable semantic flips on 40/400 questions. A separately preregistered 200-question TriviaQA study yields smaller, directionally consistent excess churn while exact-match accuracy moves in the opposite direction. An outcome-blind post-hoc 100-question subset replication with a second DeepSeek generator and serving configuration finds 8.75 pp of semantic excess churn even as exact match rises by 3.00 percentage points. Answer-level compatibility can therefore fail without a conspicuous or consistently directed utility shift. Retrieval-augmented releases should audit compatibility alongside utility.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "retrieval-augmented QA",
+      "index expansion",
+      "accuracy-blind answer churn",
+      "Snapshot Compatibility Audit",
+      "FineWeb",
+      "Natural Questions",
+      "TriviaQA",
+      "DeepSeek"
+    ]
+  },
+  {
+    "id": "2608.17336",
+    "title": "TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration",
+    "summary": "Long-context prefill in large language models (LLMs) incurs substantial computation and memory traffic because dense self-attention computes quadratic query-key scores. Existing methods either use a uniform low-precision path or select token interactions, leaving spatial precision routing over hardware-aligned score tiles outside fused dense attention. We introduce TileMix, a tile-centric precision-routing kernel that makes numerical precision an executable spatial decision over score-tile groups within fused dense attention. TileMix partitions the attention matrix into hardware-aligned score tiles, packs routing decisions into compact bitmasks, and dispatches each tile group through FP16 or INT8 score computation while both paths update a shared online-softmax state. Scalable precision grouping lets each routing bit govern multiple adjacent key tiles, preserving hardware-aligned compute tiles and compact metadata at long contexts. By routing all legal tile groups, TileMix preserves dense token connectivity, requires no training, and supports grouped-query attention, variable-length batches, and INT8 key/value caches. Across LongEval, LV-Eval, and A100 prefill benchmarks on LLaMA, Qwen, and Vicuna, TileMix recovers long-context quality lost under uniform INT8 and improves prefill throughput over FP16, yielding a controllable accuracy-efficiency frontier across model families. The implementation is available at https://github.com/HanzhiZhang-Ulrica/TileMix.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "long-context prefill",
+      "dense self-attention",
+      "query-key scores",
+      "TileMix",
+      "tile-centric precision-routing",
+      "score tiles",
+      "online-softmax",
+      "FP16",
+      "INT8",
+      "grouped-query attention",
+      "INT8 key/value caches"
+    ]
+  },
+  {
+    "id": "2608.16812",
+    "title": "Unlocking the Potential of Image Editing via Concept Scaling and Dense Supervision",
+    "summary": "Existing image editing frameworks predominantly follow the training paradigm of text-to-image diffusion models. However, extending this paradigm to image editing highlights two inherent discrepancies, specifically, the insufficient attention to edit concept granularity and the training inefficiency caused by sparse supervision signals. To address these issues, we establish a comprehensive hierarchical taxonomy featuring over 1,000 fine-grained edit concepts and build ConceptEdit-12M, a massive dataset of 12 million high-quality editing pairs via an improved synthesis framework. This library-driven approach effectively rectifies the distribution collapse of generated data while ensuring high data fidelity. Furthermore, we propose a dense supervision training strategy that synthesizes multiple non-interfering concepts into single image pairs. By providing richer learning signals, this strategy significantly enhances both training efficiency and overall model performance. Training results validate our strategy, significantly outperforming prior works. Finally, we present ConceptEdit-Bench, a granular evaluation suite designed to diagnose model capabilities across a vast array of real-world scenarios.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "text-to-image diffusion models",
+      "edit concept granularity",
+      "sparse supervision signals",
+      "hierarchical taxonomy",
+      "ConceptEdit-12M",
+      "dense supervision training strategy",
+      "non-interfering concepts",
+      "ConceptEdit-Bench"
+    ]
+  },
+  {
+    "id": "2608.13622",
+    "title": "ARC: Fair Relative Advantage Comparison in Open-Ended Real-World Interaction",
+    "summary": "Open-ended real-world interaction admits multiple valid behaviors: an agent may answer directly, ask for clarification, provide progress updates, or confirm before acting. This flexibility breaks a core assumption behind group-based RL: rollouts compared within a group are no longer guaranteed to be behaviorally comparable. As a result, reward-model preferences over interaction style can distort relative advantages and steer optimization toward reward-preferred behaviors rather than context-appropriate ones. We formalize this as a reward fairness problem and propose ARC (Advantage Regularization via Conditioning), a training recipe that restores fairer relative comparison through strategy-conditioned rollout grouping, together with hybrid rewards and entropy regularization. We study ARC in our proposed \\inter, a novel paradigm for responsive, steerable, and execution-aware user-agent interaction that decouples user-visible communication from latent reasoning and tool use. \\inter\\ also provides the annotation and distillation pipeline for constructing \\inter-86K, our strategy-annotated training corpus for supervised and RL training. Empirically, ARC substantially strengthens the core τ/τ^2 tool-use benchmarks, while \\inter\\ reduces time-to-first-token from 4.91s to 1.27s relative to a think-style baseline. Together, these results suggest that a central bottleneck in open-ended interactive learning is not only how agents are rewarded, but whether their behaviors are compared fairly in the first place. The ARC implementation and \\inter-86K training data will be released.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "group-based RL",
+      "reward fairness",
+      "ARC",
+      "Advantage Regularization via Conditioning",
+      "strategy-conditioned rollout grouping",
+      "hybrid rewards",
+      "entropy regularization",
+      "tool-use benchmarks",
+      "time-to-first-token"
+    ]
+  },
+  {
+    "id": "2608.21833",
+    "title": "GameXpert-Bench: How Far Are Coding Agents from Expert Game Development?",
+    "summary": "Recent large language models (LLMs) can operate as coding agents that build complete games from natural language requests. Game development is especially demanding because program logic, visual and audio content, interfaces, interaction and playability must function together in one executable artifact. Measuring this capability therefore requires evaluation of both game product and the development process. Existing benchmarks often assess the game development capabilities of LLMs by evaluating the final artifact or an isolated development stage. Our analysis of complete human-agent development trajectories identifies three stages that together span the lifecycle of game development with a coding agent: initial game generation, bug diagnosis and repair, and optimization over multiple turns. Therefore, we introduce GameXpert-Bench, which operationalizes the three lifecycle stages as three complementary benchmark tracks. GameGen evaluates complete game creation from a single request in an empty workspace. GameFix evaluates diagnosis and repair when defects are reported or left for the agent to discover. GameOpt evaluates cumulative optimization through request chains seeded by real development trajectories between users and agents. We evaluate each track using live game interaction, deterministic behavioral tests, or final product criteria with regression checks. The suite contains 97 generation tasks across 11 genres; 100 repair tasks from 50 game levels verified by humans, each with 19-27 injected bugs; and 17 optimization chains with six turns and 102 requests. Across the three tracks, current agents are more reliable at producing playable foundations and implementing explicit requirements than at discovering defects, verifying runtime behavior, and preserving functionality across changes.",
+    "upvotes": null,
+    "projectPage": "https://kwen-chen.github.io/GameXpert-Bench/",
+    "ai_keywords": [
+      "large language models",
+      "coding agents",
+      "GameXpert-Bench",
+      "game generation",
+      "bug diagnosis and repair",
+      "optimization",
+      "live game interaction",
+      "deterministic behavioral tests",
+      "regression checks"
+    ]
+  }
+]
