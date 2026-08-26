@@ -1,0 +1,214 @@
+[
+  {
+    "id": "2608.24053",
+    "title": "WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report",
+    "summary": "Universal multimodal embeddings are becoming a core component of modern AI systems, enabling heterogeneous content to be represented in a shared space for applications such as retrieval, recommendation, classification, and agentic systems. In this report, we present WeMM-Embedding, a family of universal multimodal embedding models supporting text, images, videos, visual documents, and arbitrarily interleaved multimodal inputs with flexible output dimensions. The family comprises 2B, 4B, and 9B variants and is trained in two stages: a large-scale multimodal alignment stage, followed by a refinement stage using curated data, fine-grained relevance supervision, and cross-scale knowledge transfer. Across extensive evaluations, WeMM-Embedding achieves leading performance on multiple public benchmarks. Notably, the 2B variant already surpasses the previously leading 8B open-source baseline on MMEB-v2, while the 9B variant further achieves a new state-of-the-art overall score of 80.6. WeMM-Embedding also demonstrates strong practical performance across WeChat applications, with substantial gains on a 26-task in-house benchmark and consistent improvements across 14 online A/B tests. It has been deployed at scale across recommendation and search applications, including WeChat Channels, Official Accounts, Moments, and e-commerce services. We have released the model weights and code to facilitate future research at https://github.com/Tencent/WeMM-Embedding.",
+    "upvotes": 29,
+    "projectPage": null,
+    "ai_keywords": [
+      "multimodal embeddings",
+      "cross-scale knowledge transfer",
+      "fine-grained relevance supervision",
+      "MMEB-v2",
+      "universal multimodal embedding models"
+    ]
+  },
+  {
+    "id": "2608.23041",
+    "title": "AutoSaddler: Automatic Harness Optimization with Durable Updates from Agent Execution Traces",
+    "summary": "LLM agents remain unreliable on long-horizon tasks, where small local failures can compound over extended interactions and lead to overall task failure. Although external harnesses can substantially improve robustness, harness design remains a manual and expensive process that requires searching over a large space of prompts, tool configurations, and control logic. We propose AutoSaddler, an automatic harness optimization framework that formulates harness improvement as an offline learning problem and iteratively updates the harness using failure signals from mini-batches. AutoSaddler combines failure-trace diagnosis, structured patch generation that treats the harness as code, and validation-based update selection. Experiments on GAIA2, SWE-Bench Pro, and Terminal-Bench 2.0 show that AutoSaddler substantially improves agent performance over the corresponding base harnesses, achieving gains of 9.0, 9.6, and 10.0 percentage points, respectively. Ablation studies further suggest that effective harness optimization benefits from three ingredients: deep debugging rather than shallow reflection, targeted modifications rather than unconstrained editing, and generalization-aware selection rather than trajectory-specific repair. Together, these results suggest that automatic harness optimization is a promising path toward more performant and reliable agent systems.",
+    "upvotes": 26,
+    "projectPage": "https://autosaddler-projectpage.github.io/",
+    "ai_keywords": [
+      "LLM agents",
+      "harness optimization",
+      "failure-trace diagnosis",
+      "structured patch generation",
+      "validation-based update selection",
+      "deep debugging",
+      "targeted modifications",
+      "generalization-aware selection"
+    ]
+  },
+  {
+    "id": "2608.24646",
+    "title": "On-Policy Self-Distillation in Diffusion Models",
+    "summary": "Reinforcement learning can align diffusion models with human preferences and task-specific objectives, but endpoint rewards do not specify how an intermediate denoising prediction should change. We introduce DiffusionOPSD as an on-policy self-distillation framework that converts image-level reward guidance into explicit targets for clean-output predictions at sampled queries. At each outer iteration, a frozen behavior policy generates trajectories and supplies query states and anchors. Reward gradients construct bounded positive and negative targets around each anchor. The trainable policy fits these targets as detached supervision through finite fitting before an exponential moving average update refreshes the behavior policy. This setup lets us measure target construction and finite realization separately. Controlled same-query experiments show that larger target-construction gains do not necessarily translate into larger realized gains after a single fitting update. Across SD 3.5-M and the step-distilled Z-Image-Turbo, our approach achieves the best final held-out scores in 19 of 20 reward-matched settings across two backbones and ten evaluators. It outperforms the strongest competing method by up to 44.0% and reduces training GPU-hours relative to DiffusionNFT by 40% on SD 3.5-M and 63% on Z-Image-Turbo. These results support on-policy self-distillation as an efficient and analyzable approach to diffusion post-training by converting image-level reward guidance into explicit and continually refreshed intermediate supervision, thereby opening a path toward more efficient and diagnosable alignment.",
+    "upvotes": 24,
+    "projectPage": "https://diffusionopsd.github.io/",
+    "ai_keywords": [
+      "DiffusionOPSD",
+      "on-policy self-distillation",
+      "diffusion models",
+      "reinforcement learning",
+      "endpoint rewards",
+      "denoising prediction",
+      "behavior policy",
+      "reward gradients",
+      "exponential moving average",
+      "target construction",
+      "finite fitting"
+    ]
+  },
+  {
+    "id": "2608.24876",
+    "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
+    "summary": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory tracks task progress and guides skill selection from Experiential Memory, grounding skill use in current needs rather than the full history. This coupling also turns execution into structured evidence that localizes failures to specific memory components. Across tasks, a fixed Meta-Agent turns that evidence into localized, validation-gated updates to Skill Memory that reshape execution and yield new evidence, forming a bounded recursive memory-evolution loop. Across four long-horizon benchmarks and ten models, Recuris improves task success in 35 of the 37 completed model-benchmark pairs, carrying frontier models to SOTA-level task success: on tau-bench it adds +17.8 points to GPT-5.6 Sol and +15.6 to Claude Opus 5, taking Opus 5 to 87.9%, and +16.6/+13.5 points on Qwen3.6-27B/35B on SkillFlow. The advantage widens as the interaction horizon grows, to +32.2 points on the longest tasks, and common long-horizon failures fall by up to 80%. These results position recursively evolving memory as a scalable foundation for RSI, enabling agents to continuously transform accumulated experience into increasingly effective long-horizon behavior. Code: https://github.com/Gen-Verse/Recuris",
+    "upvotes": 14,
+    "projectPage": "https://github.com/Gen-Verse/Recuris",
+    "ai_keywords": [
+      "recursive self-improvement",
+      "Experiential-Working Memory",
+      "Working Memory",
+      "Experiential Memory",
+      "Skill Memory",
+      "Meta-Agent",
+      "validation-gated updates",
+      "long-horizon agent harnesses"
+    ]
+  },
+  {
+    "id": "2608.24696",
+    "title": "On-policy Distillation with Verifiable Reward",
+    "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) and on-policy distillation (OPD) have become two widely adopted paradigms for post-training large language models. However, RLVR suffers from sparse task-level feedback, while OPD provides dense token-level guidance but ignores trajectory correctness, limiting its performance to that of the teacher. Combining them is a promising direction: OPD supplies dense supervisory signals, while RLVR provides task-level correctness. Nevertheless, existing integrations often rely on weighted combination or heuristic switching, introducing extra hyperparameters and trade-offs. We propose On-policy Distillation with Verifiable Reward (OPDVR), a simple yet effective method that seamlessly combines OPD and RLVR without adding any hyperparameters. We first reformulate the implicit reward of sampled-token OPD based on trajectory correctness, then apply a ReLU gating mechanism to ensure that correct trajectories receive non-negative rewards and incorrect ones receive non-positive rewards---thereby aligning the distillation signal with task success while preserving the teacher's distributional guidance. Furthermore, our modification transforms sampled-token OPD into a proper RLVR method, making it readily combinable with any policy gradient algorithm, such as GRPO. Experiments on six reasoning benchmarks show that OPDVR consistently outperforms standard OPD. Our code is available at https://github.com/LeapLabTHU/OPDVR.",
+    "upvotes": 3,
+    "projectPage": null,
+    "ai_keywords": [
+      "Reinforcement Learning with Verifiable Rewards",
+      "on-policy distillation",
+      "OPDVR",
+      "implicit reward",
+      "ReLU gating",
+      "policy gradient",
+      "GRPO",
+      "reasoning benchmarks"
+    ]
+  },
+  {
+    "id": "2608.24877",
+    "title": "From Seeing to Acting: Smart Glasses as First-Person Intelligence Platforms",
+    "summary": "Smart glasses are evolving from capture and display accessories into first-person intelligence platforms that connect human perception, persistent context, and digital or physical action. Their on-body viewpoint aligns with the wearer's vision, audition, motion, and hand-object interaction, but must operate under tight energy, thermal, privacy, and feedback constraints. Despite rapid progress in augmented reality, egocentric vision, multimodal models, human-computer interaction, and embodied intelligence, the literature remains fragmented across devices, tasks, and benchmarks. The key challenge is not whether a model can recognize, answer, remember, or act in isolation, but whether a complete system can sustain a reliable, temporally valid, correctable, and governable perception-state-interaction-action loop. This survey is the \\textbf{first to systematically study smart glasses through such a unified framework}. We formalize first-person data flow and constrained task utility, characterize devices along eight verifiable hardware capability axes, organize the literature around seven interdependent foundational capabilities, and introduce an L0-L5 framework spanning capture, reactive perception, contextual assistance, persistent state, governed action, and embodied coupling. Across nine application scenes, we connect tasks with datasets, systems, products, stakeholders, failure consequences, and evidence gaps. We further present a nine-dimensional deployment framework, a claim-conditioned evaluation protocol, and an evidence ladder from controlled measurement to longitudinal field validation and audit. Together, these elements make smart glasses more comparable, deployable, and reproducibly evaluated, while outlining a roadmap toward trustworthy first-person intelligence.",
+    "upvotes": 3,
+    "projectPage": "https://github.com/zhangzjn/awesome-smart-glasses",
+    "ai_keywords": [
+      "multimodal models",
+      "embodied intelligence",
+      "egocentric vision"
+    ]
+  },
+  {
+    "id": "2608.24845",
+    "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+    "summary": "We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a total duration of 10 million hours. The dataset is designed for multimodal pre-training across the video, audio, and image modalities. Using content-aware scene detection, we extract clips for which we synthetically generate video and audio captions. Models trained on these data achieve competitive performance on standard video-text and audio-text benchmarks, with consistent improvements as training or model scale increases. Additionally, we explore video frames as an alternative source of image-text data by extracting scene-changing frames. These frames exhibit a visual distribution distinct from standard web image corpora, and models trained on this dataset achieve strong image-text retrieval performance. We release LAION-BVD to the research community. It significantly expands open access to multimodal videos at an unprecedented scale.",
+    "upvotes": 1,
+    "projectPage": "https://projects.laion.ai/bvd/",
+    "ai_keywords": [
+      "multimodal learning",
+      "LAION-BVD",
+      "CommonCrawl",
+      "content-aware scene detection",
+      "synthetic captions",
+      "video-text",
+      "audio-text",
+      "image-text retrieval"
+    ]
+  },
+  {
+    "id": "2608.23566",
+    "title": "Best Practice Critic Optimization",
+    "summary": "Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token-level advantages from one response, but standard critic-based training recipes are often unstable. We study this instability and develop **Best Practice Critic Optimization (BPCO)**, a recipe that combines DPPO, value predictions bounded to the reward range, Monte Carlo value targets, unnormalized policy advantages, and length-adaptive generalized advantage estimation. Because the critic is used only during training, BPCO can also condition it on reward-defining information, such as a reference answer or grading rubric, that is hidden from the policy. Controlled experiments isolate the effect of each design choice. Across mathematical reasoning tasks with models ranging from 1.5B parameters to 30B-A3B mixtures of experts, BPCO improves a strong critic-based baseline consistently, and matches or exceeds a group-based baseline while sampling one response per prompt. The same recipe also improves learning with rubric-based rewards. These results show that a carefully designed critic provides a reliable alternative to group-relative advantage estimation. Code is available at https://github.com/QPHutu/golden_critic.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "GRPO",
+      "DPPO",
+      "critic optimization",
+      "value predictions",
+      "Monte Carlo value targets",
+      "generalized advantage estimation",
+      "token-level advantages",
+      "rubric-based rewards",
+      "mixture of experts"
+    ]
+  },
+  {
+    "id": "2608.24735",
+    "title": "Meta^n: Recursive Self-Improvement through Emergent Depth",
+    "summary": "Self-improving LLM agents refine answers, not the process that produces those answers. Systems that add a meta-level hold that level fixed, and those that edit themselves must leave part of their own editing machinery untouched to stay stable, capping the meta-depth they realize at roughly two. We present Meta^n, which keeps the meta-operation fixed and recurses on its input instead. That operation, Ω, is applied repeatedly to its own products, reading the traces of the solver stack below together with the code that produced them, then writing the next layer as a strategic pre-process and a library of callable helpers. Because Ω never changes, it cannot destabilize the system, and because its input strictly grows, each layer reasons from a higher vantage than the last. Depth is set by convergence rather than fixed in advance, and an evolutionary archive searches over layer chains. Across two backbones, Meta^n outperforms prior self-improving agents on all eight benchmark families. The sharpest case is ARC-AGI-2, built to resist skill memorization, where it alone scores above zero. Ablations indicate that most of the gain from recursion comes from the conditioning each layer passes to the next, and distinct layer roles emerge with depth although no prompt prescribes them. Code available at https://github.com/minnesotanlp/meta-n",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "self-improving LLM agents",
+      "meta-operation",
+      "Meta^n",
+      "Ω",
+      "solver stack",
+      "strategic pre-process",
+      "evolutionary archive",
+      "layer chains",
+      "ARC-AGI-2",
+      "recursion",
+      "conditioning"
+    ]
+  },
+  {
+    "id": "2608.24794",
+    "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+    "summary": "Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Treating corrective feedback as a learned in-trajectory intervention couples the two roles: the agent must decide when to request and use feedback, while the critic must infer useful corrections from outcome-confounded rollouts whose failure patterns shift as the agent improves. We introduce CAFE (Coupled Agent--Feedback Evolution), a framework in which a shared-parameter model alternates between search-agent and critic roles. CAFE initializes feedback-conditioned recovery from trajectories built around the base agent's own failures, then couples online and offline optimization. During online RL, a comparative feedback estimate uses a prompt-level call--skip success gap to shape request returns, while feedback-aware advantage shaping reweights token advantages before and after feedback. Offline, rollout-derived preference optimization learns feedback from matched successful and unsuccessful trajectories. On seven agentic search benchmarks, CAFE outperforms the evaluated RL-based search agents on average, retains its gains across all six out-of-domain benchmarks, and reduces answer-level hallucinations. One-sided ablations show that improving only the agent or only the critic eventually plateaus, whereas alternating the two updates continues to improve performance. These findings suggest that a self-improving search agent needs feedback that co-evolves with the policy it guides.",
+    "upvotes": 1,
+    "projectPage": null,
+    "ai_keywords": [
+      "outcome-supervised search agents",
+      "corrective feedback",
+      "in-trajectory intervention",
+      "CAFE",
+      "shared-parameter model",
+      "feedback-conditioned recovery",
+      "online RL",
+      "comparative feedback estimate",
+      "call-skip success gap",
+      "feedback-aware advantage shaping",
+      "token advantages",
+      "rollout-derived preference optimization",
+      "agentic search benchmarks",
+      "RL-based search agents",
+      "out-of-domain benchmarks",
+      "answer-level hallucinations"
+    ]
+  },
+  {
+    "id": "2608.22274",
+    "title": "Length-Adaptive Decoding for Masked Diffusion Machine Translation",
+    "summary": "Machine translation tests masked diffusion language models (dLLMs) because every source token must be rendered faithfully, while fixed canvas decoding must choose target length before denoising. Existing masked diffusion decoding work mainly studies token unmasking order, leaving this length decision under-explored despite its direct effect on coverage and redundancy. We introduce Entropy-Valley (EV), a training-free length selector that scores candidate target canvases by mean predictive entropy from all-mask forward passes and selects the canvas the backbone is most prepared to fill. Relative to a baseline using training corpus length statistics, EV recovers 64.9%, 65.3%, and 33.0% of the COMET-22 gain from reference target lengths on EntoZh, ZhtoEn, and EntoDe. Our diagnostics show that denoising-friendly lengths need not match reference lengths. Evaluation by three translation experts supports the EnleftrightarrowZh adequacy gains, with stronger evidence on ZhtoEn. Compared with a LLaMA-3-8B autoregressive (AR) model trained on the same fine-tuning data, the EV system ties on EntoZh and leads on ZhtoEn; an oracle-length diagnostic further shows that, in this masked diffusion MT setting, deciding which tokens to reveal first matters less than how the target length is supplied.",
+    "upvotes": 1,
+    "projectPage": "https://huggingface.co/collections/YanZhanPKU/entropy-valley",
+    "ai_keywords": [
+      "masked diffusion language models",
+      "dLLMs",
+      "entropy-valley",
+      "predictive entropy",
+      "all-mask forward passes",
+      "COMET-22",
+      "denoising-friendly lengths",
+      "autoregressive",
+      "masked diffusion MT"
+    ]
+  },
+  {
+    "id": "2608.24738",
+    "title": "TorchMorph: CUDA-accelerated Morphological Transforms",
+    "summary": "Morphological transforms are long-standing tools for shape and mask processing, but the de facto reference implementation in the Python ecosystem, i.e. scipy.ndimage, is CPU-only, single-array, and therefore unusable inside a GPU training loop without an expensive device-to-host round trip. GPU vision libraries built on PyTorch cover a narrow subset of these operators, typically restricted to two spatial dimensions and flat structuring elements. We present TorchMorph, a lightweight PyTorch extension that closes this gap. TorchMorph exposes 22 public operators covering binary morphology, greyscale morphology, exact and approximate distance transforms, and entropy-regularised optimal transport, all implemented as fused CUDA kernels that operate directly on (B, C, Spatial...) CUDA tensors with up to eight spatial dimensions. The API deliberately mirrors scipy.ndimage argument-for-argument, including border modes, structuring-element origins and pre-allocated outputs, so that existing pipelines port with a change of import. We describe the layered architecture and the kernel designs behind each operator family. Against single-threaded CPU references, batched execution reaches up to 1.1e3 times the throughput of scipy.ndimage on greyscale morphology and up to 350x on exact Euclidean distance transforms, while the Sinkhorn solver runs up to 42x faster than POT. Binary and chamfer operators reproduce their SciPy counterparts exactly, and every float-valued operator agrees with the CPU reference to within 1.8e-6 absolute error. TorchMorph is released under the MIT licence at https://intcomp.github.io/tm.",
+    "upvotes": null,
+    "projectPage": "https://intcomp.github.io/tm/",
+    "ai_keywords": [
+      "morphological transforms",
+      "binary morphology",
+      "greyscale morphology",
+      "distance transforms",
+      "entropy-regularised optimal transport",
+      "Sinkhorn solver",
+      "CUDA kernels",
+      "TorchMorph"
+    ]
+  }
+]
