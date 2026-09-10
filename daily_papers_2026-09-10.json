@@ -1,0 +1,264 @@
+[
+  {
+    "id": "2609.10522",
+    "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+    "summary": "Foundation vision-language models (VLMs) exhibit broad intelligence about the world, yet translating this intelligence into robot control remains challenging. We present Show-Harness, an Embodied Harness that enables VLMs to \"play\" robots through a compact semantic interface linking intent to action. Show-Harness exposes discrete semantic action units that VLMs can naturally reason over, while embodiment-specific interpreters deterministically ground them into local robot actions, keeping the VLM directly responsible for fine-grained physical decisions. Through the same interface, Show-Harness demonstrates the feasibility of (1) directly unlocking closed-source frontier VLMs for zero-shot robot control, and (2) adapting small-scale open-source VLMs for low-cost deployment with just a few GPU-hours of fine-tuning. We further develop GUMI (GUI Manipulation Interface), which extends the same semantic action space to GUI-based demonstration collection, allowing humans and agents to \"play\" robots across embodiments without specialized teleoperation hardware. Extensive experiments show that Show-Harness-equipped VLM agents generalize robustly across tasks, embodiments, and environments, outperforming representative agentic and VLA paradigms. These results suggest that the right interface can unlock substantial embodied capability from foundation VLMs, without requiring additional model capacity or costly embodiment-specific pretraining.",
+    "upvotes": 45,
+    "projectPage": "https://showlab.github.io/Show-Harness/",
+    "ai_keywords": [
+      "vision-language models",
+      "Show-Harness",
+      "Embodied Harness",
+      "semantic action units",
+      "embodiment-specific interpreters",
+      "zero-shot robot control",
+      "GUMI",
+      "GUI Manipulation Interface",
+      "VLA paradigms"
+    ]
+  },
+  {
+    "id": "2609.10540",
+    "title": "Programmable World Model",
+    "summary": "Recent video world models generate increasingly realistic and interactive visual experiences, yet lack reliable mechanisms for maintaining persistent world state and enforcing programmable rules over extended interactions. We introduce Programmable World Model, a framework that decouples world-state evolution from visual observation generation. An agent translates natural-language instructions into executable programs that specify entity states and state-transition rules, enabling direct control over individual entities and their interactions. A lightweight engine executes these programs to update and maintain an explicit, persistent global world state, including off-screen entities and non-visual attributes. To connect world state with visual generation, we introduce state-augmented 3D oriented bounding boxes (OBBs) as an intermediate representation. This representation, together with the target camera trajectory, is deterministically compiled into pixel-aligned spatiotemporal conditioning signals for a pretrained video model serving as the generative renderer. This design allows users to create playable games with predefined mechanics, direct control over individual entities, and persistent world state throughout gameplay. We further introduce CombatStateBench, a benchmark for evaluating programmable world models. On CombatStateBench, our method achieves 94% Count Accuracy and 98% State Accuracy, substantially outperforming existing interactive video world models while supporting coherent long-horizon generation. These results demonstrate the effectiveness of separating explicit state evolution from generative rendering for building persistent, programmable worlds.",
+    "upvotes": 35,
+    "projectPage": "https://alaya-lab.github.io/pwm/",
+    "ai_keywords": [
+      "programmable world model",
+      "executable programs",
+      "entity states",
+      "state-transition rules",
+      "global world state",
+      "3D oriented bounding boxes",
+      "spatiotemporal conditioning signals",
+      "pretrained video model",
+      "generative renderer",
+      "CombatStateBench"
+    ]
+  },
+  {
+    "id": "2609.05405",
+    "title": "WearableQA: A Benchmark for Health Reasoning over Real-World Wearable Data",
+    "summary": "Recent advances in wearable sensing enable continuous monitoring of physiological and behavioral signals, yet existing benchmarks rarely evaluate whether AI systems can reason over a real user's longitudinal wearable record. We introduce WearableQA, a benchmark comprising 4,084 10-option multiple-choice questions constructed from the wearable time series, blood biomarkers, and demographics of 200 real users, each with up to 500 days of daily measurements. WearableQA preserves authentic wearable distributions that include device noise and inter-individual variability. To evaluate distinct reasoning capabilities, we introduce 16 question types organized along two complementary axes: data versus health reasoning, which distinguishes computation over longitudinal measurements from physiological interpretation; and single- versus cross-signal reasoning, which separates reasoning about individual signals from the integration of multiple signals. To construct reliable questions at scale, we adopt a dual-grounding framework that combines literature-grounded physiological findings with statistically validated population-grounded physiological patterns. This enables the capture of meaningful relationships observed in real-world wearable data. Evaluation of 14 proprietary and open-source LLMs demonstrates that WearableQA effectively differentiates model capabilities, with performance ranging from 19.6% to 72.9% against a 10% chance baseline. Moreover, WearableQA remains far from solved: most models achieve accuracies below 60%. Overall, WearableQA provides a realistic and diagnostic benchmark for evaluating LLM reasoning over real-world wearable data.",
+    "upvotes": 24,
+    "projectPage": null,
+    "ai_keywords": [
+      "LLMs",
+      "cross-signal reasoning",
+      "dual-grounding framework"
+    ]
+  },
+  {
+    "id": "2609.09113",
+    "title": "SAEScientist-Bench: Can AI Agents Conduct Autonomous SAE Interpretability Research?",
+    "summary": "While research on recursive self-improvement (RSI) has predominantly automated model training pipelines, reliable autonomous development demands a missing pillar: post-hoc monitoring and auditing to understand what models learn and ensure safe alignment. Mechanistic interpretability tools are essential to bridge this gap, among which Sparse Autoencoders (SAEs) serve as a cornerstone by isolating interpretable features for model inspection and steering. In this paper, we introduce SAEScientist-Bench to evaluate whether AI agents can act as scientists utilizing SAE tools for autonomous mechanistic discovery. Given a target concept, an agent designs contrastive probes and navigates a Gemma Scope dictionary of 131K+ features in Gemma-2-9B-IT to discover the optimal feature, evaluated against curated expert reference features anchored on Neuronpedia across activation rank, concept selectivity on contrastive texts, and causal steering. Across 10 agent configurations and 20 tasks, frontier agents demonstrate genuine discovery capabilities and lead different evaluation dimensions, but remain well behind the expert baseline, approaching expert levels on separating target concepts from contrastive controls while lagging substantially in causal generation steering. Further analysis reveals that although agents can design contrasts to rule out spurious candidates, they frequently misinterpret experimental measurements. These results establish experimental model understanding as a measurable capability for closed-loop autonomous AI R&D. Our code is available at https://github.com/Trae1ounG/SAEScientist.",
+    "upvotes": 14,
+    "projectPage": null,
+    "ai_keywords": [
+      "Sparse Autoencoders",
+      "SAEs",
+      "mechanistic interpretability",
+      "contrastive probes",
+      "Gemma Scope",
+      "feature discovery",
+      "causal steering",
+      "activation rank",
+      "concept selectivity",
+      "autonomous AI R&D"
+    ]
+  },
+  {
+    "id": "2609.09219",
+    "title": "Scores Alone Do Not Prove Discovery: The Discovery Certification Protocol for Auditing AI Research Agents",
+    "summary": "AI research agents combine prior knowledge, public sources, and experimental feedback to produce useful results. The Discovery Certification Protocol (DCP) turns claims about these results into executable recovery and feedback tests. Gate 1 validates useful improvement on sealed evaluation. Gate 2 gives matched agents the registered starting information and observed Web content while withholding the target research history. Every valid method reaching the numerical target supplies a recovery witness and triggers the Core veto. DCP Core requires adequate controls, zero observed recoveries, and a finite-sample bound on recovery in one fresh registered episode. Optional Gate 3 measures the average effect of truthful feedback relative to a specified neutral policy from a shared checkpoint. DCP Evidence adds this effect after independent null calibration and a registered effect margin. Two controlled audits exercise the complete protocol in SQLite optimization and virtual catalyst control under different models. Each produced zero recoveries in 96 episodes, with an upper bound of 0.0468. Each paired study yielded 30 truthful recoveries and zero neutral recoveries, with passing 60-pair null studies. Additional cases exercise Core, recovered, and audit-incomplete decisions. A deterministic, LLM-free verifier reproduces the decisions from frozen evidence. DCP provides a common evidence language for useful outcomes, alternative routes, and feedback effects across AI research.",
+    "upvotes": 13,
+    "projectPage": "https://cxcscmu.github.io/Discovery-Certification-Protocol/",
+    "ai_keywords": [
+      "Discovery Certification Protocol",
+      "recovery and feedback tests",
+      "sealed evaluation",
+      "Core veto",
+      "finite-sample bound",
+      "null calibration",
+      "SQLite optimization",
+      "virtual catalyst control",
+      "LLM-free verifier",
+      "frozen evidence"
+    ]
+  },
+  {
+    "id": "2609.06703",
+    "title": "DianShi-RxnDB: A Large-Scale, Fine-Grained Organic Reaction Data Platform Built via a Fully Automated Pipeline for Researchers and AI Agents",
+    "summary": "High-quality structured organic reaction data are essential for developing artificial intelligence for chemistry (AI4Chem), yet much of this knowledge remains dispersed across patent text, images, and reaction schemes. We present DianShi-RxnDB, a large-scale, fine-grained organic reaction data platform built via a fully automated extraction and normalization pipeline integrating patent text, images, and reaction schemes. Its corpus covers organic synthesis patents from the USPTO and EPO published between 1976 and 2025, yielding approximately 24 million reaction instances, of which approximately 14.8 million (61.7%) pass automated qualification checks. Each instance represents a specific single-step experiment recording participants, roles, quantities, temperatures, reaction times, yields, experimental procedures, and provenance links to source patents. In a manual evaluation of 1,300 sampled qualified instances, the micro-averaged field-level accuracy was 92.95%. A matched comparison with Pistachio further indicated advantages in deduplicated record counts, representation granularity, and field-level exact agreement. The platform provides a Web research workbench for searching, filtering, comparing, and source-verifying records, and a Model Context Protocol (MCP) service offering AI agents composable structured retrieval tools. DianShi-RxnDB is available at https://dianshi.opendatalab.org.cn/ .",
+    "upvotes": 7,
+    "projectPage": "https://dianshi.opendatalab.org.cn/",
+    "ai_keywords": [
+      "DianShi-RxnDB",
+      "AI4Chem",
+      "organic reaction extraction",
+      "patent reaction schemes",
+      "normalization pipeline",
+      "Model Context Protocol"
+    ]
+  },
+  {
+    "id": "2609.07103",
+    "title": "Revisiting Complete Reasoning Traces for Post-Training",
+    "summary": "Large language models (LLMs) are often post-trained on pre-collected reasoning trajectories to improve their reasoning capability. Such trajectories tend to be long due to complex, interwoven paths, which often include detours on the path toward the answer. However, it has been underexplored whether LLMs indeed benefit from learning complete trajectories in post-training, such as supervised fine-tuning (SFT). Starting from our pilot study, we find that full trajectories provide only limited benefit, while partial trajectories are effective even under heavy truncation. We analyze redundancy in reasoning trajectories through attention-based analyses and controlled token-removal studies, both of which show that intermediate tokens contribute minimally to final reasoning quality. This suggests that avoiding redundant information may allow LLMs to internally infer coherent alternatives by inferring missing steps from their internal knowledge, given known trajectory endpoints. Furthermore, we show that training LLMs using endpoints leads to consistent changes in reasoning behavior, and that it also benefits post-training methods based on reinforcement learning or on-policy distillation, highlighting the need to revisit complete reasoning traces. Code is available at https://github.com/naver-ai/revisiting-trace.",
+    "upvotes": 6,
+    "projectPage": null,
+    "ai_keywords": [
+      "large language models",
+      "reasoning trajectories",
+      "supervised fine-tuning",
+      "attention-based analysis",
+      "token-removal studies",
+      "reinforcement learning",
+      "on-policy distillation"
+    ]
+  },
+  {
+    "id": "2609.09155",
+    "title": "SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators",
+    "summary": "World models are increasingly used as policy-in-the-loop imagination environments, where reliable rollouts require fine-grained controllability with respect to low-level robot actions. A key obstacle to scaling such models in robotics is that actions are not a universal language in pixel space: changes in visual environment, camera view, robot placement, or embodiment alter how the same numerical action manifests visually, leading to conflicting supervision under mixed training and brittle generalization at deployment. We introduce SyncWorld, an action-conditioned world model that serves as a zero-shot simulator across unseen environments without any additional training. SyncWorld leverages a visual calibration episode---paired frames and actions that showcase all the controllable degrees of freedom---to specify the setup-specific Action--Visual Mapping in context. Training with visual calibration contexts teaches the model to interpret actions through visual evidence and to leverage interaction history when explicit calibration is unavailable. Experiments show that SyncWorld can accurately simulate action outcomes in previously unseen settings, and that its capability of simulating rollouts enables test-time policy improvement without training.",
+    "upvotes": 5,
+    "projectPage": "https://umass-embodied-agi.github.io/SyncWorld/",
+    "ai_keywords": [
+      "world models",
+      "action-conditioned",
+      "visual calibration",
+      "Action--Visual Mapping",
+      "zero-shot simulator",
+      "policy improvement"
+    ]
+  },
+  {
+    "id": "2609.10226",
+    "title": "Φ-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them?",
+    "summary": "Large language models (LLMs) have demonstrated remarkable capabilities in reasoning and code generation, raising the prospect that they could assist in developing and optimizing the very infrastructure that powers them. However, existing benchmarks mainly focus on isolated kernels, predefined operators, or pre-specified optimization targets, and therefore fail to evaluate the ability of LLMs to perform open-ended, long-horizon LLM infrastructure engineering. To address this gap, we present Φ-Bench, a benchmark for systematically evaluating LLMs on engineering the LLM infrastructure stack. Derived from optimization problems studied in frontier research and grounded in real-world code repositories, Φ-Bench provides broad coverage of the LLM infrastructure stack and spans tasks of varying complexity, ranging from localized kernel-level function completion to long-horizon implementation and end-to-end system optimization. Extensive experiments on frontier LLMs reveal their current capabilities and limitations in engineering complex LLM infrastructure, offering insights into the challenges that remain on the path toward autonomous optimization of future AI infrastructure.",
+    "upvotes": 4,
+    "projectPage": "https://faibench.org/",
+    "ai_keywords": [
+      "Φ-Bench",
+      "LLM infrastructure stack",
+      "kernel-level optimization",
+      "long-horizon implementation",
+      "end-to-end system optimization",
+      "autonomous optimization"
+    ]
+  },
+  {
+    "id": "2609.09134",
+    "title": "Co-Evolving Harnesses and Models: On-Policy Correction Helps Weaker Models Catch Up Where Imitation Fails",
+    "summary": "Agent harnesses (the system prompt, tool set, execution hooks, and context-management scaffolding around a model) are a critical determinant of agentic task success. Automated harness evolution can enable smaller models to perform well on domain-specific tasks at a fraction of frontier-model cost. Since both the harness and model weights shape behavior, we ask how harness evolution and lightweight fine-tuning should be combined. Across seven enterprise agent tasks, we first evolve a harness with the weaker model, then find that a stronger expert often uses it more effectively, suggesting expert supervision could close the remaining gap. However, training the weaker model on the expert's complete trajectories under the evolved harness backfires: performance regresses on all seven tasks by 4 to 30 points across Qwen3-Coder and Gemma 4, even though the same procedure helps under the unevolved harness. Our analysis shows that imitation transfers knowledge and increases scaffold usage, but disrupts model-harness fit: the weaker model adopts the expert's planning strategy without the competence to execute it and no longer matches the harness evolved around its native planning style. We therefore develop an on-policy expert-correction pipeline, automated by a meta-level MLE agent, that localizes the failing turn in the weaker model's own rollout and asks the expert to rewrite only that turn. This preserves the model's planning style and combines the gains of harness evolution and model adaptation. Our results identify and resolve a source of contention between harness and weight updates, yielding a compatibility-preserving recipe for economical co-evolution on domain-specific enterprise tasks.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "agent harness",
+      "harness evolution",
+      "fine-tuning",
+      "imitation learning",
+      "on-policy expert correction",
+      "meta-level MLE agent",
+      "model-harness fit"
+    ]
+  },
+  {
+    "id": "2609.09187",
+    "title": "AgenticGen: Reward-Guided Agentic Video Generation for Advertising",
+    "summary": "Advertising video generation is not only a video synthesis task, but also a product-conditioned reasoning problem whose success is measured by online business metrics. Recent video foundation models can generate realistic clips from multimodal conditions, yet they do not optimize how a product should be transformed into an effective advertisement or how future generation should be improved from online business feedback. To close this loop, we propose AgenticGen, a reward-guided agentic framework that decomposes advertising video generation into two trainable reasoning stages, strategy selection and draft generation, thereby exposing optimization targets that online business feedback can supervise. AgenticGen learns a performance-based reward from accumulated online feedback and a complementary rubric-based reward aligned with human quality standards, then uses them to supervise policy optimization. DPO first moves the agentic policies toward online preferences, and GRPO further refines both stages with process and outcome rewards. Offline experiments validate the reward models and successive policy optimization. Online A/B experiments in the TikTok advertising system show that AgenticGen after DPO and GRPO improves CTR by 2.72%, CVR by 2.63%, and Advv by 9.61% over the SFT baseline.",
+    "upvotes": 2,
+    "projectPage": null,
+    "ai_keywords": [
+      "DPO",
+      "GRPO",
+      "reward-guided agentic framework",
+      "policy optimization",
+      "process and outcome rewards",
+      "CTR",
+      "CVR"
+    ]
+  },
+  {
+    "id": "2609.05779",
+    "title": "Diffs vs. Whole Files: An Empirical Comparison of Iterative Edit-Based and Direct Generation for Flutter/Dart Code Models",
+    "summary": "Large language models used for code editing can be trained and deployed in at least two output regimes: direct generation, where the model emits the entire modified file in one shot, and iterative diff-based generation (\"steps\"), where the model emits a sequence of localized search/replace edits applied one at a time until it signals completion or a step budget is exhausted. The diff-based regime is attractive because it mirrors how developers edit code and should require far fewer generated tokens per turn. We train two code models - a 100M-parameter model trained from scratch (Rainbow-Pony-100M) and a fine-tuned Qwen2.5-Coder-0.5B - in both regimes on a shared Flutter/Dart dataset, and evaluate all four resulting models on a held-out set of approx 1,790 tasks per model. Direct generation substantially outperforms diff-based generation on every metric we measure - compilation/static-analysis pass rate, bits-per-byte, character-level similarity to the reference, and blinded LLM-judge ratings of goal fulfillment, correctness, and code quality - and the gap persists after controlling for task difficulty via a matched-ID comparison and when restricting to code that compiles on both sides. We then identify a single, architecture-independent mechanism behind the conditions where diff-based generation does win: it is competitive on short, spatially localized edits, and its category-level wins concentrate in exactly the two task categories - refactoring and error-handling/edge-case fixes - with the lowest mean edit-step count in our dataset. We term this task locality and discuss its implications for when an edit-based training regime is and is not the right choice for a code-editing model.",
+    "upvotes": 1,
+    "projectPage": "https://huggingface.co/spaces/bbidpa/diffs-vs-whole-files-demo",
+    "ai_keywords": [
+      "diff-based generation",
+      "direct generation",
+      "code editing",
+      "task locality",
+      "edit-step count",
+      "bits-per-byte",
+      "static-analysis pass rate"
+    ]
+  },
+  {
+    "id": "2609.00369",
+    "title": "Puppeteer: Object-Grounded Posture-Aware Co-Speech Gesture Generation",
+    "summary": "Generating co-speech gestures that are temporally coherent, semantically aligned with speech, and grounded with surrounding objects remains challenging. Prior speech-driven gesture models emphasize audio-gesture alignment but do not explicitly account for posture constraints or surrounding objects, failing to capture the inherent correlation between body gestures and the physical space. We present Puppeteer, a posture-aware, object-grounded co-speech gesture diffusion model operating in a causal latent space. We decompose long gestures into structured primitives and learn a causal variational autoencoder that encodes them into temporally ordered latent tokens, each depending only on the past. We then perform conditional diffusion directly in the causal latent space, conditioning on speech signals, motion history, an initial posture reference, and object geometry to synthesize physically consistent gestures. This temporally ordered latent formulation enables explicit temporal control and supports tasks such as gesture in-betweening and gesture completion. To better assess co-speech gesture synthesis beyond existing measures, we introduce new evaluation metrics tailored to this task. We also created SceneGes, the first curated synthetic 3D dataset of embodied co-speech gestures and corresponding 3D objects, enabling object-grounded gesture generation. Experiments show that Puppeteer generates more diverse and temporally synchronized gestures than prior methods, while enabling object-grounded gesture synthesis.",
+    "upvotes": 1,
+    "projectPage": "https://puppeteer.pickford.ai/",
+    "ai_keywords": [
+      "co-speech gesture diffusion model",
+      "causal variational autoencoder",
+      "latent tokens",
+      "conditional diffusion",
+      "posture-aware",
+      "object-grounded",
+      "gesture primitives",
+      "temporal control",
+      "gesture in-betweening",
+      "SceneGes"
+    ]
+  },
+  {
+    "id": "2609.09657",
+    "title": "RESCUE-BENCH: Towards Relation-Aware Multi-Party Emotional Support Conversation Systems",
+    "summary": "Existing emotional support conversation systems mainly focus on one-on-one seeker-supporter interactions and individual emotional states, leaving interpersonal relations in multi-party scenarios underexplored. In this work, we introduce relation-aware emotional support conversation, a new task that evaluates whether LLMs can capture and utilize the evolving dynamics of relationships to offer more effective emotional support. We construct RESCUE (Relation-aware Emotional Support Conversation Understanding and Evaluation Benchmark) from real couple and family interview conversations, containing 191 samples, 7,079 annotated turns, and 1,064.8 minutes of video. Based on rich annotations of socio-emotional and support-related dynamics, RESCUE defines six tasks that evaluate two core capabilities required for relation-aware emotional support: Relational Understanding and Relation-Sensitive Support. Experiments with ten LLMs show that current models perform relatively well on tasks relying on local emotional or intervention cues, but struggle with relation-intensive tasks such as relation pattern prediction, viewpoint prediction, and support strategy prediction. These findings reveal the limitations of current LLMs in modeling interpersonal relations and making relation-sensitive support decisions.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "relation-aware emotional support conversation",
+      "RESCUE",
+      "relational understanding",
+      "relation-sensitive support",
+      "relation pattern prediction",
+      "viewpoint prediction",
+      "support strategy prediction"
+    ]
+  },
+  {
+    "id": "2609.08650",
+    "title": "Difficulty-Adaptive Tree-Structured Policy Optimization for Expanding Reasoning Coverage in RLVR",
+    "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has been central to the recent success of Large Reasoning Models. However, while RLVR significantly improves single-sample accuracy, it often fails to expand the model's intrinsic reasoning coverage (pass@k) due to limited exploration during training. To address this, we optimize the structural design of train-time rollouts to enhance pass@k. Our analysis identifies three key design principles: (1) difficulty-adaptive rollout can play an important role in expanding pass@k, beyond serving as an efficiency heuristic; (2) tree-based rollout outperforms parallel sampling in discovering correct answers; and (3) sentence-entropy-guided forking overcomes the localization phenomenon of token-level branching to maximize semantic diversity. Building on these insights, we propose DATPO (Difficulty-Adaptive Sentence-entropy-guided Tree-structured Policy Optimization). DATPO integrates difficulty-adaptive tree search with a sibling-diversity advantage term, explicitly promoting semantic diversity to expand reasoning coverage during training. Experiments on mathematical reasoning benchmarks demonstrate that DATPO outperforms baselines especially in pass@k, which directly translates to superior test-time scaling performance.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "RLVR",
+      "pass@k",
+      "difficulty-adaptive rollout",
+      "tree-based rollout",
+      "sentence-entropy-guided forking",
+      "DATPO",
+      "sibling-diversity advantage",
+      "test-time scaling"
+    ]
+  },
+  {
+    "id": "2609.07369",
+    "title": "DF26: We Cannot Tell Fake From Real Anymore",
+    "summary": "We introduce DF26, a novel benchmark for detecting AI-generated videos containing fully synthetic clips produced by recent text-to-video and image-to-video models. The videos capture single-person public-speaking scenarios, spanning direct-to-camera recordings, official statements, and studio interviews - 271 real and 2,420 synthetic videos generated by seven modern video models. The study on DF26 shows that human performance in detecting AI-generated videos, as well as state-of-the-art deepfake detectors, is close to random chance. Our results highlight the limitations of current evaluation protocols and motivate the need for benchmarks that explicitly measure robustness to modern generative model distribution shifts.",
+    "upvotes": null,
+    "projectPage": null,
+    "ai_keywords": [
+      "text-to-video",
+      "image-to-video",
+      "deepfake detectors",
+      "generative model distribution shifts",
+      "AI-generated videos"
+    ]
+  }
+]
